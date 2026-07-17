@@ -88,11 +88,14 @@ def fetch_latest_quarter(page: Page, slug: str) -> Optional[QuarterData]:
     dates: list[str] = raw["dates"]
     rows: dict[str, list[str]] = raw["rows"]
 
-    if "Sales" not in rows or "Net Profit" not in rows:
-        log.warning("%s: quarters table missing Sales/Net Profit row(s), found: %s", slug, list(rows.keys()))
+    # Banks/NBFCs/insurers use a "Revenue" top line instead of "Sales" on screener.in.
+    sales_label = "Sales" if "Sales" in rows else ("Revenue" if "Revenue" in rows else None)
+
+    if sales_label is None or "Net Profit" not in rows:
+        log.warning("%s: quarters table missing Sales/Revenue/Net Profit row(s), found: %s", slug, list(rows.keys()))
         return None
 
-    sales = [parse_number(v) for v in rows["Sales"]]
+    sales = [parse_number(v) for v in rows[sales_label]]
     net_profit = [parse_number(v) for v in rows["Net Profit"]]
 
     return QuarterData(latest_date=dates[-1], dates=dates, sales=sales, net_profit=net_profit)

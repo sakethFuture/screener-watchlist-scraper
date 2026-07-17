@@ -26,6 +26,10 @@ Notes/assumptions (easy to change in `growth.py` if you want it different):
   we don't reprocess it every run) but no output entry is written, and a warning is logged.
 - On the very first run, every watchlist stock looks "new" (there's no prior state yet) -
   this is expected, it's what seeds `output.json` with an initial baseline for all stocks.
+- If login fails (bad credentials, or screener.in changed its login page), a full-page
+  screenshot is saved to `DATA_DIR/login_failure.png` before the error is raised - useful
+  on Railway where there's no visible browser to watch. Pull it down with `railway run`
+  or the dashboard's file browser.
 
 ## Local setup
 
