@@ -1,0 +1,1026 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Top 200 Company Analysis — FY26-27</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#FFFFFF;
+    --surface:#F7F8FA;
+    --surface-hover:#EEF0F3;
+    --border:#E3E5E9;
+    --border-strong:#D0D3D9;
+    --text:#1A1D23;
+    --text-dim:#5B616E;
+    --text-faint:#8B909B;
+    --accent:#2563EB;
+    --accent-soft:#EFF4FF;
+
+    --buy:#16A34A;
+    --buy-bg:#F0FDF4;
+    --sell:#DC2626;
+    --sell-bg:#FEF2F2;
+    --hold:#D97706;
+    --hold-bg:#FFFBEB;
+
+    --cat-slow:#64748B;
+    --cat-slow-bg:#F1F5F9;
+    --cat-stalwart:#0D9488;
+    --cat-stalwart-bg:#F0FDFA;
+    --cat-fast:#7C3AED;
+    --cat-fast-bg:#F5F3FF;
+    --cat-cyclical:#EA580C;
+    --cat-cyclical-bg:#FFF7ED;
+    --cat-turnaround:#DB2777;
+    --cat-turnaround-bg:#FDF2F8;
+    --cat-asset:#2563EB;
+    --cat-asset-bg:#EFF4FF;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--text);
+    font-family:'Inter', sans-serif;
+    min-height:100vh;
+    padding:0 0 60px 0;
+  }
+
+  /* ===== Header ===== */
+  .masthead{
+    padding:32px 32px 20px;
+    border-bottom:1px solid var(--border);
+  }
+  .masthead-inner{max-width:1300px; margin:0 auto;}
+  .eyebrow{
+    font-size:12px;
+    font-weight:500;
+    color:var(--text-faint);
+    margin:0 0 6px;
+  }
+  h1{
+    font-weight:600;
+    font-size:24px;
+    margin:0;
+    letter-spacing:-0.01em;
+    color:var(--text);
+  }
+  h1 em{ color:var(--accent); font-style:normal; }
+
+  /* ===== Quarter tabs ===== */
+  .tabs-row{
+    max-width:1300px;
+    margin:0 auto;
+    padding:0 32px;
+    display:flex;
+    gap:6px;
+    margin-top:20px;
+    flex-wrap:wrap;
+  }
+  .qtab{
+    font-size:13px;
+    font-weight:500;
+    background:transparent;
+    color:var(--text-dim);
+    border:1px solid transparent;
+    padding:8px 14px;
+    cursor:pointer;
+    border-radius:6px;
+    transition:all .12s ease;
+  }
+  .qtab .yr{ color:var(--text-faint); font-weight:400; }
+  .qtab:hover{ background:var(--surface); }
+  .qtab.active{
+    background:var(--accent-soft);
+    color:var(--accent);
+  }
+
+  /* ===== Main container ===== */
+  .wrap{ max-width:1300px; margin:0 auto; padding:0 32px; }
+  .panel{
+    background:var(--bg);
+    border:1px solid var(--border);
+    border-radius:8px;
+    padding:0;
+    margin-top:16px;
+  }
+
+  /* ===== Summary strip ===== */
+  .summary{
+    display:flex;
+    gap:0;
+    border-bottom:1px solid var(--border);
+    flex-wrap:wrap;
+  }
+  .stat{
+    flex:1;
+    min-width:100px;
+    padding:16px 20px;
+    border-right:1px solid var(--border);
+  }
+  .stat:last-child{ border-right:none; }
+  .stat .num{ font-size:22px; font-weight:600; }
+  .stat .lbl{ font-size:11px; color:var(--text-faint); margin-top:2px; }
+  .stat.buy .num{ color:var(--buy); }
+  .stat.sell .num{ color:var(--sell); }
+  .stat.hold .num{ color:var(--hold); }
+  .stat.changed .num{ color:var(--accent); }
+
+  /* ===== Toolbar ===== */
+  .toolbar{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    padding:14px 20px;
+    border-bottom:1px solid var(--border);
+    flex-wrap:wrap;
+  }
+  .search{
+    flex:1;
+    min-width:200px;
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:6px;
+    padding:8px 12px;
+    color:var(--text);
+    font-family:'Inter';
+    font-size:13.5px;
+    outline:none;
+  }
+  .search::placeholder{ color:var(--text-faint); }
+  .search:focus{ border-color:var(--accent); }
+  select.filter{
+    background:var(--surface);
+    border:1px solid var(--border);
+    color:var(--text-dim);
+    font-size:13px;
+    padding:8px 10px;
+    border-radius:6px;
+    outline:none;
+  }
+  .btn{
+    font-size:13px;
+    font-weight:500;
+    border-radius:6px;
+    padding:8px 14px;
+    cursor:pointer;
+    border:1px solid var(--border);
+    background:var(--bg);
+    color:var(--text-dim);
+    transition:all .12s ease;
+    white-space:nowrap;
+  }
+  .btn:hover{ background:var(--surface); color:var(--text); }
+  .btn.primary{
+    background:var(--accent);
+    border-color:var(--accent);
+    color:#fff;
+  }
+  .btn.primary:hover{ opacity:0.9; }
+  .save-status{
+    font-size:11px;
+    color:var(--text-faint);
+    min-width:90px;
+    text-align:right;
+  }
+  .save-status.on{ color:var(--buy); }
+
+  /* ===== Autofill / Sync panels ===== */
+  .autofill-panel, .sync-panel{
+    padding:16px 20px 18px;
+    border-bottom:1px solid var(--border);
+    background:var(--surface);
+  }
+  .autofill-head{ display:flex; justify-content:space-between; align-items:flex-start; gap:16px; margin-bottom:8px; }
+  .autofill-title{ font-size:14px; font-weight:600; color:var(--text); }
+  .autofill-title span{ color:var(--accent); }
+  .autofill-sub{ font-size:12px; color:var(--text-dim); margin-top:4px; max-width:640px; line-height:1.5; }
+  .autofill-sub code{ font-size:12px; color:var(--accent); background:var(--accent-soft); padding:1px 5px; border-radius:3px; }
+  #autofillInput{
+    width:100%;
+    min-height:100px;
+    background:var(--bg);
+    border:1px solid var(--border);
+    border-radius:6px;
+    color:var(--text);
+    font-size:12.5px;
+    padding:10px 12px;
+    outline:none;
+    resize:vertical;
+  }
+  #autofillInput:focus{ border-color:var(--accent); }
+  .autofill-actions{ display:flex; align-items:center; gap:14px; margin-top:10px; }
+  .autofill-result{ font-size:12px; color:var(--text-dim); }
+  .autofill-result.warn{ color:var(--hold); }
+  .sync-row{ display:flex; gap:10px; align-items:center; }
+  .sync-row .search{ flex:1; font-size:12.5px; }
+  #syncResult{ display:block; margin-top:10px; }
+
+  /* ===== Table ===== */
+  .table-scroll{ overflow-x:auto; }
+  table{ width:100%; border-collapse:collapse; min-width:900px; }
+  thead th{
+    text-align:left;
+    font-size:11px;
+    font-weight:600;
+    text-transform:uppercase;
+    letter-spacing:0.03em;
+    color:var(--text-faint);
+    padding:10px 14px;
+    border-bottom:1px solid var(--border);
+    position:sticky;
+    top:0;
+    background:var(--bg);
+    z-index:2;
+  }
+  tbody tr{ border-bottom:1px solid var(--border); }
+  tbody tr:hover{ background:var(--surface); }
+  tbody tr.new-row{ background:var(--accent-soft); }
+  td{ padding:8px 14px; vertical-align:middle; }
+
+  .co-name{
+    font-size:13px;
+    background:transparent;
+    border:1px solid transparent;
+    color:var(--text);
+    padding:5px 8px;
+    border-radius:5px;
+    width:100%;
+    min-width:170px;
+    outline:none;
+    font-family:'Inter';
+  }
+  .co-name:hover{ border-color:var(--border); }
+  .co-name:focus{ border-color:var(--accent); background:var(--bg); }
+
+  .prior{
+    font-size:12px;
+    color:var(--text-faint);
+    white-space:nowrap;
+  }
+  .prior .dash{ color:var(--text-faint); }
+  .prior-period{ display:block; color:var(--text-faint); font-size:10px; margin-bottom:2px; }
+
+  select.cat-select, select.rec-select{
+    font-family:'Inter';
+    font-size:12.5px;
+    padding:6px 9px;
+    border-radius:5px;
+    border:1px solid var(--border);
+    background:var(--bg);
+    color:var(--text);
+    outline:none;
+    cursor:pointer;
+    min-width:140px;
+  }
+  select.rec-select{ min-width:85px; font-weight:500; }
+  select.cat-select:focus, select.rec-select:focus{ border-color:var(--accent); }
+
+  select.rec-select[data-v="Buy"]{ color:var(--buy); }
+  select.rec-select[data-v="Sell"]{ color:var(--sell); }
+  select.rec-select[data-v="Hold"]{ color:var(--hold); }
+
+  .suggested-tag, .outlier-tag{
+    display:inline-block;
+    font-size:10px;
+    padding:2px 7px;
+    border-radius:4px;
+    margin-left:6px;
+    cursor:help;
+    vertical-align:middle;
+  }
+  .suggested-tag{ color:var(--text-faint); background:var(--surface); border:1px solid var(--border); }
+  .outlier-tag{ color:var(--hold); background:var(--hold-bg); border:1px solid transparent; font-weight:500; }
+
+  .change-badge{
+    font-size:11px;
+    padding:3px 9px;
+    border-radius:20px;
+    white-space:nowrap;
+    border:1px solid transparent;
+  }
+  .change-badge.changed{ color:var(--accent); background:var(--accent-soft); }
+  .change-badge.same{ color:var(--text-faint); background:var(--surface); }
+  .change-badge.isnew{ color:var(--cat-asset); background:var(--cat-asset-bg); }
+  .change-badge.empty{ color:var(--text-faint); }
+
+  .del-btn{
+    background:transparent;
+    border:1px solid transparent;
+    color:var(--text-faint);
+    font-size:14px;
+    cursor:pointer;
+    padding:4px 8px;
+    border-radius:5px;
+    line-height:1;
+  }
+  .del-btn:hover{ color:var(--sell); background:var(--sell-bg); }
+
+  .empty-state{ padding:50px 20px; text-align:center; color:var(--text-faint); font-size:13px; }
+
+  footer.note{
+    max-width:1300px; margin:20px auto 0; padding:0 32px;
+    font-size:12px; color:var(--text-faint); line-height:1.6;
+  }
+  footer.note b{ color:var(--text-dim); }
+
+  ::selection{ background:var(--accent-soft); }
+  ::-webkit-scrollbar{ height:8px; width:8px; }
+  ::-webkit-scrollbar-thumb{ background:var(--border-strong); border-radius:4px; }
+  ::-webkit-scrollbar-track{ background:transparent; }
+
+  @media (max-width:760px){
+    .masthead{ padding:24px 16px 16px; }
+    .tabs-row, .wrap, footer.note{ padding-left:16px; padding-right:16px; }
+    h1{ font-size:20px; }
+  }
+</style>
+</head>
+<body>
+
+  <div class="masthead">
+    <div class="masthead-inner">
+      <div>
+        <p class="eyebrow">FCC · Fundamental Call Register</p>
+        <h1>Top 200 <em>Company Analysis</em></h1>
+      </div>
+    </div>
+
+    <div class="tabs-row" id="tabsRow"></div>
+  </div>
+
+  <div class="wrap">
+    <div class="panel">
+      <div class="summary" id="summaryRow"></div>
+      <div class="toolbar">
+        <input class="search" id="searchBox" type="text" placeholder="Filter by company name…">
+        <select class="filter" id="catFilter">
+          <option value="">All categories</option>
+          <option>Slow Grower</option>
+          <option>Stalwart</option>
+          <option>Fast Grower</option>
+          <option>Cyclical</option>
+          <option>Turnaround</option>
+          <option>Asset Play</option>
+        </select>
+        <select class="filter" id="recFilter">
+          <option value="">All recommendations</option>
+          <option>Buy</option>
+          <option>Hold</option>
+          <option>Sell</option>
+        </select>
+        <button class="btn" id="autofillBtn">⇩ Autofill results</button>
+        <button class="btn" id="syncBtn">⟳ Sync from automation</button>
+        <button class="btn primary" id="verifyBtn">✓ Verify latest</button>
+        <span class="autofill-result" id="verifyStatus"></span>
+        <button class="btn primary" id="addBtn">+ Add stock</button>
+        <span class="save-status" id="saveStatus">saved</span>
+      </div>
+      <div class="sync-panel" id="syncPanel" style="display:none;">
+        <div class="autofill-head">
+          <div>
+            <div class="autofill-title">Sync <span id="syncQLabel">this quarter</span> from your Railway scraper</div>
+            <div class="autofill-sub">Paste the endpoint URL that serves <code>output.json</code> (the one your scraper's cron job writes to). This fetches classifications directly — no copy-paste needed once it's set. The URL is remembered for next time.</div>
+            <div class="autofill-sub" id="syncModeNote" style="margin-top:6px;"></div>
+          </div>
+          <button class="btn" id="closeSync">✕ Close</button>
+        </div>
+        <div class="sync-row">
+          <input class="search" id="syncUrlInput" type="text" placeholder="https://your-app.up.railway.app/api/ledger-output">
+          <button class="btn primary" id="fetchSyncBtn">Fetch &amp; apply</button>
+        </div>
+        <span id="syncResult" class="autofill-result"></span>
+      </div>
+      <div class="autofill-panel" id="autofillPanel" style="display:none;">
+        <div class="autofill-head">
+          <div>
+            <div class="autofill-title">Autofill <span id="autofillQLabel">this quarter</span> from results you already have</div>
+            <div class="autofill-sub">Paste either: a raw <b>Screener export CSV</b> (include a Name column and a Sales-growth and/or Profit-growth column — Category is auto-classified from your bands: 0-8% Slow, 8-15% Stalwart, 15%+ Fast) — <i>or</i> manual rows of <code>Company name, Category, Recommendation</code>, comma or tab separated. Either way it matches by name and only touches the open quarter. Unmatched names are listed after you apply.</div>
+          </div>
+          <button class="btn" id="closeAutofill">✕ Close</button>
+        </div>
+        <textarea id="autofillInput" placeholder="Paste a Screener export CSV here, e.g.:&#10;Name,Sales growth,Profit growth&#10;Reliance Industry,6.2,5.8&#10;Bajaj Finance,24.1,27.3&#10;&#10;— or manual rows —&#10;Reliance Industry, Stalwart, Hold&#10;Bajaj Finance, Fast Grower, Buy"></textarea>
+        <div class="autofill-actions">
+          <button class="btn primary" id="applyAutofillBtn">Apply to current quarter</button>
+          <span id="autofillResult" class="autofill-result"></span>
+        </div>
+      </div>
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:22%">Company</th>
+              <th style="width:16%">Prior quarter</th>
+              <th style="width:22%">Category</th>
+              <th style="width:12%">Recommendation</th>
+              <th style="width:13%">Change</th>
+              <th style="width:4%"></th>
+            </tr>
+          </thead>
+          <tbody id="tableBody"></tbody>
+        </table>
+        <div class="empty-state" id="emptyState" style="display:none;">No tickers match this filter.</div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="note">
+    <b>Logic:</b> each quarter's category is compared to the previous quarter for the same stock. "Changed" fires when the category label differs; a fresh addition is tagged "New" instead of a change. This mirrors the FY25-26 sheet's Category / Recommendation / Change columns.<br>
+    <b>Screener sync:</b> Screener doesn't expose an API even on Premium — export stays CSV-based. But Premium's bulk "Export" on a saved screen (up to 50 columns, whole watchlist in one file) is enough: paste that CSV into Autofill below and it reads Sales/Profit growth columns itself, classifies Category against your bands, and matches rows by name. Recommendation still needs your judgment, so it's left blank for you to set.
+  </footer>
+
+<script>
+const QUARTERS = ['Q1 2026','Q2 2026','Q3 2026','Q4 2026'];
+const CATS = ['Slow Grower','Stalwart','Fast Grower','Cyclical','Turnaround','Asset Play'];
+const RECS = ['Buy','Hold','Sell'];
+const CAT_COLOR = {
+  'Slow Grower':'var(--cat-slow)','Stalwart':'var(--cat-stalwart)','Fast Grower':'var(--cat-fast)',
+  'Cyclical':'var(--cat-cyclical)','Turnaround':'var(--cat-turnaround)','Asset Play':'var(--cat-asset)'
+};
+
+const SEED = [{"name":"Reliance Industry","q4_2025_cat":"Slow Grower","q4_2025_rec":"Hold"},{"name":"HDFC Bank","q4_2025_cat":"Slow Grower","q4_2025_rec":"Sell"},{"name":"TCS","q4_2025_cat":"Slow Grower","q4_2025_rec":"Hold"},{"name":"Bharti Airtel","q4_2025_cat":"Slow Grower","q4_2025_rec":"Sell"},{"name":"ICICI Bank","q4_2025_cat":"Slow Grower","q4_2025_rec":"Hold"},{"name":"St Bk of India","q4_2025_cat":"Stalwart","q4_2025_rec":"Hold"},{"name":"Infosys","q4_2025_cat":"Stalwart/ Slow grower","q4_2025_rec":"Hold"},{"name":"Bajaj Finance","q4_2025_cat":"Fast Grower","q4_2025_rec":"Buy"},{"name":"Hind. Unilever","q4_2025_cat":"Slow Grower","q4_2025_rec":"Hold"},{"name":"ITC","q4_2025_cat":"Turnaround","q4_2025_rec":"Buy"},{"name":"Larsen & Toubro","q4_2025_cat":"Stalwart","q4_2025_rec":"Hold"},{"name":"Kotak Mah. Bank","q4_2025_cat":"Slow Grower","q4_2025_rec":"Hold"},{"name":"Sun Pharma.Inds.","q4_2025_cat":null,"q4_2025_rec":null},{"name":"HCL Technologies","q4_2025_cat":"Slow Grower","q4_2025_rec":"Hold"},{"name":"Maruti Suzuki","q4_2025_cat":"Hold","q4_2025_rec":"Buy"},{"name":"NTPC","q4_2025_cat":null,"q4_2025_rec":null},{"name":"UltraTech Cem.","q4_2025_cat":"Fast Grower","q4_2025_rec":"Hold"},{"name":"Axis Bank","q4_2025_cat":"Stalwart","q4_2025_rec":"Hold"},{"name":"M & M","q4_2025_cat":"Stalwart","q4_2025_rec":"Hold"},{"name":"Bajaj Finserv","q4_2025_cat":"Stalwart","q4_2025_rec":"Hold"},{"name":"O N G C","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Power Grid Corpn","q4_2025_cat":"Slow Grower","q4_2025_rec":"Sell"},{"name":"Titan Company","q4_2025_cat":"Fast Grower","q4_2025_rec":"Buy"},{"name":"Adani Enterp.","q4_2025_cat":"Cyclical","q4_2025_rec":"Buy"},{"name":"Wipro","q4_2025_cat":"Slow Grower","q4_2025_rec":"Hold"},{"name":"Adani Ports","q4_2025_cat":"Stalwart","q4_2025_rec":"Buy"},{"name":"Coal India","q4_2025_cat":"Cyclical","q4_2025_rec":"Buy"},{"name":"Asian Paints","q4_2025_cat":null,"q4_2025_rec":null},{"name":"JSW Steel","q4_2025_cat":"Slow Grower","q4_2025_rec":"Buy"},{"name":"Nestle India","q4_2025_cat":"Stalwart","q4_2025_rec":"Buy"},{"name":"Tata Motors","q4_2025_cat":"Stalwart","q4_2025_rec":"Hold"},{"name":"Bajaj Auto","q4_2025_cat":"Stalwart","q4_2025_rec":"Buy"},{"name":"Eternal Ltd","q4_2025_cat":"Fast Grower","q4_2025_rec":"Buy"},{"name":"Bharat Electron","q4_2025_cat":"Stalwart","q4_2025_rec":"Hold"},{"name":"Grasim Inds","q4_2025_cat":"Stalwart","q4_2025_rec":"Buy"},{"name":"Tata Steel","q4_2025_cat":"Slow grower","q4_2025_rec":"Buy"},{"name":"Trent","q4_2025_cat":"Fast Grower","q4_2025_rec":"Buy"},{"name":"SBI Life Insuran","q4_2025_cat":"Stalwart","q4_2025_rec":"Sell"},{"name":"Eicher Motors","q4_2025_cat":null,"q4_2025_rec":null},{"name":"HDFC Life Insur.","q4_2025_cat":"Slow Grower","q4_2025_rec":"Sell"},{"name":"Jio Financial","q4_2025_cat":"Fast Grower","q4_2025_rec":"Buy"},{"name":"Hindalco Inds.","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Tech Mahindra","q4_2025_cat":"Slow Grower","q4_2025_rec":"Hold"},{"name":"Shriram Finance","q4_2025_cat":"Fast Grower","q4_2025_rec":"Hold"},{"name":"Cipla","q4_2025_cat":"Slow  Grower","q4_2025_rec":"Sell"},{"name":"Tata Consumer","q4_2025_cat":"Stalwart","q4_2025_rec":"Buy"},{"name":"Dr Reddy's Labs","q4_2025_cat":"Slow grower","q4_2025_rec":"Sell"},{"name":"Apollo Hospitals","q4_2025_cat":"Stalwart","q4_2025_rec":"Buy"},{"name":"Life Insurance","q4_2025_cat":null,"q4_2025_rec":null},{"name":"IndusInd Bank","q4_2025_cat":"Slow Grower/Turnaround","q4_2025_rec":"Hold"},{"name":"Hero Motocorp","q4_2025_cat":"Slow Grower","q4_2025_rec":"Buy"},{"name":"Hind.Aeronautics","q4_2025_cat":"Stalwart","q4_2025_rec":"Sell"},{"name":"Avenue Super.","q4_2025_cat":"Stalwart","q4_2025_rec":"Hold"},{"name":"Adani Power","q4_2025_cat":"Stalwart","q4_2025_rec":"Buy"},{"name":"Interglobe Aviat","q4_2025_cat":null,"q4_2025_rec":null},{"name":"I O C L","q4_2025_cat":"Slow grower","q4_2025_rec":"Hold"},{"name":"Varun Beverages","q4_2025_cat":"Fast Grower","q4_2025_rec":"Buy"},{"name":"I R F C","q4_2025_cat":"Stalwart / Turnaround","q4_2025_rec":"Hold"},{"name":"Vedanta","q4_2025_cat":"Stalwart","q4_2025_rec":"Hold"},{"name":"DLF","q4_2025_cat":"Cyclical","q4_2025_rec":"Sell"},{"name":"Pidilite Inds.","q4_2025_cat":"Stalwart","q4_2025_rec":"Buy"},{"name":"Divi's Lab.","q4_2025_cat":"Stalwart","q4_2025_rec":"Hold"},{"name":"Adani Green","q4_2025_cat":"Stalwart/ Slow grower","q4_2025_rec":"Hold"},{"name":"Power Fin.Corpn.","q4_2025_cat":"Stalwart","q4_2025_rec":"Sell"},{"name":"Ambuja Cements","q4_2025_cat":"Slow Grower","q4_2025_rec":"Hold"},{"name":"Cholaman.Inv.&Fn","q4_2025_cat":"Fast grower","q4_2025_rec":"Hold"},{"name":"LTIMindtree","q4_2025_cat":"Stalwart","q4_2025_rec":"Buy"},{"name":"B P C L","q4_2025_cat":"Slow Grower","q4_2025_rec":"Hold"},{"name":"Britannia Inds.","q4_2025_cat":"Slow Grower","q4_2025_rec":"Hold"},{"name":"Bajaj Holdings","q4_2025_cat":"Stalwart","q4_2025_rec":"Sell"},{"name":"Godrej Consumer","q4_2025_cat":"Slow grower","q4_2025_rec":"Hold"},{"name":"Bank of Baroda","q4_2025_cat":"Slow grower","q4_2025_rec":"Hold"},{"name":"Hyundai Motor I","q4_2025_cat":"Slow grower","q4_2025_rec":"Hold"},{"name":"TVS Motor Co.","q4_2025_cat":"Stalwart","q4_2025_rec":"Buy"},{"name":"GAIL (India)","q4_2025_cat":"Stalwart","q4_2025_rec":"Sell"},{"name":"Lodha Developers Ltd","q4_2025_cat":"Cyclical and Stalwart","q4_2025_rec":"Hold"},{"name":"Indian Hotels Co","q4_2025_cat":"Fast grower/ cyclical","q4_2025_rec":"Hold"},{"name":"Tata Power Co.","q4_2025_cat":"Stalwart","q4_2025_rec":"Sell"},{"name":"A B B","q4_2025_cat":"Stalwart","q4_2025_rec":"Hold"},{"name":"REC Ltd","q4_2025_cat":"Stalwart","q4_2025_rec":"Hold"},{"name":"Punjab Natl.Bank","q4_2025_cat":"Stalwart","q4_2025_rec":"Hold"},{"name":"Shree Cement","q4_2025_cat":"Stalwart","q4_2025_rec":"Hold"},{"name":"United Spirits","q4_2025_cat":"Slow grower","q4_2025_rec":"Hold"},{"name":"Bajaj Housing","q4_2025_cat":"Fast Grower","q4_2025_rec":"Hold"},{"name":"Adani Energy Sol","q4_2025_cat":"Stalwart","q4_2025_rec":"Buy"},{"name":"Torrent Pharma.","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Havells India","q4_2025_cat":"Stalwart","q4_2025_rec":"Hold"},{"name":"CG Power & Ind","q4_2025_cat":"Stalwart","q4_2025_rec":"Hold"},{"name":"Samvardh. Mothe.","q4_2025_cat":"Stalwart ","q4_2025_rec":"Buy"},{"name":"Siemens","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Prestige Estates","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Canara Bank","q4_2025_cat":"Slow Grower","q4_2025_rec":"Sell"},{"name":"Info Edg.(India)","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Jindal Steel","q4_2025_cat":"Slow Grower","q4_2025_rec":"Buy"},{"name":"Zydus Lifesci.","q4_2025_cat":"Stalwart","q4_2025_rec":"Buy"},{"name":"ICICI Pru Life","q4_2025_cat":"Slow Grower","q4_2025_rec":"Sell"},{"name":"Dabur India","q4_2025_cat":"Slow Grower","q4_2025_rec":"Hold"},{"name":"BSE","q4_2025_cat":"Fast Grower","q4_2025_rec":"Buy"},{"name":"Swiggy","q4_2025_cat":"Fast Grower","q4_2025_rec":"Hold"},{"name":"JSW Energy","q4_2025_cat":"Turnaround","q4_2025_rec":"Buy"},{"name":"Bosch","q4_2025_cat":"Stalwart","q4_2025_rec":"Buy"},{"name":"Cummins India","q4_2025_cat":null,"q4_2025_rec":null},{"name":"GMR Airports","q4_2025_cat":"Cyclical, Asset Play and Turnaround","q4_2025_rec":"Buy"},{"name":"ICICI Lombard","q4_2025_cat":"Stalwart","q4_2025_rec":"Hold"},{"name":"Bharti Hexacom","q4_2025_cat":"Stalwart","q4_2025_rec":"Hold"},{"name":"Lupin","q4_2025_cat":"Stalwart","q4_2025_rec":"Buy"},{"name":"Marico","q4_2025_cat":"Stalwart","q4_2025_rec":"Buy"},{"name":"SRF","q4_2025_cat":"Stalwart","q4_2025_rec":"Hold"},{"name":"H P C L","q4_2025_cat":"Slow Grower","q4_2025_rec":"Hold"},{"name":"NTPC Green Ene.","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Hitachi Energy","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Waaree Energies","q4_2025_cat":"Fast Grower","q4_2025_rec":"Buy"},{"name":"NHPC Ltd","q4_2025_cat":"Turnaround","q4_2025_rec":"BUy"},{"name":"B H E L","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Indian Bank","q4_2025_cat":"Stalwart","q4_2025_rec":"Hold"},{"name":"PB Fintech.","q4_2025_cat":"Fast Grower","q4_2025_rec":"Hold"},{"name":"Persistent Sys","q4_2025_cat":"Fast Grower","q4_2025_rec":"Buy"},{"name":"Suzlon Energy","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Lloyds Metals","q4_2025_cat":"Fast Grower","q4_2025_rec":"Buy"},{"name":"Coromandel Inter","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Oracle Fin.Serv.","q4_2025_cat":null,"q4_2025_rec":null},{"name":"SBI Cards","q4_2025_cat":"Stalwart","q4_2025_rec":"Hold"},{"name":"Vodafone Idea","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Abbott India","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Rail Vikas","q4_2025_cat":null,"q4_2025_rec":null},{"name":"I O B","q4_2025_cat":null,"q4_2025_rec":null},{"name":"One 97","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Ashok Leyland","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Oil India","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Aurobindo Pharma","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Adani Total Gas","q4_2025_cat":"Stalwart","q4_2025_rec":"Buy"},{"name":"Patanjali Foods","q4_2025_cat":null,"q4_2025_rec":null},{"name":"GE Vernova T&D","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Berger Paints","q4_2025_cat":null,"q4_2025_rec":null},{"name":"JSW Infrast","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Torrent Power","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Schaeffler India","q4_2025_cat":"Stalwart","q4_2025_rec":"Hold"},{"name":"Vishal Mega Mart","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Aditya Birla Cap","q4_2025_cat":null,"q4_2025_rec":null},{"name":"General Insuranc","q4_2025_cat":null,"q4_2025_rec":null},{"name":"NMDC","q4_2025_cat":null,"q4_2025_rec":null},{"name":"P I Industries","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Fortis Health.","q4_2025_cat":null,"q4_2025_rec":null},{"name":"HDB FINANC SER","q4_2025_cat":"Stalwart","q4_2025_rec":"Hold"},{"name":"Godrej Propert.","q4_2025_cat":"Cyclical, Turnaround","q4_2025_rec":"Buy"},{"name":"MRF","q4_2025_cat":null,"q4_2025_rec":null},{"name":"FSN E-Commerce","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Kalyan Jewellers","q4_2025_cat":null,"q4_2025_rec":null},{"name":"F A C T","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Uno Minda","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Colgate-Palmoliv","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Alkem Lab","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Glenmark Pharma.","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Bharat Dynamics","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Yes Bank","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Coforge","q4_2025_cat":"Stalwart","q4_2025_rec":"Sell"},{"name":"UPL","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Oberoi Realty","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Linde India","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Jindal Stain.","q4_2025_cat":null,"q4_2025_rec":null},{"name":"I R C T C","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Bharat Forge","q4_2025_cat":null,"q4_2025_rec":null},{"name":"AU Small Finance","q4_2025_cat":"Fast Grower","q4_2025_rec":"Buy"},{"name":"Glaxosmi. Pharma","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Tube Investments","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Motil.Oswal.Fin.","q4_2025_cat":"Stalwart","q4_2025_rec":"Buy"},{"name":"Supreme Inds.","q4_2025_cat":"Slow Grower","q4_2025_rec":"Buy"},{"name":"Sundaram Finance","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Phoenix Mills","q4_2025_cat":"Stalwart","q4_2025_rec":"Buy"},{"name":"Balkrishna Inds","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Mphasis","q4_2025_cat":"Slow Grower","q4_2025_rec":"Sell"},{"name":"United Breweries","q4_2025_cat":"Stalwart","q4_2025_rec":"Sell"},{"name":"Max Financial","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Biocon","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Page Industries","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Nippon Life Ind.","q4_2025_cat":"Stalwart","q4_2025_rec":"Buy"},{"name":"J K Cements","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Bank of India","q4_2025_cat":null,"q4_2025_rec":null},{"name":"S A I L","q4_2025_cat":null,"q4_2025_rec":null},{"name":"L&T Finance Ltd","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Federal Bank","q4_2025_cat":"Stalwart","q4_2025_rec":"Buy"},{"name":"Tata Comm","q4_2025_cat":"Slow Grower","q4_2025_rec":"Hold"},{"name":"IDFC First Bank","q4_2025_cat":"Stalwart","q4_2025_rec":"Hold"},{"name":"ITC Hotels","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Godfrey Phillips","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Laurus Labs","q4_2025_cat":"Stalwart","q4_2025_rec":"Hold"},{"name":"Authum Invest","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Dixon Tech","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Karuru Vyasa Bank","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Ipca Labs","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Gland Pharma","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Indus Tower","q4_2025_cat":"Stalwart","q4_2025_rec":"Hold"},{"name":"Multi Commodity Exchange","q4_2025_cat":"Fast Grower","q4_2025_rec":"Buy"},{"name":"Solar Industries","q4_2025_cat":null,"q4_2025_rec":null},{"name":"HPCL","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Polycab India","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Coforge","q4_2025_cat":null,"q4_2025_rec":null},{"name":"HDFC AMC","q4_2025_cat":"Stalwart","q4_2025_rec":"Buy"},{"name":"IRFC","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Indian Overseas Bank","q4_2025_cat":"Slow Grower","q4_2025_rec":"Hold"},{"name":"Hindustan Zinc","q4_2025_cat":"Stalwart","q4_2025_rec":"Buy"},{"name":"IDBI Bank","q4_2025_cat":"Slow Grower","q4_2025_rec":"Sell"},{"name":"Mazagon Dock Shipbuilders","q4_2025_cat":"Stalwart","q4_2025_rec":"Buy"},{"name":"Tata Capital","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Premier Energies","q4_2025_cat":null,"q4_2025_rec":null},{"name":"BHEL","q4_2025_cat":"Stalwart","q4_2025_rec":"Buy"},{"name":"NMDC","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Steel Authority of India","q4_2025_cat":null,"q4_2025_rec":null},{"name":"APL Apollo Tubes","q4_2025_cat":"Stalwart","q4_2025_rec":"Hold"},{"name":"Lodha Developers","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Union Bank of India","q4_2025_cat":"Stalwart","q4_2025_rec":"Hold"},{"name":"Fertilizer and Chemical Travancore","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Kaynes Technologies","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Mankind Pharma","q4_2025_cat":null,"q4_2025_rec":null},{"name":"National Aluminium","q4_2025_cat":"Stalwart","q4_2025_rec":"Hold"},{"name":"KEI Industries","q4_2025_cat":"Stalwart","q4_2025_rec":"Hold"},{"name":"Max Healthcare Institute","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Sai Life Science","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Wockhardt","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Graphite India Ltd","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Motherson Sumi Wiring","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Religare Enterprises ltd","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Piramal Finances","q4_2025_cat":"Stalwart ","q4_2025_rec":"Hold"},{"name":"Radico Khaitan","q4_2025_cat":null,"q4_2025_rec":null},{"name":"One Source Speciality Pharma","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Acutaas Chemicals","q4_2025_cat":"Fast Grower","q4_2025_rec":"Buy"},{"name":"Metropolis Healthcare","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Happy Forging","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Craftsman automation","q4_2025_cat":null,"q4_2025_rec":null},{"name":"LT Foods Ltd","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Tilaknagar Industries","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Jubilant Pharmova","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Aster DM","q4_2025_cat":"Slow Grower","q4_2025_rec":"Buy"},{"name":"Muthoot Finance","q4_2025_cat":null,"q4_2025_rec":null},{"name":"DCB Bank ","q4_2025_cat":"Fast grower","q4_2025_rec":"Hold"},{"name":"CSB Bank","q4_2025_cat":null,"q4_2025_rec":null},{"name":"PNB Hosuing Finance","q4_2025_cat":"Slow grower","q4_2025_rec":"Hold"},{"name":"CDS","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Nuvama Wealth Management","q4_2025_cat":null,"q4_2025_rec":null},{"name":"J B Chemials","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Neuland Laboritries","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Krishna Institue of Medical Science","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Astrazeneca Pharma India Ltd","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Medplus Health Services","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Rubicon Research","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Aadhar Housing Finance","q4_2025_cat":null,"q4_2025_rec":null},{"name":"ZF Commcercial ","q4_2025_cat":null,"q4_2025_rec":null},{"name":"PTC Industries","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Ramco Cements","q4_2025_cat":null,"q4_2025_rec":null},{"name":"ICICI Pru Asset Management Co Ltd.","q4_2025_cat":"Fast Grower","q4_2025_rec":"Buy"},{"name":"Embassy Office Parks REIT","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Cholamandalam Financial Holdings Ltd","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Hindustan Petroleum Corporation Ltd","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Larsen & Toubro Ltd","q4_2025_cat":"Stalwart","q4_2025_rec":"Hold"},{"name":"Canara HSBC Life Insurance Company Ltd","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Healthcare Global Entprises","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Ujjivan Small Finance Bank Ltd","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Central Depository Services (India) Ltd","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Billionbrains Garage Ventures Ltd","q4_2025_cat":null,"q4_2025_rec":null}];
+
+// --- Storage abstraction: uses claude.ai's window.storage when this file
+// runs inside the artifact viewer, falls back to plain localStorage when
+// opened directly as a local file in a normal browser tab. The fallback
+// matters because claude.ai's sandbox blocks fetch() to external domains
+// regardless of the target server's CORS headers — so Sync only works when
+// this file is opened outside claude.ai, and in that mode window.storage
+// doesn't exist at all. ---
+// Q1 FY26-27 classifications pulled directly from the live Railway scraper
+// output on 2026-07-17 (243 stocks with reported results). Baked in here so
+// this data is available the instant the file opens, no fetch required.
+const Q1_2026_CLASSIFICATIONS = {"Reliance Industry":"Slow Grower","HDFC Bank":"Slow Grower","TCS":"Stalwart","Bharti Airtel":"Slow Grower","ICICI Bank":"Slow Grower","St Bk of India":"Slow Grower","Infosys":"Fast Grower","Bajaj Finance":"Fast Grower","Hind. Unilever":"Stalwart","ITC":"Slow Grower","Larsen & Toubro Ltd":"Slow Grower","Kotak Mah. Bank":"Stalwart","Sun Pharma.Inds.":"Slow Grower","HCL Technologies":"Fast Grower","Maruti Suzuki":"Stalwart","NTPC":"Fast Grower","UltraTech Cem.":"Fast Grower","Axis Bank":"Slow Grower","M & M":"Fast Grower","Bajaj Finserv":"Slow Grower","O N G C":"Fast Grower","Power Grid Corpn":"Slow Grower","Titan Company":"Fast Grower","Adani Enterp.":"Slow Grower","Wipro":"Slow Grower","Adani Ports":"Fast Grower","Coal India":"Fast Grower","Asian Paints":"Fast Grower","JSW Steel":"Fast Grower","Nestle India":"Fast Grower","Bajaj Auto":"Fast Grower","Eternal Ltd":"Fast Grower","Bharat Electron":"Stalwart","Grasim Inds":"Fast Grower","Tata Steel":"Fast Grower","Trent":"Fast Grower","SBI Life Insuran":"Slow Grower","Eicher Motors":"Stalwart","HDFC Life Insur.":"Stalwart","Jio Financial":"Fast Grower","Hindalco Inds.":"Slow Grower","Tech Mahindra":"Fast Grower","Shriram Finance":"Fast Grower","Cipla":"Slow Grower","Tata Consumer":"Fast Grower","Dr Reddy's Labs":"Slow Grower","Apollo Hospitals":"Fast Grower","Life Insurance":"Fast Grower","IndusInd Bank":"Fast Grower","Hero Motocorp":"Fast Grower","Hind.Aeronautics":"Slow Grower","Avenue Super.":"Stalwart","Adani Power":"Fast Grower","Interglobe Aviat":"Slow Grower","Varun Beverages":"Fast Grower","IRFC":"Slow Grower","Vedanta":"Fast Grower","DLF":"Slow Grower","Pidilite Inds.":"Fast Grower","Divi's Lab.":"Stalwart","Adani Green":"Fast Grower","Power Fin.Corpn.":"Slow Grower","Ambuja Cements":"Fast Grower","Cholaman.Inv.&Fn":"Slow Grower","B P C L":"Fast Grower","Britannia Inds.":"Stalwart","Bajaj Holdings":"Slow Grower","Godrej Consumer":"Stalwart","Bank of Baroda":"Slow Grower","Hyundai Motor I":"Slow Grower","TVS Motor Co.":"Fast Grower","GAIL (India)":"Slow Grower","Lodha Developers Ltd":"Stalwart","Indian Hotels Co":"Stalwart","Tata Power Co.":"Slow Grower","A B B":"Fast Grower","REC Ltd":"Slow Grower","Punjab Natl.Bank":"Slow Grower","Shree Cement":"Slow Grower","United Spirits":"Fast Grower","Bajaj Housing":"Stalwart","Adani Energy Sol":"Stalwart","Torrent Pharma.":"Slow Grower","Havells India":"Fast Grower","Siemens":"Slow Grower","Prestige Estates":"Fast Grower","Canara Bank":"Slow Grower","Info Edg.(India)":"Stalwart","Jindal Steel":"Fast Grower","Zydus Lifesci.":"Stalwart","Dabur India":"Stalwart","BSE":"Fast Grower","Swiggy":"Fast Grower","JSW Energy":"Fast Grower","Bosch":"Stalwart","Cummins India":"Fast Grower","GMR Airports":"Fast Grower","ICICI Lombard":"Slow Grower","Bharti Hexacom":"Slow Grower","Lupin":"Fast Grower","Marico":"Fast Grower","SRF":"Stalwart","NTPC Green Ene.":"Fast Grower","Hitachi Energy":"Fast Grower","Waaree Energies":"Fast Grower","NHPC Ltd":"Fast Grower","BHEL":"Fast Grower","Indian Bank":"Fast Grower","PB Fintech.":"Fast Grower","Persistent Sys":"Fast Grower","Suzlon Energy":"Fast Grower","Lloyds Metals":"Fast Grower","Coromandel Inter":"Slow Grower","SBI Cards":"Stalwart","Vodafone Idea":"Fast Grower","Abbott India":"Slow Grower","Rail Vikas":"Slow Grower","Indian Overseas Bank":"Fast Grower","One 97":"Fast Grower","Ashok Leyland":"Stalwart","Oil India":"Fast Grower","Aurobindo Pharma":"Slow Grower","Adani Total Gas":"Stalwart","Patanjali Foods":"Fast Grower","GE Vernova T&D":"Fast Grower","Berger Paints":"Fast Grower","JSW Infrast":"Slow Grower","Torrent Power":"Slow Grower","Schaeffler India":"Fast Grower","Vishal Mega Mart":"Fast Grower","Aditya Birla Cap":"Fast Grower","General Insuranc":"Slow Grower","NMDC":"Fast Grower","P I Industries":"Slow Grower","Fortis Health.":"Fast Grower","Godrej Propert.":"Fast Grower","MRF":"Fast Grower","FSN E-Commerce":"Fast Grower","Kalyan Jewellers":"Fast Grower","Fertilizer and Chemical Travancore":"Slow Grower","Uno Minda":"Fast Grower","Colgate-Palmoliv":"Slow Grower","Alkem Lab":"Slow Grower","Glenmark Pharma.":"Fast Grower","Bharat Dynamics":"Slow Grower","Yes Bank":"Fast Grower","Coforge":"Fast Grower","UPL":"Fast Grower","Oberoi Realty":"Fast Grower","Linde India":"Slow Grower","Jindal Stain.":"Fast Grower","I R C T C":"Slow Grower","Bharat Forge":"Slow Grower","AU Small Finance":"Fast Grower","Glaxosmi. Pharma":"Slow Grower","Tube Investments":"Fast Grower","Motil.Oswal.Fin.":"Slow Grower","Supreme Inds.":"Fast Grower","Sundaram Finance":"Slow Grower","Phoenix Mills":"Fast Grower","Balkrishna Inds":"Slow Grower","Mphasis":"Stalwart","United Breweries":"Slow Grower","Max Financial":"Slow Grower","Biocon":"Slow Grower","Page Industries":"Stalwart","J K Cements":"Slow Grower","Bank of India":"Stalwart","Steel Authority of India":"Fast Grower","L&T Finance Ltd":"Fast Grower","Federal Bank":"Fast Grower","Tata Comm":"Slow Grower","IDFC First Bank":"Stalwart","ITC Hotels":"Fast Grower","Godfrey Phillips":"Fast Grower","Laurus Labs":"Stalwart","Authum Invest":"Slow Grower","Dixon Tech":"Slow Grower","Karuru Vyasa Bank":"Fast Grower","Ipca Labs":"Fast Grower","Gland Pharma":"Fast Grower","Indus Tower":"Slow Grower","Multi Commodity Exchange":"Fast Grower","Solar Industries":"Fast Grower","Polycab India":"Fast Grower","HDFC AMC":"Stalwart","Hindustan Zinc":"Fast Grower","IDBI Bank":"Slow Grower","Mazagon Dock Shipbuilders":"Fast Grower","Tata Capital":"Slow Grower","Premier Energies":"Fast Grower","APL Apollo Tubes":"Fast Grower","Union Bank of India":"Stalwart","Kaynes Technologies":"Slow Grower","Mankind Pharma":"Fast Grower","National Aluminium":"Slow Grower","KEI Industries":"Fast Grower","Max Healthcare Institute":"Stalwart","Sai Life Science":"Stalwart","Wockhardt":"Fast Grower","Graphite India Ltd":"Slow Grower","Motherson Sumi Wiring":"Fast Grower","Religare Enterprises ltd":"Slow Grower","Radico Khaitan":"Fast Grower","One Source Speciality Pharma":"Slow Grower","Acutaas Chemicals":"Slow Grower","Metropolis Healthcare":"Fast Grower","Happy Forging":"Fast Grower","Craftsman automation":"Fast Grower","LT Foods Ltd":"Slow Grower","Tilaknagar Industries":"Stalwart","Jubilant Pharmova":"Slow Grower","Aster DM":"Fast Grower","Muthoot Finance":"Fast Grower","DCB Bank":"Stalwart","CSB Bank":"Stalwart","PNB Hosuing Finance":"Stalwart","CDS":"Slow Grower","Nuvama Wealth Management":"Stalwart","J B Chemials":"Fast Grower","Neuland Laboritries":"Fast Grower","Krishna Institue of Medical Science":"Slow Grower","Astrazeneca Pharma India Ltd":"Slow Grower","Medplus Health Services":"Fast Grower","Aadhar Housing Finance":"Fast Grower","PTC Industries":"Slow Grower","Ramco Cements":"Fast Grower","ICICI Pru Asset Management Co Ltd.":"Slow Grower","Cholamandalam Financial Holdings Ltd":"Fast Grower","Hindustan Petroleum Corporation Ltd":"Fast Grower","Healthcare Global Entprises":"Slow Grower","Ujjivan Small Finance Bank Ltd":"Fast Grower","Central Depository Services (India) Ltd":"Slow Grower","Billionbrains Garage Ventures Ltd":"Fast Grower","I O C L":"Fast Grower","CG Power & Ind":"Fast Grower","Samvardh. Mothe.":"Fast Grower","ICICI Pru Life":"Slow Grower","Oracle Fin.Serv.":"Fast Grower","Nippon Life Ind.":"Fast Grower","Rubicon Research":"Fast Grower","ZF Commcercial":"Stalwart","Embassy Office Parks REIT":"Slow Grower"};
+
+// Rule-based Q1 FY26-27 Recommendation suggestions, computed from category
+// trend (vs Q4 FY25-26 baseline) plus a drastic-negative-growth override.
+// These are starting points only — never treated as final calls, and never
+// overwrite anything typed in by hand.
+const Q1_2026_REC_SUGGESTIONS = {"Reliance Industry":"Hold","HDFC Bank":"Hold","TCS":"Buy","Bharti Airtel":"Hold","ICICI Bank":"Hold","St Bk of India":"Sell","Infosys":"Buy","Bajaj Finance":"Hold","Hind. Unilever":"Buy","ITC":"Sell","Larsen & Toubro Ltd":"Sell","Kotak Mah. Bank":"Buy","HCL Technologies":"Buy","UltraTech Cem.":"Hold","Axis Bank":"Sell","M & M":"Buy","Bajaj Finserv":"Sell","Power Grid Corpn":"Hold","Titan Company":"Hold","Adani Enterp.":"Sell","Wipro":"Hold","Adani Ports":"Buy","Coal India":"Hold","JSW Steel":"Buy","Nestle India":"Buy","Bajaj Auto":"Buy","Eternal Ltd":"Buy","Bharat Electron":"Hold","Grasim Inds":"Buy","Tata Steel":"Buy","Trent":"Hold","SBI Life Insuran":"Sell","HDFC Life Insur.":"Buy","Jio Financial":"Buy","Hindalco Inds.":"Sell","Tech Mahindra":"Buy","Shriram Finance":"Hold","Cipla":"Sell","Tata Consumer":"Buy","Dr Reddy's Labs":"Sell","Apollo Hospitals":"Buy","IndusInd Bank":"Buy","Hero Motocorp":"Buy","Hind.Aeronautics":"Sell","Avenue Super.":"Hold","Adani Power":"Buy","Interglobe Aviat":"Sell","Varun Beverages":"Hold","Vedanta":"Buy","DLF":"Sell","Pidilite Inds.":"Buy","Divi's Lab.":"Hold","Adani Green":"Buy","Power Fin.Corpn.":"Sell","Ambuja Cements":"Buy","Cholaman.Inv.&Fn":"Sell","B P C L":"Buy","Britannia Inds.":"Buy","Bajaj Holdings":"Sell","Godrej Consumer":"Buy","Bank of Baroda":"Hold","Hyundai Motor I":"Hold","TVS Motor Co.":"Buy","GAIL (India)":"Sell","Lodha Developers Ltd":"Hold","Indian Hotels Co":"Sell","Tata Power Co.":"Sell","A B B":"Buy","REC Ltd":"Sell","Punjab Natl.Bank":"Sell","Shree Cement":"Sell","United Spirits":"Buy","Bajaj Housing":"Sell","Adani Energy Sol":"Hold","Havells India":"Buy","Prestige Estates":"Buy","Canara Bank":"Hold","Jindal Steel":"Buy","Zydus Lifesci.":"Hold","Dabur India":"Buy","BSE":"Hold","Swiggy":"Hold","JSW Energy":"Hold","Bosch":"Hold","GMR Airports":"Buy","ICICI Lombard":"Sell","Bharti Hexacom":"Sell","Lupin":"Buy","Marico":"Buy","SRF":"Hold","Waaree Energies":"Hold","NHPC Ltd":"Hold","BHEL":"Buy","Indian Bank":"Buy","PB Fintech.":"Hold","Persistent Sys":"Hold","Lloyds Metals":"Buy","Coromandel Inter":"Sell","SBI Cards":"Hold","Vodafone Idea":"Buy","Rail Vikas":"Sell","Indian Overseas Bank":"Buy","Adani Total Gas":"Hold","Torrent Power":"Sell","Schaeffler India":"Buy","Godrej Propert.":"Hold","FSN E-Commerce":"Buy","Fertilizer and Chemical Travancore":"Sell","Glenmark Pharma.":"Buy","Bharat Dynamics":"Sell","AU Small Finance":"Hold","Motil.Oswal.Fin.":"Sell","Supreme Inds.":"Buy","Phoenix Mills":"Buy","Mphasis":"Buy","United Breweries":"Sell","Max Financial":"Sell","Biocon":"Sell","Federal Bank":"Buy","Tata Comm":"Sell","IDFC First Bank":"Hold","Laurus Labs":"Hold","Authum Invest":"Sell","Indus Tower":"Sell","Multi Commodity Exchange":"Buy","HDFC AMC":"Hold","Hindustan Zinc":"Buy","IDBI Bank":"Hold","Mazagon Dock Shipbuilders":"Buy","APL Apollo Tubes":"Buy","Union Bank of India":"Hold","National Aluminium":"Sell","KEI Industries":"Buy","Wockhardt":"Buy","Graphite India Ltd":"Sell","One Source Speciality Pharma":"Sell","Acutaas Chemicals":"Sell","Tilaknagar Industries":"Sell","Aster DM":"Buy","PNB Hosuing Finance":"Buy","CDS":"Sell","Neuland Laboritries":"Buy","Krishna Institue of Medical Science":"Sell","PTC Industries":"Sell","Ramco Cements":"Buy","ICICI Pru Asset Management Co Ltd.":"Sell","Ujjivan Small Finance Bank Ltd":"Buy","Billionbrains Garage Ventures Ltd":"Buy","I O C L":"Buy","CG Power & Ind":"Buy","Samvardh. Mothe.":"Buy","ICICI Pru Life":"Sell","Nippon Life Ind.":"Buy","Embassy Office Parks REIT":"Sell"};
+// Stocks whose growth numbers look like base effects (e.g. a very low or
+// negative prior-year quarter making this quarter's % look extreme) rather
+// than genuine acceleration — flagged for a manual sanity check regardless
+// of what the rule suggested.
+const OUTLIER_FLAGS = new Set(["JSW Steel","Eternal Ltd","Jio Financial","A B B","Prestige Estates","Jindal Steel","GMR Airports","Lloyds Metals","Vodafone Idea","FSN E-Commerce","Glenmark Pharma.","Multi Commodity Exchange","Wockhardt","Neuland Laboritries","Ramco Cements","Ujjivan Small Finance Bank Ltd","Billionbrains Garage Ventures Ltd"]);
+
+const hasNativeStorage = typeof window.storage !== 'undefined' && window.storage;
+const localStore = {
+  async get(key){
+    const v = localStorage.getItem('ledger:'+key);
+    if(v === null) throw new Error('not found');
+    return { key, value: v };
+  },
+  async set(key, value){
+    localStorage.setItem('ledger:'+key, value);
+    return { key, value };
+  }
+};
+const store = hasNativeStorage ? window.storage : localStore;
+
+// The live, permanent data source — your scraper commits here daily via
+// GitHub Actions. Used as the default Sync URL and for auto-fetch on load
+// when this file is running standalone (not inside claude.ai's sandbox).
+const DEFAULT_SYNC_URL = 'https://raw.githubusercontent.com/sakethFuture/screener-watchlist-scraper/main/data/output.json';
+
+let state = { activeQ: 'Q1 2026', companies: [] };
+
+function normCat(c){
+  if(!c) return '';
+  const t = c.trim().toLowerCase();
+  if(t.includes('slow')) return 'Slow Grower';
+  if(t.includes('fast')) return 'Fast Grower';
+  if(t.includes('cyclical')) return 'Cyclical';
+  if(t.includes('turnaround')) return 'Turnaround';
+  if(t.includes('asset')) return 'Asset Play';
+  if(t.includes('stalwart')) return 'Stalwart';
+  return '';
+}
+function normRec(r){
+  if(!r) return '';
+  const t = r.trim().toLowerCase();
+  if(t.startsWith('buy')) return 'Buy';
+  if(t.startsWith('sell')) return 'Sell';
+  if(t.startsWith('hold')) return 'Hold';
+  return '';
+}
+
+function seedToState(){
+  return SEED.map((row, i) => {
+    const q1Class = Q1_2026_CLASSIFICATIONS[row.name] || '';
+    const q1Rec = Q1_2026_REC_SUGGESTIONS[row.name] || '';
+    return {
+      id: 'c' + i + '_' + Date.now().toString(36).slice(-4),
+      name: row.name,
+      baseline: { cat: normCat(row.q4_2025_cat), rec: normRec(row.q4_2025_rec) },
+      quarters: {
+        'Q1 2026':{cat:q1Class, rec:q1Rec, recSuggested: !!q1Rec},
+        'Q2 2026':{cat:'',rec:'', recSuggested:false},
+        'Q3 2026':{cat:'',rec:'', recSuggested:false},
+        'Q4 2026':{cat:'',rec:'', recSuggested:false}
+      }
+    };
+  });
+}
+
+function backfillQ1Classifications(){
+  let filled = 0;
+  state.companies.forEach(c => {
+    const q1 = c.quarters['Q1 2026'];
+    if(!q1.cat && Q1_2026_CLASSIFICATIONS[c.name]){
+      q1.cat = Q1_2026_CLASSIFICATIONS[c.name];
+      filled++;
+    }
+    if(!q1.rec && Q1_2026_REC_SUGGESTIONS[c.name]){
+      q1.rec = Q1_2026_REC_SUGGESTIONS[c.name];
+      q1.recSuggested = true;
+      filled++;
+    }
+  });
+  return filled;
+}
+
+async function loadState(){
+  try{
+    const res = await store.get('fy26-27-ledger', false);
+    if(res && res.value){
+      const parsed = JSON.parse(res.value);
+      if(parsed && Array.isArray(parsed.companies) && parsed.companies.length){
+        state.companies = parsed.companies;
+        if(parsed.activeQ) state.activeQ = parsed.activeQ;
+        const filled = backfillQ1Classifications();
+        if(filled > 0) await saveState();
+        setSaveStatus('loaded');
+        return;
+      }
+    }
+  }catch(e){ /* no saved state yet */ }
+  state.companies = seedToState();
+  await saveState();
+}
+
+let saveTimer = null;
+function setSaveStatus(msg){
+  const el = document.getElementById('saveStatus');
+  el.textContent = msg;
+  el.classList.toggle('on', msg==='saved');
+}
+async function saveState(){
+  clearTimeout(saveTimer);
+  document.getElementById('saveStatus').textContent = 'saving…';
+  saveTimer = setTimeout(async () => {
+    try{
+      await store.set('fy26-27-ledger', JSON.stringify({companies: state.companies, activeQ: state.activeQ}), false);
+      setSaveStatus('saved');
+    }catch(e){
+      document.getElementById('saveStatus').textContent = 'save failed';
+    }
+  }, 350);
+}
+
+function prevOf(company, qIndex){
+  if(qIndex === 0) return company.baseline;
+  return company.quarters[QUARTERS[qIndex-1]];
+}
+function priorLabel(qIndex){
+  // Q1 looks back to prior FY's Q4; Q2-Q4 look back to the previous quarter within FY26-27.
+  if(qIndex === 0) return 'Q4 FY25-26';
+  const [qq, yr] = QUARTERS[qIndex-1].split(' ');
+  const yy = parseInt(yr.slice(2));
+  return qq + ' FY' + yy + '-' + (yy+1);
+}
+
+function renderTabs(){
+  const row = document.getElementById('tabsRow');
+  row.innerHTML = '';
+  QUARTERS.forEach(q => {
+    const [qq, yr] = q.split(' ');
+    const btn = document.createElement('div');
+    btn.className = 'qtab' + (q === state.activeQ ? ' active' : '');
+    btn.innerHTML = qq + ' <span class="yr">FY' + (yr.slice(2)) + '-' + (parseInt(yr.slice(2))+1) + '</span>';
+    btn.onclick = () => { state.activeQ = q; saveState(); render(); };
+    row.appendChild(btn);
+  });
+  const qLabel = document.getElementById('autofillQLabel');
+  if(qLabel) qLabel.textContent = state.activeQ;
+}
+
+function renderSummary(){
+  const qIndex = QUARTERS.indexOf(state.activeQ);
+  let buy=0, hold=0, sell=0, changed=0, unset=0;
+  state.companies.forEach(c => {
+    const cur = c.quarters[state.activeQ];
+    if(cur.rec === 'Buy') buy++;
+    else if(cur.rec === 'Hold') hold++;
+    else if(cur.rec === 'Sell') sell++;
+    else unset++;
+    const prev = prevOf(c, qIndex);
+    if(cur.cat && prev.cat && cur.cat !== prev.cat) changed++;
+  });
+  const box = document.getElementById('summaryRow');
+  box.innerHTML = `
+    <div class="stat"><div class="num">${state.companies.length}</div><div class="lbl">Tracked</div></div>
+    <div class="stat buy"><div class="num">${buy}</div><div class="lbl">Buy</div></div>
+    <div class="stat hold"><div class="num">${hold}</div><div class="lbl">Hold</div></div>
+    <div class="stat sell"><div class="num">${sell}</div><div class="lbl">Sell</div></div>
+    <div class="stat changed"><div class="num">${changed}</div><div class="lbl">Category changed</div></div>
+    <div class="stat"><div class="num">${unset}</div><div class="lbl">Unmarked</div></div>
+  `;
+}
+
+function catDot(cat){
+  if(!cat) return '';
+  return `<span style="display:inline-block;width:7px;height:7px;border-radius:50%;background:${CAT_COLOR[cat]||'var(--text-faint)'};margin-right:6px;"></span>`;
+}
+
+function renderTable(){
+  const qIndex = QUARTERS.indexOf(state.activeQ);
+  const search = document.getElementById('searchBox').value.trim().toLowerCase();
+  const catF = document.getElementById('catFilter').value;
+  const recF = document.getElementById('recFilter').value;
+
+  const body = document.getElementById('tableBody');
+  body.innerHTML = '';
+  let shown = 0;
+
+  state.companies.forEach((c) => {
+    const cur = c.quarters[state.activeQ];
+    if(search && !c.name.toLowerCase().includes(search)) return;
+    if(catF && cur.cat !== catF) return;
+    if(recF && cur.rec !== recF) return;
+    shown++;
+
+    const prev = prevOf(c, qIndex);
+    const tr = document.createElement('tr');
+    if(!prev.cat && !prev.rec) tr.classList.add('new-row');
+
+    const priorHtml = (prev.cat || prev.rec)
+      ? `<span class="prior-period">${priorLabel(qIndex)}</span><br>${catDot(prev.cat)}${prev.cat||'—'} <span class="dash">·</span> ${prev.rec||'—'}`
+      : `<span class="prior-period">${priorLabel(qIndex)}</span><br><span class="dash">— new ticker —</span>`;
+
+    let changeHtml;
+    if(!cur.cat){
+      changeHtml = `<span class="change-badge empty">—</span>`;
+    } else if(!prev.cat){
+      changeHtml = `<span class="change-badge isnew">New</span>`;
+    } else if(cur.cat !== prev.cat){
+      changeHtml = `<span class="change-badge changed">Changed</span>`;
+    } else {
+      changeHtml = `<span class="change-badge same">No change</span>`;
+    }
+
+    const isOutlier = OUTLIER_FLAGS.has(c.name);
+    const suggestedTag = cur.recSuggested && cur.rec
+      ? `<span class="suggested-tag" title="Rule-based suggestion from category trend — not a final call. Edit the dropdown to confirm or override.">suggested</span>`
+      : '';
+    const outlierTag = isOutlier
+      ? `<span class="outlier-tag" title="This quarter's growth % looks like a base effect (unusually low/negative prior-year quarter), not necessarily real acceleration. Worth checking manually before trusting the suggestion.">⚠ verify</span>`
+      : '';
+
+    tr.innerHTML = `
+      <td><input class="co-name" value="${c.name.replace(/"/g,'&quot;')}" data-id="${c.id}" data-field="name"></td>
+      <td class="prior">${priorHtml}</td>
+      <td>
+        <select class="cat-select" data-id="${c.id}" data-field="cat">
+          <option value="">—</option>
+          ${CATS.map(cat => `<option value="${cat}" ${cur.cat===cat?'selected':''}>${cat}</option>`).join('')}
+        </select>
+      </td>
+      <td>
+        <select class="rec-select" data-id="${c.id}" data-field="rec" data-v="${cur.rec||''}">
+          <option value="">—</option>
+          ${RECS.map(r => `<option value="${r}" ${cur.rec===r?'selected':''}>${r}</option>`).join('')}
+        </select>
+        ${suggestedTag}${outlierTag}
+      </td>
+      <td>${changeHtml}</td>
+      <td><button class="del-btn" data-id="${c.id}" title="Remove from ledger">✕</button></td>
+    `;
+    body.appendChild(tr);
+  });
+
+  document.getElementById('emptyState').style.display = shown === 0 ? 'block' : 'none';
+
+  body.querySelectorAll('.co-name').forEach(el => {
+    el.addEventListener('change', onNameEdit);
+  });
+  body.querySelectorAll('.cat-select').forEach(el => {
+    el.addEventListener('change', onFieldEdit);
+  });
+  body.querySelectorAll('.rec-select').forEach(el => {
+    el.addEventListener('change', (e) => { onFieldEdit(e); e.target.setAttribute('data-v', e.target.value); });
+  });
+  body.querySelectorAll('.del-btn').forEach(el => {
+    el.addEventListener('click', onDelete);
+  });
+}
+
+function findCompany(id){ return state.companies.find(c => c.id === id); }
+
+function onNameEdit(e){
+  const c = findCompany(e.target.dataset.id);
+  if(!c) return;
+  c.name = e.target.value.trim() || c.name;
+  saveState();
+}
+function onFieldEdit(e){
+  const c = findCompany(e.target.dataset.id);
+  if(!c) return;
+  c.quarters[state.activeQ][e.target.dataset.field] = e.target.value;
+  if(e.target.dataset.field === 'rec') c.quarters[state.activeQ].recSuggested = false;
+  saveState();
+  renderSummary();
+  renderTable();
+}
+function onDelete(e){
+  const c = findCompany(e.target.dataset.id);
+  if(!c) return;
+  if(!confirm(`Remove "${c.name}" from the ledger? This clears it from all quarters.`)) return;
+  state.companies = state.companies.filter(x => x.id !== c.id);
+  saveState();
+  render();
+}
+
+document.getElementById('addBtn').addEventListener('click', () => {
+  const id = 'c_new_' + Date.now().toString(36);
+  const rec = {
+    id, name: 'New Stock',
+    baseline: { cat:'', rec:'' },
+    quarters: { 'Q1 2026':{cat:'',rec:'',recSuggested:false}, 'Q2 2026':{cat:'',rec:'',recSuggested:false}, 'Q3 2026':{cat:'',rec:'',recSuggested:false}, 'Q4 2026':{cat:'',rec:'',recSuggested:false} }
+  };
+  state.companies.unshift(rec);
+  saveState();
+  render();
+  const first = document.querySelector('.co-name');
+  if(first){ first.focus(); first.select(); }
+});
+
+document.getElementById('autofillBtn').addEventListener('click', () => {
+  const panel = document.getElementById('autofillPanel');
+  panel.style.display = panel.style.display === 'none' ? 'block' : 'none';
+  if(panel.style.display === 'block') document.getElementById('autofillInput').focus();
+});
+document.getElementById('closeAutofill').addEventListener('click', () => {
+  document.getElementById('autofillPanel').style.display = 'none';
+});
+
+function parseAutofillLine(line){
+  // supports comma or tab separated: Name, Category, Recommendation
+  const parts = line.includes('\t') ? line.split('\t') : line.split(',');
+  if(parts.length < 2) return null;
+  const name = parts[0].trim();
+  if(!name) return null;
+  const cat = normCat(parts[1] || '');
+  const rec = normRec(parts[2] || '');
+  return { name, cat, rec };
+}
+
+// --- Screener CSV support ---
+function splitCSVLine(line){
+  // handles simple quoted fields with embedded commas
+  const out = [];
+  let cur = '', inQ = false;
+  for(let i=0;i<line.length;i++){
+    const ch = line[i];
+    if(ch === '"'){ inQ = !inQ; continue; }
+    if(ch === ',' && !inQ){ out.push(cur); cur=''; continue; }
+    if(ch === '\t' && !inQ && line.includes('\t')){ out.push(cur); cur=''; continue; }
+    cur += ch;
+  }
+  out.push(cur);
+  return out.map(s => s.trim());
+}
+function looksLikeScreenerCSV(lines){
+  if(!lines.length) return false;
+  const header = lines[0].toLowerCase();
+  const hasDelim = header.includes(',') || header.includes('\t');
+  const hasNameCol = /\bname\b|company/.test(header);
+  const hasGrowthCol = /growth/.test(header);
+  return hasDelim && hasNameCol && hasGrowthCol;
+}
+function findCol(headers, patterns){
+  for(const p of patterns){
+    const idx = headers.findIndex(h => p.test(h));
+    if(idx !== -1) return idx;
+  }
+  return -1;
+}
+function classifyGrowth(avg){
+  if(avg === null || isNaN(avg)) return '';
+  if(avg < 8) return 'Slow Grower';
+  if(avg < 15) return 'Stalwart';
+  return 'Fast Grower';
+}
+function parseGrowthNum(v){
+  if(v === undefined || v === null) return null;
+  const cleaned = String(v).replace(/[%,]/g,'').trim();
+  if(cleaned === '' || cleaned === '-' || /^#?n\/?a$/i.test(cleaned)) return null;
+  const n = parseFloat(cleaned);
+  return isNaN(n) ? null : n;
+}
+function applyScreenerCSV(lines){
+  const headers = splitCSVLine(lines[0]).map(h => h.toLowerCase());
+  const nameIdx = findCol(headers, [/^name$/, /company/, /^name of company$/, /symbol/]);
+  const salesIdx = findCol(headers, [/sales.*growth/, /revenue.*growth/]);
+  const profitIdx = findCol(headers, [/profit.*growth/, /net profit.*growth/, /eps.*growth/]);
+  let updated = 0;
+  const unmatched = [];
+  const skippedNoGrowth = [];
+  for(let i=1;i<lines.length;i++){
+    if(!lines[i].trim()) continue;
+    const cells = splitCSVLine(lines[i]);
+    const name = nameIdx !== -1 ? cells[nameIdx] : cells[0];
+    if(!name) continue;
+    const sg = salesIdx !== -1 ? parseGrowthNum(cells[salesIdx]) : null;
+    const pg = profitIdx !== -1 ? parseGrowthNum(cells[profitIdx]) : null;
+    const vals = [sg, pg].filter(v => v !== null);
+    if(!vals.length){ skippedNoGrowth.push(name); continue; }
+    const avg = vals.reduce((a,b)=>a+b,0) / vals.length;
+    const cat = classifyGrowth(avg);
+    const co = findByName(name);
+    if(!co){ unmatched.push(name); continue; }
+    co.quarters[state.activeQ].cat = cat;
+    updated++;
+  }
+  return { updated, unmatched, skippedNoGrowth, nameIdx, salesIdx, profitIdx };
+}
+
+function findByName(name){
+  const t = name.trim().toLowerCase();
+  let hit = state.companies.find(c => c.name.trim().toLowerCase() === t);
+  if(hit) return hit;
+  hit = state.companies.find(c => c.name.trim().toLowerCase().includes(t) || t.includes(c.name.trim().toLowerCase()));
+  return hit || null;
+}
+
+document.getElementById('applyAutofillBtn').addEventListener('click', () => {
+  const raw = document.getElementById('autofillInput').value;
+  const lines = raw.split('\n').map(l => l.replace(/\r$/,'')).filter(l => l.trim());
+  const resultEl = document.getElementById('autofillResult');
+  if(!lines.length){
+    resultEl.textContent = 'Paste something first.';
+    resultEl.classList.add('warn');
+    return;
+  }
+
+  if(looksLikeScreenerCSV(lines)){
+    const { updated, unmatched, skippedNoGrowth, nameIdx, salesIdx, profitIdx } = applyScreenerCSV(lines);
+    if(nameIdx === -1){
+      resultEl.textContent = "Couldn't find a Name column in that CSV — check the header row.";
+      resultEl.classList.add('warn');
+      return;
+    }
+    if(salesIdx === -1 && profitIdx === -1){
+      resultEl.textContent = "Couldn't find a Sales growth or Profit growth column — add one of those to your Screener columns and re-export.";
+      resultEl.classList.add('warn');
+      return;
+    }
+    let msg = `Classified ${updated} row${updated===1?'':'s'} in ${state.activeQ} from growth data`;
+    const problems = [];
+    if(unmatched.length) problems.push(`${unmatched.length} not matched: ${unmatched.slice(0,6).join(', ')}${unmatched.length>6?'…':''}`);
+    if(skippedNoGrowth.length) problems.push(`${skippedNoGrowth.length} had no growth figures`);
+    if(problems.length) msg += ' · ' + problems.join(' · ');
+    msg += ' — Recommendation left blank, set that yourself.';
+    resultEl.textContent = msg;
+    resultEl.classList.toggle('warn', unmatched.length > 0 || skippedNoGrowth.length > 0);
+  } else {
+    let updated = 0;
+    const unmatched = [];
+    lines.forEach(line => {
+      const parsed = parseAutofillLine(line);
+      if(!parsed) return;
+      const co = findByName(parsed.name);
+      if(!co){ unmatched.push(parsed.name); return; }
+      const cell = co.quarters[state.activeQ];
+      if(parsed.cat) cell.cat = parsed.cat;
+      if(parsed.rec) cell.rec = parsed.rec;
+      if(parsed.cat || parsed.rec) updated++;
+    });
+    if(updated || unmatched.length){
+      resultEl.textContent = `Updated ${updated} row${updated===1?'':'s'} in ${state.activeQ}` + (unmatched.length ? ` · ${unmatched.length} not found: ${unmatched.slice(0,6).join(', ')}${unmatched.length>6?'…':''}` : '');
+      resultEl.classList.toggle('warn', unmatched.length > 0);
+    } else {
+      resultEl.textContent = 'Nothing to apply — check the format (Name, Category, Recommendation) or paste a Screener CSV with a Name + growth column.';
+      resultEl.classList.add('warn');
+    }
+  }
+
+  saveState();
+  renderSummary();
+  renderTable();
+});
+
+document.getElementById('searchBox').addEventListener('input', renderTable);
+document.getElementById('catFilter').addEventListener('change', renderTable);
+document.getElementById('recFilter').addEventListener('change', renderTable);
+
+// --- Sync from automation endpoint ---
+async function loadSyncUrl(){
+  try{
+    const res = await store.get('ledger-sync-url', false);
+    if(res && res.value) return res.value;
+  }catch(e){ /* nothing saved yet */ }
+  return DEFAULT_SYNC_URL;
+}
+async function saveSyncUrl(url){
+  try{ await store.set('ledger-sync-url', url, false); }catch(e){ /* ignore */ }
+}
+
+async function runSync(url, { silent } = {}){
+  const resultEl = document.getElementById('syncResult');
+  const verifyStatus = document.getElementById('verifyStatus');
+  if(!url) url = DEFAULT_SYNC_URL;
+  if(!silent && resultEl){ resultEl.textContent = 'Fetching…'; resultEl.classList.remove('warn'); }
+  if(verifyStatus) verifyStatus.textContent = silent ? 'checking latest…' : 'fetching…';
+  try{
+    const res = await fetch(url, { method: 'GET' });
+    if(!res.ok) throw new Error('HTTP ' + res.status);
+    const data = await res.json();
+    const entries = Object.values(data);
+    let updated = 0;
+    const unmatched = [];
+    entries.forEach(entry => {
+      if(!entry || !entry.name) return;
+      const cat = normCat(entry.classification || '');
+      if(!cat) return;
+      const co = findByName(entry.name);
+      if(!co){ unmatched.push(entry.name); return; }
+      co.quarters[state.activeQ].cat = cat;
+      updated++;
+    });
+    let msg = `Synced ${updated} classification${updated===1?'':'s'} into ${state.activeQ}`;
+    if(unmatched.length) msg += ` · ${unmatched.length} not matched: ${unmatched.slice(0,6).join(', ')}${unmatched.length>6?'…':''}`;
+    msg += ' — Recommendation still yours to set.';
+    if(resultEl){ resultEl.textContent = msg; resultEl.classList.toggle('warn', unmatched.length > 0); }
+    if(verifyStatus){ verifyStatus.textContent = `✓ verified — ${updated} synced just now`; verifyStatus.classList.remove('warn'); }
+    saveState();
+    renderSummary();
+    renderTable();
+    return { ok: true, updated, unmatched };
+  }catch(e){
+    const errMsg = `Couldn't fetch that endpoint (${e.message}). Check the URL is live and returns JSON with CORS enabled.`;
+    if(resultEl){ resultEl.textContent = errMsg; resultEl.classList.add('warn'); }
+    if(verifyStatus){ verifyStatus.textContent = '✗ fetch failed'; verifyStatus.classList.add('warn'); }
+    return { ok: false, error: e.message };
+  }
+}
+
+document.getElementById('syncBtn').addEventListener('click', async () => {
+  const panel = document.getElementById('syncPanel');
+  panel.style.display = panel.style.display === 'none' ? 'block' : 'none';
+  const qLabel = document.getElementById('syncQLabel');
+  if(qLabel) qLabel.textContent = state.activeQ;
+  const modeNote = document.getElementById('syncModeNote');
+  if(modeNote){
+    if(hasNativeStorage){
+      modeNote.innerHTML = '⚠ Running inside claude.ai — Sync will likely fail here even with correct CORS, since this environment blocks outbound fetch() by policy. Download this file and open it directly in a browser tab to use Sync; use Autofill (paste) instead while working inside claude.ai.';
+      modeNote.style.color = 'var(--accent)';
+    } else {
+      modeNote.innerHTML = '✓ Running as a local file — Sync will work normally here.';
+      modeNote.style.color = 'var(--buy)';
+    }
+  }
+  if(panel.style.display === 'block'){
+    const urlInput = document.getElementById('syncUrlInput');
+    if(!urlInput.value) urlInput.value = await loadSyncUrl();
+    urlInput.focus();
+  }
+});
+document.getElementById('closeSync').addEventListener('click', () => {
+  document.getElementById('syncPanel').style.display = 'none';
+});
+
+document.getElementById('fetchSyncBtn').addEventListener('click', async () => {
+  const url = document.getElementById('syncUrlInput').value.trim() || DEFAULT_SYNC_URL;
+  await saveSyncUrl(url);
+  await runSync(url);
+});
+
+// One-click verify — no panel needed, uses the saved/default URL directly.
+document.getElementById('verifyBtn').addEventListener('click', async () => {
+  const url = await loadSyncUrl();
+  await runSync(url);
+});
+
+function render(){
+  renderTabs();
+  renderSummary();
+  renderTable();
+}
+
+loadState().then(async () => {
+  render();
+  // Auto-fetch on load, silently, whenever this file is running standalone
+  // (i.e. not inside claude.ai, where outbound fetch is blocked by policy).
+  if(!hasNativeStorage){
+    const url = await loadSyncUrl();
+    await runSync(url, { silent: true });
+  }
+});
+</script>
+
+</body>
+</html>

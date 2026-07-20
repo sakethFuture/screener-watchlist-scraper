@@ -98,6 +98,28 @@ def fetch_latest_quarter(page: Page, slug: str) -> Optional[QuarterData]:
     sales = [parse_number(v) for v in rows[sales_label]]
     net_profit = [parse_number(v) for v in rows["Net Profit"]]
 
+    # screener.in shows an "Upcoming result date" badge for an announced-but-
+    # unreported board meeting (a SEBI-mandated disclosure, not a result).
+    # Confirmed live that this badge sits outside the table entirely, so it
+    # can't leak into `rows` above - but as a hard guarantee regardless of
+    # page-structure changes, never trust a column as a genuine reported
+    # quarter unless it actually has both Sales/Revenue and Net Profit
+    # figures. Trim any trailing column(s) that lack real data rather than
+    # trusting the date header alone.
+    last_reported_idx = None
+    for i in range(len(dates) - 1, -1, -1):
+        if sales[i] is not None and net_profit[i] is not None:
+            last_reported_idx = i
+            break
+
+    if last_reported_idx is None:
+        log.warning("%s: no quarter with both Sales/Revenue and Net Profit actually reported", slug)
+        return None
+
+    dates = dates[: last_reported_idx + 1]
+    sales = sales[: last_reported_idx + 1]
+    net_profit = net_profit[: last_reported_idx + 1]
+
     return QuarterData(latest_date=dates[-1], dates=dates, sales=sales, net_profit=net_profit)
 
 
