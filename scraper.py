@@ -101,7 +101,7 @@ def fetch_latest_quarter(page: Page, slug: str) -> Optional[QuarterData]:
     return QuarterData(latest_date=dates[-1], dates=dates, sales=sales, net_profit=net_profit)
 
 
-def fetch_with_retry(context, page: Page, slug: str, config: Config) -> Optional[QuarterData]:
+def fetch_with_retry(page: Page, slug: str, config: Config) -> Optional[QuarterData]:
     attempts = config.max_retries_per_stock + 1
     last_error: Optional[Exception] = None
 
@@ -110,7 +110,7 @@ def fetch_with_retry(context, page: Page, slug: str, config: Config) -> Optional
             return fetch_latest_quarter(page, slug)
         except SessionExpiredError:
             log.warning("%s: session expired mid-run, re-logging in", slug)
-            auth.perform_login(context, page, config)
+            auth.perform_login(page, config)
         except PlaywrightTimeoutError as e:
             last_error = e
             log.warning("%s: timeout on attempt %d/%d: %s", slug, attempt, attempts, e)

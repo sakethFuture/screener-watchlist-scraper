@@ -1,5 +1,6 @@
 .env
-data/
+data/storage_state.json
+data/login_failure.png
 __pycache__/
 *.pyc
 .venv/

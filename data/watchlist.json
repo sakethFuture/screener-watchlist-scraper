@@ -1,0 +1,982 @@
+[
+ {
+  "name": "Reliance Industry",
+  "slug": "RELIANCE"
+ },
+ {
+  "name": "HDFC Bank",
+  "slug": "HDFCBANK"
+ },
+ {
+  "name": "TCS",
+  "slug": "TCS"
+ },
+ {
+  "name": "Bharti Airtel",
+  "slug": "BHARTIARTL"
+ },
+ {
+  "name": "ICICI Bank",
+  "slug": "ICICIBANK"
+ },
+ {
+  "name": "St Bk of India",
+  "slug": "SBIN"
+ },
+ {
+  "name": "Infosys",
+  "slug": "INFY"
+ },
+ {
+  "name": "Bajaj Finance",
+  "slug": "BAJFINANCE"
+ },
+ {
+  "name": "Hind. Unilever",
+  "slug": "HINDUNILVR"
+ },
+ {
+  "name": "ITC",
+  "slug": "ITC"
+ },
+ {
+  "name": "Larsen & Toubro Ltd",
+  "slug": "LT"
+ },
+ {
+  "name": "Kotak Mah. Bank",
+  "slug": "KOTAKBANK"
+ },
+ {
+  "name": "Sun Pharma.Inds.",
+  "slug": "ANUHPHR"
+ },
+ {
+  "name": "HCL Technologies",
+  "slug": "HCLTECH"
+ },
+ {
+  "name": "Maruti Suzuki",
+  "slug": "MARUTI"
+ },
+ {
+  "name": "NTPC",
+  "slug": "NTPC"
+ },
+ {
+  "name": "UltraTech Cem.",
+  "slug": "ULTRACEMCO"
+ },
+ {
+  "name": "Axis Bank",
+  "slug": "AXISBANK"
+ },
+ {
+  "name": "M & M",
+  "slug": "M&M"
+ },
+ {
+  "name": "Bajaj Finserv",
+  "slug": "BAJAJFINSV"
+ },
+ {
+  "name": "O N G C",
+  "slug": "ONGC"
+ },
+ {
+  "name": "Power Grid Corpn",
+  "slug": "POWERGRID"
+ },
+ {
+  "name": "Titan Company",
+  "slug": "TITAN"
+ },
+ {
+  "name": "Adani Enterp.",
+  "slug": "ADANIENT"
+ },
+ {
+  "name": "Wipro",
+  "slug": "WIPRO"
+ },
+ {
+  "name": "Adani Ports",
+  "slug": "ADANIPORTS"
+ },
+ {
+  "name": "Coal India",
+  "slug": "COALINDIA"
+ },
+ {
+  "name": "Asian Paints",
+  "slug": "ASIANPAINT"
+ },
+ {
+  "name": "JSW Steel",
+  "slug": "JSWSTEEL"
+ },
+ {
+  "name": "Nestle India",
+  "slug": "NESTLEIND"
+ },
+ {
+  "name": "Bajaj Auto",
+  "slug": "BAJAJ-AUTO"
+ },
+ {
+  "name": "Eternal Ltd",
+  "slug": "ETERNAL"
+ },
+ {
+  "name": "Bharat Electron",
+  "slug": "BEL"
+ },
+ {
+  "name": "Grasim Inds",
+  "slug": "GRASIM"
+ },
+ {
+  "name": "Tata Steel",
+  "slug": "TATASTEEL"
+ },
+ {
+  "name": "Trent",
+  "slug": "TRENT"
+ },
+ {
+  "name": "SBI Life Insuran",
+  "slug": "SBILIFE"
+ },
+ {
+  "name": "Eicher Motors",
+  "slug": "EICHERMOT"
+ },
+ {
+  "name": "HDFC Life Insur.",
+  "slug": "HDFCLIFE"
+ },
+ {
+  "name": "Jio Financial",
+  "slug": "JIOFIN"
+ },
+ {
+  "name": "Hindalco Inds.",
+  "slug": "HINDALCO"
+ },
+ {
+  "name": "Tech Mahindra",
+  "slug": "TECHM"
+ },
+ {
+  "name": "Shriram Finance",
+  "slug": "SHRIRAMFIN"
+ },
+ {
+  "name": "Cipla",
+  "slug": "CIPLA"
+ },
+ {
+  "name": "Tata Consumer",
+  "slug": "HONASA"
+ },
+ {
+  "name": "Dr Reddy's Labs",
+  "slug": "DRREDDY"
+ },
+ {
+  "name": "Apollo Hospitals",
+  "slug": "APOLLOHOSP"
+ },
+ {
+  "name": "Life Insurance",
+  "slug": "LICI"
+ },
+ {
+  "name": "IndusInd Bank",
+  "slug": "INDUSINDBK"
+ },
+ {
+  "name": "Hero Motocorp",
+  "slug": "HEROMOTOCO"
+ },
+ {
+  "name": "Hind.Aeronautics",
+  "slug": "HAL"
+ },
+ {
+  "name": "Avenue Super.",
+  "slug": "DMART"
+ },
+ {
+  "name": "Adani Power",
+  "slug": "ADANIPOWER"
+ },
+ {
+  "name": "Interglobe Aviat",
+  "slug": "INDIGO"
+ },
+ {
+  "name": "Varun Beverages",
+  "slug": "VBL"
+ },
+ {
+  "name": "IRFC",
+  "slug": "IRFC"
+ },
+ {
+  "name": "Vedanta",
+  "slug": "VEDL"
+ },
+ {
+  "name": "DLF",
+  "slug": "DLF"
+ },
+ {
+  "name": "Pidilite Inds.",
+  "slug": "PIDILITIND"
+ },
+ {
+  "name": "Divi's Lab.",
+  "slug": "DIVISLAB"
+ },
+ {
+  "name": "Adani Green",
+  "slug": "ADANIGREEN"
+ },
+ {
+  "name": "Power Fin.Corpn.",
+  "slug": "PFC"
+ },
+ {
+  "name": "Ambuja Cements",
+  "slug": "AMBUJACEM"
+ },
+ {
+  "name": "Cholaman.Inv.&Fn",
+  "slug": "MANINDS"
+ },
+ {
+  "name": "B P C L",
+  "slug": "BPCL"
+ },
+ {
+  "name": "Britannia Inds.",
+  "slug": "BRITANNIA"
+ },
+ {
+  "name": "Bajaj Holdings",
+  "slug": "AMJLAND"
+ },
+ {
+  "name": "Godrej Consumer",
+  "slug": "GODREJCP"
+ },
+ {
+  "name": "Bank of Baroda",
+  "slug": "BANKBARODA"
+ },
+ {
+  "name": "Hyundai Motor I",
+  "slug": "HYUNDAI"
+ },
+ {
+  "name": "TVS Motor Co.",
+  "slug": "TVSMOTOR"
+ },
+ {
+  "name": "GAIL (India)",
+  "slug": "GAIL"
+ },
+ {
+  "name": "Lodha Developers Ltd",
+  "slug": "LODHA"
+ },
+ {
+  "name": "Indian Hotels Co",
+  "slug": "INDHOTEL"
+ },
+ {
+  "name": "Tata Power Co.",
+  "slug": "TATAPOWER"
+ },
+ {
+  "name": "A B B",
+  "slug": "ABB"
+ },
+ {
+  "name": "REC Ltd",
+  "slug": "RECLTD"
+ },
+ {
+  "name": "Punjab Natl.Bank",
+  "slug": "PNB"
+ },
+ {
+  "name": "Shree Cement",
+  "slug": "SHREECEM"
+ },
+ {
+  "name": "United Spirits",
+  "slug": "UNITDSPR"
+ },
+ {
+  "name": "Bajaj Housing",
+  "slug": "BAJAJHFL"
+ },
+ {
+  "name": "Adani Energy Sol",
+  "slug": "ADANIENSOL"
+ },
+ {
+  "name": "Torrent Pharma.",
+  "slug": "TORNTPHARM"
+ },
+ {
+  "name": "Havells India",
+  "slug": "HAVELLS"
+ },
+ {
+  "name": "Siemens",
+  "slug": "SIEMENS"
+ },
+ {
+  "name": "Prestige Estates",
+  "slug": "PRESTIGE"
+ },
+ {
+  "name": "Canara Bank",
+  "slug": "CANBK"
+ },
+ {
+  "name": "Info Edg.(India)",
+  "slug": "NAUKRI"
+ },
+ {
+  "name": "Jindal Steel",
+  "slug": "JINDALSTEL"
+ },
+ {
+  "name": "Zydus Lifesci.",
+  "slug": "ZYDUSLIFE"
+ },
+ {
+  "name": "Dabur India",
+  "slug": "DABUR"
+ },
+ {
+  "name": "BSE",
+  "slug": "BSE"
+ },
+ {
+  "name": "Swiggy",
+  "slug": "SWIGGY"
+ },
+ {
+  "name": "JSW Energy",
+  "slug": "JSWENERGY"
+ },
+ {
+  "name": "Bosch",
+  "slug": "BOSCHLTD"
+ },
+ {
+  "name": "Cummins India",
+  "slug": "CUMMINSIND"
+ },
+ {
+  "name": "GMR Airports",
+  "slug": "GMRAIRPORT"
+ },
+ {
+  "name": "ICICI Lombard",
+  "slug": "ICICIGI"
+ },
+ {
+  "name": "Bharti Hexacom",
+  "slug": "BHARTIHEXA"
+ },
+ {
+  "name": "Lupin",
+  "slug": "LUPIN"
+ },
+ {
+  "name": "Marico",
+  "slug": "MARICO"
+ },
+ {
+  "name": "SRF",
+  "slug": "SRF"
+ },
+ {
+  "name": "NTPC Green Ene.",
+  "slug": "NTPCGREEN"
+ },
+ {
+  "name": "Hitachi Energy",
+  "slug": "POWERINDIA"
+ },
+ {
+  "name": "Waaree Energies",
+  "slug": "WAAREEENER"
+ },
+ {
+  "name": "NHPC Ltd",
+  "slug": "NHPC"
+ },
+ {
+  "name": "BHEL",
+  "slug": "BHEL"
+ },
+ {
+  "name": "Indian Bank",
+  "slug": "INDIANB"
+ },
+ {
+  "name": "PB Fintech.",
+  "slug": "POLICYBZR"
+ },
+ {
+  "name": "Persistent Sys",
+  "slug": "PERSISTENT"
+ },
+ {
+  "name": "Suzlon Energy",
+  "slug": "SUZLON"
+ },
+ {
+  "name": "Lloyds Metals",
+  "slug": "LLOYDSME"
+ },
+ {
+  "name": "Coromandel Inter",
+  "slug": "COROMANDEL"
+ },
+ {
+  "name": "SBI Cards",
+  "slug": "SBICARD"
+ },
+ {
+  "name": "Vodafone Idea",
+  "slug": "IDEA"
+ },
+ {
+  "name": "Abbott India",
+  "slug": "ABBOTINDIA"
+ },
+ {
+  "name": "Rail Vikas",
+  "slug": "RVNL"
+ },
+ {
+  "name": "Indian Overseas Bank",
+  "slug": "IOB"
+ },
+ {
+  "name": "One 97",
+  "slug": "PAYTM"
+ },
+ {
+  "name": "Ashok Leyland",
+  "slug": "ASHOKLEY"
+ },
+ {
+  "name": "Oil India",
+  "slug": "OIL"
+ },
+ {
+  "name": "Aurobindo Pharma",
+  "slug": "AUROPHARMA"
+ },
+ {
+  "name": "Adani Total Gas",
+  "slug": "ATGL"
+ },
+ {
+  "name": "Patanjali Foods",
+  "slug": "PATANJALI"
+ },
+ {
+  "name": "GE Vernova T&D",
+  "slug": "GVT&D"
+ },
+ {
+  "name": "Berger Paints",
+  "slug": "BERGEPAINT"
+ },
+ {
+  "name": "JSW Infrast",
+  "slug": "JSWINFRA"
+ },
+ {
+  "name": "Torrent Power",
+  "slug": "TORNTPOWER"
+ },
+ {
+  "name": "Schaeffler India",
+  "slug": "SCHAEFFLER"
+ },
+ {
+  "name": "Vishal Mega Mart",
+  "slug": "VMM"
+ },
+ {
+  "name": "Aditya Birla Cap",
+  "slug": "ABCAPITAL"
+ },
+ {
+  "name": "General Insuranc",
+  "slug": "GICRE"
+ },
+ {
+  "name": "NMDC",
+  "slug": "NMDC"
+ },
+ {
+  "name": "P I Industries",
+  "slug": "PIIND"
+ },
+ {
+  "name": "Fortis Health.",
+  "slug": "FORTIS"
+ },
+ {
+  "name": "Godrej Propert.",
+  "slug": "GODREJPROP"
+ },
+ {
+  "name": "MRF",
+  "slug": "MRF"
+ },
+ {
+  "name": "FSN E-Commerce",
+  "slug": "NYKAA"
+ },
+ {
+  "name": "Kalyan Jewellers",
+  "slug": "KALYANKJIL"
+ },
+ {
+  "name": "Fertilizer and Chemical Travancore",
+  "slug": "FACT"
+ },
+ {
+  "name": "Uno Minda",
+  "slug": "UNOMINDA"
+ },
+ {
+  "name": "Colgate-Palmoliv",
+  "slug": "COLPAL"
+ },
+ {
+  "name": "Alkem Lab",
+  "slug": "ALKEM"
+ },
+ {
+  "name": "Glenmark Pharma.",
+  "slug": "GLENMARK"
+ },
+ {
+  "name": "Bharat Dynamics",
+  "slug": "BDL"
+ },
+ {
+  "name": "Yes Bank",
+  "slug": "YESBANK"
+ },
+ {
+  "name": "Coforge",
+  "slug": "COFORGE"
+ },
+ {
+  "name": "UPL",
+  "slug": "UPL"
+ },
+ {
+  "name": "Oberoi Realty",
+  "slug": "OBEROIRLTY"
+ },
+ {
+  "name": "Linde India",
+  "slug": "LINDEINDIA"
+ },
+ {
+  "name": "Jindal Stain.",
+  "slug": "JSL"
+ },
+ {
+  "name": "I R C T C",
+  "slug": "IRCTC"
+ },
+ {
+  "name": "Bharat Forge",
+  "slug": "BHARATFORG"
+ },
+ {
+  "name": "AU Small Finance",
+  "slug": "AUBANK"
+ },
+ {
+  "name": "Glaxosmi. Pharma",
+  "slug": "GLAXO"
+ },
+ {
+  "name": "Tube Investments",
+  "slug": "TIINDIA"
+ },
+ {
+  "name": "Motil.Oswal.Fin.",
+  "slug": "TIL"
+ },
+ {
+  "name": "Supreme Inds.",
+  "slug": "SUPREMEIND"
+ },
+ {
+  "name": "Sundaram Finance",
+  "slug": "SUNDARMFIN"
+ },
+ {
+  "name": "Phoenix Mills",
+  "slug": "PHOENIXLTD"
+ },
+ {
+  "name": "Balkrishna Inds",
+  "slug": "BALKRISIND"
+ },
+ {
+  "name": "Mphasis",
+  "slug": "MPHASIS"
+ },
+ {
+  "name": "United Breweries",
+  "slug": "UBL"
+ },
+ {
+  "name": "Max Financial",
+  "slug": "MFSL"
+ },
+ {
+  "name": "Biocon",
+  "slug": "BIOCON"
+ },
+ {
+  "name": "Page Industries",
+  "slug": "PAGEIND"
+ },
+ {
+  "name": "J K Cements",
+  "slug": "JKCEMENT"
+ },
+ {
+  "name": "Bank of India",
+  "slug": "BANKINDIA"
+ },
+ {
+  "name": "Steel Authority of India",
+  "slug": "SAIL"
+ },
+ {
+  "name": "L&T Finance Ltd",
+  "slug": "LTF"
+ },
+ {
+  "name": "Federal Bank",
+  "slug": "FEDERALBNK"
+ },
+ {
+  "name": "Tata Comm",
+  "slug": "TATACOMM"
+ },
+ {
+  "name": "IDFC First Bank",
+  "slug": "IDFCFIRSTB"
+ },
+ {
+  "name": "ITC Hotels",
+  "slug": "ITCHOTELS"
+ },
+ {
+  "name": "Godfrey Phillips",
+  "slug": "GODFRYPHLP"
+ },
+ {
+  "name": "Laurus Labs",
+  "slug": "LAURUSLABS"
+ },
+ {
+  "name": "Authum Invest",
+  "slug": "AIIL"
+ },
+ {
+  "name": "Dixon Tech",
+  "slug": "DIXON"
+ },
+ {
+  "name": "Karuru Vyasa Bank",
+  "slug": "KARURVYSYA"
+ },
+ {
+  "name": "Ipca Labs",
+  "slug": "VIMTALABS"
+ },
+ {
+  "name": "Gland Pharma",
+  "slug": "GLAND"
+ },
+ {
+  "name": "Indus Tower",
+  "slug": "INDUSTOWER"
+ },
+ {
+  "name": "Multi Commodity Exchange",
+  "slug": "MCX"
+ },
+ {
+  "name": "Solar Industries",
+  "slug": "SOLARINDS"
+ },
+ {
+  "name": "Polycab India",
+  "slug": "POLYCAB"
+ },
+ {
+  "name": "HDFC AMC",
+  "slug": "HDFCAMC"
+ },
+ {
+  "name": "Hindustan Zinc",
+  "slug": "HINDZINC"
+ },
+ {
+  "name": "IDBI Bank",
+  "slug": "IDBI"
+ },
+ {
+  "name": "Mazagon Dock Shipbuilders",
+  "slug": "MAZDOCK"
+ },
+ {
+  "name": "Tata Capital",
+  "slug": "5PAISA"
+ },
+ {
+  "name": "Premier Energies",
+  "slug": "PREMIERENE"
+ },
+ {
+  "name": "APL Apollo Tubes",
+  "slug": "APLAPOLLO"
+ },
+ {
+  "name": "Union Bank of India",
+  "slug": "UNIONBANK"
+ },
+ {
+  "name": "Kaynes Technologies",
+  "slug": "KAYNES"
+ },
+ {
+  "name": "Mankind Pharma",
+  "slug": "MANKIND"
+ },
+ {
+  "name": "National Aluminium",
+  "slug": "NATIONALUM"
+ },
+ {
+  "name": "KEI Industries",
+  "slug": "KEI"
+ },
+ {
+  "name": "Max Healthcare Institute",
+  "slug": "MAXHEALTH"
+ },
+ {
+  "name": "Sai Life Science",
+  "slug": "SAILIFE"
+ },
+ {
+  "name": "Wockhardt",
+  "slug": "WOCKPHARMA"
+ },
+ {
+  "name": "Graphite India Ltd",
+  "slug": "GRAPHITE"
+ },
+ {
+  "name": "Motherson Sumi Wiring",
+  "slug": "MSUMI"
+ },
+ {
+  "name": "Religare Enterprises ltd",
+  "slug": "RELIGARE"
+ },
+ {
+  "name": "Radico Khaitan",
+  "slug": "RADICO"
+ },
+ {
+  "name": "One Source Speciality Pharma",
+  "slug": "ONESOURCE"
+ },
+ {
+  "name": "Acutaas Chemicals",
+  "slug": "TATACHEM"
+ },
+ {
+  "name": "Metropolis Healthcare",
+  "slug": "METROPOLIS"
+ },
+ {
+  "name": "Happy Forging",
+  "slug": "HAPPYFORGE"
+ },
+ {
+  "name": "Craftsman automation",
+  "slug": "CRAFTSMAN"
+ },
+ {
+  "name": "LT Foods Ltd",
+  "slug": "LTFOODS"
+ },
+ {
+  "name": "Tilaknagar Industries",
+  "slug": "TI"
+ },
+ {
+  "name": "Jubilant Pharmova",
+  "slug": "JUBLPHARMA"
+ },
+ {
+  "name": "Aster DM",
+  "slug": "ASTERDM"
+ },
+ {
+  "name": "Muthoot Finance",
+  "slug": "MUTHOOTFIN"
+ },
+ {
+  "name": "DCB Bank ",
+  "slug": "DCBBANK"
+ },
+ {
+  "name": "CSB Bank",
+  "slug": "CSBBANK"
+ },
+ {
+  "name": "PNB Hosuing Finance",
+  "slug": "PNBHOUSING"
+ },
+ {
+  "name": "CDS",
+  "slug": "ICDSLTD"
+ },
+ {
+  "name": "Nuvama Wealth Management",
+  "slug": "NUVAMA"
+ },
+ {
+  "name": "J B Chemials",
+  "slug": "JGCHEM"
+ },
+ {
+  "name": "Neuland Laboritries",
+  "slug": "NEULANDLAB"
+ },
+ {
+  "name": "Krishna Institue of Medical Science",
+  "slug": "KIMS"
+ },
+ {
+  "name": "Astrazeneca Pharma India Ltd",
+  "slug": "ASTRAZEN"
+ },
+ {
+  "name": "Medplus Health Services",
+  "slug": "MEDPLUS"
+ },
+ {
+  "name": "Aadhar Housing Finance",
+  "slug": "AADHARHFC"
+ },
+ {
+  "name": "PTC Industries",
+  "slug": "PTC"
+ },
+ {
+  "name": "Ramco Cements",
+  "slug": "RAMCOCEM"
+ },
+ {
+  "name": "ICICI Pru Asset Management Co Ltd.",
+  "slug": "UTIAMC"
+ },
+ {
+  "name": "Cholamandalam Financial Holdings Ltd",
+  "slug": "CHOLAHLDNG"
+ },
+ {
+  "name": "Hindustan Petroleum Corporation Ltd",
+  "slug": "HINDPETRO"
+ },
+ {
+  "name": "Healthcare Global Entprises",
+  "slug": "HCG"
+ },
+ {
+  "name": "Ujjivan Small Finance Bank Ltd",
+  "slug": "UJJIVANSFB"
+ },
+ {
+  "name": "Central Depository Services (India) Ltd",
+  "slug": "CDSL"
+ },
+ {
+  "name": "Billionbrains Garage Ventures Ltd",
+  "slug": "RAIN"
+ },
+ {
+  "name": "I O C L",
+  "slug": "IOC"
+ },
+ {
+  "name": "CG Power & Ind",
+  "slug": "CGPOWER"
+ },
+ {
+  "name": "Samvardh. Mothe.",
+  "slug": "MOTHERSON"
+ },
+ {
+  "name": "ICICI Pru Life",
+  "slug": "ICICIPRULI"
+ },
+ {
+  "name": "Oracle Fin.Serv.",
+  "slug": "OFSS"
+ },
+ {
+  "name": "Nippon Life Ind.",
+  "slug": "NAM-INDIA"
+ },
+ {
+  "name": "HDB FINANC SER",
+  "slug": "HDBFS",
+  "note": "unverified - confirm slug on screener.in before first run"
+ },
+ {
+  "name": "Rubicon Research",
+  "slug": "RUBICON",
+  "note": "unverified - confirm slug on screener.in before first run"
+ },
+ {
+  "name": "ZF Commcercial",
+  "slug": "ZFCVINDIA",
+  "note": "unverified - confirm slug on screener.in before first run"
+ },
+ {
+  "name": "Embassy Office Parks REIT",
+  "slug": "EMBASSY",
+  "note": "unverified - confirm slug on screener.in before first run"
+ }
+]

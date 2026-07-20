@@ -4,50 +4,21 @@ import logging
 import os
 from urllib.parse import urlparse
 
-from playwright.sync_api import BrowserContext, Page
+from playwright.sync_api import Page
 
 from config import Config
 
 log = logging.getLogger(__name__)
 
 LOGIN_URL = "https://www.screener.in/login/"
-# Requires auth - unauthenticated visitors get redirected to /login/?next=/watchlist/
-PROBE_URL = "https://www.screener.in/watchlist/"
 LOGIN_FAILURE_SCREENSHOT_NAME = "login_failure.png"
-
-
-def new_context(browser, config: Config) -> BrowserContext:
-    if os.path.exists(config.storage_state_path):
-        log.info("Reusing existing session from %s", config.storage_state_path)
-        return browser.new_context(storage_state=config.storage_state_path)
-    log.info("No saved session found at %s - will log in fresh", config.storage_state_path)
-    return browser.new_context()
-
-
-def _probe_shows_logged_in(page: Page) -> bool:
-    # Fail closed: only trust it if we actually stayed on the authenticated
-    # page's path. Anonymous visitors get redirected elsewhere - historically
-    # to /login/?next=..., but as observed in production, screener.in
-    # currently sends them to /register/?next=/watchlist/ instead - and a
-    # naive substring check on the full URL is fooled by that "next=" query
-    # param containing "/watchlist/" itself. Compare the path only.
-    return urlparse(page.url).path.rstrip("/") == "/watchlist"
 
 
 def _still_on_login_page(page: Page) -> bool:
     return urlparse(page.url).path.rstrip("/") == "/login"
 
 
-def ensure_logged_in(context: BrowserContext, page: Page, config: Config) -> None:
-    page.goto(PROBE_URL, wait_until="domcontentloaded")
-    if _probe_shows_logged_in(page):
-        log.info("Session is valid, already logged in")
-        return
-    log.info("Not logged in (probe redirected to %s) - logging in", page.url)
-    perform_login(context, page, config)
-
-
-def perform_login(context: BrowserContext, page: Page, config: Config) -> None:
+def perform_login(page: Page, config: Config) -> None:
     page.goto(LOGIN_URL, wait_until="domcontentloaded")
     page.fill("#id_username", config.screener_email)
     page.fill("#id_password", config.screener_password)
@@ -75,5 +46,4 @@ def perform_login(context: BrowserContext, page: Page, config: Config) -> None:
             f"{(' Site said: ' + error_text) if error_text else ''}"
         )
 
-    context.storage_state(path=config.storage_state_path)
-    log.info("Login successful, session saved to %s", config.storage_state_path)
+    log.info("Login successful")

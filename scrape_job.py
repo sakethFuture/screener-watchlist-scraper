@@ -38,13 +38,13 @@ def run_scrape_job(config: Optional[Config] = None) -> dict:
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=config.headless)
         try:
-            context = auth.new_context(browser, config)
+            context = browser.new_context()
             page = context.new_page()
-            auth.ensure_logged_in(context, page, config)
+            auth.perform_login(page, config)
 
             for stock in stocks:
                 try:
-                    qd = fetch_with_retry(context, page, stock.slug, config)
+                    qd = fetch_with_retry(page, stock.slug, config)
                     if qd is None:
                         counts["errors"] += 1
                         errors.append((stock.slug, "no quarterly results table found"))
