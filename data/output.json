@@ -1,0 +1,2189 @@
+{
+  "RELIANCE": {
+    "name": "Reliance Industry",
+    "result_date": "2026-06-30",
+    "sales_growth_pct": 27.02,
+    "net_profit_growth_pct": -24.65,
+    "avg_growth_pct": 1.19,
+    "classification": "Slow Grower",
+    "updated_at": "2026-07-20T06:14:07.091034+00:00"
+  },
+  "HDFCBANK": {
+    "name": "HDFC Bank",
+    "result_date": "2026-06-30",
+    "sales_growth_pct": 3.67,
+    "net_profit_growth_pct": 19.27,
+    "avg_growth_pct": 11.47,
+    "classification": "Stalwart",
+    "updated_at": "2026-07-20T06:14:14.829695+00:00"
+  },
+  "TCS": {
+    "name": "TCS",
+    "result_date": "2026-06-30",
+    "sales_growth_pct": 13.93,
+    "net_profit_growth_pct": 4.69,
+    "avg_growth_pct": 9.31,
+    "classification": "Stalwart",
+    "updated_at": "2026-07-20T06:14:22.034343+00:00"
+  },
+  "BHARTIARTL": {
+    "name": "Bharti Airtel",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 15.68,
+    "net_profit_growth_pct": -25.88,
+    "avg_growth_pct": -5.1,
+    "classification": "Slow Grower",
+    "updated_at": "2026-07-20T06:14:26.256159+00:00"
+  },
+  "ICICIBANK": {
+    "name": "ICICI Bank",
+    "result_date": "2026-06-30",
+    "sales_growth_pct": 6.44,
+    "net_profit_growth_pct": 12.59,
+    "avg_growth_pct": 9.52,
+    "classification": "Stalwart",
+    "updated_at": "2026-07-20T06:14:33.166436+00:00"
+  },
+  "SBIN": {
+    "name": "St Bk of India",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 3.34,
+    "net_profit_growth_pct": 0.63,
+    "avg_growth_pct": 1.99,
+    "classification": "Slow Grower",
+    "updated_at": "2026-07-20T06:14:40.166827+00:00"
+  },
+  "INFY": {
+    "name": "Infosys",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 13.38,
+    "net_profit_growth_pct": 20.9,
+    "avg_growth_pct": 17.14,
+    "classification": "Fast Grower",
+    "updated_at": "2026-07-20T06:14:46.876475+00:00"
+  },
+  "BAJFINANCE": {
+    "name": "Bajaj Finance",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 18.1,
+    "net_profit_growth_pct": 22.15,
+    "avg_growth_pct": 20.13,
+    "classification": "Fast Grower",
+    "updated_at": "2026-07-20T06:14:52.600017+00:00"
+  },
+  "HINDUNILVR": {
+    "name": "Hind. Unilever",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 7.64,
+    "net_profit_growth_pct": 20.97,
+    "avg_growth_pct": 14.31,
+    "classification": "Stalwart",
+    "updated_at": "2026-07-20T06:15:00.095041+00:00"
+  },
+  "ITC": {
+    "name": "ITC",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": -5.01,
+    "net_profit_growth_pct": -72.38,
+    "avg_growth_pct": -38.7,
+    "classification": "Slow Grower",
+    "updated_at": "2026-07-20T06:15:04.726135+00:00"
+  },
+  "LT": {
+    "name": "Larsen & Toubro Ltd",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 11.25,
+    "net_profit_growth_pct": -0.37,
+    "avg_growth_pct": 5.44,
+    "classification": "Slow Grower",
+    "updated_at": "2026-07-20T06:15:11.732065+00:00"
+  },
+  "KOTAKBANK": {
+    "name": "Kotak Mah. Bank",
+    "result_date": "2026-06-30",
+    "sales_growth_pct": 6.42,
+    "net_profit_growth_pct": 22.54,
+    "avg_growth_pct": 14.48,
+    "classification": "Stalwart",
+    "updated_at": "2026-07-20T06:15:19.433480+00:00"
+  },
+  "ANUHPHR": {
+    "name": "Sun Pharma.Inds.",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 2.02,
+    "net_profit_growth_pct": 0.0,
+    "avg_growth_pct": 1.01,
+    "classification": "Slow Grower",
+    "updated_at": "2026-07-20T06:15:24.502867+00:00"
+  },
+  "HCLTECH": {
+    "name": "HCL Technologies",
+    "result_date": "2026-06-30",
+    "sales_growth_pct": 13.94,
+    "net_profit_growth_pct": 20.34,
+    "avg_growth_pct": 17.14,
+    "classification": "Fast Grower",
+    "updated_at": "2026-07-20T06:15:31.646463+00:00"
+  },
+  "MARUTI": {
+    "name": "Maruti Suzuki",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 28.21,
+    "net_profit_growth_pct": -6.44,
+    "avg_growth_pct": 10.88,
+    "classification": "Stalwart",
+    "updated_at": "2026-07-20T06:15:39.061459+00:00"
+  },
+  "NTPC": {
+    "name": "NTPC",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": -0.29,
+    "net_profit_growth_pct": 34.42,
+    "avg_growth_pct": 17.06,
+    "classification": "Fast Grower",
+    "updated_at": "2026-07-20T06:15:44.858328+00:00"
+  },
+  "ULTRACEMCO": {
+    "name": "UltraTech Cem.",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 11.86,
+    "net_profit_growth_pct": 21.21,
+    "avg_growth_pct": 16.54,
+    "classification": "Fast Grower",
+    "updated_at": "2026-07-20T06:15:49.547426+00:00"
+  },
+  "AXISBANK": {
+    "name": "Axis Bank",
+    "result_date": "2026-06-30",
+    "sales_growth_pct": 9.87,
+    "net_profit_growth_pct": 22.15,
+    "avg_growth_pct": 16.01,
+    "classification": "Fast Grower",
+    "updated_at": "2026-07-20T06:15:54.351225+00:00"
+  },
+  "M&M": {
+    "name": "M & M",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 29.07,
+    "net_profit_growth_pct": 48.5,
+    "avg_growth_pct": 38.79,
+    "classification": "Fast Grower",
+    "updated_at": "2026-07-20T06:16:01.638156+00:00"
+  },
+  "BAJAJFINSV": {
+    "name": "Bajaj Finserv",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 5.19,
+    "net_profit_growth_pct": 9.88,
+    "avg_growth_pct": 7.54,
+    "classification": "Slow Grower",
+    "updated_at": "2026-07-20T06:16:07.298280+00:00"
+  },
+  "ONGC": {
+    "name": "O N G C",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 3.61,
+    "net_profit_growth_pct": 52.57,
+    "avg_growth_pct": 28.09,
+    "classification": "Fast Grower",
+    "updated_at": "2026-07-20T06:16:13.280111+00:00"
+  },
+  "POWERGRID": {
+    "name": "Power Grid Corpn",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": -4.96,
+    "net_profit_growth_pct": 9.73,
+    "avg_growth_pct": 2.38,
+    "classification": "Slow Grower",
+    "updated_at": "2026-07-20T06:16:20.830945+00:00"
+  },
+  "TITAN": {
+    "name": "Titan Company",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 80.48,
+    "net_profit_growth_pct": 35.36,
+    "avg_growth_pct": 57.92,
+    "classification": "Fast Grower",
+    "updated_at": "2026-07-20T06:16:27.235907+00:00"
+  },
+  "ADANIENT": {
+    "name": "Adani Enterp.",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 20.3,
+    "net_profit_growth_pct": -104.16,
+    "avg_growth_pct": -41.93,
+    "classification": "Slow Grower",
+    "updated_at": "2026-07-20T06:16:33.399411+00:00"
+  },
+  "WIPRO": {
+    "name": "Wipro",
+    "result_date": "2026-06-30",
+    "sales_growth_pct": 10.59,
+    "net_profit_growth_pct": 0.6,
+    "avg_growth_pct": 5.59,
+    "classification": "Slow Grower",
+    "updated_at": "2026-07-20T06:16:38.785875+00:00"
+  },
+  "ADANIPORTS": {
+    "name": "Adani Ports",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 26.51,
+    "net_profit_growth_pct": 9.43,
+    "avg_growth_pct": 17.97,
+    "classification": "Fast Grower",
+    "updated_at": "2026-07-20T06:16:45.979954+00:00"
+  },
+  "COALINDIA": {
+    "name": "Coal India",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 22.91,
+    "net_profit_growth_pct": 13.71,
+    "avg_growth_pct": 18.31,
+    "classification": "Fast Grower",
+    "updated_at": "2026-07-20T06:16:51.847377+00:00"
+  },
+  "ASIANPAINT": {
+    "name": "Asian Paints",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 10.62,
+    "net_profit_growth_pct": 69.04,
+    "avg_growth_pct": 39.83,
+    "classification": "Fast Grower",
+    "updated_at": "2026-07-20T06:16:57.581585+00:00"
+  },
+  "JSWSTEEL": {
+    "name": "JSW Steel",
+    "result_date": "2026-06-30",
+    "sales_growth_pct": 9.77,
+    "net_profit_growth_pct": 112.58,
+    "avg_growth_pct": 61.18,
+    "classification": "Fast Grower",
+    "updated_at": "2026-07-20T06:17:03.033096+00:00"
+  },
+  "NESTLEIND": {
+    "name": "Nestle India",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 22.6,
+    "net_profit_growth_pct": 27.26,
+    "avg_growth_pct": 24.93,
+    "classification": "Fast Grower",
+    "updated_at": "2026-07-20T06:17:07.628693+00:00"
+  },
+  "BAJAJ-AUTO": {
+    "name": "Bajaj Auto",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 41.01,
+    "net_profit_growth_pct": 93.78,
+    "avg_growth_pct": 67.4,
+    "classification": "Fast Grower",
+    "updated_at": "2026-07-20T06:17:14.341970+00:00"
+  },
+  "ETERNAL": {
+    "name": "Eternal Ltd",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 196.45,
+    "net_profit_growth_pct": 346.15,
+    "avg_growth_pct": 271.3,
+    "classification": "Fast Grower",
+    "updated_at": "2026-07-20T06:17:21.963267+00:00"
+  },
+  "BEL": {
+    "name": "Bharat Electron",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 11.74,
+    "net_profit_growth_pct": 4.65,
+    "avg_growth_pct": 8.2,
+    "classification": "Stalwart",
+    "updated_at": "2026-07-20T06:17:28.194683+00:00"
+  },
+  "GRASIM": {
+    "name": "Grasim Inds",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 15.44,
+    "net_profit_growth_pct": 27.88,
+    "avg_growth_pct": 21.66,
+    "classification": "Fast Grower",
+    "updated_at": "2026-07-20T06:17:33.219703+00:00"
+  },
+  "TATASTEEL": {
+    "name": "Tata Steel",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 12.54,
+    "net_profit_growth_pct": 146.88,
+    "avg_growth_pct": 79.71,
+    "classification": "Fast Grower",
+    "updated_at": "2026-07-20T06:17:40.450595+00:00"
+  },
+  "TRENT": {
+    "name": "Trent",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 19.23,
+    "net_profit_growth_pct": 32.37,
+    "avg_growth_pct": 25.8,
+    "classification": "Fast Grower",
+    "updated_at": "2026-07-20T06:17:45.186501+00:00"
+  },
+  "SBILIFE": {
+    "name": "SBI Life Insuran",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": -82.35,
+    "net_profit_growth_pct": -1.11,
+    "avg_growth_pct": -41.73,
+    "classification": "Slow Grower",
+    "updated_at": "2026-07-20T06:17:49.956166+00:00"
+  },
+  "EICHERMOT": {
+    "name": "Eicher Motors",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 16.01,
+    "net_profit_growth_pct": 11.6,
+    "avg_growth_pct": 13.8,
+    "classification": "Stalwart",
+    "updated_at": "2026-07-20T06:17:57.445725+00:00"
+  },
+  "HDFCLIFE": {
+    "name": "HDFC Life Insur.",
+    "result_date": "2026-06-30",
+    "sales_growth_pct": 14.58,
+    "net_profit_growth_pct": 11.5,
+    "avg_growth_pct": 13.04,
+    "classification": "Stalwart",
+    "updated_at": "2026-07-20T06:18:02.953309+00:00"
+  },
+  "JIOFIN": {
+    "name": "Jio Financial",
+    "result_date": "2026-06-30",
+    "sales_growth_pct": 227.45,
+    "net_profit_growth_pct": 155.38,
+    "avg_growth_pct": 191.42,
+    "classification": "Fast Grower",
+    "updated_at": "2026-07-20T06:18:08.564038+00:00"
+  },
+  "HINDALCO": {
+    "name": "Hindalco Inds.",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 20.41,
+    "net_profit_growth_pct": -50.85,
+    "avg_growth_pct": -15.22,
+    "classification": "Slow Grower",
+    "updated_at": "2026-07-20T06:18:16.221403+00:00"
+  },
+  "TECHM": {
+    "name": "Tech Mahindra",
+    "result_date": "2026-06-30",
+    "sales_growth_pct": 17.68,
+    "net_profit_growth_pct": 31.62,
+    "avg_growth_pct": 24.65,
+    "classification": "Fast Grower",
+    "updated_at": "2026-07-20T06:18:23.840034+00:00"
+  },
+  "SHRIRAMFIN": {
+    "name": "Shriram Finance",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 9.25,
+    "net_profit_growth_pct": 40.9,
+    "avg_growth_pct": 25.08,
+    "classification": "Fast Grower",
+    "updated_at": "2026-07-20T06:18:28.761578+00:00"
+  },
+  "CIPLA": {
+    "name": "Cipla",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": -2.81,
+    "net_profit_growth_pct": -55.27,
+    "avg_growth_pct": -29.04,
+    "classification": "Slow Grower",
+    "updated_at": "2026-07-20T06:18:35.329887+00:00"
+  },
+  "HONASA": {
+    "name": "Tata Consumer",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 23.03,
+    "net_profit_growth_pct": 176.0,
+    "avg_growth_pct": 99.52,
+    "classification": "Fast Grower",
+    "updated_at": "2026-07-20T06:18:39.133356+00:00"
+  },
+  "DRREDDY": {
+    "name": "Dr Reddy's Labs",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": -11.52,
+    "net_profit_growth_pct": -86.07,
+    "avg_growth_pct": -48.79,
+    "classification": "Slow Grower",
+    "updated_at": "2026-07-20T06:18:44.152452+00:00"
+  },
+  "APOLLOHOSP": {
+    "name": "Apollo Hospitals",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 18.13,
+    "net_profit_growth_pct": 33.09,
+    "avg_growth_pct": 25.61,
+    "classification": "Fast Grower",
+    "updated_at": "2026-07-20T06:18:49.139954+00:00"
+  },
+  "LICI": {
+    "name": "Life Insurance",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 13.82,
+    "net_profit_growth_pct": 23.26,
+    "avg_growth_pct": 18.54,
+    "classification": "Fast Grower",
+    "updated_at": "2026-07-20T06:18:54.145475+00:00"
+  },
+  "INDUSINDBK": {
+    "name": "IndusInd Bank",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 3.49,
+    "net_profit_growth_pct": 125.5,
+    "avg_growth_pct": 64.5,
+    "classification": "Fast Grower",
+    "updated_at": "2026-07-20T06:18:59.201152+00:00"
+  },
+  "HEROMOTOCO": {
+    "name": "Hero Motocorp",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 30.17,
+    "net_profit_growth_pct": 26.09,
+    "avg_growth_pct": 28.13,
+    "classification": "Fast Grower",
+    "updated_at": "2026-07-20T06:19:05.409890+00:00"
+  },
+  "HAL": {
+    "name": "Hind.Aeronautics",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 1.77,
+    "net_profit_growth_pct": 5.51,
+    "avg_growth_pct": 3.64,
+    "classification": "Slow Grower",
+    "updated_at": "2026-07-20T06:19:11.382587+00:00"
+  },
+  "DMART": {
+    "name": "Avenue Super.",
+    "result_date": "2026-06-30",
+    "sales_growth_pct": 14.88,
+    "net_profit_growth_pct": 11.25,
+    "avg_growth_pct": 13.07,
+    "classification": "Stalwart",
+    "updated_at": "2026-07-20T06:19:18.609999+00:00"
+  },
+  "ADANIPOWER": {
+    "name": "Adani Power",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": -0.1,
+    "net_profit_growth_pct": 64.33,
+    "avg_growth_pct": 32.12,
+    "classification": "Fast Grower",
+    "updated_at": "2026-07-20T06:19:25.713596+00:00"
+  },
+  "INDIGO": {
+    "name": "Interglobe Aviat",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 1.29,
+    "net_profit_growth_pct": -182.69,
+    "avg_growth_pct": -90.7,
+    "classification": "Slow Grower",
+    "updated_at": "2026-07-20T06:19:30.835879+00:00"
+  },
+  "VBL": {
+    "name": "Varun Beverages",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 18.09,
+    "net_profit_growth_pct": 20.25,
+    "avg_growth_pct": 19.17,
+    "classification": "Fast Grower",
+    "updated_at": "2026-07-20T06:19:37.293783+00:00"
+  },
+  "IRFC": {
+    "name": "IRFC",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 9.12,
+    "net_profit_growth_pct": 0.12,
+    "avg_growth_pct": 4.62,
+    "classification": "Slow Grower",
+    "updated_at": "2026-07-20T06:19:43.229295+00:00"
+  },
+  "VEDL": {
+    "name": "Vedanta",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 47.48,
+    "net_profit_growth_pct": 88.51,
+    "avg_growth_pct": 68.0,
+    "classification": "Fast Grower",
+    "updated_at": "2026-07-20T06:19:50.561052+00:00"
+  },
+  "DLF": {
+    "name": "DLF",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": -42.01,
+    "net_profit_growth_pct": -1.01,
+    "avg_growth_pct": -21.51,
+    "classification": "Slow Grower",
+    "updated_at": "2026-07-20T06:19:56.630746+00:00"
+  },
+  "PIDILITIND": {
+    "name": "Pidilite Inds.",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 14.07,
+    "net_profit_growth_pct": 36.45,
+    "avg_growth_pct": 25.26,
+    "classification": "Fast Grower",
+    "updated_at": "2026-07-20T06:20:00.496010+00:00"
+  },
+  "DIVISLAB": {
+    "name": "Divi's Lab.",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 9.52,
+    "net_profit_growth_pct": 13.44,
+    "avg_growth_pct": 11.48,
+    "classification": "Stalwart",
+    "updated_at": "2026-07-20T06:20:06.333278+00:00"
+  },
+  "ADANIGREEN": {
+    "name": "Adani Green",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 13.96,
+    "net_profit_growth_pct": 34.2,
+    "avg_growth_pct": 24.08,
+    "classification": "Fast Grower",
+    "updated_at": "2026-07-20T06:20:10.378682+00:00"
+  },
+  "PFC": {
+    "name": "Power Fin.Corpn.",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": -1.18,
+    "net_profit_growth_pct": 2.87,
+    "avg_growth_pct": 0.85,
+    "classification": "Slow Grower",
+    "updated_at": "2026-07-20T06:20:17.061372+00:00"
+  },
+  "AMBUJACEM": {
+    "name": "Ambuja Cements",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 9.36,
+    "net_profit_growth_pct": 37.45,
+    "avg_growth_pct": 23.41,
+    "classification": "Fast Grower",
+    "updated_at": "2026-07-20T06:20:24.646587+00:00"
+  },
+  "MANINDS": {
+    "name": "Cholaman.Inv.&Fn",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": -5.01,
+    "net_profit_growth_pct": -25.0,
+    "avg_growth_pct": -15.0,
+    "classification": "Slow Grower",
+    "updated_at": "2026-07-20T06:20:29.995354+00:00"
+  },
+  "BPCL": {
+    "name": "B P C L",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 6.72,
+    "net_profit_growth_pct": 28.07,
+    "avg_growth_pct": 17.4,
+    "classification": "Fast Grower",
+    "updated_at": "2026-07-20T06:20:36.041378+00:00"
+  },
+  "BRITANNIA": {
+    "name": "Britannia Inds.",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 6.48,
+    "net_profit_growth_pct": 21.65,
+    "avg_growth_pct": 14.06,
+    "classification": "Stalwart",
+    "updated_at": "2026-07-20T06:20:40.728244+00:00"
+  },
+  "AMJLAND": {
+    "name": "Bajaj Holdings",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": -39.88,
+    "net_profit_growth_pct": -50.64,
+    "avg_growth_pct": -45.26,
+    "classification": "Slow Grower",
+    "updated_at": "2026-07-20T06:20:47.881298+00:00"
+  },
+  "GODREJCP": {
+    "name": "Godrej Consumer",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 10.98,
+    "net_profit_growth_pct": 9.71,
+    "avg_growth_pct": 10.35,
+    "classification": "Stalwart",
+    "updated_at": "2026-07-20T06:20:51.707407+00:00"
+  },
+  "BANKBARODA": {
+    "name": "Bank of Baroda",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 5.16,
+    "net_profit_growth_pct": 7.8,
+    "avg_growth_pct": 6.48,
+    "classification": "Slow Grower",
+    "updated_at": "2026-07-20T06:20:57.053346+00:00"
+  },
+  "HYUNDAI": {
+    "name": "Hyundai Motor I",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 5.44,
+    "net_profit_growth_pct": -22.18,
+    "avg_growth_pct": -8.37,
+    "classification": "Slow Grower",
+    "updated_at": "2026-07-20T06:21:04.776749+00:00"
+  },
+  "TVSMOTOR": {
+    "name": "TVS Motor Co.",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 30.42,
+    "net_profit_growth_pct": 17.48,
+    "avg_growth_pct": 23.95,
+    "classification": "Fast Grower",
+    "updated_at": "2026-07-20T06:21:11.620918+00:00"
+  },
+  "GAIL": {
+    "name": "GAIL (India)",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": -2.37,
+    "net_profit_growth_pct": -40.9,
+    "avg_growth_pct": -21.64,
+    "classification": "Slow Grower",
+    "updated_at": "2026-07-20T06:21:18.468762+00:00"
+  },
+  "LODHA": {
+    "name": "Lodha Developers Ltd",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 11.6,
+    "net_profit_growth_pct": 9.21,
+    "avg_growth_pct": 10.4,
+    "classification": "Stalwart",
+    "updated_at": "2026-07-20T06:21:25.299333+00:00"
+  },
+  "INDHOTEL": {
+    "name": "Indian Hotels Co",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 14.02,
+    "net_profit_growth_pct": 14.56,
+    "avg_growth_pct": 14.29,
+    "classification": "Stalwart",
+    "updated_at": "2026-07-20T06:21:29.276744+00:00"
+  },
+  "TATAPOWER": {
+    "name": "Tata Power Co.",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": -12.85,
+    "net_profit_growth_pct": 8.42,
+    "avg_growth_pct": -2.21,
+    "classification": "Slow Grower",
+    "updated_at": "2026-07-20T06:21:34.104456+00:00"
+  },
+  "ABB": {
+    "name": "A B B",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 5.78,
+    "net_profit_growth_pct": 275.58,
+    "avg_growth_pct": 140.68,
+    "classification": "Fast Grower",
+    "updated_at": "2026-07-20T06:21:39.547780+00:00"
+  },
+  "RECLTD": {
+    "name": "REC Ltd",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": -5.02,
+    "net_profit_growth_pct": -21.69,
+    "avg_growth_pct": -13.36,
+    "classification": "Slow Grower",
+    "updated_at": "2026-07-20T06:21:46.973123+00:00"
+  },
+  "PNB": {
+    "name": "Punjab Natl.Bank",
+    "result_date": "2026-06-30",
+    "sales_growth_pct": 3.12,
+    "net_profit_growth_pct": 169.27,
+    "avg_growth_pct": 86.19,
+    "classification": "Fast Grower",
+    "updated_at": "2026-07-20T06:21:51.457103+00:00"
+  },
+  "SHREECEM": {
+    "name": "Shree Cement",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 10.29,
+    "net_profit_growth_pct": -8.17,
+    "avg_growth_pct": 1.06,
+    "classification": "Slow Grower",
+    "updated_at": "2026-07-20T06:21:58.363413+00:00"
+  },
+  "UNITDSPR": {
+    "name": "United Spirits",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 3.67,
+    "net_profit_growth_pct": 28.03,
+    "avg_growth_pct": 15.85,
+    "classification": "Fast Grower",
+    "updated_at": "2026-07-20T06:22:02.785257+00:00"
+  },
+  "BAJAJHFL": {
+    "name": "Bajaj Housing",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 15.93,
+    "net_profit_growth_pct": 13.97,
+    "avg_growth_pct": 14.95,
+    "classification": "Stalwart",
+    "updated_at": "2026-07-20T06:22:09.149946+00:00"
+  },
+  "ADANIENSOL": {
+    "name": "Adani Energy Sol",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 16.75,
+    "net_profit_growth_pct": 1.26,
+    "avg_growth_pct": 9.01,
+    "classification": "Stalwart",
+    "updated_at": "2026-07-20T06:22:15.971935+00:00"
+  },
+  "TORNTPHARM": {
+    "name": "Torrent Pharma.",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 41.84,
+    "net_profit_growth_pct": -26.91,
+    "avg_growth_pct": 7.47,
+    "classification": "Slow Grower",
+    "updated_at": "2026-07-20T06:22:23.244969+00:00"
+  },
+  "HAVELLS": {
+    "name": "Havells India",
+    "result_date": "2026-06-30",
+    "sales_growth_pct": 19.49,
+    "net_profit_growth_pct": -16.67,
+    "avg_growth_pct": 1.41,
+    "classification": "Slow Grower",
+    "updated_at": "2026-07-20T06:22:30.231015+00:00"
+  },
+  "SIEMENS": {
+    "name": "Siemens",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 14.62,
+    "net_profit_growth_pct": -36.43,
+    "avg_growth_pct": -10.9,
+    "classification": "Slow Grower",
+    "updated_at": "2026-07-20T06:22:34.831301+00:00"
+  },
+  "PRESTIGE": {
+    "name": "Prestige Estates",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 166.62,
+    "net_profit_growth_pct": 579.07,
+    "avg_growth_pct": 372.85,
+    "classification": "Fast Grower",
+    "updated_at": "2026-07-20T06:22:39.644029+00:00"
+  },
+  "CANBK": {
+    "name": "Canara Bank",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 1.09,
+    "net_profit_growth_pct": -10.49,
+    "avg_growth_pct": -4.7,
+    "classification": "Slow Grower",
+    "updated_at": "2026-07-20T06:22:46.415074+00:00"
+  },
+  "NAUKRI": {
+    "name": "Info Edg.(India)",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 15.87,
+    "net_profit_growth_pct": 11.5,
+    "avg_growth_pct": 13.69,
+    "classification": "Stalwart",
+    "updated_at": "2026-07-20T06:22:52.851372+00:00"
+  },
+  "JINDALSTEL": {
+    "name": "Jindal Steel",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 23.02,
+    "net_profit_growth_pct": 442.43,
+    "avg_growth_pct": 232.73,
+    "classification": "Fast Grower",
+    "updated_at": "2026-07-20T06:22:57.886193+00:00"
+  },
+  "ZYDUSLIFE": {
+    "name": "Zydus Lifesci.",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 16.22,
+    "net_profit_growth_pct": 7.8,
+    "avg_growth_pct": 12.01,
+    "classification": "Stalwart",
+    "updated_at": "2026-07-20T06:23:05.119010+00:00"
+  },
+  "DABUR": {
+    "name": "Dabur India",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 7.35,
+    "net_profit_growth_pct": 15.65,
+    "avg_growth_pct": 11.5,
+    "classification": "Stalwart",
+    "updated_at": "2026-07-20T06:23:11.675622+00:00"
+  },
+  "BSE": {
+    "name": "BSE",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 84.65,
+    "net_profit_growth_pct": 60.93,
+    "avg_growth_pct": 72.79,
+    "classification": "Fast Grower",
+    "updated_at": "2026-07-20T06:23:16.485593+00:00"
+  },
+  "SWIGGY": {
+    "name": "Swiggy",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 44.74,
+    "net_profit_growth_pct": 25.99,
+    "avg_growth_pct": 35.37,
+    "classification": "Fast Grower",
+    "updated_at": "2026-07-20T06:23:22.037254+00:00"
+  },
+  "JSWENERGY": {
+    "name": "JSW Energy",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 41.08,
+    "net_profit_growth_pct": 38.31,
+    "avg_growth_pct": 39.7,
+    "classification": "Fast Grower",
+    "updated_at": "2026-07-20T06:23:26.106833+00:00"
+  },
+  "BOSCHLTD": {
+    "name": "Bosch",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 13.34,
+    "net_profit_growth_pct": 2.89,
+    "avg_growth_pct": 8.11,
+    "classification": "Stalwart",
+    "updated_at": "2026-07-20T06:23:31.720844+00:00"
+  },
+  "CUMMINSIND": {
+    "name": "Cummins India",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 21.9,
+    "net_profit_growth_pct": 22.45,
+    "avg_growth_pct": 22.18,
+    "classification": "Fast Grower",
+    "updated_at": "2026-07-20T06:23:35.899325+00:00"
+  },
+  "GMRAIRPORT": {
+    "name": "GMR Airports",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 37.55,
+    "net_profit_growth_pct": 258.1,
+    "avg_growth_pct": 147.83,
+    "classification": "Fast Grower",
+    "updated_at": "2026-07-20T06:23:40.083876+00:00"
+  },
+  "ICICIGI": {
+    "name": "ICICI Lombard",
+    "result_date": "2026-06-30",
+    "sales_growth_pct": 10.82,
+    "net_profit_growth_pct": -46.05,
+    "avg_growth_pct": -17.62,
+    "classification": "Slow Grower",
+    "updated_at": "2026-07-20T06:23:46.875920+00:00"
+  },
+  "BHARTIHEXA": {
+    "name": "Bharti Hexacom",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 5.46,
+    "net_profit_growth_pct": -4.49,
+    "avg_growth_pct": 0.49,
+    "classification": "Slow Grower",
+    "updated_at": "2026-07-20T06:23:54.788325+00:00"
+  },
+  "LUPIN": {
+    "name": "Lupin",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 31.9,
+    "net_profit_growth_pct": 87.85,
+    "avg_growth_pct": 59.88,
+    "classification": "Fast Grower",
+    "updated_at": "2026-07-20T06:23:59.020252+00:00"
+  },
+  "MARICO": {
+    "name": "Marico",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 22.09,
+    "net_profit_growth_pct": 18.26,
+    "avg_growth_pct": 20.17,
+    "classification": "Fast Grower",
+    "updated_at": "2026-07-20T06:24:04.656969+00:00"
+  },
+  "SRF": {
+    "name": "SRF",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 7.0,
+    "net_profit_growth_pct": 10.65,
+    "avg_growth_pct": 8.82,
+    "classification": "Stalwart",
+    "updated_at": "2026-07-20T06:24:08.961637+00:00"
+  },
+  "NTPCGREEN": {
+    "name": "NTPC Green Ene.",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 46.78,
+    "net_profit_growth_pct": -15.45,
+    "avg_growth_pct": 15.67,
+    "classification": "Fast Grower",
+    "updated_at": "2026-07-20T06:24:15.389699+00:00"
+  },
+  "POWERINDIA": {
+    "name": "Hitachi Energy",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 46.18,
+    "net_profit_growth_pct": 79.35,
+    "avg_growth_pct": 62.76,
+    "classification": "Fast Grower",
+    "updated_at": "2026-07-20T06:24:21.520380+00:00"
+  },
+  "WAAREEENER": {
+    "name": "Waaree Energies",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 111.79,
+    "net_profit_growth_pct": 74.84,
+    "avg_growth_pct": 93.32,
+    "classification": "Fast Grower",
+    "updated_at": "2026-07-20T06:24:26.583681+00:00"
+  },
+  "NHPC": {
+    "name": "NHPC Ltd",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 19.98,
+    "net_profit_growth_pct": 68.37,
+    "avg_growth_pct": 44.18,
+    "classification": "Fast Grower",
+    "updated_at": "2026-07-20T06:24:32.938347+00:00"
+  },
+  "BHEL": {
+    "name": "BHEL",
+    "result_date": "2026-06-30",
+    "sales_growth_pct": 40.3,
+    "net_profit_growth_pct": 182.68,
+    "avg_growth_pct": 111.49,
+    "classification": "Fast Grower",
+    "updated_at": "2026-07-20T06:24:40.727373+00:00"
+  },
+  "INDIANB": {
+    "name": "Indian Bank",
+    "result_date": "2026-06-30",
+    "sales_growth_pct": 11.11,
+    "net_profit_growth_pct": 47.43,
+    "avg_growth_pct": 29.27,
+    "classification": "Fast Grower",
+    "updated_at": "2026-07-20T06:24:46.280043+00:00"
+  },
+  "POLICYBZR": {
+    "name": "PB Fintech.",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 36.67,
+    "net_profit_growth_pct": 53.53,
+    "avg_growth_pct": 45.1,
+    "classification": "Fast Grower",
+    "updated_at": "2026-07-20T06:24:50.070323+00:00"
+  },
+  "PERSISTENT": {
+    "name": "Persistent Sys",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 25.11,
+    "net_profit_growth_pct": 33.59,
+    "avg_growth_pct": 29.35,
+    "classification": "Fast Grower",
+    "updated_at": "2026-07-20T06:24:57.232095+00:00"
+  },
+  "SUZLON": {
+    "name": "Suzlon Energy",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 44.93,
+    "net_profit_growth_pct": -5.67,
+    "avg_growth_pct": 19.63,
+    "classification": "Fast Grower",
+    "updated_at": "2026-07-20T06:25:04.814057+00:00"
+  },
+  "LLOYDSME": {
+    "name": "Lloyds Metals",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 404.61,
+    "net_profit_growth_pct": 657.43,
+    "avg_growth_pct": 531.02,
+    "classification": "Fast Grower",
+    "updated_at": "2026-07-20T06:25:09.021081+00:00"
+  },
+  "COROMANDEL": {
+    "name": "Coromandel Inter",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 20.37,
+    "net_profit_growth_pct": -80.1,
+    "avg_growth_pct": -29.87,
+    "classification": "Slow Grower",
+    "updated_at": "2026-07-20T06:25:13.715584+00:00"
+  },
+  "SBICARD": {
+    "name": "SBI Cards",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 5.56,
+    "net_profit_growth_pct": 14.04,
+    "avg_growth_pct": 9.8,
+    "classification": "Stalwart",
+    "updated_at": "2026-07-20T06:25:21.758541+00:00"
+  },
+  "IDEA": {
+    "name": "Vodafone Idea",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 2.88,
+    "net_profit_growth_pct": 825.13,
+    "avg_growth_pct": 414.0,
+    "classification": "Fast Grower",
+    "updated_at": "2026-07-20T06:25:29.413188+00:00"
+  },
+  "ABBOTINDIA": {
+    "name": "Abbott India",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 6.54,
+    "net_profit_growth_pct": 7.63,
+    "avg_growth_pct": 7.09,
+    "classification": "Slow Grower",
+    "updated_at": "2026-07-20T06:25:37.268090+00:00"
+  },
+  "RVNL": {
+    "name": "Rail Vikas",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 4.19,
+    "net_profit_growth_pct": -60.0,
+    "avg_growth_pct": -27.91,
+    "classification": "Slow Grower",
+    "updated_at": "2026-07-20T06:25:43.524281+00:00"
+  },
+  "IOB": {
+    "name": "Indian Overseas Bank",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 11.19,
+    "net_profit_growth_pct": 42.49,
+    "avg_growth_pct": 26.84,
+    "classification": "Fast Grower",
+    "updated_at": "2026-07-20T06:25:48.146251+00:00"
+  },
+  "PAYTM": {
+    "name": "One 97",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 18.41,
+    "net_profit_growth_pct": 133.58,
+    "avg_growth_pct": 75.99,
+    "classification": "Fast Grower",
+    "updated_at": "2026-07-20T06:25:53.563011+00:00"
+  },
+  "ASHOKLEY": {
+    "name": "Ashok Leyland",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 17.35,
+    "net_profit_growth_pct": 10.83,
+    "avg_growth_pct": 14.09,
+    "classification": "Stalwart",
+    "updated_at": "2026-07-20T06:25:59.699419+00:00"
+  },
+  "OIL": {
+    "name": "Oil India",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 5.51,
+    "net_profit_growth_pct": 61.92,
+    "avg_growth_pct": 33.72,
+    "classification": "Fast Grower",
+    "updated_at": "2026-07-20T06:26:07.212688+00:00"
+  },
+  "AUROPHARMA": {
+    "name": "Aurobindo Pharma",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 5.62,
+    "net_profit_growth_pct": 1.99,
+    "avg_growth_pct": 3.81,
+    "classification": "Slow Grower",
+    "updated_at": "2026-07-20T06:26:11.585588+00:00"
+  },
+  "ATGL": {
+    "name": "Adani Total Gas",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 16.11,
+    "net_profit_growth_pct": 8.39,
+    "avg_growth_pct": 12.25,
+    "classification": "Stalwart",
+    "updated_at": "2026-07-20T06:26:18.084538+00:00"
+  },
+  "PATANJALI": {
+    "name": "Patanjali Foods",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 15.11,
+    "net_profit_growth_pct": 45.96,
+    "avg_growth_pct": 30.53,
+    "classification": "Fast Grower",
+    "updated_at": "2026-07-20T06:26:25.282938+00:00"
+  },
+  "GVT&D": {
+    "name": "GE Vernova T&D",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 41.98,
+    "net_profit_growth_pct": 89.25,
+    "avg_growth_pct": 65.61,
+    "classification": "Fast Grower",
+    "updated_at": "2026-07-20T06:26:32.435161+00:00"
+  },
+  "BERGEPAINT": {
+    "name": "Berger Paints",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 6.07,
+    "net_profit_growth_pct": 27.38,
+    "avg_growth_pct": 16.72,
+    "classification": "Fast Grower",
+    "updated_at": "2026-07-20T06:26:37.671161+00:00"
+  },
+  "JSWINFRA": {
+    "name": "JSW Infrast",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 18.63,
+    "net_profit_growth_pct": -17.83,
+    "avg_growth_pct": 0.4,
+    "classification": "Slow Grower",
+    "updated_at": "2026-07-20T06:26:44.638675+00:00"
+  },
+  "TORNTPOWER": {
+    "name": "Torrent Power",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": -0.77,
+    "net_profit_growth_pct": -69.27,
+    "avg_growth_pct": -35.02,
+    "classification": "Slow Grower",
+    "updated_at": "2026-07-20T06:26:49.823648+00:00"
+  },
+  "SCHAEFFLER": {
+    "name": "Schaeffler India",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 18.95,
+    "net_profit_growth_pct": 25.4,
+    "avg_growth_pct": 22.17,
+    "classification": "Fast Grower",
+    "updated_at": "2026-07-20T06:26:53.801678+00:00"
+  },
+  "VMM": {
+    "name": "Vishal Mega Mart",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 22.21,
+    "net_profit_growth_pct": 46.09,
+    "avg_growth_pct": 34.15,
+    "classification": "Fast Grower",
+    "updated_at": "2026-07-20T06:27:00.499275+00:00"
+  },
+  "ABCAPITAL": {
+    "name": "Aditya Birla Cap",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 10.19,
+    "net_profit_growth_pct": 31.49,
+    "avg_growth_pct": 20.84,
+    "classification": "Fast Grower",
+    "updated_at": "2026-07-20T06:27:08.293027+00:00"
+  },
+  "GICRE": {
+    "name": "General Insuranc",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": -1.45,
+    "net_profit_growth_pct": 1.36,
+    "avg_growth_pct": -0.04,
+    "classification": "Slow Grower",
+    "updated_at": "2026-07-20T06:27:12.705394+00:00"
+  },
+  "NMDC": {
+    "name": "NMDC",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 61.93,
+    "net_profit_growth_pct": 37.24,
+    "avg_growth_pct": 49.58,
+    "classification": "Fast Grower",
+    "updated_at": "2026-07-20T06:27:20.516145+00:00"
+  },
+  "PIIND": {
+    "name": "P I Industries",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": -12.42,
+    "net_profit_growth_pct": -39.39,
+    "avg_growth_pct": -25.91,
+    "classification": "Slow Grower",
+    "updated_at": "2026-07-20T06:27:26.277973+00:00"
+  },
+  "FORTIS": {
+    "name": "Fortis Health.",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 17.84,
+    "net_profit_growth_pct": 44.15,
+    "avg_growth_pct": 30.99,
+    "classification": "Fast Grower",
+    "updated_at": "2026-07-20T06:27:31.699280+00:00"
+  },
+  "GODREJPROP": {
+    "name": "Godrej Propert.",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 62.96,
+    "net_profit_growth_pct": 70.63,
+    "avg_growth_pct": 66.8,
+    "classification": "Fast Grower",
+    "updated_at": "2026-07-20T06:27:36.606598+00:00"
+  },
+  "MRF": {
+    "name": "MRF",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 13.7,
+    "net_profit_growth_pct": 37.65,
+    "avg_growth_pct": 25.67,
+    "classification": "Fast Grower",
+    "updated_at": "2026-07-20T06:27:43.306264+00:00"
+  },
+  "NYKAA": {
+    "name": "FSN E-Commerce",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 28.42,
+    "net_profit_growth_pct": 315.79,
+    "avg_growth_pct": 172.1,
+    "classification": "Fast Grower",
+    "updated_at": "2026-07-20T06:27:47.614110+00:00"
+  },
+  "KALYANKJIL": {
+    "name": "Kalyan Jewellers",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 66.21,
+    "net_profit_growth_pct": 118.09,
+    "avg_growth_pct": 92.15,
+    "classification": "Fast Grower",
+    "updated_at": "2026-07-20T06:27:55.176188+00:00"
+  },
+  "FACT": {
+    "name": "Fertilizer and Chemical Travancore",
+    "result_date": "2025-12-31",
+    "sales_growth_pct": 65.23,
+    "net_profit_growth_pct": -950.0,
+    "avg_growth_pct": -442.39,
+    "classification": "Slow Grower",
+    "updated_at": "2026-07-20T06:28:02.240469+00:00"
+  },
+  "UNOMINDA": {
+    "name": "Uno Minda",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 17.84,
+    "net_profit_growth_pct": 21.8,
+    "avg_growth_pct": 19.82,
+    "classification": "Fast Grower",
+    "updated_at": "2026-07-20T06:28:06.874316+00:00"
+  },
+  "COLPAL": {
+    "name": "Colgate-Palmoliv",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 9.02,
+    "net_profit_growth_pct": -0.56,
+    "avg_growth_pct": 4.23,
+    "classification": "Slow Grower",
+    "updated_at": "2026-07-20T06:28:15.089691+00:00"
+  },
+  "ALKEM": {
+    "name": "Alkem Lab",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 14.6,
+    "net_profit_growth_pct": -22.05,
+    "avg_growth_pct": -3.73,
+    "classification": "Slow Grower",
+    "updated_at": "2026-07-20T06:28:22.687117+00:00"
+  },
+  "GLENMARK": {
+    "name": "Glenmark Pharma.",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 15.82,
+    "net_profit_growth_pct": 7425.0,
+    "avg_growth_pct": 3720.41,
+    "classification": "Fast Grower",
+    "updated_at": "2026-07-20T06:28:27.987523+00:00"
+  },
+  "BDL": {
+    "name": "Bharat Dynamics",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": -72.99,
+    "net_profit_growth_pct": -58.61,
+    "avg_growth_pct": -65.8,
+    "classification": "Slow Grower",
+    "updated_at": "2026-07-20T06:28:33.772306+00:00"
+  },
+  "YESBANK": {
+    "name": "Yes Bank",
+    "result_date": "2026-06-30",
+    "sales_growth_pct": 5.9,
+    "net_profit_growth_pct": 32.51,
+    "avg_growth_pct": 19.21,
+    "classification": "Fast Grower",
+    "updated_at": "2026-07-20T06:28:40.050896+00:00"
+  },
+  "COFORGE": {
+    "name": "Coforge",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 30.04,
+    "net_profit_growth_pct": 116.94,
+    "avg_growth_pct": 73.49,
+    "classification": "Fast Grower",
+    "updated_at": "2026-07-20T06:28:44.753090+00:00"
+  },
+  "UPL": {
+    "name": "UPL",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 17.74,
+    "net_profit_growth_pct": 19.93,
+    "avg_growth_pct": 18.83,
+    "classification": "Fast Grower",
+    "updated_at": "2026-07-20T06:28:50.668128+00:00"
+  },
+  "OBEROIRLTY": {
+    "name": "Oberoi Realty",
+    "result_date": "2026-06-30",
+    "sales_growth_pct": 31.68,
+    "net_profit_growth_pct": 29.22,
+    "avg_growth_pct": 30.45,
+    "classification": "Fast Grower",
+    "updated_at": "2026-07-20T06:28:54.737830+00:00"
+  },
+  "LINDEINDIA": {
+    "name": "Linde India",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 3.72,
+    "net_profit_growth_pct": -34.75,
+    "avg_growth_pct": -15.51,
+    "classification": "Slow Grower",
+    "updated_at": "2026-07-20T06:29:02.054212+00:00"
+  },
+  "JSL": {
+    "name": "Jindal Stain.",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 11.17,
+    "net_profit_growth_pct": 41.36,
+    "avg_growth_pct": 26.26,
+    "classification": "Fast Grower",
+    "updated_at": "2026-07-20T06:29:08.393608+00:00"
+  },
+  "IRCTC": {
+    "name": "I R C T C",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 15.05,
+    "net_profit_growth_pct": -8.94,
+    "avg_growth_pct": 3.06,
+    "classification": "Slow Grower",
+    "updated_at": "2026-07-20T06:29:13.110753+00:00"
+  },
+  "BHARATFORG": {
+    "name": "Bharat Forge",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 17.52,
+    "net_profit_growth_pct": -17.67,
+    "avg_growth_pct": -0.07,
+    "classification": "Slow Grower",
+    "updated_at": "2026-07-20T06:29:18.050478+00:00"
+  },
+  "AUBANK": {
+    "name": "AU Small Finance",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 17.51,
+    "net_profit_growth_pct": 65.08,
+    "avg_growth_pct": 41.3,
+    "classification": "Fast Grower",
+    "updated_at": "2026-07-20T06:29:25.906501+00:00"
+  },
+  "GLAXO": {
+    "name": "Glaxosmi. Pharma",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 2.16,
+    "net_profit_growth_pct": 5.7,
+    "avg_growth_pct": 3.93,
+    "classification": "Slow Grower",
+    "updated_at": "2026-07-20T06:29:30.574923+00:00"
+  },
+  "TIINDIA": {
+    "name": "Tube Investments",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 20.68,
+    "net_profit_growth_pct": 48.1,
+    "avg_growth_pct": 34.39,
+    "classification": "Fast Grower",
+    "updated_at": "2026-07-20T06:29:37.406408+00:00"
+  },
+  "TIL": {
+    "name": "Motil.Oswal.Fin.",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 7.21,
+    "net_profit_growth_pct": -202.15,
+    "avg_growth_pct": -97.47,
+    "classification": "Slow Grower",
+    "updated_at": "2026-07-20T06:29:42.726516+00:00"
+  },
+  "SUPREMEIND": {
+    "name": "Supreme Inds.",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 16.55,
+    "net_profit_growth_pct": 47.62,
+    "avg_growth_pct": 32.09,
+    "classification": "Fast Grower",
+    "updated_at": "2026-07-20T06:29:47.695137+00:00"
+  },
+  "SUNDARMFIN": {
+    "name": "Sundaram Finance",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 13.32,
+    "net_profit_growth_pct": 0.18,
+    "avg_growth_pct": 6.75,
+    "classification": "Slow Grower",
+    "updated_at": "2026-07-20T06:29:53.594781+00:00"
+  },
+  "PHOENIXLTD": {
+    "name": "Phoenix Mills",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 21.36,
+    "net_profit_growth_pct": 39.37,
+    "avg_growth_pct": 30.36,
+    "classification": "Fast Grower",
+    "updated_at": "2026-07-20T06:30:00.631004+00:00"
+  },
+  "BALKRISIND": {
+    "name": "Balkrishna Inds",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 6.58,
+    "net_profit_growth_pct": -18.97,
+    "avg_growth_pct": -6.2,
+    "classification": "Slow Grower",
+    "updated_at": "2026-07-20T06:30:07.931546+00:00"
+  },
+  "MPHASIS": {
+    "name": "Mphasis",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 14.37,
+    "net_profit_growth_pct": 14.35,
+    "avg_growth_pct": 14.36,
+    "classification": "Stalwart",
+    "updated_at": "2026-07-20T06:30:14.926544+00:00"
+  },
+  "UBL": {
+    "name": "United Breweries",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": -3.14,
+    "net_profit_growth_pct": 4.08,
+    "avg_growth_pct": 0.47,
+    "classification": "Slow Grower",
+    "updated_at": "2026-07-20T06:30:20.720601+00:00"
+  },
+  "MFSL": {
+    "name": "Max Financial",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": -12.72,
+    "net_profit_growth_pct": -184.21,
+    "avg_growth_pct": -98.46,
+    "classification": "Slow Grower",
+    "updated_at": "2026-07-20T06:30:27.439748+00:00"
+  },
+  "BIOCON": {
+    "name": "Biocon",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 2.26,
+    "net_profit_growth_pct": -56.64,
+    "avg_growth_pct": -27.19,
+    "classification": "Slow Grower",
+    "updated_at": "2026-07-20T06:30:32.015324+00:00"
+  },
+  "PAGEIND": {
+    "name": "Page Industries",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 14.12,
+    "net_profit_growth_pct": 9.15,
+    "avg_growth_pct": 11.63,
+    "classification": "Stalwart",
+    "updated_at": "2026-07-20T06:30:39.173362+00:00"
+  },
+  "JKCEMENT": {
+    "name": "J K Cements",
+    "result_date": "2026-06-30",
+    "sales_growth_pct": 20.25,
+    "net_profit_growth_pct": -15.12,
+    "avg_growth_pct": 2.56,
+    "classification": "Slow Grower",
+    "updated_at": "2026-07-20T06:30:44.789731+00:00"
+  },
+  "BANKINDIA": {
+    "name": "Bank of India",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 5.92,
+    "net_profit_growth_pct": 18.72,
+    "avg_growth_pct": 12.32,
+    "classification": "Stalwart",
+    "updated_at": "2026-07-20T06:30:48.680153+00:00"
+  },
+  "SAIL": {
+    "name": "Steel Authority of India",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 5.11,
+    "net_profit_growth_pct": 46.68,
+    "avg_growth_pct": 25.89,
+    "classification": "Fast Grower",
+    "updated_at": "2026-07-20T06:30:55.360786+00:00"
+  },
+  "LTF": {
+    "name": "L&T Finance Ltd",
+    "result_date": "2026-06-30",
+    "sales_growth_pct": 22.37,
+    "net_profit_growth_pct": 30.67,
+    "avg_growth_pct": 26.52,
+    "classification": "Fast Grower",
+    "updated_at": "2026-07-20T06:30:59.559048+00:00"
+  },
+  "FEDERALBNK": {
+    "name": "Federal Bank",
+    "result_date": "2026-06-30",
+    "sales_growth_pct": 9.94,
+    "net_profit_growth_pct": 36.91,
+    "avg_growth_pct": 23.43,
+    "classification": "Fast Grower",
+    "updated_at": "2026-07-20T06:31:06.314463+00:00"
+  },
+  "TATACOMM": {
+    "name": "Tata Comm",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 9.42,
+    "net_profit_growth_pct": -75.12,
+    "avg_growth_pct": -32.85,
+    "classification": "Slow Grower",
+    "updated_at": "2026-07-20T06:31:12.299997+00:00"
+  },
+  "IDFCFIRSTB": {
+    "name": "IDFC First Bank",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 12.11,
+    "net_profit_growth_pct": 11.82,
+    "avg_growth_pct": 11.97,
+    "classification": "Stalwart",
+    "updated_at": "2026-07-20T06:31:18.671309+00:00"
+  },
+  "ITCHOTELS": {
+    "name": "ITC Hotels",
+    "result_date": "2026-06-30",
+    "sales_growth_pct": 14.71,
+    "net_profit_growth_pct": 35.82,
+    "avg_growth_pct": 25.26,
+    "classification": "Fast Grower",
+    "updated_at": "2026-07-20T06:31:23.878564+00:00"
+  },
+  "GODFRYPHLP": {
+    "name": "Godfrey Phillips",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 13.6,
+    "net_profit_growth_pct": 86.07,
+    "avg_growth_pct": 49.84,
+    "classification": "Fast Grower",
+    "updated_at": "2026-07-20T06:31:29.386664+00:00"
+  },
+  "LAURUSLABS": {
+    "name": "Laurus Labs",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 5.35,
+    "net_profit_growth_pct": 21.03,
+    "avg_growth_pct": 13.19,
+    "classification": "Stalwart",
+    "updated_at": "2026-07-20T06:31:33.960356+00:00"
+  },
+  "AIIL": {
+    "name": "Authum Invest",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": -78.58,
+    "net_profit_growth_pct": -96.71,
+    "avg_growth_pct": -87.65,
+    "classification": "Slow Grower",
+    "updated_at": "2026-07-20T06:31:40.330401+00:00"
+  },
+  "DIXON": {
+    "name": "Dixon Tech",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 2.12,
+    "net_profit_growth_pct": -35.91,
+    "avg_growth_pct": -16.9,
+    "classification": "Slow Grower",
+    "updated_at": "2026-07-20T06:31:45.084650+00:00"
+  },
+  "KARURVYSYA": {
+    "name": "Karuru Vyasa Bank",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 15.42,
+    "net_profit_growth_pct": 41.33,
+    "avg_growth_pct": 28.37,
+    "classification": "Fast Grower",
+    "updated_at": "2026-07-20T06:31:50.746592+00:00"
+  },
+  "VIMTALABS": {
+    "name": "Ipca Labs",
+    "result_date": "2024-12-31",
+    "sales_growth_pct": 20.0,
+    "net_profit_growth_pct": 120.0,
+    "avg_growth_pct": 70.0,
+    "classification": "Fast Grower",
+    "updated_at": "2026-07-20T06:31:54.878693+00:00"
+  },
+  "GLAND": {
+    "name": "Gland Pharma",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 22.32,
+    "net_profit_growth_pct": 96.26,
+    "avg_growth_pct": 59.29,
+    "classification": "Fast Grower",
+    "updated_at": "2026-07-20T06:32:02.373880+00:00"
+  },
+  "INDUSTOWER": {
+    "name": "Indus Tower",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 4.84,
+    "net_profit_growth_pct": 0.79,
+    "avg_growth_pct": 2.81,
+    "classification": "Slow Grower",
+    "updated_at": "2026-07-20T06:32:10.074688+00:00"
+  },
+  "MCX": {
+    "name": "Multi Commodity Exchange",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 205.5,
+    "net_profit_growth_pct": 292.59,
+    "avg_growth_pct": 249.05,
+    "classification": "Fast Grower",
+    "updated_at": "2026-07-20T06:32:15.596561+00:00"
+  },
+  "SOLARINDS": {
+    "name": "Solar Industries",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 40.89,
+    "net_profit_growth_pct": 60.69,
+    "avg_growth_pct": 50.79,
+    "classification": "Fast Grower",
+    "updated_at": "2026-07-20T06:32:21.764021+00:00"
+  },
+  "POLYCAB": {
+    "name": "Polycab India",
+    "result_date": "2026-06-30",
+    "sales_growth_pct": 39.01,
+    "net_profit_growth_pct": 32.83,
+    "avg_growth_pct": 35.92,
+    "classification": "Fast Grower",
+    "updated_at": "2026-07-20T06:32:27.146721+00:00"
+  },
+  "HDFCAMC": {
+    "name": "HDFC AMC",
+    "result_date": "2026-06-30",
+    "sales_growth_pct": 13.64,
+    "net_profit_growth_pct": 11.9,
+    "avg_growth_pct": 12.77,
+    "classification": "Stalwart",
+    "updated_at": "2026-07-20T06:32:32.009227+00:00"
+  },
+  "HINDZINC": {
+    "name": "Hindustan Zinc",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 49.05,
+    "net_profit_growth_pct": 67.6,
+    "avg_growth_pct": 58.32,
+    "classification": "Fast Grower",
+    "updated_at": "2026-07-20T06:32:36.022839+00:00"
+  },
+  "IDBI": {
+    "name": "IDBI Bank",
+    "result_date": "2026-06-30",
+    "sales_growth_pct": 7.43,
+    "net_profit_growth_pct": 5.29,
+    "avg_growth_pct": 6.36,
+    "classification": "Slow Grower",
+    "updated_at": "2026-07-20T06:32:43.115560+00:00"
+  },
+  "MAZDOCK": {
+    "name": "Mazagon Dock Shipbuilders",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 21.3,
+    "net_profit_growth_pct": 107.38,
+    "avg_growth_pct": 64.34,
+    "classification": "Fast Grower",
+    "updated_at": "2026-07-20T06:32:50.128442+00:00"
+  },
+  "5PAISA": {
+    "name": "Tata Capital",
+    "result_date": "2026-06-30",
+    "sales_growth_pct": 12.82,
+    "net_profit_growth_pct": 0.0,
+    "avg_growth_pct": 6.41,
+    "classification": "Slow Grower",
+    "updated_at": "2026-07-20T06:32:56.114685+00:00"
+  },
+  "PREMIERENE": {
+    "name": "Premier Energies",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 37.57,
+    "net_profit_growth_pct": 64.39,
+    "avg_growth_pct": 50.98,
+    "classification": "Fast Grower",
+    "updated_at": "2026-07-20T06:33:01.272700+00:00"
+  },
+  "APLAPOLLO": {
+    "name": "APL Apollo Tubes",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 13.8,
+    "net_profit_growth_pct": 20.82,
+    "avg_growth_pct": 17.31,
+    "classification": "Fast Grower",
+    "updated_at": "2026-07-20T06:33:05.241982+00:00"
+  },
+  "UNIONBANK": {
+    "name": "Union Bank of India",
+    "result_date": "2026-06-30",
+    "sales_growth_pct": 1.21,
+    "net_profit_growth_pct": 27.42,
+    "avg_growth_pct": 14.31,
+    "classification": "Stalwart",
+    "updated_at": "2026-07-20T06:33:12.096499+00:00"
+  },
+  "KAYNES": {
+    "name": "Kaynes Technologies",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 26.32,
+    "net_profit_growth_pct": -21.55,
+    "avg_growth_pct": 2.38,
+    "classification": "Slow Grower",
+    "updated_at": "2026-07-20T06:33:16.105761+00:00"
+  },
+  "MANKIND": {
+    "name": "Mankind Pharma",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 11.82,
+    "net_profit_growth_pct": 31.53,
+    "avg_growth_pct": 21.68,
+    "classification": "Fast Grower",
+    "updated_at": "2026-07-20T06:33:23.068082+00:00"
+  },
+  "NATIONALUM": {
+    "name": "National Aluminium",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": -4.84,
+    "net_profit_growth_pct": -16.69,
+    "avg_growth_pct": -10.77,
+    "classification": "Slow Grower",
+    "updated_at": "2026-07-20T06:33:28.538377+00:00"
+  },
+  "KEI": {
+    "name": "KEI Industries",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 19.25,
+    "net_profit_growth_pct": 25.11,
+    "avg_growth_pct": 22.18,
+    "classification": "Fast Grower",
+    "updated_at": "2026-07-20T06:33:33.057578+00:00"
+  },
+  "MAXHEALTH": {
+    "name": "Max Healthcare Institute",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 12.2,
+    "net_profit_growth_pct": 7.21,
+    "avg_growth_pct": 9.7,
+    "classification": "Stalwart",
+    "updated_at": "2026-07-20T06:33:37.372397+00:00"
+  },
+  "SAILIFE": {
+    "name": "Sai Life Science",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 3.79,
+    "net_profit_growth_pct": 18.18,
+    "avg_growth_pct": 10.99,
+    "classification": "Stalwart",
+    "updated_at": "2026-07-20T06:33:41.054492+00:00"
+  },
+  "WOCKPHARMA": {
+    "name": "Wockhardt",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 29.88,
+    "net_profit_growth_pct": 464.44,
+    "avg_growth_pct": 247.16,
+    "classification": "Fast Grower",
+    "updated_at": "2026-07-20T06:33:46.249527+00:00"
+  },
+  "GRAPHITE": {
+    "name": "Graphite India Ltd",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 22.52,
+    "net_profit_growth_pct": -314.29,
+    "avg_growth_pct": -145.88,
+    "classification": "Slow Grower",
+    "updated_at": "2026-07-20T06:33:51.488128+00:00"
+  },
+  "MSUMI": {
+    "name": "Motherson Sumi Wiring",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 32.87,
+    "net_profit_growth_pct": 1.21,
+    "avg_growth_pct": 17.04,
+    "classification": "Fast Grower",
+    "updated_at": "2026-07-20T06:33:58.824709+00:00"
+  },
+  "RELIGARE": {
+    "name": "Religare Enterprises ltd",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 20.81,
+    "net_profit_growth_pct": -36.42,
+    "avg_growth_pct": -7.81,
+    "classification": "Slow Grower",
+    "updated_at": "2026-07-20T06:34:04.550234+00:00"
+  },
+  "RADICO": {
+    "name": "Radico Khaitan",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 15.34,
+    "net_profit_growth_pct": 94.57,
+    "avg_growth_pct": 54.95,
+    "classification": "Fast Grower",
+    "updated_at": "2026-07-20T06:34:09.446728+00:00"
+  },
+  "ONESOURCE": {
+    "name": "One Source Speciality Pharma",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 0.53,
+    "net_profit_growth_pct": -95.33,
+    "avg_growth_pct": -47.4,
+    "classification": "Slow Grower",
+    "updated_at": "2026-07-20T06:34:15.912002+00:00"
+  },
+  "TATACHEM": {
+    "name": "Acutaas Chemicals",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": -2.02,
+    "net_profit_growth_pct": -4218.37,
+    "avg_growth_pct": -2110.2,
+    "classification": "Slow Grower",
+    "updated_at": "2026-07-20T06:34:20.189938+00:00"
+  },
+  "METROPOLIS": {
+    "name": "Metropolis Healthcare",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 23.19,
+    "net_profit_growth_pct": 75.86,
+    "avg_growth_pct": 49.53,
+    "classification": "Fast Grower",
+    "updated_at": "2026-07-20T06:34:26.948193+00:00"
+  },
+  "HAPPYFORGE": {
+    "name": "Happy Forging",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 20.45,
+    "net_profit_growth_pct": 23.53,
+    "avg_growth_pct": 21.99,
+    "classification": "Fast Grower",
+    "updated_at": "2026-07-20T06:34:33.980078+00:00"
+  },
+  "CRAFTSMAN": {
+    "name": "Craftsman automation",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 27.27,
+    "net_profit_growth_pct": 73.13,
+    "avg_growth_pct": 50.2,
+    "classification": "Fast Grower",
+    "updated_at": "2026-07-20T06:34:39.031384+00:00"
+  },
+  "LTFOODS": {
+    "name": "LT Foods Ltd",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 30.48,
+    "net_profit_growth_pct": -15.53,
+    "avg_growth_pct": 7.47,
+    "classification": "Slow Grower",
+    "updated_at": "2026-07-20T06:34:43.345908+00:00"
+  },
+  "TI": {
+    "name": "Tilaknagar Industries",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 147.14,
+    "net_profit_growth_pct": -119.48,
+    "avg_growth_pct": 13.83,
+    "classification": "Stalwart",
+    "updated_at": "2026-07-20T06:34:47.040414+00:00"
+  },
+  "JUBLPHARMA": {
+    "name": "Jubilant Pharmova",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 18.71,
+    "net_profit_growth_pct": -21.19,
+    "avg_growth_pct": -1.24,
+    "classification": "Slow Grower",
+    "updated_at": "2026-07-20T06:34:53.377853+00:00"
+  },
+  "ASTERDM": {
+    "name": "Aster DM",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 18.2,
+    "net_profit_growth_pct": 79.07,
+    "avg_growth_pct": 48.63,
+    "classification": "Fast Grower",
+    "updated_at": "2026-07-20T06:34:57.213423+00:00"
+  },
+  "MUTHOOTFIN": {
+    "name": "Muthoot Finance",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 65.23,
+    "net_profit_growth_pct": 135.25,
+    "avg_growth_pct": 100.24,
+    "classification": "Fast Grower",
+    "updated_at": "2026-07-20T06:35:02.243751+00:00"
+  },
+  "DCBBANK": {
+    "name": "DCB Bank",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 9.47,
+    "net_profit_growth_pct": 16.38,
+    "avg_growth_pct": 12.93,
+    "classification": "Stalwart",
+    "updated_at": "2026-07-20T06:35:09.202965+00:00"
+  },
+  "CSBBANK": {
+    "name": "CSB Bank",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 22.43,
+    "net_profit_growth_pct": 6.32,
+    "avg_growth_pct": 14.37,
+    "classification": "Stalwart",
+    "updated_at": "2026-07-20T06:35:15.228821+00:00"
+  },
+  "PNBHOUSING": {
+    "name": "PNB Hosuing Finance",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 7.91,
+    "net_profit_growth_pct": 19.27,
+    "avg_growth_pct": 13.59,
+    "classification": "Stalwart",
+    "updated_at": "2026-07-20T06:35:22.912989+00:00"
+  },
+  "ICDSLTD": {
+    "name": "CDS",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": -77.87,
+    "net_profit_growth_pct": -150.0,
+    "avg_growth_pct": -113.94,
+    "classification": "Slow Grower",
+    "updated_at": "2026-07-20T06:35:29.940766+00:00"
+  },
+  "NUVAMA": {
+    "name": "Nuvama Wealth Management",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 13.3,
+    "net_profit_growth_pct": 5.49,
+    "avg_growth_pct": 9.4,
+    "classification": "Stalwart",
+    "updated_at": "2026-07-20T06:35:35.328605+00:00"
+  },
+  "JGCHEM": {
+    "name": "J B Chemials",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 27.68,
+    "net_profit_growth_pct": 18.75,
+    "avg_growth_pct": 23.21,
+    "classification": "Fast Grower",
+    "updated_at": "2026-07-20T06:35:39.608928+00:00"
+  },
+  "NEULANDLAB": {
+    "name": "Neuland Laboritries",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 136.59,
+    "net_profit_growth_pct": 660.71,
+    "avg_growth_pct": 398.65,
+    "classification": "Fast Grower",
+    "updated_at": "2026-07-20T06:35:46.437037+00:00"
+  },
+  "KIMS": {
+    "name": "Krishna Institue of Medical Science",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 34.88,
+    "net_profit_growth_pct": -68.87,
+    "avg_growth_pct": -16.99,
+    "classification": "Slow Grower",
+    "updated_at": "2026-07-20T06:35:52.985586+00:00"
+  },
+  "ASTRAZEN": {
+    "name": "Astrazeneca Pharma India Ltd",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 20.62,
+    "net_profit_growth_pct": -22.41,
+    "avg_growth_pct": -0.89,
+    "classification": "Slow Grower",
+    "updated_at": "2026-07-20T06:35:57.385395+00:00"
+  },
+  "MEDPLUS": {
+    "name": "Medplus Health Services",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 23.44,
+    "net_profit_growth_pct": 25.49,
+    "avg_growth_pct": 24.47,
+    "classification": "Fast Grower",
+    "updated_at": "2026-07-20T06:36:01.411514+00:00"
+  },
+  "AADHARHFC": {
+    "name": "Aadhar Housing Finance",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 18.25,
+    "net_profit_growth_pct": 26.94,
+    "avg_growth_pct": 22.59,
+    "classification": "Fast Grower",
+    "updated_at": "2026-07-20T06:36:06.529093+00:00"
+  },
+  "PTC": {
+    "name": "PTC Industries",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 33.31,
+    "net_profit_growth_pct": -67.47,
+    "avg_growth_pct": -17.08,
+    "classification": "Slow Grower",
+    "updated_at": "2026-07-20T06:36:12.082867+00:00"
+  },
+  "RAMCOCEM": {
+    "name": "Ramco Cements",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 8.89,
+    "net_profit_growth_pct": 480.77,
+    "avg_growth_pct": 244.83,
+    "classification": "Fast Grower",
+    "updated_at": "2026-07-20T06:36:16.947859+00:00"
+  },
+  "UTIAMC": {
+    "name": "ICICI Pru Asset Management Co Ltd.",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 3.72,
+    "net_profit_growth_pct": -150.0,
+    "avg_growth_pct": -73.14,
+    "classification": "Slow Grower",
+    "updated_at": "2026-07-20T06:36:23.559378+00:00"
+  },
+  "CHOLAHLDNG": {
+    "name": "Cholamandalam Financial Holdings Ltd",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 16.3,
+    "net_profit_growth_pct": 19.38,
+    "avg_growth_pct": 17.84,
+    "classification": "Fast Grower",
+    "updated_at": "2026-07-20T06:36:27.428526+00:00"
+  },
+  "HINDPETRO": {
+    "name": "Hindustan Petroleum Corporation Ltd",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 4.84,
+    "net_profit_growth_pct": 77.6,
+    "avg_growth_pct": 41.22,
+    "classification": "Fast Grower",
+    "updated_at": "2026-07-20T06:36:32.707550+00:00"
+  },
+  "HCG": {
+    "name": "Healthcare Global Entprises",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 11.48,
+    "net_profit_growth_pct": -40.32,
+    "avg_growth_pct": -14.42,
+    "classification": "Slow Grower",
+    "updated_at": "2026-07-20T06:36:38.426071+00:00"
+  },
+  "UJJIVANSFB": {
+    "name": "Ujjivan Small Finance Bank Ltd",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 19.39,
+    "net_profit_growth_pct": 239.76,
+    "avg_growth_pct": 129.57,
+    "classification": "Fast Grower",
+    "updated_at": "2026-07-20T06:36:46.708521+00:00"
+  },
+  "CDSL": {
+    "name": "Central Depository Services (India) Ltd",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 17.41,
+    "net_profit_growth_pct": -20.0,
+    "avg_growth_pct": -1.29,
+    "classification": "Slow Grower",
+    "updated_at": "2026-07-20T06:36:52.495926+00:00"
+  },
+  "RAIN": {
+    "name": "Billionbrains Garage Ventures Ltd",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 19.98,
+    "net_profit_growth_pct": 237.39,
+    "avg_growth_pct": 128.69,
+    "classification": "Fast Grower",
+    "updated_at": "2026-07-20T06:36:59.429929+00:00"
+  },
+  "IOC": {
+    "name": "I O C L",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 6.67,
+    "net_profit_growth_pct": 81.36,
+    "avg_growth_pct": 44.01,
+    "classification": "Fast Grower",
+    "updated_at": "2026-07-20T06:37:04.519067+00:00"
+  },
+  "CGPOWER": {
+    "name": "CG Power & Ind",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 25.03,
+    "net_profit_growth_pct": 32.48,
+    "avg_growth_pct": 28.75,
+    "classification": "Fast Grower",
+    "updated_at": "2026-07-20T06:37:11.079110+00:00"
+  },
+  "MOTHERSON": {
+    "name": "Samvardh. Mothe.",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 17.03,
+    "net_profit_growth_pct": 40.09,
+    "avg_growth_pct": 28.56,
+    "classification": "Fast Grower",
+    "updated_at": "2026-07-20T06:37:18.345333+00:00"
+  },
+  "ICICIPRULI": {
+    "name": "ICICI Pru Life",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": -79.7,
+    "net_profit_growth_pct": 62.08,
+    "avg_growth_pct": -8.81,
+    "classification": "Slow Grower",
+    "updated_at": "2026-07-20T06:37:24.956287+00:00"
+  },
+  "OFSS": {
+    "name": "Oracle Fin.Serv.",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 20.34,
+    "net_profit_growth_pct": 30.75,
+    "avg_growth_pct": 25.54,
+    "classification": "Fast Grower",
+    "updated_at": "2026-07-20T06:37:29.317353+00:00"
+  },
+  "NAM-INDIA": {
+    "name": "Nippon Life Ind.",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 30.34,
+    "net_profit_growth_pct": 28.76,
+    "avg_growth_pct": 29.55,
+    "classification": "Fast Grower",
+    "updated_at": "2026-07-20T06:37:34.959060+00:00"
+  },
+  "RUBICON": {
+    "name": "Rubicon Research",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 43.58,
+    "net_profit_growth_pct": 113.89,
+    "avg_growth_pct": 78.73,
+    "classification": "Fast Grower",
+    "updated_at": "2026-07-20T06:37:41.296226+00:00"
+  },
+  "ZFCVINDIA": {
+    "name": "ZF Commcercial",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 14.13,
+    "net_profit_growth_pct": 14.96,
+    "avg_growth_pct": 14.55,
+    "classification": "Stalwart",
+    "updated_at": "2026-07-20T06:37:45.210757+00:00"
+  },
+  "EMBASSY": {
+    "name": "Embassy Office Parks REIT",
+    "result_date": "2026-03-31",
+    "sales_growth_pct": 10.96,
+    "net_profit_growth_pct": -76.95,
+    "avg_growth_pct": -33.0,
+    "classification": "Slow Grower",
+    "updated_at": "2026-07-20T06:37:50.878333+00:00"
+  }
+}
