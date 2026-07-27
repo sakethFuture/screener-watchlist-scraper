@@ -271,12 +271,12 @@
   },
   "BAJAJ-AUTO": {
     "name": "Bajaj Auto",
-    "result_date": "2026-03-31",
-    "sales_growth_pct": 41.01,
-    "net_profit_growth_pct": 93.78,
-    "avg_growth_pct": 67.4,
+    "result_date": "2026-06-30",
+    "sales_growth_pct": 65.15,
+    "net_profit_growth_pct": 44.3,
+    "avg_growth_pct": 54.72,
     "classification": "Fast Grower",
-    "updated_at": "2026-07-20T06:17:14.341970+00:00"
+    "updated_at": "2026-07-27T09:42:19.276382+00:00"
   },
   "ETERNAL": {
     "name": "Eternal Ltd",

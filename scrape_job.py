@@ -90,8 +90,15 @@ def run_scrape_job(config: Optional[Config] = None) -> dict:
                     counts["errors"] += 1
                     errors.append((stock.slug, "unexpected error - see traceback above"))
                     log.exception("%s (%s): error", stock.name, stock.slug)
-
-                time.sleep(random.uniform(config.min_delay_seconds, config.max_delay_seconds))
+                finally:
+                    # Must be in `finally`, not after the try/except: several
+                    # branches above `continue` (unchanged, no-table-found,
+                    # not-enough-history), which would otherwise skip this
+                    # entirely and hammer screener.in with zero delay between
+                    # the majority of requests - almost certainly the real
+                    # cause of the connection timeouts we were seeing, not IP
+                    # reputation.
+                    time.sleep(random.uniform(config.min_delay_seconds, config.max_delay_seconds))
         finally:
             browser.close()
 
