@@ -235,12 +235,12 @@
   },
   "COALINDIA": {
     "name": "Coal India",
-    "result_date": "2026-03-31",
-    "sales_growth_pct": 22.91,
-    "net_profit_growth_pct": 13.71,
-    "avg_growth_pct": 18.31,
-    "classification": "Fast Grower",
-    "updated_at": "2026-07-20T06:16:51.847377+00:00"
+    "result_date": "2026-06-30",
+    "sales_growth_pct": 7.77,
+    "net_profit_growth_pct": 0.71,
+    "avg_growth_pct": 4.24,
+    "classification": "Slow Grower",
+    "updated_at": "2026-07-28T05:48:51.363489+00:00"
   },
   "ASIANPAINT": {
     "name": "Asian Paints",
@@ -289,12 +289,12 @@
   },
   "BEL": {
     "name": "Bharat Electron",
-    "result_date": "2026-03-31",
-    "sales_growth_pct": 11.74,
-    "net_profit_growth_pct": 4.65,
-    "avg_growth_pct": 8.2,
-    "classification": "Stalwart",
-    "updated_at": "2026-07-20T06:17:28.194683+00:00"
+    "result_date": "2026-06-30",
+    "sales_growth_pct": 24.93,
+    "net_profit_growth_pct": 8.88,
+    "avg_growth_pct": 16.9,
+    "classification": "Fast Grower",
+    "updated_at": "2026-07-28T05:49:24.555213+00:00"
   },
   "GRASIM": {
     "name": "Grasim Inds",
@@ -667,12 +667,12 @@
   },
   "TATAPOWER": {
     "name": "Tata Power Co.",
-    "result_date": "2026-03-31",
-    "sales_growth_pct": -12.85,
-    "net_profit_growth_pct": 8.42,
-    "avg_growth_pct": -2.21,
-    "classification": "Slow Grower",
-    "updated_at": "2026-07-20T06:21:34.104456+00:00"
+    "result_date": "2026-06-30",
+    "sales_growth_pct": 5.63,
+    "net_profit_growth_pct": 11.01,
+    "avg_growth_pct": 8.32,
+    "classification": "Stalwart",
+    "updated_at": "2026-07-28T05:53:15.522412+00:00"
   },
   "ABB": {
     "name": "A B B",
@@ -1567,12 +1567,12 @@
   },
   "GODFRYPHLP": {
     "name": "Godfrey Phillips",
-    "result_date": "2026-03-31",
-    "sales_growth_pct": 13.6,
-    "net_profit_growth_pct": 86.07,
-    "avg_growth_pct": 49.84,
-    "classification": "Fast Grower",
-    "updated_at": "2026-07-20T06:31:29.386664+00:00"
+    "result_date": "2026-06-30",
+    "sales_growth_pct": -18.84,
+    "net_profit_growth_pct": -44.38,
+    "avg_growth_pct": -31.61,
+    "classification": "Slow Grower",
+    "updated_at": "2026-07-28T06:02:39.290282+00:00"
   },
   "LAURUSLABS": {
     "name": "Laurus Labs",
@@ -1630,12 +1630,12 @@
   },
   "INDUSTOWER": {
     "name": "Indus Tower",
-    "result_date": "2026-03-31",
-    "sales_growth_pct": 4.84,
-    "net_profit_growth_pct": 0.79,
-    "avg_growth_pct": 2.81,
+    "result_date": "2026-06-30",
+    "sales_growth_pct": 4.63,
+    "net_profit_growth_pct": 0.52,
+    "avg_growth_pct": 2.57,
     "classification": "Slow Grower",
-    "updated_at": "2026-07-20T06:32:10.074688+00:00"
+    "updated_at": "2026-07-28T06:03:19.489860+00:00"
   },
   "MCX": {
     "name": "Multi Commodity Exchange",
@@ -1846,12 +1846,12 @@
   },
   "TATACHEM": {
     "name": "Acutaas Chemicals",
-    "result_date": "2026-03-31",
-    "sales_growth_pct": -2.02,
-    "net_profit_growth_pct": -4218.37,
-    "avg_growth_pct": -2110.2,
+    "result_date": "2026-06-30",
+    "sales_growth_pct": 14.41,
+    "net_profit_growth_pct": -81.01,
+    "avg_growth_pct": -33.3,
     "classification": "Slow Grower",
-    "updated_at": "2026-07-20T06:34:20.189938+00:00"
+    "updated_at": "2026-07-28T06:05:37.402990+00:00"
   },
   "METROPOLIS": {
     "name": "Metropolis Healthcare",
@@ -1891,12 +1891,12 @@
   },
   "TI": {
     "name": "Tilaknagar Industries",
-    "result_date": "2026-03-31",
-    "sales_growth_pct": 147.14,
-    "net_profit_growth_pct": -119.48,
-    "avg_growth_pct": 13.83,
-    "classification": "Stalwart",
-    "updated_at": "2026-07-20T06:34:47.040414+00:00"
+    "result_date": "2026-06-30",
+    "sales_growth_pct": 155.75,
+    "net_profit_growth_pct": -64.04,
+    "avg_growth_pct": 45.85,
+    "classification": "Fast Grower",
+    "updated_at": "2026-07-28T06:06:03.490886+00:00"
   },
   "JUBLPHARMA": {
     "name": "Jubilant Pharmova",
