@@ -6,7 +6,7 @@
 <title>Top 200 Company Analysis — FY26-27</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Nunito:wght@700;800;900&display=swap" rel="stylesheet">
 <style>
   :root{
     --bg:#FFFFFF;
@@ -39,16 +39,27 @@
     --cat-turnaround-bg:#FDF2F8;
     --cat-asset:#2563EB;
     --cat-asset-bg:#EFF4FF;
+
+    --shadow-1: 0 1px 2px rgba(20,20,40,.04), 0 2px 4px rgba(20,20,40,.03);
+    --shadow-2: 0 2px 4px rgba(20,20,40,.05), 0 8px 16px rgba(20,20,40,.06), 0 1px 0 rgba(255,255,255,.6) inset;
+    --shadow-3: 0 4px 8px rgba(20,20,40,.06), 0 16px 32px rgba(20,20,40,.10), 0 1px 0 rgba(255,255,255,.7) inset;
+    --shadow-lift: 0 10px 20px rgba(20,20,40,.10), 0 22px 44px rgba(20,20,40,.12), 0 1px 0 rgba(255,255,255,.7) inset;
   }
   *{box-sizing:border-box;}
   body{
     margin:0;
-    background:var(--bg);
     color:var(--text);
     font-family:'Inter', sans-serif;
     min-height:100vh;
     padding:0 0 60px 0;
+    background:
+      radial-gradient(1100px 600px at 8% -10%, rgba(37,99,235,.10), transparent 60%),
+      radial-gradient(900px 500px at 92% 8%, rgba(124,58,237,.09), transparent 60%),
+      radial-gradient(1000px 700px at 50% 110%, rgba(13,148,136,.08), transparent 60%),
+      var(--bg);
+    background-attachment: fixed;
   }
+  .num-font{ font-family:'Nunito', 'Inter', sans-serif; font-weight:800; }
 
   /* ===== Header ===== */
   .masthead{
@@ -104,9 +115,11 @@
   .panel{
     background:var(--bg);
     border:1px solid var(--border);
-    border-radius:8px;
+    border-radius:16px;
     padding:0;
     margin-top:16px;
+    box-shadow:var(--shadow-3);
+    transition:box-shadow .25s ease, transform .25s ease;
   }
 
   /* ===== Summary strip ===== */
@@ -123,12 +136,76 @@
     border-right:1px solid var(--border);
   }
   .stat:last-child{ border-right:none; }
-  .stat .num{ font-size:22px; font-weight:600; }
+  .stat{ transition:background .2s ease; }
+  .stat:hover{ background:var(--surface); }
+  .stat .num{ font-family:'Nunito','Inter',sans-serif; font-size:30px; font-weight:800; letter-spacing:-0.02em; }
   .stat .lbl{ font-size:11px; color:var(--text-faint); margin-top:2px; }
   .stat.buy .num{ color:var(--buy); }
   .stat.sell .num{ color:var(--sell); }
   .stat.hold .num{ color:var(--hold); }
   .stat.changed .num{ color:var(--accent); }
+
+  /* ===== Scroll reveal ===== */
+  .reveal{ opacity:0; transform:translateY(18px); transition:opacity .5s ease, transform .5s ease; }
+  .reveal.visible{ opacity:1; transform:translateY(0); }
+
+  /* ===== Sector Overview ===== */
+  .sector-overview{ margin-top:24px; }
+  .sector-overview-head{ margin-bottom:14px; }
+  .sector-overview-head h2{
+    font-family:'Nunito','Inter',sans-serif;
+    font-size:19px; font-weight:800; margin:0 0 4px; color:var(--text);
+    letter-spacing:-0.01em;
+  }
+  .sector-overview-sub{ font-size:12.5px; color:var(--text-dim); margin:0; }
+  .sector-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fill, minmax(220px, 1fr));
+    gap:14px;
+  }
+  .sector-card{
+    background:var(--bg);
+    border:1px solid var(--border);
+    border-radius:14px;
+    padding:16px 18px;
+    cursor:pointer;
+    box-shadow:var(--shadow-2);
+    border-top:3px solid var(--sector-color);
+    transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+    position:relative;
+    overflow:hidden;
+  }
+  .sector-card::after{
+    content:'';
+    position:absolute; inset:0;
+    background:radial-gradient(120px 80px at 100% 0%, color-mix(in srgb, var(--sector-color) 12%, transparent), transparent 70%);
+    pointer-events:none;
+  }
+  .sector-card:hover{ transform:translateY(-4px); box-shadow:var(--shadow-lift); }
+  .sector-card.active{
+    border-color:var(--sector-color);
+    box-shadow:var(--shadow-lift), 0 0 0 2px color-mix(in srgb, var(--sector-color) 45%, transparent);
+  }
+  .sector-card-top{ display:flex; align-items:center; gap:8px; margin-bottom:10px; }
+  .sector-swatch{
+    width:11px; height:11px; border-radius:50%;
+    background:var(--sector-color);
+    box-shadow:0 0 0 3px color-mix(in srgb, var(--sector-color) 22%, transparent);
+    flex-shrink:0;
+  }
+  .sector-name{ font-size:12.5px; font-weight:600; color:var(--text); line-height:1.3; }
+  .sector-count{
+    font-family:'Nunito','Inter',sans-serif; font-weight:900; font-size:32px;
+    color:var(--text); letter-spacing:-0.02em; line-height:1;
+  }
+  .sector-count-lbl{ font-size:10.5px; color:var(--text-faint); margin:2px 0 12px; text-transform:uppercase; letter-spacing:.04em; }
+  .sector-rec-row{ display:flex; gap:6px; flex-wrap:wrap; margin-bottom:10px; }
+  .sector-rec{ font-size:10.5px; font-weight:700; padding:3px 8px; border-radius:999px; }
+  .sector-rec.buy{ color:var(--buy); background:var(--buy-bg); }
+  .sector-rec.hold{ color:var(--hold); background:var(--hold-bg); }
+  .sector-rec.sell{ color:var(--sell); background:var(--sell-bg); }
+  .sector-changed{ font-size:11px; color:var(--text-faint); font-weight:500; }
+  .sector-changed.has-changes{ color:var(--accent); font-weight:700; }
 
   /* ===== Toolbar ===== */
   .toolbar{
@@ -144,43 +221,50 @@
     min-width:200px;
     background:var(--surface);
     border:1px solid var(--border);
-    border-radius:6px;
+    border-radius:8px;
     padding:8px 12px;
     color:var(--text);
     font-family:'Inter';
     font-size:13.5px;
     outline:none;
+    transition:box-shadow .15s ease, border-color .15s ease;
   }
   .search::placeholder{ color:var(--text-faint); }
-  .search:focus{ border-color:var(--accent); }
+  .search:focus{ border-color:var(--accent); box-shadow:0 0 0 3px var(--accent-soft); }
   select.filter{
     background:var(--surface);
     border:1px solid var(--border);
     color:var(--text-dim);
     font-size:13px;
     padding:8px 10px;
-    border-radius:6px;
+    border-radius:8px;
     outline:none;
+    transition:box-shadow .15s ease, border-color .15s ease;
   }
+  select.filter:focus{ border-color:var(--accent); box-shadow:0 0 0 3px var(--accent-soft); }
   .btn{
     font-size:13px;
     font-weight:500;
-    border-radius:6px;
+    border-radius:8px;
     padding:8px 14px;
     cursor:pointer;
     border:1px solid var(--border);
     background:var(--bg);
     color:var(--text-dim);
-    transition:all .12s ease;
+    transition:transform .12s ease, box-shadow .12s ease, background .12s ease, color .12s ease;
     white-space:nowrap;
+    box-shadow:var(--shadow-1);
   }
-  .btn:hover{ background:var(--surface); color:var(--text); }
+  .btn:hover{ background:var(--surface); color:var(--text); transform:translateY(-1px); box-shadow:var(--shadow-2); }
+  .btn:active{ transform:translateY(0) scale(.96); box-shadow:none; transition-duration:.05s; }
   .btn.primary{
     background:var(--accent);
     border-color:var(--accent);
     color:#fff;
+    box-shadow:0 2px 6px rgba(37,99,235,.35);
   }
-  .btn.primary:hover{ opacity:0.9; }
+  .btn.primary:hover{ opacity:0.94; transform:translateY(-1px); box-shadow:0 6px 16px rgba(37,99,235,.4); }
+  .btn.primary:active{ transform:translateY(0) scale(.96); }
   .save-status{
     font-size:11px;
     color:var(--text-faint);
@@ -193,7 +277,10 @@
   .autofill-panel, .sync-panel{
     padding:16px 20px 18px;
     border-bottom:1px solid var(--border);
-    background:var(--surface);
+    background:rgba(247,248,250,.65);
+    backdrop-filter:blur(10px) saturate(140%);
+    -webkit-backdrop-filter:blur(10px) saturate(140%);
+    box-shadow:inset 0 1px 0 rgba(255,255,255,.5);
   }
   .autofill-head{ display:flex; justify-content:space-between; align-items:flex-start; gap:16px; margin-bottom:8px; }
   .autofill-title{ font-size:14px; font-weight:600; color:var(--text); }
@@ -237,9 +324,12 @@
     background:var(--bg);
     z-index:2;
   }
-  tbody tr{ border-bottom:1px solid var(--border); }
+  tbody tr{ border-bottom:1px solid var(--border); transition:background .15s ease; }
+  tbody tr td{ transition:transform .15s ease, box-shadow .15s ease; position:relative; }
   tbody tr:hover{ background:var(--surface); }
+  tbody tr:hover td{ transform:translateY(-2px); box-shadow:0 6px 14px rgba(20,20,40,.07); background:var(--surface); z-index:1; }
   tbody tr.new-row{ background:var(--accent-soft); }
+  tbody tr.new-row:hover td{ background:var(--accent-soft); }
   td{ padding:8px 14px; vertical-align:middle; }
 
   .co-name{
@@ -283,6 +373,40 @@
   select.rec-select[data-v="Buy"]{ color:var(--buy); }
   select.rec-select[data-v="Sell"]{ color:var(--sell); }
   select.rec-select[data-v="Hold"]{ color:var(--hold); }
+
+  /* ===== Colorful pill selects (Category / Recommendation) ===== */
+  .pill-wrap{
+    position:relative;
+    display:inline-flex;
+    align-items:center;
+    border-radius:999px;
+    transition:transform .12s ease, box-shadow .12s ease;
+  }
+  .pill-wrap:not(.empty){
+    background:linear-gradient(135deg, var(--pill-color), color-mix(in srgb, var(--pill-color) 70%, black));
+    box-shadow:0 2px 6px color-mix(in srgb, var(--pill-color) 45%, transparent), inset 0 1px 0 rgba(255,255,255,.35);
+  }
+  .pill-wrap:not(.empty):hover{ transform:translateY(-1px) scale(1.02); box-shadow:0 4px 12px color-mix(in srgb, var(--pill-color) 55%, transparent); }
+  .pill-wrap::before{
+    content:attr(data-icon);
+    position:absolute;
+    left:12px;
+    font-size:9px;
+    color:#fff;
+    opacity:.9;
+    pointer-events:none;
+  }
+  .pill-wrap:not(.empty) select{
+    background:transparent;
+    border:none;
+    color:#fff;
+    font-weight:700;
+    padding:6px 12px 6px 26px;
+    text-shadow:0 1px 1px rgba(0,0,0,.15);
+  }
+  .pill-wrap:not(.empty) select option{ color:var(--text); background:var(--bg); font-weight:500; text-shadow:none; }
+  .pill-wrap.empty::before{ display:none; }
+  .pill-wrap.empty select{ padding-left:9px; }
 
   .suggested-tag, .outlier-tag{
     display:inline-block;
@@ -354,7 +478,15 @@
   </div>
 
   <div class="wrap">
-    <div class="panel">
+    <section class="sector-overview reveal" id="sectorOverviewSection">
+      <div class="sector-overview-head">
+        <h2>Sector Overview</h2>
+        <p class="sector-overview-sub">Sorted by most category-changes this quarter first. Click a card to filter the table below; click again to clear.</p>
+      </div>
+      <div class="sector-grid" id="sectorGrid"></div>
+    </section>
+
+    <div class="panel reveal">
       <div class="summary" id="summaryRow"></div>
       <div class="toolbar">
         <input class="search" id="searchBox" type="text" placeholder="Filter by company name…">
@@ -372,6 +504,9 @@
           <option>Buy</option>
           <option>Hold</option>
           <option>Sell</option>
+        </select>
+        <select class="filter" id="sectorFilter">
+          <option value="">All sectors</option>
         </select>
         <button class="btn" id="autofillBtn">⇩ Autofill results</button>
         <button class="btn" id="syncBtn">⟳ Sync from automation</button>
@@ -441,6 +576,9 @@ const CAT_COLOR = {
   'Slow Grower':'var(--cat-slow)','Stalwart':'var(--cat-stalwart)','Fast Grower':'var(--cat-fast)',
   'Cyclical':'var(--cat-cyclical)','Turnaround':'var(--cat-turnaround)','Asset Play':'var(--cat-asset)'
 };
+const CAT_ICON = {'Slow Grower':'●','Stalwart':'◆','Fast Grower':'▲','Cyclical':'↻','Turnaround':'⤴','Asset Play':'■'};
+const REC_COLOR = {'Buy':'var(--buy)','Hold':'var(--hold)','Sell':'var(--sell)'};
+const REC_ICON = {'Buy':'▲','Hold':'●','Sell':'▼'};
 
 const SEED = [{"name":"Reliance Industry","q4_2025_cat":"Slow Grower","q4_2025_rec":"Hold"},{"name":"HDFC Bank","q4_2025_cat":"Slow Grower","q4_2025_rec":"Sell"},{"name":"TCS","q4_2025_cat":"Slow Grower","q4_2025_rec":"Hold"},{"name":"Bharti Airtel","q4_2025_cat":"Slow Grower","q4_2025_rec":"Sell"},{"name":"ICICI Bank","q4_2025_cat":"Slow Grower","q4_2025_rec":"Hold"},{"name":"St Bk of India","q4_2025_cat":"Stalwart","q4_2025_rec":"Hold"},{"name":"Infosys","q4_2025_cat":"Stalwart/ Slow grower","q4_2025_rec":"Hold"},{"name":"Bajaj Finance","q4_2025_cat":"Fast Grower","q4_2025_rec":"Buy"},{"name":"Hind. Unilever","q4_2025_cat":"Slow Grower","q4_2025_rec":"Hold"},{"name":"ITC","q4_2025_cat":"Turnaround","q4_2025_rec":"Buy"},{"name":"Larsen & Toubro","q4_2025_cat":"Stalwart","q4_2025_rec":"Hold"},{"name":"Kotak Mah. Bank","q4_2025_cat":"Slow Grower","q4_2025_rec":"Hold"},{"name":"Sun Pharma.Inds.","q4_2025_cat":null,"q4_2025_rec":null},{"name":"HCL Technologies","q4_2025_cat":"Slow Grower","q4_2025_rec":"Hold"},{"name":"Maruti Suzuki","q4_2025_cat":"Hold","q4_2025_rec":"Buy"},{"name":"NTPC","q4_2025_cat":null,"q4_2025_rec":null},{"name":"UltraTech Cem.","q4_2025_cat":"Fast Grower","q4_2025_rec":"Hold"},{"name":"Axis Bank","q4_2025_cat":"Stalwart","q4_2025_rec":"Hold"},{"name":"M & M","q4_2025_cat":"Stalwart","q4_2025_rec":"Hold"},{"name":"Bajaj Finserv","q4_2025_cat":"Stalwart","q4_2025_rec":"Hold"},{"name":"O N G C","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Power Grid Corpn","q4_2025_cat":"Slow Grower","q4_2025_rec":"Sell"},{"name":"Titan Company","q4_2025_cat":"Fast Grower","q4_2025_rec":"Buy"},{"name":"Adani Enterp.","q4_2025_cat":"Cyclical","q4_2025_rec":"Buy"},{"name":"Wipro","q4_2025_cat":"Slow Grower","q4_2025_rec":"Hold"},{"name":"Adani Ports","q4_2025_cat":"Stalwart","q4_2025_rec":"Buy"},{"name":"Coal India","q4_2025_cat":"Cyclical","q4_2025_rec":"Buy"},{"name":"Asian Paints","q4_2025_cat":null,"q4_2025_rec":null},{"name":"JSW Steel","q4_2025_cat":"Slow Grower","q4_2025_rec":"Buy"},{"name":"Nestle India","q4_2025_cat":"Stalwart","q4_2025_rec":"Buy"},{"name":"Tata Motors","q4_2025_cat":"Stalwart","q4_2025_rec":"Hold"},{"name":"Bajaj Auto","q4_2025_cat":"Stalwart","q4_2025_rec":"Buy"},{"name":"Eternal Ltd","q4_2025_cat":"Fast Grower","q4_2025_rec":"Buy"},{"name":"Bharat Electron","q4_2025_cat":"Stalwart","q4_2025_rec":"Hold"},{"name":"Grasim Inds","q4_2025_cat":"Stalwart","q4_2025_rec":"Buy"},{"name":"Tata Steel","q4_2025_cat":"Slow grower","q4_2025_rec":"Buy"},{"name":"Trent","q4_2025_cat":"Fast Grower","q4_2025_rec":"Buy"},{"name":"SBI Life Insuran","q4_2025_cat":"Stalwart","q4_2025_rec":"Sell"},{"name":"Eicher Motors","q4_2025_cat":null,"q4_2025_rec":null},{"name":"HDFC Life Insur.","q4_2025_cat":"Slow Grower","q4_2025_rec":"Sell"},{"name":"Jio Financial","q4_2025_cat":"Fast Grower","q4_2025_rec":"Buy"},{"name":"Hindalco Inds.","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Tech Mahindra","q4_2025_cat":"Slow Grower","q4_2025_rec":"Hold"},{"name":"Shriram Finance","q4_2025_cat":"Fast Grower","q4_2025_rec":"Hold"},{"name":"Cipla","q4_2025_cat":"Slow  Grower","q4_2025_rec":"Sell"},{"name":"Tata Consumer","q4_2025_cat":"Stalwart","q4_2025_rec":"Buy"},{"name":"Dr Reddy's Labs","q4_2025_cat":"Slow grower","q4_2025_rec":"Sell"},{"name":"Apollo Hospitals","q4_2025_cat":"Stalwart","q4_2025_rec":"Buy"},{"name":"Life Insurance","q4_2025_cat":null,"q4_2025_rec":null},{"name":"IndusInd Bank","q4_2025_cat":"Slow Grower/Turnaround","q4_2025_rec":"Hold"},{"name":"Hero Motocorp","q4_2025_cat":"Slow Grower","q4_2025_rec":"Buy"},{"name":"Hind.Aeronautics","q4_2025_cat":"Stalwart","q4_2025_rec":"Sell"},{"name":"Avenue Super.","q4_2025_cat":"Stalwart","q4_2025_rec":"Hold"},{"name":"Adani Power","q4_2025_cat":"Stalwart","q4_2025_rec":"Buy"},{"name":"Interglobe Aviat","q4_2025_cat":null,"q4_2025_rec":null},{"name":"I O C L","q4_2025_cat":"Slow grower","q4_2025_rec":"Hold"},{"name":"Varun Beverages","q4_2025_cat":"Fast Grower","q4_2025_rec":"Buy"},{"name":"I R F C","q4_2025_cat":"Stalwart / Turnaround","q4_2025_rec":"Hold"},{"name":"Vedanta","q4_2025_cat":"Stalwart","q4_2025_rec":"Hold"},{"name":"DLF","q4_2025_cat":"Cyclical","q4_2025_rec":"Sell"},{"name":"Pidilite Inds.","q4_2025_cat":"Stalwart","q4_2025_rec":"Buy"},{"name":"Divi's Lab.","q4_2025_cat":"Stalwart","q4_2025_rec":"Hold"},{"name":"Adani Green","q4_2025_cat":"Stalwart/ Slow grower","q4_2025_rec":"Hold"},{"name":"Power Fin.Corpn.","q4_2025_cat":"Stalwart","q4_2025_rec":"Sell"},{"name":"Ambuja Cements","q4_2025_cat":"Slow Grower","q4_2025_rec":"Hold"},{"name":"Cholaman.Inv.&Fn","q4_2025_cat":"Fast grower","q4_2025_rec":"Hold"},{"name":"LTIMindtree","q4_2025_cat":"Stalwart","q4_2025_rec":"Buy"},{"name":"B P C L","q4_2025_cat":"Slow Grower","q4_2025_rec":"Hold"},{"name":"Britannia Inds.","q4_2025_cat":"Slow Grower","q4_2025_rec":"Hold"},{"name":"Bajaj Holdings","q4_2025_cat":"Stalwart","q4_2025_rec":"Sell"},{"name":"Godrej Consumer","q4_2025_cat":"Slow grower","q4_2025_rec":"Hold"},{"name":"Bank of Baroda","q4_2025_cat":"Slow grower","q4_2025_rec":"Hold"},{"name":"Hyundai Motor I","q4_2025_cat":"Slow grower","q4_2025_rec":"Hold"},{"name":"TVS Motor Co.","q4_2025_cat":"Stalwart","q4_2025_rec":"Buy"},{"name":"GAIL (India)","q4_2025_cat":"Stalwart","q4_2025_rec":"Sell"},{"name":"Lodha Developers Ltd","q4_2025_cat":"Cyclical and Stalwart","q4_2025_rec":"Hold"},{"name":"Indian Hotels Co","q4_2025_cat":"Fast grower/ cyclical","q4_2025_rec":"Hold"},{"name":"Tata Power Co.","q4_2025_cat":"Stalwart","q4_2025_rec":"Sell"},{"name":"A B B","q4_2025_cat":"Stalwart","q4_2025_rec":"Hold"},{"name":"REC Ltd","q4_2025_cat":"Stalwart","q4_2025_rec":"Hold"},{"name":"Punjab Natl.Bank","q4_2025_cat":"Stalwart","q4_2025_rec":"Hold"},{"name":"Shree Cement","q4_2025_cat":"Stalwart","q4_2025_rec":"Hold"},{"name":"United Spirits","q4_2025_cat":"Slow grower","q4_2025_rec":"Hold"},{"name":"Bajaj Housing","q4_2025_cat":"Fast Grower","q4_2025_rec":"Hold"},{"name":"Adani Energy Sol","q4_2025_cat":"Stalwart","q4_2025_rec":"Buy"},{"name":"Torrent Pharma.","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Havells India","q4_2025_cat":"Stalwart","q4_2025_rec":"Hold"},{"name":"CG Power & Ind","q4_2025_cat":"Stalwart","q4_2025_rec":"Hold"},{"name":"Samvardh. Mothe.","q4_2025_cat":"Stalwart ","q4_2025_rec":"Buy"},{"name":"Siemens","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Prestige Estates","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Canara Bank","q4_2025_cat":"Slow Grower","q4_2025_rec":"Sell"},{"name":"Info Edg.(India)","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Jindal Steel","q4_2025_cat":"Slow Grower","q4_2025_rec":"Buy"},{"name":"Zydus Lifesci.","q4_2025_cat":"Stalwart","q4_2025_rec":"Buy"},{"name":"ICICI Pru Life","q4_2025_cat":"Slow Grower","q4_2025_rec":"Sell"},{"name":"Dabur India","q4_2025_cat":"Slow Grower","q4_2025_rec":"Hold"},{"name":"BSE","q4_2025_cat":"Fast Grower","q4_2025_rec":"Buy"},{"name":"Swiggy","q4_2025_cat":"Fast Grower","q4_2025_rec":"Hold"},{"name":"JSW Energy","q4_2025_cat":"Turnaround","q4_2025_rec":"Buy"},{"name":"Bosch","q4_2025_cat":"Stalwart","q4_2025_rec":"Buy"},{"name":"Cummins India","q4_2025_cat":null,"q4_2025_rec":null},{"name":"GMR Airports","q4_2025_cat":"Cyclical, Asset Play and Turnaround","q4_2025_rec":"Buy"},{"name":"ICICI Lombard","q4_2025_cat":"Stalwart","q4_2025_rec":"Hold"},{"name":"Bharti Hexacom","q4_2025_cat":"Stalwart","q4_2025_rec":"Hold"},{"name":"Lupin","q4_2025_cat":"Stalwart","q4_2025_rec":"Buy"},{"name":"Marico","q4_2025_cat":"Stalwart","q4_2025_rec":"Buy"},{"name":"SRF","q4_2025_cat":"Stalwart","q4_2025_rec":"Hold"},{"name":"H P C L","q4_2025_cat":"Slow Grower","q4_2025_rec":"Hold"},{"name":"NTPC Green Ene.","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Hitachi Energy","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Waaree Energies","q4_2025_cat":"Fast Grower","q4_2025_rec":"Buy"},{"name":"NHPC Ltd","q4_2025_cat":"Turnaround","q4_2025_rec":"BUy"},{"name":"B H E L","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Indian Bank","q4_2025_cat":"Stalwart","q4_2025_rec":"Hold"},{"name":"PB Fintech.","q4_2025_cat":"Fast Grower","q4_2025_rec":"Hold"},{"name":"Persistent Sys","q4_2025_cat":"Fast Grower","q4_2025_rec":"Buy"},{"name":"Suzlon Energy","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Lloyds Metals","q4_2025_cat":"Fast Grower","q4_2025_rec":"Buy"},{"name":"Coromandel Inter","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Oracle Fin.Serv.","q4_2025_cat":null,"q4_2025_rec":null},{"name":"SBI Cards","q4_2025_cat":"Stalwart","q4_2025_rec":"Hold"},{"name":"Vodafone Idea","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Abbott India","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Rail Vikas","q4_2025_cat":null,"q4_2025_rec":null},{"name":"I O B","q4_2025_cat":null,"q4_2025_rec":null},{"name":"One 97","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Ashok Leyland","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Oil India","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Aurobindo Pharma","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Adani Total Gas","q4_2025_cat":"Stalwart","q4_2025_rec":"Buy"},{"name":"Patanjali Foods","q4_2025_cat":null,"q4_2025_rec":null},{"name":"GE Vernova T&D","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Berger Paints","q4_2025_cat":null,"q4_2025_rec":null},{"name":"JSW Infrast","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Torrent Power","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Schaeffler India","q4_2025_cat":"Stalwart","q4_2025_rec":"Hold"},{"name":"Vishal Mega Mart","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Aditya Birla Cap","q4_2025_cat":null,"q4_2025_rec":null},{"name":"General Insuranc","q4_2025_cat":null,"q4_2025_rec":null},{"name":"NMDC","q4_2025_cat":null,"q4_2025_rec":null},{"name":"P I Industries","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Fortis Health.","q4_2025_cat":null,"q4_2025_rec":null},{"name":"HDB FINANC SER","q4_2025_cat":"Stalwart","q4_2025_rec":"Hold"},{"name":"Godrej Propert.","q4_2025_cat":"Cyclical, Turnaround","q4_2025_rec":"Buy"},{"name":"MRF","q4_2025_cat":null,"q4_2025_rec":null},{"name":"FSN E-Commerce","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Kalyan Jewellers","q4_2025_cat":null,"q4_2025_rec":null},{"name":"F A C T","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Uno Minda","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Colgate-Palmoliv","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Alkem Lab","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Glenmark Pharma.","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Bharat Dynamics","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Yes Bank","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Coforge","q4_2025_cat":"Stalwart","q4_2025_rec":"Sell"},{"name":"UPL","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Oberoi Realty","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Linde India","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Jindal Stain.","q4_2025_cat":null,"q4_2025_rec":null},{"name":"I R C T C","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Bharat Forge","q4_2025_cat":null,"q4_2025_rec":null},{"name":"AU Small Finance","q4_2025_cat":"Fast Grower","q4_2025_rec":"Buy"},{"name":"Glaxosmi. Pharma","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Tube Investments","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Motil.Oswal.Fin.","q4_2025_cat":"Stalwart","q4_2025_rec":"Buy"},{"name":"Supreme Inds.","q4_2025_cat":"Slow Grower","q4_2025_rec":"Buy"},{"name":"Sundaram Finance","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Phoenix Mills","q4_2025_cat":"Stalwart","q4_2025_rec":"Buy"},{"name":"Balkrishna Inds","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Mphasis","q4_2025_cat":"Slow Grower","q4_2025_rec":"Sell"},{"name":"United Breweries","q4_2025_cat":"Stalwart","q4_2025_rec":"Sell"},{"name":"Max Financial","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Biocon","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Page Industries","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Nippon Life Ind.","q4_2025_cat":"Stalwart","q4_2025_rec":"Buy"},{"name":"J K Cements","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Bank of India","q4_2025_cat":null,"q4_2025_rec":null},{"name":"S A I L","q4_2025_cat":null,"q4_2025_rec":null},{"name":"L&T Finance Ltd","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Federal Bank","q4_2025_cat":"Stalwart","q4_2025_rec":"Buy"},{"name":"Tata Comm","q4_2025_cat":"Slow Grower","q4_2025_rec":"Hold"},{"name":"IDFC First Bank","q4_2025_cat":"Stalwart","q4_2025_rec":"Hold"},{"name":"ITC Hotels","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Godfrey Phillips","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Laurus Labs","q4_2025_cat":"Stalwart","q4_2025_rec":"Hold"},{"name":"Authum Invest","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Dixon Tech","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Karuru Vyasa Bank","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Ipca Labs","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Gland Pharma","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Indus Tower","q4_2025_cat":"Stalwart","q4_2025_rec":"Hold"},{"name":"Multi Commodity Exchange","q4_2025_cat":"Fast Grower","q4_2025_rec":"Buy"},{"name":"Solar Industries","q4_2025_cat":null,"q4_2025_rec":null},{"name":"HPCL","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Polycab India","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Coforge","q4_2025_cat":null,"q4_2025_rec":null},{"name":"HDFC AMC","q4_2025_cat":"Stalwart","q4_2025_rec":"Buy"},{"name":"IRFC","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Indian Overseas Bank","q4_2025_cat":"Slow Grower","q4_2025_rec":"Hold"},{"name":"Hindustan Zinc","q4_2025_cat":"Stalwart","q4_2025_rec":"Buy"},{"name":"IDBI Bank","q4_2025_cat":"Slow Grower","q4_2025_rec":"Sell"},{"name":"Mazagon Dock Shipbuilders","q4_2025_cat":"Stalwart","q4_2025_rec":"Buy"},{"name":"Tata Capital","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Premier Energies","q4_2025_cat":null,"q4_2025_rec":null},{"name":"BHEL","q4_2025_cat":"Stalwart","q4_2025_rec":"Buy"},{"name":"NMDC","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Steel Authority of India","q4_2025_cat":null,"q4_2025_rec":null},{"name":"APL Apollo Tubes","q4_2025_cat":"Stalwart","q4_2025_rec":"Hold"},{"name":"Lodha Developers","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Union Bank of India","q4_2025_cat":"Stalwart","q4_2025_rec":"Hold"},{"name":"Fertilizer and Chemical Travancore","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Kaynes Technologies","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Mankind Pharma","q4_2025_cat":null,"q4_2025_rec":null},{"name":"National Aluminium","q4_2025_cat":"Stalwart","q4_2025_rec":"Hold"},{"name":"KEI Industries","q4_2025_cat":"Stalwart","q4_2025_rec":"Hold"},{"name":"Max Healthcare Institute","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Sai Life Science","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Wockhardt","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Graphite India Ltd","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Motherson Sumi Wiring","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Religare Enterprises ltd","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Piramal Finances","q4_2025_cat":"Stalwart ","q4_2025_rec":"Hold"},{"name":"Radico Khaitan","q4_2025_cat":null,"q4_2025_rec":null},{"name":"One Source Speciality Pharma","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Acutaas Chemicals","q4_2025_cat":"Fast Grower","q4_2025_rec":"Buy"},{"name":"Metropolis Healthcare","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Happy Forging","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Craftsman automation","q4_2025_cat":null,"q4_2025_rec":null},{"name":"LT Foods Ltd","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Tilaknagar Industries","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Jubilant Pharmova","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Aster DM","q4_2025_cat":"Slow Grower","q4_2025_rec":"Buy"},{"name":"Muthoot Finance","q4_2025_cat":null,"q4_2025_rec":null},{"name":"DCB Bank ","q4_2025_cat":"Fast grower","q4_2025_rec":"Hold"},{"name":"CSB Bank","q4_2025_cat":null,"q4_2025_rec":null},{"name":"PNB Hosuing Finance","q4_2025_cat":"Slow grower","q4_2025_rec":"Hold"},{"name":"CDS","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Nuvama Wealth Management","q4_2025_cat":null,"q4_2025_rec":null},{"name":"J B Chemials","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Neuland Laboritries","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Krishna Institue of Medical Science","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Astrazeneca Pharma India Ltd","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Medplus Health Services","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Rubicon Research","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Aadhar Housing Finance","q4_2025_cat":null,"q4_2025_rec":null},{"name":"ZF Commcercial ","q4_2025_cat":null,"q4_2025_rec":null},{"name":"PTC Industries","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Ramco Cements","q4_2025_cat":null,"q4_2025_rec":null},{"name":"ICICI Pru Asset Management Co Ltd.","q4_2025_cat":"Fast Grower","q4_2025_rec":"Buy"},{"name":"Embassy Office Parks REIT","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Cholamandalam Financial Holdings Ltd","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Hindustan Petroleum Corporation Ltd","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Larsen & Toubro Ltd","q4_2025_cat":"Stalwart","q4_2025_rec":"Hold"},{"name":"Canara HSBC Life Insurance Company Ltd","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Healthcare Global Entprises","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Ujjivan Small Finance Bank Ltd","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Central Depository Services (India) Ltd","q4_2025_cat":null,"q4_2025_rec":null},{"name":"Billionbrains Garage Ventures Ltd","q4_2025_cat":null,"q4_2025_rec":null}];
 
@@ -466,6 +604,27 @@ const Q1_2026_REC_SUGGESTIONS = {"Reliance Industry":"Hold","HDFC Bank":"Hold","
 // than genuine acceleration — flagged for a manual sanity check regardless
 // of what the rule suggested.
 const OUTLIER_FLAGS = new Set(["JSW Steel","Eternal Ltd","Jio Financial","A B B","Prestige Estates","Jindal Steel","GMR Airports","Lloyds Metals","Vodafone Idea","FSN E-Commerce","Glenmark Pharma.","Multi Commodity Exchange","Wockhardt","Neuland Laboritries","Ramco Cements","Ujjivan Small Finance Bank Ltd","Billionbrains Garage Ventures Ltd"]);
+
+// Company name -> sector. 149 direct matches from the official Indices
+// Constituents sheet, 108 manually classified by actual business. Two keys
+// ("DCB Bank ", "ZF Commcercial ") intentionally keep a trailing space to
+// match how those names appear in SEED - do not trim these keys.
+const SECTOR_MAP = {"Reliance Industry":"Oil Gas & Consumable Fuels","HDFC Bank":"Financial Services","Bharti Airtel":"Telecommunication","ICICI Bank":"Financial Services","St Bk of India":"Financial Services","Infosys":"Information Technology","Bajaj Finance":"Financial Services","Hind. Unilever":"Fast Moving Consumer Goods","ITC":"Fast Moving Consumer Goods","Larsen & Toubro":"Construction","Kotak Mah. Bank":"Financial Services","HCL Technologies":"Information Technology","Maruti Suzuki":"Automobile and Auto Components","NTPC":"Power","UltraTech Cem.":"Construction Materials","Axis Bank":"Financial Services","Bajaj Finserv":"Financial Services","Power Grid Corpn":"Power","Titan Company":"Consumer Durables","Adani Enterp.":"Metals & Mining","Wipro":"Information Technology","Adani Ports":"Power","Coal India":"Oil Gas & Consumable Fuels","Asian Paints":"Consumer Durables","JSW Steel":"Metals & Mining","Nestle India":"Fast Moving Consumer Goods","Tata Motors":"Automobile and Auto Components","Bajaj Auto":"Automobile and Auto Components","Eternal Ltd":"Consumer Services","Grasim Inds":"Construction Materials","Tata Steel":"Metals & Mining","SBI Life Insuran":"Financial Services","Eicher Motors":"Automobile and Auto Components","HDFC Life Insur.":"Financial Services","Hindalco Inds.":"Metals & Mining","Tech Mahindra":"Information Technology","Shriram Finance":"Financial Services","Cipla":"Healthcare","Dr Reddy's Labs":"Healthcare","Life Insurance":"Financial Services","IndusInd Bank":"Financial Services","Hero Motocorp":"Automobile and Auto Components","Avenue Super.":"Consumer Services","Adani Power":"Power","Interglobe Aviat":"Services","Varun Beverages":"Fast Moving Consumer Goods","Vedanta":"Metals & Mining","DLF":"Realty","Pidilite Inds.":"Chemicals","Adani Green":"Power","Power Fin.Corpn.":"Financial Services","Ambuja Cements":"Construction Materials","LTIMindtree":"Information Technology","Britannia Inds.":"Fast Moving Consumer Goods","Godrej Consumer":"Fast Moving Consumer Goods","Bank of Baroda":"Financial Services","TVS Motor Co.":"Automobile and Auto Components","GAIL (India)":"Oil Gas & Consumable Fuels","Indian Hotels Co":"Consumer Services","Tata Power Co.":"Power","REC Ltd":"Financial Services","Punjab Natl.Bank":"Financial Services","Shree Cement":"Construction Materials","United Spirits":"Fast Moving Consumer Goods","Adani Energy Sol":"Power","Torrent Pharma.":"Healthcare","Havells India":"Consumer Durables","Siemens":"Capital Goods","Prestige Estates":"Realty","Canara Bank":"Financial Services","Info Edg.(India)":"Consumer Services","Jindal Steel":"Metals & Mining","Zydus Lifesci.":"Healthcare","Dabur India":"Fast Moving Consumer Goods","JSW Energy":"Power","Bosch":"Automobile and Auto Components","Cummins India":"Capital Goods","Lupin":"Healthcare","Marico":"Fast Moving Consumer Goods","SRF":"Chemicals","NHPC Ltd":"Power","Indian Bank":"Financial Services","Persistent Sys":"Information Technology","Coromandel Inter":"Chemicals","Abbott India":"Healthcare","Ashok Leyland":"Capital Goods","Oil India":"Oil Gas & Consumable Fuels","Aurobindo Pharma":"Healthcare","Adani Total Gas":"Oil Gas & Consumable Fuels","Patanjali Foods":"Fast Moving Consumer Goods","Torrent Power":"Power","NMDC":"Metals & Mining","P I Industries":"Chemicals","Fortis Health.":"Healthcare","Godrej Propert.":"Realty","MRF":"Automobile and Auto Components","Kalyan Jewellers":"Consumer Durables","Colgate-Palmoliv":"Fast Moving Consumer Goods","Glenmark Pharma.":"Healthcare","Yes Bank":"Financial Services","Coforge":"Information Technology","UPL":"Chemicals","Oberoi Realty":"Realty","Linde India":"Chemicals","Jindal Stain.":"Metals & Mining","Bharat Forge":"Automobile and Auto Components","AU Small Finance":"Financial Services","Tube Investments":"Automobile and Auto Components","Sundaram Finance":"Financial Services","Phoenix Mills":"Realty","Balkrishna Inds":"Automobile and Auto Components","Mphasis":"Information Technology","United Breweries":"Fast Moving Consumer Goods","Biocon":"Healthcare","Bank of India":"Financial Services","Federal Bank":"Financial Services","IDFC First Bank":"Financial Services","Laurus Labs":"Healthcare","Gland Pharma":"Healthcare","Indus Tower":"Telecommunication","Solar Industries":"Chemicals","HPCL":"Power","Indian Overseas Bank":"Financial Services","Hindustan Zinc":"Metals & Mining","IDBI Bank":"Financial Services","Steel Authority of India":"Metals & Mining","APL Apollo Tubes":"Capital Goods","Union Bank of India":"Financial Services","Kaynes Technologies":"Consumer Durables","Mankind Pharma":"Healthcare","National Aluminium":"Metals & Mining","Max Healthcare Institute":"Healthcare","Sai Life Science":"Healthcare","Religare Enterprises ltd":"Realty","Piramal Finances":"Financial Services","Radico Khaitan":"Fast Moving Consumer Goods","Acutaas Chemicals":"Chemicals","Muthoot Finance":"Financial Services","DCB Bank ":"Financial Services","CSB Bank":"Financial Services","PNB Hosuing Finance":"Financial Services","Aadhar Housing Finance":"Financial Services","ICICI Pru Asset Management Co Ltd.":"Financial Services","Hindustan Petroleum Corporation Ltd":"Oil Gas & Consumable Fuels","Larsen & Toubro Ltd":"Construction","Canara HSBC Life Insurance Company Ltd":"Financial Services","Ujjivan Small Finance Bank Ltd":"Financial Services","TCS":"Information Technology","Sun Pharma.Inds.":"Healthcare","M & M":"Automobile and Auto Components","O N G C":"Oil Gas & Consumable Fuels","Bharat Electron":"Capital Goods","Trent":"Consumer Services","Jio Financial":"Financial Services","Tata Consumer":"Fast Moving Consumer Goods","Apollo Hospitals":"Healthcare","Hind.Aeronautics":"Capital Goods","I O C L":"Oil Gas & Consumable Fuels","I R F C":"Financial Services","Divi's Lab.":"Healthcare","Cholaman.Inv.&Fn":"Financial Services","B P C L":"Oil Gas & Consumable Fuels","Bajaj Holdings":"Financial Services","Hyundai Motor I":"Automobile and Auto Components","Lodha Developers Ltd":"Realty","A B B":"Capital Goods","Bajaj Housing":"Financial Services","CG Power & Ind":"Capital Goods","Samvardh. Mothe.":"Automobile and Auto Components","ICICI Pru Life":"Financial Services","BSE":"Financial Services","Swiggy":"Consumer Services","GMR Airports":"Services","ICICI Lombard":"Financial Services","Bharti Hexacom":"Telecommunication","H P C L":"Oil Gas & Consumable Fuels","NTPC Green Ene.":"Power","Hitachi Energy":"Capital Goods","Waaree Energies":"Capital Goods","B H E L":"Capital Goods","PB Fintech.":"Financial Services","Suzlon Energy":"Capital Goods","Lloyds Metals":"Metals & Mining","Oracle Fin.Serv.":"Information Technology","SBI Cards":"Financial Services","Vodafone Idea":"Telecommunication","Rail Vikas":"Construction","I O B":"Financial Services","One 97":"Financial Services","GE Vernova T&D":"Capital Goods","Berger Paints":"Consumer Durables","JSW Infrast":"Services","Schaeffler India":"Capital Goods","Vishal Mega Mart":"Consumer Services","Aditya Birla Cap":"Financial Services","General Insuranc":"Financial Services","HDB FINANC SER":"Financial Services","FSN E-Commerce":"Consumer Services","F A C T":"Chemicals","Uno Minda":"Automobile and Auto Components","Alkem Lab":"Healthcare","Bharat Dynamics":"Capital Goods","I R C T C":"Consumer Services","Glaxosmi. Pharma":"Healthcare","Motil.Oswal.Fin.":"Financial Services","Supreme Inds.":"Capital Goods","Max Financial":"Financial Services","Page Industries":"Textiles","Nippon Life Ind.":"Financial Services","J K Cements":"Construction Materials","S A I L":"Metals & Mining","L&T Finance Ltd":"Financial Services","Tata Comm":"Telecommunication","ITC Hotels":"Consumer Services","Godfrey Phillips":"Fast Moving Consumer Goods","Authum Invest":"Financial Services","Dixon Tech":"Consumer Durables","Karuru Vyasa Bank":"Financial Services","Ipca Labs":"Healthcare","Multi Commodity Exchange":"Financial Services","Polycab India":"Capital Goods","HDFC AMC":"Financial Services","IRFC":"Financial Services","Mazagon Dock Shipbuilders":"Capital Goods","Tata Capital":"Financial Services","Premier Energies":"Capital Goods","BHEL":"Capital Goods","Lodha Developers":"Realty","Fertilizer and Chemical Travancore":"Chemicals","KEI Industries":"Capital Goods","Wockhardt":"Healthcare","Graphite India Ltd":"Capital Goods","Motherson Sumi Wiring":"Automobile and Auto Components","One Source Speciality Pharma":"Healthcare","Metropolis Healthcare":"Healthcare","Happy Forging":"Automobile and Auto Components","Craftsman automation":"Automobile and Auto Components","LT Foods Ltd":"Fast Moving Consumer Goods","Tilaknagar Industries":"Fast Moving Consumer Goods","Jubilant Pharmova":"Healthcare","Aster DM":"Healthcare","CDS":"Financial Services","Nuvama Wealth Management":"Financial Services","J B Chemials":"Healthcare","Neuland Laboritries":"Healthcare","Krishna Institue of Medical Science":"Healthcare","Astrazeneca Pharma India Ltd":"Healthcare","Medplus Health Services":"Healthcare","Rubicon Research":"Healthcare","ZF Commcercial ":"Automobile and Auto Components","PTC Industries":"Capital Goods","Ramco Cements":"Construction Materials","Embassy Office Parks REIT":"Realty","Cholamandalam Financial Holdings Ltd":"Financial Services","Healthcare Global Entprises":"Healthcare","Central Depository Services (India) Ltd":"Financial Services","Billionbrains Garage Ventures Ltd":"Financial Services"};
+
+// Fixed per-sector accent (categorical identity, always paired with the
+// sector's own text label on its card - never the sole identifier). Chosen
+// to stay clear of the Buy/Hold/Sell status hues (green/amber/red) so a
+// sector's accent never gets mistaken for the status chips inside its card.
+const SECTORS = ["Financial Services","Information Technology","Healthcare","Capital Goods","Automobile and Auto Components","Oil Gas & Consumable Fuels","Fast Moving Consumer Goods","Metals & Mining","Realty","Construction","Construction Materials","Consumer Durables","Consumer Services","Telecommunication","Power","Chemicals","Textiles","Services"];
+const SECTOR_COLOR = {
+  "Financial Services":"#4F46E5","Information Technology":"#2563EB","Healthcare":"#0D9488",
+  "Capital Goods":"#6366F1","Automobile and Auto Components":"#EA580C","Oil Gas & Consumable Fuels":"#92400E",
+  "Fast Moving Consumer Goods":"#DB2777","Metals & Mining":"#475569","Realty":"#0891B2",
+  "Construction":"#78716C","Construction Materials":"#C2410C","Consumer Durables":"#7C3AED",
+  "Consumer Services":"#E11D48","Telecommunication":"#0EA5E9","Power":"#CA8A04",
+  "Chemicals":"#C026D3","Textiles":"#B45309","Services":"#64748B"
+};
+function sectorOf(name){ return SECTOR_MAP[name] || 'Unclassified'; }
 
 const hasNativeStorage = typeof window.storage !== 'undefined' && window.storage;
 const localStore = {
@@ -515,6 +674,7 @@ function seedToState(){
     return {
       id: 'c' + i + '_' + Date.now().toString(36).slice(-4),
       name: row.name,
+      sector: sectorOf(row.name),
       baseline: { cat: normCat(row.q4_2025_cat), rec: normRec(row.q4_2025_rec) },
       quarters: {
         'Q1 2026':{cat:q1Class, rec:q1Rec, recSuggested: !!q1Rec},
@@ -537,6 +697,10 @@ function backfillQ1Classifications(){
     if(!q1.rec && Q1_2026_REC_SUGGESTIONS[c.name]){
       q1.rec = Q1_2026_REC_SUGGESTIONS[c.name];
       q1.recSuggested = true;
+      filled++;
+    }
+    if(!c.sector){
+      c.sector = sectorOf(c.name);
       filled++;
     }
   });
@@ -641,6 +805,7 @@ function renderTable(){
   const search = document.getElementById('searchBox').value.trim().toLowerCase();
   const catF = document.getElementById('catFilter').value;
   const recF = document.getElementById('recFilter').value;
+  const sectorF = document.getElementById('sectorFilter').value;
 
   const body = document.getElementById('tableBody');
   body.innerHTML = '';
@@ -651,6 +816,7 @@ function renderTable(){
     if(search && !c.name.toLowerCase().includes(search)) return;
     if(catF && cur.cat !== catF) return;
     if(recF && cur.rec !== recF) return;
+    if(sectorF && (c.sector || 'Unclassified') !== sectorF) return;
     shown++;
 
     const prev = prevOf(c, qIndex);
@@ -680,20 +846,29 @@ function renderTable(){
       ? `<span class="outlier-tag" title="This quarter's growth % looks like a base effect (unusually low/negative prior-year quarter), not necessarily real acceleration. Worth checking manually before trusting the suggestion.">⚠ verify</span>`
       : '';
 
+    const catColor = CAT_COLOR[cur.cat] || '';
+    const catIcon = CAT_ICON[cur.cat] || '';
+    const recColor = REC_COLOR[cur.rec] || '';
+    const recIcon = REC_ICON[cur.rec] || '';
+
     tr.innerHTML = `
       <td><input class="co-name" value="${c.name.replace(/"/g,'&quot;')}" data-id="${c.id}" data-field="name"></td>
       <td class="prior">${priorHtml}</td>
       <td>
-        <select class="cat-select" data-id="${c.id}" data-field="cat">
-          <option value="">—</option>
-          ${CATS.map(cat => `<option value="${cat}" ${cur.cat===cat?'selected':''}>${cat}</option>`).join('')}
-        </select>
+        <span class="pill-wrap${cur.cat?'':' empty'}" data-icon="${catIcon}" style="--pill-color:${catColor||'transparent'}">
+          <select class="cat-select" data-id="${c.id}" data-field="cat">
+            <option value="">—</option>
+            ${CATS.map(cat => `<option value="${cat}" ${cur.cat===cat?'selected':''}>${cat}</option>`).join('')}
+          </select>
+        </span>
       </td>
       <td>
-        <select class="rec-select" data-id="${c.id}" data-field="rec" data-v="${cur.rec||''}">
-          <option value="">—</option>
-          ${RECS.map(r => `<option value="${r}" ${cur.rec===r?'selected':''}>${r}</option>`).join('')}
-        </select>
+        <span class="pill-wrap${cur.rec?'':' empty'}" data-icon="${recIcon}" style="--pill-color:${recColor||'transparent'}">
+          <select class="rec-select" data-id="${c.id}" data-field="rec" data-v="${cur.rec||''}">
+            <option value="">—</option>
+            ${RECS.map(r => `<option value="${r}" ${cur.rec===r?'selected':''}>${r}</option>`).join('')}
+          </select>
+        </span>
         ${suggestedTag}${outlierTag}
       </td>
       <td>${changeHtml}</td>
@@ -733,6 +908,7 @@ function onFieldEdit(e){
   if(e.target.dataset.field === 'rec') c.quarters[state.activeQ].recSuggested = false;
   saveState();
   renderSummary();
+  renderSectorOverview();
   renderTable();
 }
 function onDelete(e){
@@ -748,6 +924,7 @@ document.getElementById('addBtn').addEventListener('click', () => {
   const id = 'c_new_' + Date.now().toString(36);
   const rec = {
     id, name: 'New Stock',
+    sector: '',
     baseline: { cat:'', rec:'' },
     quarters: { 'Q1 2026':{cat:'',rec:'',recSuggested:false}, 'Q2 2026':{cat:'',rec:'',recSuggested:false}, 'Q3 2026':{cat:'',rec:'',recSuggested:false}, 'Q4 2026':{cat:'',rec:'',recSuggested:false} }
   };
@@ -910,12 +1087,84 @@ document.getElementById('applyAutofillBtn').addEventListener('click', () => {
 
   saveState();
   renderSummary();
+  renderSectorOverview();
   renderTable();
 });
 
 document.getElementById('searchBox').addEventListener('input', renderTable);
 document.getElementById('catFilter').addEventListener('change', renderTable);
 document.getElementById('recFilter').addEventListener('change', renderTable);
+document.getElementById('sectorFilter').addEventListener('change', () => { renderTable(); highlightActiveSectorCard(); });
+
+function populateSectorFilterOptions(){
+  const sel = document.getElementById('sectorFilter');
+  const current = sel.value;
+  const present = new Set(state.companies.map(c => c.sector || 'Unclassified'));
+  const ordered = SECTORS.filter(s => present.has(s));
+  if(present.has('Unclassified')) ordered.push('Unclassified');
+  sel.innerHTML = '<option value="">All sectors</option>' + ordered.map(s => `<option value="${s}">${s}</option>`).join('');
+  sel.value = ordered.includes(current) ? current : '';
+}
+
+function highlightActiveSectorCard(){
+  const active = document.getElementById('sectorFilter').value;
+  document.querySelectorAll('.sector-card').forEach(card => {
+    card.classList.toggle('active', card.dataset.sector === active);
+  });
+}
+
+function renderSectorOverview(){
+  const qIndex = QUARTERS.indexOf(state.activeQ);
+  const bySector = {};
+  state.companies.forEach(c => {
+    const s = c.sector || 'Unclassified';
+    if(!bySector[s]) bySector[s] = { count:0, buy:0, hold:0, sell:0, changed:0 };
+    const bucket = bySector[s];
+    bucket.count++;
+    const cur = c.quarters[state.activeQ];
+    if(cur.rec === 'Buy') bucket.buy++;
+    else if(cur.rec === 'Hold') bucket.hold++;
+    else if(cur.rec === 'Sell') bucket.sell++;
+    const prev = prevOf(c, qIndex);
+    if(cur.cat && prev.cat && cur.cat !== prev.cat) bucket.changed++;
+  });
+
+  const cards = Object.keys(bySector)
+    .sort((a, b) => bySector[b].changed - bySector[a].changed || bySector[b].count - bySector[a].count)
+    .map(sector => {
+      const b = bySector[sector];
+      const color = SECTOR_COLOR[sector] || '#8B909B';
+      return { sector, b, color };
+    });
+
+  const grid = document.getElementById('sectorGrid');
+  const activeSector = document.getElementById('sectorFilter').value;
+  grid.innerHTML = cards.map(({ sector, b, color }) => `
+    <div class="sector-card${sector === activeSector ? ' active' : ''}" data-sector="${sector}" style="--sector-color:${color}">
+      <div class="sector-card-top">
+        <span class="sector-swatch"></span>
+        <span class="sector-name">${sector}</span>
+      </div>
+      <div class="sector-count">${b.count}</div>
+      <div class="sector-count-lbl">companies</div>
+      <div class="sector-rec-row">
+        <span class="sector-rec buy">${b.buy} Buy</span>
+        <span class="sector-rec hold">${b.hold} Hold</span>
+        <span class="sector-rec sell">${b.sell} Sell</span>
+      </div>
+      <div class="sector-changed${b.changed > 0 ? ' has-changes' : ''}">${b.changed} changed this quarter</div>
+    </div>
+  `).join('');
+
+  grid.querySelectorAll('.sector-card').forEach(card => {
+    card.addEventListener('click', () => {
+      const sel = document.getElementById('sectorFilter');
+      sel.value = (sel.value === card.dataset.sector) ? '' : card.dataset.sector;
+      renderTable();
+      highlightActiveSectorCard();
+    });
+  });
+}
 
 // --- Sync from automation endpoint ---
 async function loadSyncUrl(){
@@ -958,6 +1207,7 @@ async function runSync(url, { silent } = {}){
     if(verifyStatus){ verifyStatus.textContent = `✓ verified — ${updated} synced just now`; verifyStatus.classList.remove('warn'); }
     saveState();
     renderSummary();
+    renderSectorOverview();
     renderTable();
     return { ok: true, updated, unmatched };
   }catch(e){
@@ -1008,8 +1258,31 @@ document.getElementById('verifyBtn').addEventListener('click', async () => {
 function render(){
   renderTabs();
   renderSummary();
+  populateSectorFilterOptions();
+  renderSectorOverview();
   renderTable();
+  highlightActiveSectorCard();
 }
+
+// Scroll-reveal for top-level sections only (not per-row - would be janky
+// on a 259-row table). Each element reveals once, then stops observing.
+function setupScrollReveal(){
+  const els = document.querySelectorAll('.reveal');
+  if(!('IntersectionObserver' in window)){
+    els.forEach(el => el.classList.add('visible'));
+    return;
+  }
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.classList.add('visible');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+  els.forEach(el => io.observe(el));
+}
+setupScrollReveal();
 
 loadState().then(async () => {
   render();
