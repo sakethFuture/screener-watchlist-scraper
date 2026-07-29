@@ -73,12 +73,12 @@
   },
   "HINDUNILVR": {
     "name": "Hind. Unilever",
-    "result_date": "2026-03-31",
-    "sales_growth_pct": 7.64,
-    "net_profit_growth_pct": 20.97,
-    "avg_growth_pct": 14.31,
-    "classification": "Stalwart",
-    "updated_at": "2026-07-20T06:15:00.095041+00:00"
+    "result_date": "2026-06-30",
+    "sales_growth_pct": 10.05,
+    "net_profit_growth_pct": -3.18,
+    "avg_growth_pct": 3.44,
+    "classification": "Slow Grower",
+    "updated_at": "2026-07-29T05:53:11.412611+00:00"
   },
   "ITC": {
     "name": "ITC",
@@ -91,12 +91,12 @@
   },
   "LT": {
     "name": "Larsen & Toubro Ltd",
-    "result_date": "2026-03-31",
-    "sales_growth_pct": 11.25,
-    "net_profit_growth_pct": -0.37,
-    "avg_growth_pct": 5.44,
-    "classification": "Slow Grower",
-    "updated_at": "2026-07-20T06:15:11.732065+00:00"
+    "result_date": "2026-06-30",
+    "sales_growth_pct": 6.69,
+    "net_profit_growth_pct": 15.52,
+    "avg_growth_pct": 11.11,
+    "classification": "Stalwart",
+    "updated_at": "2026-07-29T05:53:21.980715+00:00"
   },
   "KOTAKBANK": {
     "name": "Kotak Mah. Bank",
@@ -487,12 +487,12 @@
   },
   "VBL": {
     "name": "Varun Beverages",
-    "result_date": "2026-03-31",
-    "sales_growth_pct": 18.09,
-    "net_profit_growth_pct": 20.25,
-    "avg_growth_pct": 19.17,
+    "result_date": "2026-06-30",
+    "sales_growth_pct": 20.44,
+    "net_profit_growth_pct": 15.09,
+    "avg_growth_pct": 17.77,
     "classification": "Fast Grower",
-    "updated_at": "2026-07-20T06:19:37.293783+00:00"
+    "updated_at": "2026-07-29T05:57:27.662193+00:00"
   },
   "IRFC": {
     "name": "IRFC",
@@ -559,12 +559,12 @@
   },
   "AMBUJACEM": {
     "name": "Ambuja Cements",
-    "result_date": "2026-03-31",
-    "sales_growth_pct": 9.36,
-    "net_profit_growth_pct": 37.45,
-    "avg_growth_pct": 23.41,
-    "classification": "Fast Grower",
-    "updated_at": "2026-07-20T06:20:24.646587+00:00"
+    "result_date": "2026-06-30",
+    "sales_growth_pct": -7.67,
+    "net_profit_growth_pct": -36.6,
+    "avg_growth_pct": -22.13,
+    "classification": "Slow Grower",
+    "updated_at": "2026-07-29T05:58:09.866443+00:00"
   },
   "MANINDS": {
     "name": "Cholaman.Inv.&Fn",
@@ -991,12 +991,12 @@
   },
   "SUZLON": {
     "name": "Suzlon Energy",
-    "result_date": "2026-03-31",
-    "sales_growth_pct": 44.93,
-    "net_profit_growth_pct": -5.67,
-    "avg_growth_pct": 19.63,
-    "classification": "Fast Grower",
-    "updated_at": "2026-07-20T06:25:04.814057+00:00"
+    "result_date": "2026-06-30",
+    "sales_growth_pct": 22.25,
+    "net_profit_growth_pct": -5.86,
+    "avg_growth_pct": 8.19,
+    "classification": "Stalwart",
+    "updated_at": "2026-07-29T06:02:52.650980+00:00"
   },
   "LLOYDSME": {
     "name": "Lloyds Metals",
@@ -1315,12 +1315,12 @@
   },
   "COFORGE": {
     "name": "Coforge",
-    "result_date": "2026-03-31",
-    "sales_growth_pct": 30.04,
-    "net_profit_growth_pct": 116.94,
-    "avg_growth_pct": 73.49,
+    "result_date": "2026-06-30",
+    "sales_growth_pct": 49.24,
+    "net_profit_growth_pct": 49.44,
+    "avg_growth_pct": 49.34,
     "classification": "Fast Grower",
-    "updated_at": "2026-07-20T06:28:44.753090+00:00"
+    "updated_at": "2026-07-29T06:06:15.868921+00:00"
   },
   "UPL": {
     "name": "UPL",
@@ -1414,12 +1414,12 @@
   },
   "SUPREMEIND": {
     "name": "Supreme Inds.",
-    "result_date": "2026-03-31",
-    "sales_growth_pct": 16.55,
-    "net_profit_growth_pct": 47.62,
-    "avg_growth_pct": 32.09,
+    "result_date": "2026-06-30",
+    "sales_growth_pct": 4.18,
+    "net_profit_growth_pct": 39.11,
+    "avg_growth_pct": 21.64,
     "classification": "Fast Grower",
-    "updated_at": "2026-07-20T06:29:47.695137+00:00"
+    "updated_at": "2026-07-29T06:07:15.025858+00:00"
   },
   "SUNDARMFIN": {
     "name": "Sundaram Finance",
@@ -1432,12 +1432,12 @@
   },
   "PHOENIXLTD": {
     "name": "Phoenix Mills",
-    "result_date": "2026-03-31",
-    "sales_growth_pct": 21.36,
-    "net_profit_growth_pct": 39.37,
-    "avg_growth_pct": 30.36,
+    "result_date": "2026-06-30",
+    "sales_growth_pct": 12.8,
+    "net_profit_growth_pct": 22.74,
+    "avg_growth_pct": 17.77,
     "classification": "Fast Grower",
-    "updated_at": "2026-07-20T06:30:00.631004+00:00"
+    "updated_at": "2026-07-29T06:07:26.864262+00:00"
   },
   "BALKRISIND": {
     "name": "Balkrishna Inds",
@@ -1828,12 +1828,12 @@
   },
   "RADICO": {
     "name": "Radico Khaitan",
-    "result_date": "2026-03-31",
-    "sales_growth_pct": 15.34,
-    "net_profit_growth_pct": 94.57,
-    "avg_growth_pct": 54.95,
+    "result_date": "2026-06-30",
+    "sales_growth_pct": 11.82,
+    "net_profit_growth_pct": 75.57,
+    "avg_growth_pct": 43.7,
     "classification": "Fast Grower",
-    "updated_at": "2026-07-20T06:34:09.446728+00:00"
+    "updated_at": "2026-07-29T06:11:31.687715+00:00"
   },
   "ONESOURCE": {
     "name": "One Source Speciality Pharma",
