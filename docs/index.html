@@ -1374,6 +1374,13 @@ function setupScrollReveal(){
     els.forEach(el => el.classList.add('visible'));
     return;
   }
+  // threshold must stay tiny (not a percentage like 0.08/8%) - the .panel
+  // wrapping the main table can be 15,000+ px tall with a full watchlist,
+  // and no realistic viewport can ever show 8% of such a huge element's
+  // total area, so a percentage threshold silently never fires and leaves
+  // it stuck at opacity:0 forever (the "table just doesn't render" bug).
+  // threshold:0 fires as soon as any part of the target is visible at all,
+  // regardless of the target's total height.
   const io = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if(entry.isIntersecting){
@@ -1381,8 +1388,15 @@ function setupScrollReveal(){
         io.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+  }, { threshold: 0, rootMargin: '0px 0px -20px 0px' });
   els.forEach(el => io.observe(el));
+
+  // Defense in depth: force-reveal anything still hidden after a short
+  // delay, so a future edge case can degrade to "no fade-in animation"
+  // rather than "content invisible forever".
+  setTimeout(() => {
+    document.querySelectorAll('.reveal:not(.visible)').forEach(el => el.classList.add('visible'));
+  }, 1500);
 }
 setupScrollReveal();
 
