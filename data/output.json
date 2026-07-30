@@ -10,7 +10,7 @@
     "pb_ratio": 1.94,
     "pe_ratio": 23.5,
     "pe_ratio_5yr_avg": 25.9,
-    "cash_plus_investments_pct_mcap": 22.52,
+    "cash_plus_investments_pct_mcap": 22.54,
     "eps_cagr_3yr": 5.0,
     "eps_cagr_5yr": 12.0,
     "sales_cagr_3yr": 6.0,
@@ -20,7 +20,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 15.0,
     "opm_3yr_avg": 17.33,
-    "updated_at": "2026-07-30T10:03:07.012756+00:00"
+    "updated_at": "2026-07-30T10:59:43.585907+00:00"
   },
   "HDFCBANK": {
     "name": "HDFC Bank",
@@ -30,10 +30,10 @@
     "recommendation": "Hold",
     "cyclical_flag": null,
     "cyclical_note": null,
-    "pb_ratio": 1.94,
+    "pb_ratio": 1.93,
     "pe_ratio": 14.7,
     "pe_ratio_5yr_avg": 19.82,
-    "cash_plus_investments_pct_mcap": 126.04,
+    "cash_plus_investments_pct_mcap": 126.37,
     "eps_cagr_3yr": 18.0,
     "eps_cagr_5yr": 19.0,
     "sales_cagr_3yr": 27.0,
@@ -43,7 +43,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": -17.0,
     "opm_3yr_avg": -12.67,
-    "updated_at": "2026-07-30T10:03:12.449499+00:00"
+    "updated_at": "2026-07-30T10:59:50.922424+00:00"
   },
   "TCS": {
     "name": "TCS",
@@ -53,7 +53,7 @@
     "recommendation": "Buy",
     "cyclical_flag": null,
     "cyclical_note": null,
-    "pb_ratio": 8.21,
+    "pb_ratio": 8.22,
     "pe_ratio": 16.4,
     "pe_ratio_5yr_avg": 28.78,
     "cash_plus_investments_pct_mcap": 5.33,
@@ -66,7 +66,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 26.0,
     "opm_3yr_avg": 26.67,
-    "updated_at": "2026-07-30T10:03:20.396088+00:00"
+    "updated_at": "2026-07-30T10:59:58.272904+00:00"
   },
   "BHARTIARTL": {
     "name": "Bharti Airtel",
@@ -76,8 +76,8 @@
     "recommendation": "Buy",
     "cyclical_flag": null,
     "cyclical_note": null,
-    "pb_ratio": 7.98,
-    "pe_ratio": 45.8,
+    "pb_ratio": 7.99,
+    "pe_ratio": 45.9,
     "pe_ratio_5yr_avg": 73.42,
     "cash_plus_investments_pct_mcap": 4.04,
     "eps_cagr_3yr": 45.0,
@@ -89,7 +89,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 57.0,
     "opm_3yr_avg": 52.0,
-    "updated_at": "2026-07-30T10:03:25.658556+00:00"
+    "updated_at": "2026-07-30T11:00:04.484183+00:00"
   },
   "ICICIBANK": {
     "name": "ICICI Bank",
@@ -102,7 +102,7 @@
     "pb_ratio": 2.72,
     "pe_ratio": 18.4,
     "pe_ratio_5yr_avg": 19.65,
-    "cash_plus_investments_pct_mcap": 95.78,
+    "cash_plus_investments_pct_mcap": 95.87,
     "eps_cagr_3yr": 17.0,
     "eps_cagr_5yr": 24.0,
     "sales_cagr_3yr": 17.0,
@@ -112,7 +112,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": -12.0,
     "opm_3yr_avg": -15.33,
-    "updated_at": "2026-07-30T10:03:33.666576+00:00"
+    "updated_at": "2026-07-30T11:00:09.492018+00:00"
   },
   "SBIN": {
     "name": "St Bk of India",
@@ -125,7 +125,7 @@
     "pb_ratio": 1.59,
     "pe_ratio": 11.3,
     "pe_ratio_5yr_avg": 10.77,
-    "cash_plus_investments_pct_mcap": 275.23,
+    "cash_plus_investments_pct_mcap": 275.42,
     "eps_cagr_3yr": 14.0,
     "eps_cagr_5yr": 30.0,
     "sales_cagr_3yr": 14.0,
@@ -135,7 +135,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": -18.0,
     "opm_3yr_avg": -14.0,
-    "updated_at": "2026-07-30T10:03:39.707448+00:00"
+    "updated_at": "2026-07-30T11:00:14.599594+00:00"
   },
   "INFY": {
     "name": "Infosys",
@@ -145,10 +145,10 @@
     "recommendation": "Buy",
     "cyclical_flag": null,
     "cyclical_note": null,
-    "pb_ratio": 5.14,
+    "pb_ratio": 5.13,
     "pe_ratio": 15.0,
     "pe_ratio_5yr_avg": 26.3,
-    "cash_plus_investments_pct_mcap": 9.39,
+    "cash_plus_investments_pct_mcap": 9.41,
     "eps_cagr_3yr": 8.0,
     "eps_cagr_5yr": 9.0,
     "sales_cagr_3yr": 7.0,
@@ -158,7 +158,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 24.0,
     "opm_3yr_avg": 24.0,
-    "updated_at": "2026-07-30T10:03:43.970452+00:00"
+    "updated_at": "2026-07-30T11:00:19.008747+00:00"
   },
   "BAJFINANCE": {
     "name": "Bajaj Finance",
@@ -168,10 +168,10 @@
     "recommendation": "Buy",
     "cyclical_flag": null,
     "cyclical_note": null,
-    "pb_ratio": 5.83,
-    "pe_ratio": 34.6,
+    "pb_ratio": 5.76,
+    "pe_ratio": 34.1,
     "pe_ratio_5yr_avg": 42.43,
-    "cash_plus_investments_pct_mcap": 6.97,
+    "cash_plus_investments_pct_mcap": 7.06,
     "eps_cagr_3yr": 19.0,
     "eps_cagr_5yr": 34.0,
     "sales_cagr_3yr": 26.0,
@@ -181,7 +181,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 35.0,
     "opm_3yr_avg": 34.0,
-    "updated_at": "2026-07-30T10:03:50.934922+00:00"
+    "updated_at": "2026-07-30T11:00:23.330636+00:00"
   },
   "HINDUNILVR": {
     "name": "Hind. Unilever",
@@ -191,10 +191,10 @@
     "recommendation": "Hold",
     "cyclical_flag": null,
     "cyclical_note": null,
-    "pb_ratio": 10.19,
-    "pe_ratio": 45.0,
+    "pb_ratio": 10.18,
+    "pe_ratio": 44.9,
     "pe_ratio_5yr_avg": 55.31,
-    "cash_plus_investments_pct_mcap": 1.53,
+    "cash_plus_investments_pct_mcap": 1.54,
     "eps_cagr_3yr": 14.0,
     "eps_cagr_5yr": 13.0,
     "sales_cagr_3yr": 2.0,
@@ -204,7 +204,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 23.0,
     "opm_3yr_avg": 23.67,
-    "updated_at": "2026-07-30T10:03:57.099853+00:00"
+    "updated_at": "2026-07-30T11:00:30.273626+00:00"
   },
   "ITC": {
     "name": "ITC",
@@ -214,10 +214,10 @@
     "recommendation": "Sell",
     "cyclical_flag": null,
     "cyclical_note": null,
-    "pb_ratio": 4.94,
+    "pb_ratio": 4.92,
     "pe_ratio": 17.1,
     "pe_ratio_5yr_avg": 23.45,
-    "cash_plus_investments_pct_mcap": 11.49,
+    "cash_plus_investments_pct_mcap": 11.52,
     "eps_cagr_3yr": 3.0,
     "eps_cagr_5yr": 10.0,
     "sales_cagr_3yr": 4.0,
@@ -227,7 +227,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 39.0,
     "opm_3yr_avg": 35.33,
-    "updated_at": "2026-07-30T10:04:04.699583+00:00"
+    "updated_at": "2026-07-30T11:00:37.892717+00:00"
   },
   "LT": {
     "name": "Larsen & Toubro Ltd",
@@ -237,10 +237,10 @@
     "recommendation": "Sell",
     "cyclical_flag": null,
     "cyclical_note": null,
-    "pb_ratio": 4.97,
+    "pb_ratio": 4.96,
     "pe_ratio": 30.8,
     "pe_ratio_5yr_avg": 32.52,
-    "cash_plus_investments_pct_mcap": 16.44,
+    "cash_plus_investments_pct_mcap": 16.47,
     "eps_cagr_3yr": 17.0,
     "eps_cagr_5yr": 3.0,
     "sales_cagr_3yr": 16.0,
@@ -250,7 +250,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 12.0,
     "opm_3yr_avg": 12.67,
-    "updated_at": "2026-07-30T10:04:12.069074+00:00"
+    "updated_at": "2026-07-30T11:00:45.552918+00:00"
   },
   "KOTAKBANK": {
     "name": "Kotak Mah. Bank",
@@ -263,7 +263,7 @@
     "pb_ratio": 2.14,
     "pe_ratio": 19.4,
     "pe_ratio_5yr_avg": 24.41,
-    "cash_plus_investments_pct_mcap": 87.89,
+    "cash_plus_investments_pct_mcap": 87.83,
     "eps_cagr_3yr": 9.0,
     "eps_cagr_5yr": 14.0,
     "sales_cagr_3yr": 18.0,
@@ -273,7 +273,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": -23.0,
     "opm_3yr_avg": -21.0,
-    "updated_at": "2026-07-30T10:04:18.562514+00:00"
+    "updated_at": "2026-07-30T11:00:52.065226+00:00"
   },
   "ANUHPHR": {
     "name": "Sun Pharma.Inds.",
@@ -283,10 +283,10 @@
     "recommendation": "Hold",
     "cyclical_flag": null,
     "cyclical_note": null,
-    "pb_ratio": 2.25,
-    "pe_ratio": 21.8,
+    "pb_ratio": 2.27,
+    "pe_ratio": 22.0,
     "pe_ratio_5yr_avg": null,
-    "cash_plus_investments_pct_mcap": 10.61,
+    "cash_plus_investments_pct_mcap": 10.51,
     "eps_cagr_3yr": 3.0,
     "eps_cagr_5yr": 10.0,
     "sales_cagr_3yr": 14.0,
@@ -296,7 +296,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 10.0,
     "opm_3yr_avg": 9.67,
-    "updated_at": "2026-07-30T10:04:24.079306+00:00"
+    "updated_at": "2026-07-30T11:01:02.812106+00:00"
   },
   "HCLTECH": {
     "name": "HCL Technologies",
@@ -307,8 +307,8 @@
     "cyclical_flag": null,
     "cyclical_note": null,
     "pb_ratio": 4.88,
-    "pe_ratio": 20.3,
-    "pe_ratio_5yr_avg": null,
+    "pe_ratio": 20.4,
+    "pe_ratio_5yr_avg": 24.16,
     "cash_plus_investments_pct_mcap": 1.93,
     "eps_cagr_3yr": 6.0,
     "eps_cagr_5yr": 9.0,
@@ -319,7 +319,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 20.0,
     "opm_3yr_avg": 21.67,
-    "updated_at": "2026-07-30T10:04:29.633691+00:00"
+    "updated_at": "2026-07-30T11:01:09.223144+00:00"
   },
   "MARUTI": {
     "name": "Maruti Suzuki",
@@ -332,7 +332,7 @@
     "pb_ratio": 4.16,
     "pe_ratio": 30.4,
     "pe_ratio_5yr_avg": 37.49,
-    "cash_plus_investments_pct_mcap": 17.23,
+    "cash_plus_investments_pct_mcap": 17.58,
     "eps_cagr_3yr": 30.0,
     "eps_cagr_5yr": 27.0,
     "sales_cagr_3yr": 16.0,
@@ -342,7 +342,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 12.0,
     "opm_3yr_avg": 12.67,
-    "updated_at": "2026-07-30T10:04:34.692579+00:00"
+    "updated_at": "2026-07-30T11:01:15.571371+00:00"
   },
   "NTPC": {
     "name": "NTPC",
@@ -353,9 +353,9 @@
     "cyclical_flag": null,
     "cyclical_note": null,
     "pb_ratio": 1.64,
-    "pe_ratio": 12.0,
-    "pe_ratio_5yr_avg": null,
-    "cash_plus_investments_pct_mcap": 7.24,
+    "pe_ratio": 12.1,
+    "pe_ratio_5yr_avg": 12.66,
+    "cash_plus_investments_pct_mcap": 7.23,
     "eps_cagr_3yr": 17.0,
     "eps_cagr_5yr": 12.0,
     "sales_cagr_3yr": 2.0,
@@ -365,7 +365,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 32.0,
     "opm_3yr_avg": 28.67,
-    "updated_at": "2026-07-30T10:04:38.867827+00:00"
+    "updated_at": "2026-07-30T11:01:22.515615+00:00"
   },
   "ULTRACEMCO": {
     "name": "UltraTech Cem.",
@@ -377,8 +377,8 @@
     "cyclical_note": null,
     "pb_ratio": 4.56,
     "pe_ratio": 40.5,
-    "pe_ratio_5yr_avg": null,
-    "cash_plus_investments_pct_mcap": 1.93,
+    "pe_ratio_5yr_avg": 41.9,
+    "cash_plus_investments_pct_mcap": 2.33,
     "eps_cagr_3yr": 17.0,
     "eps_cagr_5yr": 8.0,
     "sales_cagr_3yr": 12.0,
@@ -388,7 +388,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 20.0,
     "opm_3yr_avg": 18.0,
-    "updated_at": "2026-07-30T10:04:43.796188+00:00"
+    "updated_at": "2026-07-30T11:01:29.453457+00:00"
   },
   "AXISBANK": {
     "name": "Axis Bank",
@@ -400,8 +400,8 @@
     "cyclical_note": null,
     "pb_ratio": 1.73,
     "pe_ratio": 13.8,
-    "pe_ratio_5yr_avg": null,
-    "cash_plus_investments_pct_mcap": 135.33,
+    "pe_ratio_5yr_avg": 15.24,
+    "cash_plus_investments_pct_mcap": 135.55,
     "eps_cagr_3yr": 35.0,
     "eps_cagr_5yr": 30.0,
     "sales_cagr_3yr": 15.0,
@@ -411,7 +411,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 7.0,
     "opm_3yr_avg": 7.0,
-    "updated_at": "2026-07-30T10:04:49.525102+00:00"
+    "updated_at": "2026-07-30T11:01:37.405734+00:00"
   },
   "M&M": {
     "name": "M & M",
@@ -421,10 +421,10 @@
     "recommendation": "Buy",
     "cyclical_flag": null,
     "cyclical_note": null,
-    "pb_ratio": 4.39,
-    "pe_ratio": 23.7,
+    "pb_ratio": 4.38,
+    "pe_ratio": 23.6,
     "pe_ratio_5yr_avg": 26.48,
-    "cash_plus_investments_pct_mcap": 17.67,
+    "cash_plus_investments_pct_mcap": 17.71,
     "eps_cagr_3yr": 23.0,
     "eps_cagr_5yr": 51.0,
     "sales_cagr_3yr": 18.0,
@@ -434,7 +434,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 19.0,
     "opm_3yr_avg": 18.67,
-    "updated_at": "2026-07-30T10:04:56.281675+00:00"
+    "updated_at": "2026-07-30T11:01:45.004597+00:00"
   },
   "BAJAJFINSV": {
     "name": "Bajaj Finserv",
@@ -444,10 +444,10 @@
     "recommendation": "Sell",
     "cyclical_flag": null,
     "cyclical_note": null,
-    "pb_ratio": 3.93,
-    "pe_ratio": 30.9,
+    "pb_ratio": 3.92,
+    "pe_ratio": 30.8,
     "pe_ratio_5yr_avg": 39.95,
-    "cash_plus_investments_pct_mcap": 63.41,
+    "cash_plus_investments_pct_mcap": 69.38,
     "eps_cagr_3yr": 16.0,
     "eps_cagr_5yr": 17.0,
     "sales_cagr_3yr": 22.0,
@@ -457,7 +457,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 38.0,
     "opm_3yr_avg": 37.33,
-    "updated_at": "2026-07-30T10:05:01.101503+00:00"
+    "updated_at": "2026-07-30T11:01:51.956317+00:00"
   },
   "ONGC": {
     "name": "O N G C",
@@ -470,7 +470,7 @@
     "pb_ratio": 0.82,
     "pe_ratio": 7.28,
     "pe_ratio_5yr_avg": 6.51,
-    "cash_plus_investments_pct_mcap": 43.86,
+    "cash_plus_investments_pct_mcap": 43.85,
     "eps_cagr_3yr": 1.0,
     "eps_cagr_5yr": 21.0,
     "sales_cagr_3yr": 2.0,
@@ -480,7 +480,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 15.0,
     "opm_3yr_avg": 16.0,
-    "updated_at": "2026-07-30T10:05:09.081497+00:00"
+    "updated_at": "2026-07-30T11:01:57.640879+00:00"
   },
   "POWERGRID": {
     "name": "Power Grid Corpn",
@@ -490,10 +490,10 @@
     "recommendation": "Sell",
     "cyclical_flag": null,
     "cyclical_note": null,
-    "pb_ratio": 2.64,
+    "pb_ratio": 2.65,
     "pe_ratio": 16.6,
     "pe_ratio_5yr_avg": 14.38,
-    "cash_plus_investments_pct_mcap": 4.49,
+    "cash_plus_investments_pct_mcap": 4.48,
     "eps_cagr_3yr": 1.0,
     "eps_cagr_5yr": 4.0,
     "sales_cagr_3yr": 1.0,
@@ -503,7 +503,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 45.0,
     "opm_3yr_avg": 82.0,
-    "updated_at": "2026-07-30T10:05:15.789366+00:00"
+    "updated_at": "2026-07-30T11:02:04.451001+00:00"
   },
   "TITAN": {
     "name": "Titan Company",
@@ -514,8 +514,8 @@
     "cyclical_flag": null,
     "cyclical_note": null,
     "pb_ratio": 27.4,
-    "pe_ratio": 83.7,
-    "pe_ratio_5yr_avg": null,
+    "pe_ratio": 83.8,
+    "pe_ratio_5yr_avg": 90.2,
     "cash_plus_investments_pct_mcap": 0.81,
     "eps_cagr_3yr": 17.0,
     "eps_cagr_5yr": 40.0,
@@ -526,7 +526,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 7.0,
     "opm_3yr_avg": 9.67,
-    "updated_at": "2026-07-30T10:05:20.726737+00:00"
+    "updated_at": "2026-07-30T11:02:11.202894+00:00"
   },
   "ADANIENT": {
     "name": "Adani Enterp.",
@@ -536,10 +536,10 @@
     "recommendation": "Hold",
     "cyclical_flag": null,
     "cyclical_note": null,
-    "pb_ratio": 4.87,
+    "pb_ratio": 4.86,
     "pe_ratio": 174.0,
-    "pe_ratio_5yr_avg": null,
-    "cash_plus_investments_pct_mcap": 5.14,
+    "pe_ratio_5yr_avg": 156.28,
+    "cash_plus_investments_pct_mcap": 2.28,
     "eps_cagr_3yr": null,
     "eps_cagr_5yr": null,
     "sales_cagr_3yr": -8.0,
@@ -549,7 +549,7 @@
     "negative_eps_quarters_of_8": 2,
     "opm_current": 15.0,
     "opm_3yr_avg": 13.67,
-    "updated_at": "2026-07-30T10:05:26.544073+00:00"
+    "updated_at": "2026-07-30T11:02:17.932741+00:00"
   },
   "WIPRO": {
     "name": "Wipro",
@@ -559,10 +559,10 @@
     "recommendation": "Hold",
     "cyclical_flag": null,
     "cyclical_note": null,
-    "pb_ratio": 2.23,
+    "pb_ratio": 2.22,
     "pe_ratio": 14.0,
-    "pe_ratio_5yr_avg": null,
-    "cash_plus_investments_pct_mcap": 31.01,
+    "pe_ratio_5yr_avg": 21.61,
+    "cash_plus_investments_pct_mcap": 31.07,
     "eps_cagr_3yr": 5.0,
     "eps_cagr_5yr": 4.0,
     "sales_cagr_3yr": 1.0,
@@ -572,7 +572,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 19.0,
     "opm_3yr_avg": 19.33,
-    "updated_at": "2026-07-30T10:05:33.248706+00:00"
+    "updated_at": "2026-07-30T11:02:25.301408+00:00"
   },
   "ADANIPORTS": {
     "name": "Adani Ports",
@@ -582,10 +582,10 @@
     "recommendation": "Buy",
     "cyclical_flag": null,
     "cyclical_note": null,
-    "pb_ratio": 3.99,
+    "pb_ratio": 4.0,
     "pe_ratio": 28.8,
-    "pe_ratio_5yr_avg": null,
-    "cash_plus_investments_pct_mcap": 3.64,
+    "pe_ratio_5yr_avg": 28.39,
+    "cash_plus_investments_pct_mcap": 3.63,
     "eps_cagr_3yr": 27.0,
     "eps_cagr_5yr": 21.0,
     "sales_cagr_3yr": 23.0,
@@ -595,7 +595,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 58.0,
     "opm_3yr_avg": 59.0,
-    "updated_at": "2026-07-30T10:05:39.253268+00:00"
+    "updated_at": "2026-07-30T11:02:32.439815+00:00"
   },
   "COALINDIA": {
     "name": "Coal India",
@@ -605,10 +605,10 @@
     "recommendation": "Sell",
     "cyclical_flag": null,
     "cyclical_note": null,
-    "pb_ratio": 2.17,
+    "pb_ratio": 2.16,
     "pe_ratio": 8.23,
     "pe_ratio_5yr_avg": 6.96,
-    "cash_plus_investments_pct_mcap": 24.4,
+    "cash_plus_investments_pct_mcap": 24.43,
     "eps_cagr_3yr": -1.0,
     "eps_cagr_5yr": 20.0,
     "sales_cagr_3yr": 7.0,
@@ -618,7 +618,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 26.0,
     "opm_3yr_avg": 30.0,
-    "updated_at": "2026-07-30T10:05:46.801900+00:00"
+    "updated_at": "2026-07-30T11:02:40.566481+00:00"
   },
   "ASIANPAINT": {
     "name": "Asian Paints",
@@ -628,10 +628,10 @@
     "recommendation": "Buy",
     "cyclical_flag": null,
     "cyclical_note": null,
-    "pb_ratio": 12.33,
-    "pe_ratio": 54.1,
-    "pe_ratio_5yr_avg": null,
-    "cash_plus_investments_pct_mcap": 3.08,
+    "pb_ratio": 12.31,
+    "pe_ratio": 54.0,
+    "pe_ratio_5yr_avg": 68.48,
+    "cash_plus_investments_pct_mcap": 3.09,
     "eps_cagr_3yr": 2.0,
     "eps_cagr_5yr": 7.0,
     "sales_cagr_3yr": 1.0,
@@ -641,7 +641,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 21.0,
     "opm_3yr_avg": 19.33,
-    "updated_at": "2026-07-30T10:05:52.127550+00:00"
+    "updated_at": "2026-07-30T11:02:45.931258+00:00"
   },
   "JSWSTEEL": {
     "name": "JSW Steel",
@@ -654,7 +654,7 @@
     "pb_ratio": 3.11,
     "pe_ratio": 25.8,
     "pe_ratio_5yr_avg": 32.37,
-    "cash_plus_investments_pct_mcap": 16.48,
+    "cash_plus_investments_pct_mcap": 3.29,
     "eps_cagr_3yr": 35.0,
     "eps_cagr_5yr": 3.0,
     "sales_cagr_3yr": 4.0,
@@ -664,7 +664,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 20.0,
     "opm_3yr_avg": 15.0,
-    "updated_at": "2026-07-30T10:05:59.471984+00:00"
+    "updated_at": "2026-07-30T11:02:52.304082+00:00"
   },
   "NESTLEIND": {
     "name": "Nestle India",
@@ -674,9 +674,9 @@
     "recommendation": "Buy",
     "cyclical_flag": null,
     "cyclical_note": null,
-    "pb_ratio": 57.04,
-    "pe_ratio": 79.2,
-    "pe_ratio_5yr_avg": null,
+    "pb_ratio": 56.97,
+    "pe_ratio": 79.1,
+    "pe_ratio_5yr_avg": 79.27,
     "cash_plus_investments_pct_mcap": 0.18,
     "eps_cagr_3yr": null,
     "eps_cagr_5yr": null,
@@ -687,7 +687,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 24.0,
     "opm_3yr_avg": 23.67,
-    "updated_at": "2026-07-30T10:06:03.879234+00:00"
+    "updated_at": "2026-07-30T11:02:58.507398+00:00"
   },
   "BAJAJ-AUTO": {
     "name": "Bajaj Auto",
@@ -697,8 +697,8 @@
     "recommendation": "Buy",
     "cyclical_flag": null,
     "cyclical_note": null,
-    "pb_ratio": 8.24,
-    "pe_ratio": 26.7,
+    "pb_ratio": 8.23,
+    "pe_ratio": 26.6,
     "pe_ratio_5yr_avg": 26.15,
     "cash_plus_investments_pct_mcap": 8.82,
     "eps_cagr_3yr": 21.0,
@@ -710,7 +710,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 21.0,
     "opm_3yr_avg": 20.0,
-    "updated_at": "2026-07-30T10:06:11.894097+00:00"
+    "updated_at": "2026-07-30T11:03:05.993708+00:00"
   },
   "ETERNAL": {
     "name": "Eternal Ltd",
@@ -720,10 +720,10 @@
     "recommendation": "Buy",
     "cyclical_flag": null,
     "cyclical_note": null,
-    "pb_ratio": 9.72,
-    "pe_ratio": 697.0,
-    "pe_ratio_5yr_avg": null,
-    "cash_plus_investments_pct_mcap": 5.42,
+    "pb_ratio": 9.69,
+    "pe_ratio": 692.0,
+    "pe_ratio_5yr_avg": 702.08,
+    "cash_plus_investments_pct_mcap": 5.46,
     "eps_cagr_3yr": 33.0,
     "eps_cagr_5yr": 22.0,
     "sales_cagr_3yr": 97.0,
@@ -733,7 +733,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 2.9,
     "opm_3yr_avg": 1.9,
-    "updated_at": "2026-07-30T10:06:16.850776+00:00"
+    "updated_at": "2026-07-30T11:03:12.882638+00:00"
   },
   "BEL": {
     "name": "Bharat Electron",
@@ -745,7 +745,7 @@
     "cyclical_note": null,
     "pb_ratio": 11.74,
     "pe_ratio": 45.8,
-    "pe_ratio_5yr_avg": null,
+    "pe_ratio_5yr_avg": 38.2,
     "cash_plus_investments_pct_mcap": 3.33,
     "eps_cagr_3yr": 27.0,
     "eps_cagr_5yr": 24.0,
@@ -756,7 +756,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 25.0,
     "opm_3yr_avg": 27.67,
-    "updated_at": "2026-07-30T10:06:23.421554+00:00"
+    "updated_at": "2026-07-30T11:03:19.614908+00:00"
   },
   "GRASIM": {
     "name": "Grasim Inds",
@@ -766,10 +766,10 @@
     "recommendation": "Buy",
     "cyclical_flag": null,
     "cyclical_note": null,
-    "pb_ratio": 2.05,
-    "pe_ratio": 42.4,
+    "pb_ratio": 2.04,
+    "pe_ratio": 42.3,
     "pe_ratio_5yr_avg": 28.11,
-    "cash_plus_investments_pct_mcap": 76.14,
+    "cash_plus_investments_pct_mcap": 76.28,
     "eps_cagr_3yr": -10.0,
     "eps_cagr_5yr": 2.0,
     "sales_cagr_3yr": 14.0,
@@ -779,7 +779,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 21.0,
     "opm_3yr_avg": 20.33,
-    "updated_at": "2026-07-30T10:06:31.122627+00:00"
+    "updated_at": "2026-07-30T11:03:26.773042+00:00"
   },
   "TATASTEEL": {
     "name": "Tata Steel",
@@ -787,12 +787,12 @@
     "result_date": "2026-03-31",
     "classification": "Cyclical",
     "recommendation": "Hold",
-    "cyclical_flag": null,
-    "cyclical_note": null,
+    "cyclical_flag": "peak_warning",
+    "cyclical_note": "⚠ possible cycle peak - low PE + strong earnings is a Lynch warning sign, not a buy signal",
     "pb_ratio": 2.29,
     "pe_ratio": 20.6,
-    "pe_ratio_5yr_avg": null,
-    "cash_plus_investments_pct_mcap": 7.35,
+    "pe_ratio_5yr_avg": 37.2,
+    "cash_plus_investments_pct_mcap": 3.04,
     "eps_cagr_3yr": 10.0,
     "eps_cagr_5yr": 8.0,
     "sales_cagr_3yr": -2.0,
@@ -802,7 +802,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 16.0,
     "opm_3yr_avg": 12.33,
-    "updated_at": "2026-07-30T10:06:36.703819+00:00"
+    "updated_at": "2026-07-30T11:03:33.579421+00:00"
   },
   "TRENT": {
     "name": "Trent",
@@ -812,10 +812,10 @@
     "recommendation": "Buy",
     "cyclical_flag": null,
     "cyclical_note": null,
-    "pb_ratio": 22.92,
-    "pe_ratio": 92.7,
-    "pe_ratio_5yr_avg": null,
-    "cash_plus_investments_pct_mcap": 0.86,
+    "pb_ratio": 22.89,
+    "pe_ratio": 92.6,
+    "pe_ratio_5yr_avg": 178.58,
+    "cash_plus_investments_pct_mcap": 1.04,
     "eps_cagr_3yr": 71.0,
     "eps_cagr_5yr": 69.0,
     "sales_cagr_3yr": 35.0,
@@ -825,7 +825,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 18.0,
     "opm_3yr_avg": 17.0,
-    "updated_at": "2026-07-30T10:06:41.748162+00:00"
+    "updated_at": "2026-07-30T11:03:39.580468+00:00"
   },
   "SBILIFE": {
     "name": "SBI Life Insuran",
@@ -835,10 +835,10 @@
     "recommendation": "Buy",
     "cyclical_flag": null,
     "cyclical_note": null,
-    "pb_ratio": 9.28,
-    "pe_ratio": 71.9,
+    "pb_ratio": 9.34,
+    "pe_ratio": 72.4,
     "pe_ratio_5yr_avg": null,
-    "cash_plus_investments_pct_mcap": 259.94,
+    "cash_plus_investments_pct_mcap": 258.21,
     "eps_cagr_3yr": 13.0,
     "eps_cagr_5yr": 11.0,
     "sales_cagr_3yr": 12.0,
@@ -848,7 +848,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 1.6,
     "opm_3yr_avg": 1.2,
-    "updated_at": "2026-07-30T10:06:50.024781+00:00"
+    "updated_at": "2026-07-30T11:03:50.776311+00:00"
   },
   "EICHERMOT": {
     "name": "Eicher Motors",
@@ -858,10 +858,10 @@
     "recommendation": "Buy",
     "cyclical_flag": null,
     "cyclical_note": null,
-    "pb_ratio": 8.63,
-    "pe_ratio": 37.3,
-    "pe_ratio_5yr_avg": null,
-    "cash_plus_investments_pct_mcap": 8.19,
+    "pb_ratio": 8.65,
+    "pe_ratio": 37.4,
+    "pe_ratio_5yr_avg": 36.37,
+    "cash_plus_investments_pct_mcap": 8.17,
     "eps_cagr_3yr": 24.0,
     "eps_cagr_5yr": 33.0,
     "sales_cagr_3yr": 17.0,
@@ -871,7 +871,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 24.0,
     "opm_3yr_avg": 25.33,
-    "updated_at": "2026-07-30T10:06:55.528367+00:00"
+    "updated_at": "2026-07-30T11:03:58.512859+00:00"
   },
   "HDFCLIFE": {
     "name": "HDFC Life Insur.",
@@ -884,7 +884,7 @@
     "pb_ratio": 6.06,
     "pe_ratio": 60.0,
     "pe_ratio_5yr_avg": 88.44,
-    "cash_plus_investments_pct_mcap": 317.0,
+    "cash_plus_investments_pct_mcap": 316.77,
     "eps_cagr_3yr": 12.0,
     "eps_cagr_5yr": 7.0,
     "sales_cagr_3yr": 12.0,
@@ -894,7 +894,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 1.5,
     "opm_3yr_avg": 1.17,
-    "updated_at": "2026-07-30T10:07:03.470896+00:00"
+    "updated_at": "2026-07-30T11:04:05.309264+00:00"
   },
   "JIOFIN": {
     "name": "Jio Financial",
@@ -905,9 +905,9 @@
     "cyclical_flag": null,
     "cyclical_note": null,
     "pb_ratio": 1.17,
-    "pe_ratio": 78.7,
+    "pe_ratio": 78.9,
     "pe_ratio_5yr_avg": 112.49,
-    "cash_plus_investments_pct_mcap": 83.98,
+    "cash_plus_investments_pct_mcap": 83.82,
     "eps_cagr_3yr": 294.0,
     "eps_cagr_5yr": null,
     "sales_cagr_3yr": 328.0,
@@ -917,7 +917,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 70.0,
     "opm_3yr_avg": 75.33,
-    "updated_at": "2026-07-30T10:07:09.809207+00:00"
+    "updated_at": "2026-07-30T11:04:11.817196+00:00"
   },
   "HINDALCO": {
     "name": "Hindalco Inds.",
@@ -929,8 +929,8 @@
     "cyclical_note": null,
     "pb_ratio": 1.6,
     "pe_ratio": 12.9,
-    "pe_ratio_5yr_avg": null,
-    "cash_plus_investments_pct_mcap": 11.45,
+    "pe_ratio_5yr_avg": 11.14,
+    "cash_plus_investments_pct_mcap": 11.44,
     "eps_cagr_3yr": 19.0,
     "eps_cagr_5yr": 35.0,
     "sales_cagr_3yr": 7.0,
@@ -940,7 +940,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 13.0,
     "opm_3yr_avg": 12.33,
-    "updated_at": "2026-07-30T10:07:15.110963+00:00"
+    "updated_at": "2026-07-30T11:04:18.054945+00:00"
   },
   "TECHM": {
     "name": "Tech Mahindra",
@@ -950,10 +950,10 @@
     "recommendation": "Buy",
     "cyclical_flag": null,
     "cyclical_note": null,
-    "pb_ratio": 5.5,
-    "pe_ratio": 30.6,
+    "pb_ratio": 5.53,
+    "pe_ratio": 30.8,
     "pe_ratio_5yr_avg": 33.02,
-    "cash_plus_investments_pct_mcap": 5.24,
+    "cash_plus_investments_pct_mcap": 5.22,
     "eps_cagr_3yr": 1.0,
     "eps_cagr_5yr": 2.0,
     "sales_cagr_3yr": 2.0,
@@ -963,7 +963,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 17.0,
     "opm_3yr_avg": 12.67,
-    "updated_at": "2026-07-30T10:07:21.707720+00:00"
+    "updated_at": "2026-07-30T11:04:26.064821+00:00"
   },
   "SHRIRAMFIN": {
     "name": "Shriram Finance",
@@ -973,10 +973,10 @@
     "recommendation": "Buy",
     "cyclical_flag": null,
     "cyclical_note": null,
-    "pb_ratio": 2.94,
+    "pb_ratio": 2.93,
     "pe_ratio": 21.4,
     "pe_ratio_5yr_avg": 13.49,
-    "cash_plus_investments_pct_mcap": 6.19,
+    "cash_plus_investments_pct_mcap": 9.49,
     "eps_cagr_3yr": 19.0,
     "eps_cagr_5yr": 32.0,
     "sales_cagr_3yr": 16.0,
@@ -986,7 +986,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 36.0,
     "opm_3yr_avg": 29.33,
-    "updated_at": "2026-07-30T10:07:27.646052+00:00"
+    "updated_at": "2026-07-30T11:04:32.079305+00:00"
   },
   "CIPLA": {
     "name": "Cipla",
@@ -998,8 +998,8 @@
     "cyclical_note": null,
     "pb_ratio": 3.44,
     "pe_ratio": 33.0,
-    "pe_ratio_5yr_avg": null,
-    "cash_plus_investments_pct_mcap": 8.06,
+    "pe_ratio_5yr_avg": 27.69,
+    "cash_plus_investments_pct_mcap": 6.94,
     "eps_cagr_3yr": 10.0,
     "eps_cagr_5yr": 10.0,
     "sales_cagr_3yr": 7.0,
@@ -1009,7 +1009,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 17.0,
     "opm_3yr_avg": 23.67,
-    "updated_at": "2026-07-30T10:07:34.194500+00:00"
+    "updated_at": "2026-07-30T11:04:38.182633+00:00"
   },
   "HONASA": {
     "name": "Tata Consumer",
@@ -1019,10 +1019,10 @@
     "recommendation": "Buy",
     "cyclical_flag": null,
     "cyclical_note": null,
-    "pb_ratio": 10.32,
-    "pe_ratio": 71.7,
+    "pb_ratio": 10.28,
+    "pe_ratio": 71.4,
     "pe_ratio_5yr_avg": 130.52,
-    "cash_plus_investments_pct_mcap": 3.33,
+    "cash_plus_investments_pct_mcap": 3.34,
     "eps_cagr_3yr": 118.0,
     "eps_cagr_5yr": 17.0,
     "sales_cagr_3yr": 17.0,
@@ -1032,7 +1032,7 @@
     "negative_eps_quarters_of_8": 1,
     "opm_current": 12.0,
     "opm_3yr_avg": 6.77,
-    "updated_at": "2026-07-30T10:07:41.072584+00:00"
+    "updated_at": "2026-07-30T11:04:45.425211+00:00"
   },
   "DRREDDY": {
     "name": "Dr Reddy's Labs",
@@ -1044,8 +1044,8 @@
     "cyclical_note": null,
     "pb_ratio": 2.52,
     "pe_ratio": 29.7,
-    "pe_ratio_5yr_avg": null,
-    "cash_plus_investments_pct_mcap": 5.53,
+    "pe_ratio_5yr_avg": 23.15,
+    "cash_plus_investments_pct_mcap": 9.04,
     "eps_cagr_3yr": -4.0,
     "eps_cagr_5yr": 15.0,
     "sales_cagr_3yr": 11.0,
@@ -1055,7 +1055,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 11.0,
     "opm_3yr_avg": 24.33,
-    "updated_at": "2026-07-30T10:07:45.316234+00:00"
+    "updated_at": "2026-07-30T11:04:52.944206+00:00"
   },
   "APOLLOHOSP": {
     "name": "Apollo Hospitals",
@@ -1065,10 +1065,10 @@
     "recommendation": "Buy",
     "cyclical_flag": null,
     "cyclical_note": null,
-    "pb_ratio": 13.58,
-    "pe_ratio": 65.8,
-    "pe_ratio_5yr_avg": null,
-    "cash_plus_investments_pct_mcap": 1.69,
+    "pb_ratio": 13.64,
+    "pe_ratio": 66.1,
+    "pe_ratio_5yr_avg": 84.7,
+    "cash_plus_investments_pct_mcap": 2.55,
     "eps_cagr_3yr": 34.0,
     "eps_cagr_5yr": 78.0,
     "sales_cagr_3yr": 15.0,
@@ -1078,7 +1078,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 15.0,
     "opm_3yr_avg": 14.0,
-    "updated_at": "2026-07-30T10:07:49.832576+00:00"
+    "updated_at": "2026-07-30T11:05:01.053981+00:00"
   },
   "LICI": {
     "name": "Life Insurance",
@@ -1090,8 +1090,8 @@
     "cyclical_note": null,
     "pb_ratio": 3.02,
     "pe_ratio": 9.3,
-    "pe_ratio_5yr_avg": null,
-    "cash_plus_investments_pct_mcap": 1052.1,
+    "pe_ratio_5yr_avg": 12.31,
+    "cash_plus_investments_pct_mcap": 1052.22,
     "eps_cagr_3yr": 17.0,
     "eps_cagr_5yr": 81.0,
     "sales_cagr_3yr": 8.0,
@@ -1101,7 +1101,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 4.1,
     "opm_3yr_avg": 4.97,
-    "updated_at": "2026-07-30T10:07:55.437553+00:00"
+    "updated_at": "2026-07-30T11:05:06.572775+00:00"
   },
   "INDUSINDBK": {
     "name": "IndusInd Bank",
@@ -1112,9 +1112,9 @@
     "cyclical_flag": null,
     "cyclical_note": null,
     "pb_ratio": 1.2,
-    "pe_ratio": 59.5,
+    "pe_ratio": 59.6,
     "pe_ratio_5yr_avg": 14.77,
-    "cash_plus_investments_pct_mcap": 158.73,
+    "cash_plus_investments_pct_mcap": 158.63,
     "eps_cagr_3yr": -51.0,
     "eps_cagr_5yr": -21.0,
     "sales_cagr_3yr": 8.0,
@@ -1124,7 +1124,7 @@
     "negative_eps_quarters_of_8": 2,
     "opm_current": -4.0,
     "opm_3yr_avg": -4.33,
-    "updated_at": "2026-07-30T10:07:59.855336+00:00"
+    "updated_at": "2026-07-30T11:05:12.861455+00:00"
   },
   "HEROMOTOCO": {
     "name": "Hero Motocorp",
@@ -1134,10 +1134,10 @@
     "recommendation": "Buy",
     "cyclical_flag": null,
     "cyclical_note": null,
-    "pb_ratio": 4.92,
+    "pb_ratio": 4.93,
     "pe_ratio": 18.6,
     "pe_ratio_5yr_avg": 21.02,
-    "cash_plus_investments_pct_mcap": 18.15,
+    "cash_plus_investments_pct_mcap": 18.82,
     "eps_cagr_3yr": 28.0,
     "eps_cagr_5yr": 16.0,
     "sales_cagr_3yr": 12.0,
@@ -1147,7 +1147,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 14.0,
     "opm_3yr_avg": 14.33,
-    "updated_at": "2026-07-30T10:08:04.867903+00:00"
+    "updated_at": "2026-07-30T11:05:19.807273+00:00"
   },
   "HAL": {
     "name": "Hind.Aeronautics",
@@ -1157,10 +1157,10 @@
     "recommendation": "Hold",
     "cyclical_flag": null,
     "cyclical_note": null,
-    "pb_ratio": 7.47,
-    "pe_ratio": 33.7,
+    "pb_ratio": 7.46,
+    "pe_ratio": 33.6,
     "pe_ratio_5yr_avg": 26.08,
-    "cash_plus_investments_pct_mcap": 15.68,
+    "cash_plus_investments_pct_mcap": 15.7,
     "eps_cagr_3yr": 16.0,
     "eps_cagr_5yr": 23.0,
     "sales_cagr_3yr": 7.0,
@@ -1170,7 +1170,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 36.0,
     "opm_3yr_avg": 31.0,
-    "updated_at": "2026-07-30T10:08:12.893728+00:00"
+    "updated_at": "2026-07-30T11:05:27.636939+00:00"
   },
   "DMART": {
     "name": "Avenue Super.",
@@ -1180,8 +1180,8 @@
     "recommendation": "Buy",
     "cyclical_flag": null,
     "cyclical_note": null,
-    "pb_ratio": 10.36,
-    "pe_ratio": 82.9,
+    "pb_ratio": 10.33,
+    "pe_ratio": 82.7,
     "pe_ratio_5yr_avg": 124.97,
     "cash_plus_investments_pct_mcap": 0.12,
     "eps_cagr_3yr": 8.0,
@@ -1193,7 +1193,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 8.0,
     "opm_3yr_avg": 8.0,
-    "updated_at": "2026-07-30T10:08:20.887994+00:00"
+    "updated_at": "2026-07-30T11:05:34.096663+00:00"
   },
   "ADANIPOWER": {
     "name": "Adani Power",
@@ -1206,7 +1206,7 @@
     "pb_ratio": 6.2,
     "pe_ratio": 28.3,
     "pe_ratio_5yr_avg": 16.17,
-    "cash_plus_investments_pct_mcap": 2.09,
+    "cash_plus_investments_pct_mcap": 2.1,
     "eps_cagr_3yr": 6.0,
     "eps_cagr_5yr": 58.0,
     "sales_cagr_3yr": 12.0,
@@ -1216,7 +1216,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 42.0,
     "opm_3yr_avg": 37.0,
-    "updated_at": "2026-07-30T10:08:26.906354+00:00"
+    "updated_at": "2026-07-30T11:05:42.259559+00:00"
   },
   "INDIGO": {
     "name": "Interglobe Aviat",
@@ -1226,10 +1226,10 @@
     "recommendation": "Buy",
     "cyclical_flag": null,
     "cyclical_note": null,
-    "pb_ratio": 29.04,
+    "pb_ratio": 29.06,
     "pe_ratio": null,
     "pe_ratio_5yr_avg": 27.8,
-    "cash_plus_investments_pct_mcap": 25.56,
+    "cash_plus_investments_pct_mcap": 25.55,
     "eps_cagr_3yr": null,
     "eps_cagr_5yr": 10.0,
     "sales_cagr_3yr": 16.0,
@@ -1239,7 +1239,7 @@
     "negative_eps_quarters_of_8": 4,
     "opm_current": 13.0,
     "opm_3yr_avg": 20.0,
-    "updated_at": "2026-07-30T10:08:34.919638+00:00"
+    "updated_at": "2026-07-30T11:05:47.624616+00:00"
   },
   "VBL": {
     "name": "Varun Beverages",
@@ -1262,30 +1262,30 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 28.0,
     "opm_3yr_avg": 23.33,
-    "updated_at": "2026-07-30T10:08:42.524296+00:00"
+    "updated_at": "2026-07-30T11:05:55.384187+00:00"
   },
   "IRFC": {
     "name": "IRFC",
     "sector": "Financial Services",
-    "result_date": "2026-03-31",
+    "result_date": "2026-06-30",
     "classification": "Slow Grower",
-    "recommendation": "Hold",
+    "recommendation": "Buy",
     "cyclical_flag": null,
     "cyclical_note": null,
     "pb_ratio": 2.05,
-    "pe_ratio": 16.6,
+    "pe_ratio": 16.2,
     "pe_ratio_5yr_avg": null,
     "cash_plus_investments_pct_mcap": 0.02,
     "eps_cagr_3yr": 3.0,
     "eps_cagr_5yr": 10.0,
     "sales_cagr_3yr": 5.0,
     "sales_cagr_5yr": 12.0,
-    "qoq_sales_growth": 10.13,
+    "qoq_sales_growth": 12.61,
     "qoq_swing": null,
     "negative_eps_quarters_of_8": 0,
-    "opm_current": 23.0,
+    "opm_current": 22.0,
     "opm_3yr_avg": 24.67,
-    "updated_at": "2026-07-30T10:08:47.340270+00:00"
+    "updated_at": "2026-07-30T11:06:07.385318+00:00"
   },
   "VEDL": {
     "name": "Vedanta",
@@ -1295,10 +1295,10 @@
     "recommendation": "Hold",
     "cyclical_flag": null,
     "cyclical_note": null,
-    "pb_ratio": 2.1,
-    "pe_ratio": 6.05,
+    "pb_ratio": 2.11,
+    "pe_ratio": 6.07,
     "pe_ratio_5yr_avg": 6.34,
-    "cash_plus_investments_pct_mcap": 18.36,
+    "cash_plus_investments_pct_mcap": 18.31,
     "eps_cagr_3yr": 17.0,
     "eps_cagr_5yr": 8.0,
     "sales_cagr_3yr": -19.0,
@@ -1308,7 +1308,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 31.0,
     "opm_3yr_avg": 28.33,
-    "updated_at": "2026-07-30T10:08:55.094456+00:00"
+    "updated_at": "2026-07-30T11:06:14.099374+00:00"
   },
   "DLF": {
     "name": "DLF",
@@ -1318,10 +1318,10 @@
     "recommendation": "Hold",
     "cyclical_flag": null,
     "cyclical_note": null,
-    "pb_ratio": 3.57,
+    "pb_ratio": 3.56,
     "pe_ratio": 38.8,
-    "pe_ratio_5yr_avg": null,
-    "cash_plus_investments_pct_mcap": 13.35,
+    "pe_ratio_5yr_avg": 55.64,
+    "cash_plus_investments_pct_mcap": 18.16,
     "eps_cagr_3yr": 27.0,
     "eps_cagr_5yr": 29.0,
     "sales_cagr_3yr": 13.0,
@@ -1331,7 +1331,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 23.0,
     "opm_3yr_avg": 25.67,
-    "updated_at": "2026-07-30T10:08:59.754579+00:00"
+    "updated_at": "2026-07-30T11:06:22.174262+00:00"
   },
   "PIDILITIND": {
     "name": "Pidilite Inds.",
@@ -1341,9 +1341,9 @@
     "recommendation": "Buy",
     "cyclical_flag": null,
     "cyclical_note": null,
-    "pb_ratio": 15.39,
+    "pb_ratio": 15.38,
     "pe_ratio": 67.4,
-    "pe_ratio_5yr_avg": null,
+    "pe_ratio_5yr_avg": 84.97,
     "cash_plus_investments_pct_mcap": 2.8,
     "eps_cagr_3yr": 25.0,
     "eps_cagr_5yr": 17.0,
@@ -1354,7 +1354,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 23.0,
     "opm_3yr_avg": 23.0,
-    "updated_at": "2026-07-30T10:09:05.713984+00:00"
+    "updated_at": "2026-07-30T11:06:28.203815+00:00"
   },
   "DIVISLAB": {
     "name": "Divi's Lab.",
@@ -1364,10 +1364,10 @@
     "recommendation": "Hold",
     "cyclical_flag": null,
     "cyclical_note": null,
-    "pb_ratio": 12.38,
-    "pe_ratio": 79.0,
-    "pe_ratio_5yr_avg": null,
-    "cash_plus_investments_pct_mcap": 0.03,
+    "pb_ratio": 12.42,
+    "pe_ratio": 79.2,
+    "pe_ratio_5yr_avg": 61.61,
+    "cash_plus_investments_pct_mcap": 1.67,
     "eps_cagr_3yr": 13.0,
     "eps_cagr_5yr": 6.0,
     "sales_cagr_3yr": 11.0,
@@ -1377,7 +1377,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 33.0,
     "opm_3yr_avg": 31.0,
-    "updated_at": "2026-07-30T10:09:10.197329+00:00"
+    "updated_at": "2026-07-30T11:06:36.049346+00:00"
   },
   "ADANIGREEN": {
     "name": "Adani Green",
@@ -1389,7 +1389,7 @@
     "cyclical_note": null,
     "pb_ratio": 11.23,
     "pe_ratio": 115.0,
-    "pe_ratio_5yr_avg": null,
+    "pe_ratio_5yr_avg": 292.57,
     "cash_plus_investments_pct_mcap": 2.57,
     "eps_cagr_3yr": 17.0,
     "eps_cagr_5yr": 44.0,
@@ -1400,7 +1400,7 @@
     "negative_eps_quarters_of_8": 1,
     "opm_current": 90.0,
     "opm_3yr_avg": 80.33,
-    "updated_at": "2026-07-30T10:09:16.287321+00:00"
+    "updated_at": "2026-07-30T11:06:43.353740+00:00"
   },
   "PFC": {
     "name": "Power Fin.Corpn.",
@@ -1411,9 +1411,9 @@
     "cyclical_flag": null,
     "cyclical_note": null,
     "pb_ratio": 1.06,
-    "pe_ratio": 5.43,
-    "pe_ratio_5yr_avg": null,
-    "cash_plus_investments_pct_mcap": 14.35,
+    "pe_ratio": 5.42,
+    "pe_ratio_5yr_avg": 4.79,
+    "cash_plus_investments_pct_mcap": 14.38,
     "eps_cagr_3yr": 18.0,
     "eps_cagr_5yr": 17.0,
     "sales_cagr_3yr": 14.0,
@@ -1423,7 +1423,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 39.0,
     "opm_3yr_avg": 36.67,
-    "updated_at": "2026-07-30T10:09:22.493481+00:00"
+    "updated_at": "2026-07-30T11:06:51.476094+00:00"
   },
   "AMBUJACEM": {
     "name": "Ambuja Cements",
@@ -1434,7 +1434,7 @@
     "cyclical_flag": null,
     "cyclical_note": null,
     "pb_ratio": 1.81,
-    "pe_ratio": 23.0,
+    "pe_ratio": 22.9,
     "pe_ratio_5yr_avg": 33.28,
     "cash_plus_investments_pct_mcap": 0.99,
     "eps_cagr_3yr": 21.0,
@@ -1446,7 +1446,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 17.0,
     "opm_3yr_avg": 17.33,
-    "updated_at": "2026-07-30T10:09:29.335422+00:00"
+    "updated_at": "2026-07-30T11:06:59.568695+00:00"
   },
   "MANINDS": {
     "name": "Cholaman.Inv.&Fn",
@@ -1456,10 +1456,10 @@
     "recommendation": "Buy",
     "cyclical_flag": null,
     "cyclical_note": null,
-    "pb_ratio": 1.91,
-    "pe_ratio": 23.4,
-    "pe_ratio_5yr_avg": null,
-    "cash_plus_investments_pct_mcap": 18.25,
+    "pb_ratio": 1.9,
+    "pe_ratio": 23.3,
+    "pe_ratio_5yr_avg": 13.68,
+    "cash_plus_investments_pct_mcap": 18.33,
     "eps_cagr_3yr": 43.0,
     "eps_cagr_5yr": 11.0,
     "sales_cagr_3yr": 17.0,
@@ -1469,7 +1469,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 12.0,
     "opm_3yr_avg": 9.67,
-    "updated_at": "2026-07-30T10:09:35.858035+00:00"
+    "updated_at": "2026-07-30T11:07:05.215639+00:00"
   },
   "BPCL": {
     "name": "B P C L",
@@ -1479,10 +1479,10 @@
     "recommendation": "Buy",
     "cyclical_flag": null,
     "cyclical_note": null,
-    "pb_ratio": 1.36,
-    "pe_ratio": 8.85,
+    "pb_ratio": 1.37,
+    "pe_ratio": 8.84,
     "pe_ratio_5yr_avg": 8.31,
-    "cash_plus_investments_pct_mcap": 22.07,
+    "cash_plus_investments_pct_mcap": 34.95,
     "eps_cagr_3yr": 107.0,
     "eps_cagr_5yr": 16.0,
     "sales_cagr_3yr": -1.0,
@@ -1492,7 +1492,7 @@
     "negative_eps_quarters_of_8": 1,
     "opm_current": -2.7,
     "opm_3yr_avg": 8.33,
-    "updated_at": "2026-07-30T10:09:40.912300+00:00"
+    "updated_at": "2026-07-30T11:07:10.608458+00:00"
   },
   "BRITANNIA": {
     "name": "Britannia Inds.",
@@ -1502,10 +1502,10 @@
     "recommendation": "Sell",
     "cyclical_flag": null,
     "cyclical_note": null,
-    "pb_ratio": 26.11,
-    "pe_ratio": 52.7,
+    "pb_ratio": 26.06,
+    "pe_ratio": 52.6,
     "pe_ratio_5yr_avg": 57.61,
-    "cash_plus_investments_pct_mcap": 2.97,
+    "cash_plus_investments_pct_mcap": 2.98,
     "eps_cagr_3yr": 8.0,
     "eps_cagr_5yr": 6.0,
     "sales_cagr_3yr": 6.0,
@@ -1515,7 +1515,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 18.0,
     "opm_3yr_avg": 18.33,
-    "updated_at": "2026-07-30T10:09:48.839988+00:00"
+    "updated_at": "2026-07-30T11:07:18.734996+00:00"
   },
   "AMJLAND": {
     "name": "Bajaj Holdings",
@@ -1538,7 +1538,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 44.6,
     "opm_3yr_avg": 29.0,
-    "updated_at": "2026-07-30T10:09:56.132396+00:00"
+    "updated_at": "2026-07-30T11:07:26.173083+00:00"
   },
   "GODREJCP": {
     "name": "Godrej Consumer",
@@ -1548,10 +1548,10 @@
     "recommendation": "Sell",
     "cyclical_flag": null,
     "cyclical_note": null,
-    "pb_ratio": 8.63,
-    "pe_ratio": 55.2,
+    "pb_ratio": 8.65,
+    "pe_ratio": 55.4,
     "pe_ratio_5yr_avg": 61.09,
-    "cash_plus_investments_pct_mcap": 2.53,
+    "cash_plus_investments_pct_mcap": 3.44,
     "eps_cagr_3yr": 5.0,
     "eps_cagr_5yr": 3.0,
     "sales_cagr_3yr": 4.0,
@@ -1561,7 +1561,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 22.0,
     "opm_3yr_avg": 21.33,
-    "updated_at": "2026-07-30T10:10:01.410566+00:00"
+    "updated_at": "2026-07-30T11:07:32.248784+00:00"
   },
   "BANKBARODA": {
     "name": "Bank of Baroda",
@@ -1572,9 +1572,9 @@
     "cyclical_flag": null,
     "cyclical_note": null,
     "pb_ratio": 0.74,
-    "pe_ratio": 5.69,
-    "pe_ratio_5yr_avg": null,
-    "cash_plus_investments_pct_mcap": 348.43,
+    "pe_ratio": 5.66,
+    "pe_ratio_5yr_avg": 7.65,
+    "cash_plus_investments_pct_mcap": 396.63,
     "eps_cagr_3yr": 10.0,
     "eps_cagr_5yr": 73.0,
     "sales_cagr_3yr": 13.0,
@@ -1584,7 +1584,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 5.0,
     "opm_3yr_avg": 3.0,
-    "updated_at": "2026-07-30T10:10:06.779469+00:00"
+    "updated_at": "2026-07-30T11:07:40.465322+00:00"
   },
   "HYUNDAI": {
     "name": "Hyundai Motor I",
@@ -1594,10 +1594,10 @@
     "recommendation": "Hold",
     "cyclical_flag": null,
     "cyclical_note": null,
-    "pb_ratio": 8.31,
-    "pe_ratio": 30.6,
-    "pe_ratio_5yr_avg": null,
-    "cash_plus_investments_pct_mcap": 0.0,
+    "pb_ratio": 8.2,
+    "pe_ratio": 30.2,
+    "pe_ratio_5yr_avg": 30.91,
+    "cash_plus_investments_pct_mcap": 6.44,
     "eps_cagr_3yr": 5.0,
     "eps_cagr_5yr": 24.0,
     "sales_cagr_3yr": 5.0,
@@ -1607,7 +1607,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 10.0,
     "opm_3yr_avg": 12.67,
-    "updated_at": "2026-07-30T10:10:11.476711+00:00"
+    "updated_at": "2026-07-30T11:07:47.273834+00:00"
   },
   "TVSMOTOR": {
     "name": "TVS Motor Co.",
@@ -1617,7 +1617,7 @@
     "recommendation": "Buy",
     "cyclical_flag": null,
     "cyclical_note": null,
-    "pb_ratio": 20.95,
+    "pb_ratio": 20.94,
     "pe_ratio": 57.8,
     "pe_ratio_5yr_avg": 53.37,
     "cash_plus_investments_pct_mcap": 2.82,
@@ -1630,7 +1630,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 14.0,
     "opm_3yr_avg": 14.67,
-    "updated_at": "2026-07-30T10:10:18.013673+00:00"
+    "updated_at": "2026-07-30T11:07:54.194627+00:00"
   },
   "GAIL": {
     "name": "GAIL (India)",
@@ -1642,8 +1642,8 @@
     "cyclical_note": null,
     "pb_ratio": 1.29,
     "pe_ratio": 15.1,
-    "pe_ratio_5yr_avg": null,
-    "cash_plus_investments_pct_mcap": 22.98,
+    "pe_ratio_5yr_avg": 11.06,
+    "cash_plus_investments_pct_mcap": 24.84,
     "eps_cagr_3yr": 10.0,
     "eps_cagr_5yr": 4.0,
     "sales_cagr_3yr": -1.0,
@@ -1653,7 +1653,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 4.1,
     "opm_3yr_avg": 10.0,
-    "updated_at": "2026-07-30T10:10:23.530606+00:00"
+    "updated_at": "2026-07-30T11:08:02.008929+00:00"
   },
   "LODHA": {
     "name": "Lodha Developers Ltd",
@@ -1661,12 +1661,12 @@
     "result_date": "2026-06-30",
     "classification": "Cyclical",
     "recommendation": "Hold",
-    "cyclical_flag": null,
-    "cyclical_note": null,
-    "pb_ratio": 5.54,
-    "pe_ratio": 31.2,
-    "pe_ratio_5yr_avg": null,
-    "cash_plus_investments_pct_mcap": 3.91,
+    "cyclical_flag": "peak_warning",
+    "cyclical_note": "⚠ possible cycle peak - low PE + strong earnings is a Lynch warning sign, not a buy signal",
+    "pb_ratio": 5.52,
+    "pe_ratio": 31.1,
+    "pe_ratio_5yr_avg": 50.34,
+    "cash_plus_investments_pct_mcap": 3.92,
     "eps_cagr_3yr": 56.0,
     "eps_cagr_5yr": 58.0,
     "sales_cagr_3yr": 21.0,
@@ -1676,7 +1676,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 38.0,
     "opm_3yr_avg": 28.33,
-    "updated_at": "2026-07-30T10:10:29.148334+00:00"
+    "updated_at": "2026-07-30T11:08:08.438934+00:00"
   },
   "INDHOTEL": {
     "name": "Indian Hotels Co",
@@ -1686,10 +1686,10 @@
     "recommendation": "Buy",
     "cyclical_flag": null,
     "cyclical_note": null,
-    "pb_ratio": 8.14,
-    "pe_ratio": 54.6,
-    "pe_ratio_5yr_avg": null,
-    "cash_plus_investments_pct_mcap": 5.12,
+    "pb_ratio": 8.17,
+    "pe_ratio": 54.9,
+    "pe_ratio_5yr_avg": 65.55,
+    "cash_plus_investments_pct_mcap": 3.38,
     "eps_cagr_3yr": 22.0,
     "eps_cagr_5yr": 32.0,
     "sales_cagr_3yr": 19.0,
@@ -1699,7 +1699,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 29.0,
     "opm_3yr_avg": 32.67,
-    "updated_at": "2026-07-30T10:10:35.586697+00:00"
+    "updated_at": "2026-07-30T11:08:14.345682+00:00"
   },
   "TATAPOWER": {
     "name": "Tata Power Co.",
@@ -1711,8 +1711,8 @@
     "cyclical_note": null,
     "pb_ratio": 3.03,
     "pe_ratio": 30.7,
-    "pe_ratio_5yr_avg": null,
-    "cash_plus_investments_pct_mcap": 13.8,
+    "pe_ratio_5yr_avg": 32.38,
+    "cash_plus_investments_pct_mcap": 25.16,
     "eps_cagr_3yr": 6.0,
     "eps_cagr_5yr": 27.0,
     "sales_cagr_3yr": 4.0,
@@ -1722,7 +1722,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 20.0,
     "opm_3yr_avg": 19.0,
-    "updated_at": "2026-07-30T10:10:40.112458+00:00"
+    "updated_at": "2026-07-30T11:08:20.567885+00:00"
   },
   "ABB": {
     "name": "A B B",
@@ -1732,10 +1732,10 @@
     "recommendation": "Hold",
     "cyclical_flag": null,
     "cyclical_note": null,
-    "pb_ratio": 19.76,
-    "pe_ratio": 102.0,
-    "pe_ratio_5yr_avg": null,
-    "cash_plus_investments_pct_mcap": 3.77,
+    "pb_ratio": 19.71,
+    "pe_ratio": 101.0,
+    "pe_ratio_5yr_avg": 80.59,
+    "cash_plus_investments_pct_mcap": 0.0,
     "eps_cagr_3yr": null,
     "eps_cagr_5yr": null,
     "sales_cagr_3yr": null,
@@ -1745,7 +1745,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 13.0,
     "opm_3yr_avg": 12.9,
-    "updated_at": "2026-07-30T10:10:46.124676+00:00"
+    "updated_at": "2026-07-30T11:08:27.713356+00:00"
   },
   "RECLTD": {
     "name": "REC Ltd",
@@ -1756,9 +1756,9 @@
     "cyclical_flag": null,
     "cyclical_note": null,
     "pb_ratio": 1.16,
-    "pe_ratio": 6.19,
+    "pe_ratio": 6.18,
     "pe_ratio_5yr_avg": 5.61,
-    "cash_plus_investments_pct_mcap": 11.58,
+    "cash_plus_investments_pct_mcap": 11.59,
     "eps_cagr_3yr": 13.0,
     "eps_cagr_5yr": 14.0,
     "sales_cagr_3yr": 15.0,
@@ -1768,7 +1768,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 36.0,
     "opm_3yr_avg": 36.33,
-    "updated_at": "2026-07-30T10:10:53.249974+00:00"
+    "updated_at": "2026-07-30T11:08:34.013783+00:00"
   },
   "PNB": {
     "name": "Punjab Natl.Bank",
@@ -1779,9 +1779,9 @@
     "cyclical_flag": null,
     "cyclical_note": null,
     "pb_ratio": 0.82,
-    "pe_ratio": 5.79,
-    "pe_ratio_5yr_avg": null,
-    "cash_plus_investments_pct_mcap": 452.31,
+    "pe_ratio": 5.78,
+    "pe_ratio_5yr_avg": 12.86,
+    "cash_plus_investments_pct_mcap": 408.02,
     "eps_cagr_3yr": 76.0,
     "eps_cagr_5yr": 48.0,
     "sales_cagr_3yr": 15.0,
@@ -1791,7 +1791,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 8.0,
     "opm_3yr_avg": 5.67,
-    "updated_at": "2026-07-30T10:10:59.871402+00:00"
+    "updated_at": "2026-07-30T11:08:40.187353+00:00"
   },
   "SHREECEM": {
     "name": "Shree Cement",
@@ -1804,7 +1804,7 @@
     "pb_ratio": 4.11,
     "pe_ratio": 56.8,
     "pe_ratio_5yr_avg": 53.83,
-    "cash_plus_investments_pct_mcap": 10.75,
+    "cash_plus_investments_pct_mcap": 11.11,
     "eps_cagr_3yr": 10.0,
     "eps_cagr_5yr": -6.0,
     "sales_cagr_3yr": 5.0,
@@ -1814,7 +1814,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 23.0,
     "opm_3yr_avg": 21.33,
-    "updated_at": "2026-07-30T10:11:04.928099+00:00"
+    "updated_at": "2026-07-30T11:08:47.129554+00:00"
   },
   "UNITDSPR": {
     "name": "United Spirits",
@@ -1824,10 +1824,10 @@
     "recommendation": "Sell",
     "cyclical_flag": null,
     "cyclical_note": null,
-    "pb_ratio": 12.47,
-    "pe_ratio": 60.2,
-    "pe_ratio_5yr_avg": null,
-    "cash_plus_investments_pct_mcap": 1.05,
+    "pb_ratio": 12.46,
+    "pe_ratio": 60.1,
+    "pe_ratio_5yr_avg": 63.21,
+    "cash_plus_investments_pct_mcap": 2.83,
     "eps_cagr_3yr": 23.0,
     "eps_cagr_5yr": 35.0,
     "sales_cagr_3yr": 6.0,
@@ -1837,7 +1837,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 16.0,
     "opm_3yr_avg": 18.33,
-    "updated_at": "2026-07-30T10:11:10.185601+00:00"
+    "updated_at": "2026-07-30T11:08:53.901223+00:00"
   },
   "BAJAJHFL": {
     "name": "Bajaj Housing",
@@ -1847,10 +1847,10 @@
     "recommendation": "Buy",
     "cyclical_flag": null,
     "cyclical_note": null,
-    "pb_ratio": 3.21,
+    "pb_ratio": 3.2,
     "pe_ratio": 26.8,
     "pe_ratio_5yr_avg": null,
-    "cash_plus_investments_pct_mcap": 3.46,
+    "cash_plus_investments_pct_mcap": 3.47,
     "eps_cagr_3yr": 27.0,
     "eps_cagr_5yr": 41.0,
     "sales_cagr_3yr": 25.0,
@@ -1860,7 +1860,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 31.0,
     "opm_3yr_avg": 29.33,
-    "updated_at": "2026-07-30T10:11:18.255195+00:00"
+    "updated_at": "2026-07-30T11:09:04.666595+00:00"
   },
   "ADANIENSOL": {
     "name": "Adani Energy Sol",
@@ -1870,8 +1870,8 @@
     "recommendation": "Buy",
     "cyclical_flag": null,
     "cyclical_note": null,
-    "pb_ratio": 7.82,
-    "pe_ratio": 68.2,
+    "pb_ratio": 7.83,
+    "pe_ratio": 68.3,
     "pe_ratio_5yr_avg": 125.35,
     "cash_plus_investments_pct_mcap": 3.31,
     "eps_cagr_3yr": 21.0,
@@ -1883,7 +1883,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 31.0,
     "opm_3yr_avg": 31.0,
-    "updated_at": "2026-07-30T10:11:25.235123+00:00"
+    "updated_at": "2026-07-30T11:09:11.078006+00:00"
   },
   "TORNTPHARM": {
     "name": "Torrent Pharma.",
@@ -1893,10 +1893,10 @@
     "recommendation": "Buy",
     "cyclical_flag": null,
     "cyclical_note": null,
-    "pb_ratio": 19.64,
+    "pb_ratio": 19.65,
     "pe_ratio": 84.6,
     "pe_ratio_5yr_avg": 53.58,
-    "cash_plus_investments_pct_mcap": 0.51,
+    "cash_plus_investments_pct_mcap": 1.14,
     "eps_cagr_3yr": 22.0,
     "eps_cagr_5yr": 12.0,
     "sales_cagr_3yr": 13.0,
@@ -1906,7 +1906,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 32.0,
     "opm_3yr_avg": 32.0,
-    "updated_at": "2026-07-30T10:11:30.167604+00:00"
+    "updated_at": "2026-07-30T11:09:17.834615+00:00"
   },
   "HAVELLS": {
     "name": "Havells India",
@@ -1919,7 +1919,7 @@
     "pb_ratio": 8.36,
     "pe_ratio": 47.6,
     "pe_ratio_5yr_avg": 69.08,
-    "cash_plus_investments_pct_mcap": 4.11,
+    "cash_plus_investments_pct_mcap": 1.12,
     "eps_cagr_3yr": 16.0,
     "eps_cagr_5yr": 11.0,
     "sales_cagr_3yr": 10.0,
@@ -1929,7 +1929,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 7.0,
     "opm_3yr_avg": 10.0,
-    "updated_at": "2026-07-30T10:11:37.486236+00:00"
+    "updated_at": "2026-07-30T11:09:22.537452+00:00"
   },
   "SIEMENS": {
     "name": "Siemens",
@@ -1939,9 +1939,9 @@
     "recommendation": "Buy",
     "cyclical_flag": null,
     "cyclical_note": null,
-    "pb_ratio": 9.42,
+    "pb_ratio": 9.41,
     "pe_ratio": 46.5,
-    "pe_ratio_5yr_avg": null,
+    "pe_ratio_5yr_avg": 55.48,
     "cash_plus_investments_pct_mcap": 0.0,
     "eps_cagr_3yr": 23.0,
     "eps_cagr_5yr": 30.0,
@@ -1952,7 +1952,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 10.0,
     "opm_3yr_avg": 13.0,
-    "updated_at": "2026-07-30T10:11:43.046769+00:00"
+    "updated_at": "2026-07-30T11:09:28.802565+00:00"
   },
   "PRESTIGE": {
     "name": "Prestige Estates",
@@ -1962,10 +1962,10 @@
     "recommendation": "Hold",
     "cyclical_flag": null,
     "cyclical_note": null,
-    "pb_ratio": 4.21,
-    "pe_ratio": 60.1,
+    "pb_ratio": 4.22,
+    "pe_ratio": 60.3,
     "pe_ratio_5yr_avg": 57.13,
-    "cash_plus_investments_pct_mcap": 6.65,
+    "cash_plus_investments_pct_mcap": 6.63,
     "eps_cagr_3yr": 18.0,
     "eps_cagr_5yr": 21.0,
     "sales_cagr_3yr": 15.0,
@@ -1975,7 +1975,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 32.0,
     "opm_3yr_avg": 31.67,
-    "updated_at": "2026-07-30T10:11:49.194089+00:00"
+    "updated_at": "2026-07-30T11:09:36.185704+00:00"
   },
   "CANBK": {
     "name": "Canara Bank",
@@ -1988,7 +1988,7 @@
     "pb_ratio": 0.91,
     "pe_ratio": 5.68,
     "pe_ratio_5yr_avg": 6.1,
-    "cash_plus_investments_pct_mcap": 360.74,
+    "cash_plus_investments_pct_mcap": 361.47,
     "eps_cagr_3yr": 18.0,
     "eps_cagr_5yr": 44.0,
     "sales_cagr_3yr": 14.0,
@@ -1998,7 +1998,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": -1.0,
     "opm_3yr_avg": -4.67,
-    "updated_at": "2026-07-30T10:11:55.424237+00:00"
+    "updated_at": "2026-07-30T11:09:43.422699+00:00"
   },
   "NAUKRI": {
     "name": "Info Edg.(India)",
@@ -2008,10 +2008,10 @@
     "recommendation": "Buy",
     "cyclical_flag": null,
     "cyclical_note": null,
-    "pb_ratio": 2.12,
-    "pe_ratio": 56.4,
+    "pb_ratio": 2.13,
+    "pe_ratio": 56.6,
     "pe_ratio_5yr_avg": 132.51,
-    "cash_plus_investments_pct_mcap": 53.08,
+    "cash_plus_investments_pct_mcap": 52.9,
     "eps_cagr_3yr": 91.0,
     "eps_cagr_5yr": 62.0,
     "sales_cagr_3yr": 12.0,
@@ -2021,7 +2021,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 38.0,
     "opm_3yr_avg": 31.67,
-    "updated_at": "2026-07-30T10:12:03.458700+00:00"
+    "updated_at": "2026-07-30T11:09:51.017401+00:00"
   },
   "JINDALSTEL": {
     "name": "Jindal Steel",
@@ -2029,12 +2029,12 @@
     "result_date": "2026-06-30",
     "classification": "Cyclical",
     "recommendation": "Hold",
-    "cyclical_flag": null,
-    "cyclical_note": null,
-    "pb_ratio": 2.18,
-    "pe_ratio": 36.0,
-    "pe_ratio_5yr_avg": null,
-    "cash_plus_investments_pct_mcap": 2.85,
+    "cyclical_flag": "trough_setup",
+    "cyclical_note": "possible cycle trough - may be a recovery setup, worth a closer look",
+    "pb_ratio": 2.19,
+    "pe_ratio": 36.1,
+    "pe_ratio_5yr_avg": 17.87,
+    "cash_plus_investments_pct_mcap": 6.55,
     "eps_cagr_3yr": 1.0,
     "eps_cagr_5yr": 1.0,
     "sales_cagr_3yr": 0.0,
@@ -2044,7 +2044,7 @@
     "negative_eps_quarters_of_8": 1,
     "opm_current": 17.0,
     "opm_3yr_avg": 19.0,
-    "updated_at": "2026-07-30T10:12:07.873809+00:00"
+    "updated_at": "2026-07-30T11:09:57.437800+00:00"
   },
   "ZYDUSLIFE": {
     "name": "Zydus Lifesci.",
@@ -2056,8 +2056,8 @@
     "cyclical_note": null,
     "pb_ratio": 4.14,
     "pe_ratio": 20.5,
-    "pe_ratio_5yr_avg": null,
-    "cash_plus_investments_pct_mcap": 6.79,
+    "pe_ratio_5yr_avg": 21.6,
+    "cash_plus_investments_pct_mcap": 8.05,
     "eps_cagr_3yr": 32.0,
     "eps_cagr_5yr": 19.0,
     "sales_cagr_3yr": 16.0,
@@ -2067,7 +2067,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 34.0,
     "opm_3yr_avg": 29.67,
-    "updated_at": "2026-07-30T10:12:12.603622+00:00"
+    "updated_at": "2026-07-30T11:10:04.232259+00:00"
   },
   "DABUR": {
     "name": "Dabur India",
@@ -2077,10 +2077,10 @@
     "recommendation": "Buy",
     "cyclical_flag": null,
     "cyclical_note": null,
-    "pb_ratio": 6.63,
-    "pe_ratio": 38.2,
-    "pe_ratio_5yr_avg": null,
-    "cash_plus_investments_pct_mcap": 11.81,
+    "pb_ratio": 6.61,
+    "pe_ratio": 38.1,
+    "pe_ratio_5yr_avg": 52.88,
+    "cash_plus_investments_pct_mcap": 11.83,
     "eps_cagr_3yr": 4.0,
     "eps_cagr_5yr": 2.0,
     "sales_cagr_3yr": 5.0,
@@ -2090,7 +2090,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 20.0,
     "opm_3yr_avg": 18.67,
-    "updated_at": "2026-07-30T10:12:17.267786+00:00"
+    "updated_at": "2026-07-30T11:10:11.121893+00:00"
   },
   "BSE": {
     "name": "BSE",
@@ -2100,10 +2100,10 @@
     "recommendation": "Buy",
     "cyclical_flag": null,
     "cyclical_note": null,
-    "pb_ratio": 21.55,
-    "pe_ratio": 57.9,
+    "pb_ratio": 21.52,
+    "pe_ratio": 57.8,
     "pe_ratio_5yr_avg": 58.8,
-    "cash_plus_investments_pct_mcap": 6.26,
+    "cash_plus_investments_pct_mcap": 6.27,
     "eps_cagr_3yr": 124.0,
     "eps_cagr_5yr": 68.0,
     "sales_cagr_3yr": 74.0,
@@ -2113,7 +2113,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 67.0,
     "opm_3yr_avg": 55.67,
-    "updated_at": "2026-07-30T10:12:24.747345+00:00"
+    "updated_at": "2026-07-30T11:10:17.188804+00:00"
   },
   "SWIGGY": {
     "name": "Swiggy",
@@ -2123,10 +2123,10 @@
     "recommendation": "Buy",
     "cyclical_flag": null,
     "cyclical_note": null,
-    "pb_ratio": 4.43,
+    "pb_ratio": 4.46,
     "pe_ratio": null,
     "pe_ratio_5yr_avg": null,
-    "cash_plus_investments_pct_mcap": 7.43,
+    "cash_plus_investments_pct_mcap": 12.34,
     "eps_cagr_3yr": 0.0,
     "eps_cagr_5yr": null,
     "sales_cagr_3yr": 41.0,
@@ -2136,7 +2136,7 @@
     "negative_eps_quarters_of_8": 7,
     "opm_current": -11.0,
     "opm_3yr_avg": -17.33,
-    "updated_at": "2026-07-30T10:12:29.559091+00:00"
+    "updated_at": "2026-07-30T11:10:26.499410+00:00"
   },
   "JSWENERGY": {
     "name": "JSW Energy",
@@ -2149,7 +2149,7 @@
     "pb_ratio": 3.11,
     "pe_ratio": 49.6,
     "pe_ratio_5yr_avg": 44.78,
-    "cash_plus_investments_pct_mcap": 17.19,
+    "cash_plus_investments_pct_mcap": 17.2,
     "eps_cagr_3yr": 19.0,
     "eps_cagr_5yr": 23.0,
     "sales_cagr_3yr": 22.0,
@@ -2159,7 +2159,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 55.0,
     "opm_3yr_avg": 48.0,
-    "updated_at": "2026-07-30T10:12:36.699485+00:00"
+    "updated_at": "2026-07-30T11:10:33.753898+00:00"
   },
   "BOSCHLTD": {
     "name": "Bosch",
@@ -2167,11 +2167,11 @@
     "result_date": "2026-03-31",
     "classification": "Cyclical",
     "recommendation": "Hold",
-    "cyclical_flag": null,
-    "cyclical_note": null,
+    "cyclical_flag": "trough_setup",
+    "cyclical_note": "possible cycle trough - may be a recovery setup, worth a closer look",
     "pb_ratio": 8.26,
     "pe_ratio": 58.7,
-    "pe_ratio_5yr_avg": null,
+    "pe_ratio_5yr_avg": 43.34,
     "cash_plus_investments_pct_mcap": 6.87,
     "eps_cagr_3yr": 14.0,
     "eps_cagr_5yr": 17.0,
@@ -2182,7 +2182,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 14.0,
     "opm_3yr_avg": 13.0,
-    "updated_at": "2026-07-30T10:12:42.517828+00:00"
+    "updated_at": "2026-07-30T11:10:41.756984+00:00"
   },
   "CUMMINSIND": {
     "name": "Cummins India",
@@ -2192,10 +2192,10 @@
     "recommendation": "Buy",
     "cyclical_flag": null,
     "cyclical_note": null,
-    "pb_ratio": 17.67,
-    "pe_ratio": 61.8,
-    "pe_ratio_5yr_avg": null,
-    "cash_plus_investments_pct_mcap": 1.44,
+    "pb_ratio": 17.63,
+    "pe_ratio": 61.7,
+    "pe_ratio_5yr_avg": 45.13,
+    "cash_plus_investments_pct_mcap": 3.03,
     "eps_cagr_3yr": 26.0,
     "eps_cagr_5yr": 31.0,
     "sales_cagr_3yr": 16.0,
@@ -2205,7 +2205,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 21.0,
     "opm_3yr_avg": 20.33,
-    "updated_at": "2026-07-30T10:12:48.030252+00:00"
+    "updated_at": "2026-07-30T11:10:47.126077+00:00"
   },
   "GMRAIRPORT": {
     "name": "GMR Airports",
@@ -2216,9 +2216,9 @@
     "cyclical_flag": null,
     "cyclical_note": null,
     "pb_ratio": -44.26,
-    "pe_ratio": 527.0,
-    "pe_ratio_5yr_avg": null,
-    "cash_plus_investments_pct_mcap": 5.44,
+    "pe_ratio": 528.0,
+    "pe_ratio_5yr_avg": 535.1,
+    "cash_plus_investments_pct_mcap": 6.33,
     "eps_cagr_3yr": 43.0,
     "eps_cagr_5yr": 16.0,
     "sales_cagr_3yr": 30.0,
@@ -2228,7 +2228,7 @@
     "negative_eps_quarters_of_8": 5,
     "opm_current": 37.0,
     "opm_3yr_avg": 36.33,
-    "updated_at": "2026-07-30T10:12:52.808575+00:00"
+    "updated_at": "2026-07-30T11:10:54.954035+00:00"
   },
   "ICICIGI": {
     "name": "ICICI Lombard",
@@ -2238,10 +2238,10 @@
     "recommendation": "Hold",
     "cyclical_flag": null,
     "cyclical_note": null,
-    "pb_ratio": 4.79,
-    "pe_ratio": 33.6,
+    "pb_ratio": 4.8,
+    "pe_ratio": 33.7,
     "pe_ratio_5yr_avg": null,
-    "cash_plus_investments_pct_mcap": 71.49,
+    "cash_plus_investments_pct_mcap": 71.33,
     "eps_cagr_3yr": 14.0,
     "eps_cagr_5yr": 12.0,
     "sales_cagr_3yr": 15.0,
@@ -2251,7 +2251,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 7.0,
     "opm_3yr_avg": 13.67,
-    "updated_at": "2026-07-30T10:12:59.356525+00:00"
+    "updated_at": "2026-07-30T11:11:06.118874+00:00"
   },
   "BHARTIHEXA": {
     "name": "Bharti Hexacom",
@@ -2261,10 +2261,10 @@
     "recommendation": "Hold",
     "cyclical_flag": null,
     "cyclical_note": null,
-    "pb_ratio": 11.52,
-    "pe_ratio": 48.5,
+    "pb_ratio": 11.57,
+    "pe_ratio": 48.7,
     "pe_ratio_5yr_avg": null,
-    "cash_plus_investments_pct_mcap": 0.77,
+    "cash_plus_investments_pct_mcap": 0.76,
     "eps_cagr_3yr": 46.0,
     "eps_cagr_5yr": 35.0,
     "sales_cagr_3yr": 12.0,
@@ -2274,7 +2274,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 52.0,
     "opm_3yr_avg": 49.33,
-    "updated_at": "2026-07-30T10:13:04.534004+00:00"
+    "updated_at": "2026-07-30T11:11:14.958071+00:00"
   },
   "LUPIN": {
     "name": "Lupin",
@@ -2287,7 +2287,7 @@
     "pb_ratio": 4.93,
     "pe_ratio": 19.4,
     "pe_ratio_5yr_avg": 37.42,
-    "cash_plus_investments_pct_mcap": 3.31,
+    "cash_plus_investments_pct_mcap": 8.42,
     "eps_cagr_3yr": 140.0,
     "eps_cagr_5yr": 37.0,
     "sales_cagr_3yr": 19.0,
@@ -2297,7 +2297,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 33.0,
     "opm_3yr_avg": 23.67,
-    "updated_at": "2026-07-30T10:13:09.967022+00:00"
+    "updated_at": "2026-07-30T11:11:20.660904+00:00"
   },
   "MARICO": {
     "name": "Marico",
@@ -2307,10 +2307,10 @@
     "recommendation": "Buy",
     "cyclical_flag": null,
     "cyclical_note": null,
-    "pb_ratio": 27.38,
-    "pe_ratio": 65.6,
-    "pe_ratio_5yr_avg": null,
-    "cash_plus_investments_pct_mcap": 2.24,
+    "pb_ratio": 27.31,
+    "pe_ratio": 65.5,
+    "pe_ratio_5yr_avg": 54.39,
+    "cash_plus_investments_pct_mcap": 1.81,
     "eps_cagr_3yr": 11.0,
     "eps_cagr_5yr": 9.0,
     "sales_cagr_3yr": 12.0,
@@ -2320,7 +2320,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 16.0,
     "opm_3yr_avg": 19.33,
-    "updated_at": "2026-07-30T10:13:14.883791+00:00"
+    "updated_at": "2026-07-30T11:11:26.358672+00:00"
   },
   "SRF": {
     "name": "SRF",
@@ -2331,9 +2331,9 @@
     "cyclical_flag": null,
     "cyclical_note": null,
     "pb_ratio": 5.5,
-    "pe_ratio": 34.5,
-    "pe_ratio_5yr_avg": null,
-    "cash_plus_investments_pct_mcap": 1.68,
+    "pe_ratio": 34.4,
+    "pe_ratio_5yr_avg": 49.93,
+    "cash_plus_investments_pct_mcap": 0.89,
     "eps_cagr_3yr": -4.0,
     "eps_cagr_5yr": 10.0,
     "sales_cagr_3yr": 2.0,
@@ -2343,7 +2343,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 25.0,
     "opm_3yr_avg": 20.0,
-    "updated_at": "2026-07-30T10:13:21.161363+00:00"
+    "updated_at": "2026-07-30T11:11:32.396676+00:00"
   },
   "NTPCGREEN": {
     "name": "NTPC Green Ene.",
@@ -2353,10 +2353,10 @@
     "recommendation": "Buy",
     "cyclical_flag": null,
     "cyclical_note": null,
-    "pb_ratio": 4.02,
+    "pb_ratio": 4.03,
     "pe_ratio": 126.0,
     "pe_ratio_5yr_avg": 165.11,
-    "cash_plus_investments_pct_mcap": 5.45,
+    "cash_plus_investments_pct_mcap": 5.44,
     "eps_cagr_3yr": 45.0,
     "eps_cagr_5yr": null,
     "sales_cagr_3yr": 156.0,
@@ -2366,7 +2366,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 89.0,
     "opm_3yr_avg": 87.67,
-    "updated_at": "2026-07-30T10:13:27.988070+00:00"
+    "updated_at": "2026-07-30T11:11:39.159485+00:00"
   },
   "POWERINDIA": {
     "name": "Hitachi Energy",
@@ -2376,7 +2376,7 @@
     "recommendation": "Hold",
     "cyclical_flag": null,
     "cyclical_note": null,
-    "pb_ratio": 27.0,
+    "pb_ratio": 26.92,
     "pe_ratio": 136.0,
     "pe_ratio_5yr_avg": null,
     "cash_plus_investments_pct_mcap": 0.0,
@@ -2389,7 +2389,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 15.0,
     "opm_3yr_avg": 10.33,
-    "updated_at": "2026-07-30T10:13:34.367532+00:00"
+    "updated_at": "2026-07-30T11:11:47.976508+00:00"
   },
   "WAAREEENER": {
     "name": "Waaree Energies",
@@ -2399,10 +2399,10 @@
     "recommendation": "Buy",
     "cyclical_flag": null,
     "cyclical_note": null,
-    "pb_ratio": 5.24,
+    "pb_ratio": 5.23,
     "pe_ratio": 18.8,
-    "pe_ratio_5yr_avg": null,
-    "cash_plus_investments_pct_mcap": 10.15,
+    "pe_ratio_5yr_avg": 36.87,
+    "cash_plus_investments_pct_mcap": 10.17,
     "eps_cagr_3yr": 100.0,
     "eps_cagr_5yr": 143.0,
     "sales_cagr_3yr": 58.0,
@@ -2412,7 +2412,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 18.0,
     "opm_3yr_avg": 18.33,
-    "updated_at": "2026-07-30T10:13:40.361061+00:00"
+    "updated_at": "2026-07-30T11:11:55.318697+00:00"
   },
   "NHPC": {
     "name": "NHPC Ltd",
@@ -2425,7 +2425,7 @@
     "pb_ratio": 1.9,
     "pe_ratio": 20.8,
     "pe_ratio_5yr_avg": 18.65,
-    "cash_plus_investments_pct_mcap": 5.21,
+    "cash_plus_investments_pct_mcap": 5.22,
     "eps_cagr_3yr": -1.0,
     "eps_cagr_5yr": 2.0,
     "sales_cagr_3yr": 3.0,
@@ -2435,7 +2435,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 23.0,
     "opm_3yr_avg": 49.33,
-    "updated_at": "2026-07-30T10:13:47.545982+00:00"
+    "updated_at": "2026-07-30T11:12:01.110314+00:00"
   },
   "BHEL": {
     "name": "BHEL",
@@ -2445,10 +2445,10 @@
     "recommendation": "Hold",
     "cyclical_flag": "peak_warning",
     "cyclical_note": "⚠ possible cycle peak - low PE + strong earnings is a Lynch warning sign, not a buy signal",
-    "pb_ratio": 5.38,
-    "pe_ratio": 57.9,
+    "pb_ratio": 5.37,
+    "pe_ratio": 57.7,
     "pe_ratio_5yr_avg": 142.97,
-    "cash_plus_investments_pct_mcap": 8.65,
+    "cash_plus_investments_pct_mcap": 0.22,
     "eps_cagr_3yr": 36.0,
     "eps_cagr_5yr": 21.0,
     "sales_cagr_3yr": 13.0,
@@ -2458,7 +2458,7 @@
     "negative_eps_quarters_of_8": 1,
     "opm_current": 7.0,
     "opm_3yr_avg": 5.3,
-    "updated_at": "2026-07-30T10:13:55.120182+00:00"
+    "updated_at": "2026-07-30T11:12:05.912249+00:00"
   },
   "INDIANB": {
     "name": "Indian Bank",
@@ -2471,7 +2471,7 @@
     "pb_ratio": 1.33,
     "pe_ratio": 8.72,
     "pe_ratio_5yr_avg": 7.21,
-    "cash_plus_investments_pct_mcap": 242.21,
+    "cash_plus_investments_pct_mcap": 222.15,
     "eps_cagr_3yr": 28.0,
     "eps_cagr_5yr": 30.0,
     "sales_cagr_3yr": 14.0,
@@ -2481,7 +2481,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 8.0,
     "opm_3yr_avg": 7.67,
-    "updated_at": "2026-07-30T10:14:01.698525+00:00"
+    "updated_at": "2026-07-30T11:12:12.681597+00:00"
   },
   "POLICYBZR": {
     "name": "PB Fintech.",
@@ -2491,10 +2491,10 @@
     "recommendation": "Buy",
     "cyclical_flag": null,
     "cyclical_note": null,
-    "pb_ratio": 10.06,
+    "pb_ratio": 10.09,
     "pe_ratio": 110.0,
-    "pe_ratio_5yr_avg": null,
-    "cash_plus_investments_pct_mcap": 4.36,
+    "pe_ratio_5yr_avg": 375.59,
+    "cash_plus_investments_pct_mcap": 5.39,
     "eps_cagr_3yr": 50.0,
     "eps_cagr_5yr": 42.0,
     "sales_cagr_3yr": 38.0,
@@ -2504,7 +2504,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 10.0,
     "opm_3yr_avg": 1.3,
-    "updated_at": "2026-07-30T10:14:06.065415+00:00"
+    "updated_at": "2026-07-30T11:12:19.940717+00:00"
   },
   "PERSISTENT": {
     "name": "Persistent Sys",
@@ -2514,8 +2514,8 @@
     "recommendation": "Buy",
     "cyclical_flag": null,
     "cyclical_note": null,
-    "pb_ratio": 11.07,
-    "pe_ratio": 45.0,
+    "pb_ratio": 11.1,
+    "pe_ratio": 45.1,
     "pe_ratio_5yr_avg": 51.65,
     "cash_plus_investments_pct_mcap": 3.26,
     "eps_cagr_3yr": 28.0,
@@ -2527,7 +2527,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 19.0,
     "opm_3yr_avg": 17.67,
-    "updated_at": "2026-07-30T10:14:13.362882+00:00"
+    "updated_at": "2026-07-30T11:12:27.587440+00:00"
   },
   "SUZLON": {
     "name": "Suzlon Energy",
@@ -2539,8 +2539,8 @@
     "cyclical_note": null,
     "pb_ratio": 6.81,
     "pe_ratio": 20.5,
-    "pe_ratio_5yr_avg": null,
-    "cash_plus_investments_pct_mcap": 0.34,
+    "pe_ratio_5yr_avg": 73.15,
+    "cash_plus_investments_pct_mcap": 2.26,
     "eps_cagr_3yr": 165.0,
     "eps_cagr_5yr": 46.0,
     "sales_cagr_3yr": 41.0,
@@ -2550,7 +2550,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 16.0,
     "opm_3yr_avg": 17.0,
-    "updated_at": "2026-07-30T10:14:17.560968+00:00"
+    "updated_at": "2026-07-30T11:12:35.485254+00:00"
   },
   "LLOYDSME": {
     "name": "Lloyds Metals",
@@ -2560,10 +2560,10 @@
     "recommendation": "Hold",
     "cyclical_flag": null,
     "cyclical_note": null,
-    "pb_ratio": 8.21,
-    "pe_ratio": 30.5,
-    "pe_ratio_5yr_avg": null,
-    "cash_plus_investments_pct_mcap": 2.96,
+    "pb_ratio": 8.19,
+    "pe_ratio": 30.4,
+    "pe_ratio_5yr_avg": 36.4,
+    "cash_plus_investments_pct_mcap": 2.97,
     "eps_cagr_3yr": 60.0,
     "eps_cagr_5yr": 679.0,
     "sales_cagr_3yr": 72.0,
@@ -2573,7 +2573,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 42.0,
     "opm_3yr_avg": 30.33,
-    "updated_at": "2026-07-30T10:14:23.542558+00:00"
+    "updated_at": "2026-07-30T11:12:42.307614+00:00"
   },
   "COROMANDEL": {
     "name": "Coromandel Inter",
@@ -2583,10 +2583,10 @@
     "recommendation": "Hold",
     "cyclical_flag": "trough_setup",
     "cyclical_note": "possible cycle trough - may be a recovery setup, worth a closer look",
-    "pb_ratio": 4.83,
+    "pb_ratio": 4.82,
     "pe_ratio": 32.5,
     "pe_ratio_5yr_avg": 23.72,
-    "cash_plus_investments_pct_mcap": 4.18,
+    "cash_plus_investments_pct_mcap": 4.19,
     "eps_cagr_3yr": -1.0,
     "eps_cagr_5yr": 8.0,
     "sales_cagr_3yr": 2.0,
@@ -2596,7 +2596,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 9.0,
     "opm_3yr_avg": 10.67,
-    "updated_at": "2026-07-30T10:14:30.605492+00:00"
+    "updated_at": "2026-07-30T11:12:49.170832+00:00"
   },
   "SBICARD": {
     "name": "SBI Cards",
@@ -2609,7 +2609,7 @@
     "pb_ratio": 3.99,
     "pe_ratio": 27.5,
     "pe_ratio_5yr_avg": null,
-    "cash_plus_investments_pct_mcap": 10.19,
+    "cash_plus_investments_pct_mcap": 10.18,
     "eps_cagr_3yr": -1.0,
     "eps_cagr_5yr": 17.0,
     "sales_cagr_3yr": 13.0,
@@ -2619,7 +2619,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 15.0,
     "opm_3yr_avg": 13.33,
-    "updated_at": "2026-07-30T10:14:35.512445+00:00"
+    "updated_at": "2026-07-30T11:13:00.639120+00:00"
   },
   "IDEA": {
     "name": "Vodafone Idea",
@@ -2632,7 +2632,7 @@
     "pb_ratio": -3.91,
     "pe_ratio": null,
     "pe_ratio_5yr_avg": null,
-    "cash_plus_investments_pct_mcap": 4.18,
+    "cash_plus_investments_pct_mcap": 4.19,
     "eps_cagr_3yr": 6.0,
     "eps_cagr_5yr": 0.0,
     "sales_cagr_3yr": 2.0,
@@ -2642,7 +2642,7 @@
     "negative_eps_quarters_of_8": 7,
     "opm_current": 43.0,
     "opm_3yr_avg": 41.0,
-    "updated_at": "2026-07-30T10:14:42.662042+00:00"
+    "updated_at": "2026-07-30T11:13:08.796679+00:00"
   },
   "ABBOTINDIA": {
     "name": "Abbott India",
@@ -2652,7 +2652,7 @@
     "recommendation": "Sell",
     "cyclical_flag": null,
     "cyclical_note": null,
-    "pb_ratio": 12.28,
+    "pb_ratio": 12.26,
     "pe_ratio": 37.9,
     "pe_ratio_5yr_avg": null,
     "cash_plus_investments_pct_mcap": 0.0,
@@ -2665,7 +2665,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 28.0,
     "opm_3yr_avg": 26.0,
-    "updated_at": "2026-07-30T10:14:47.198950+00:00"
+    "updated_at": "2026-07-30T11:13:20.544408+00:00"
   },
   "RVNL": {
     "name": "Rail Vikas",
@@ -2677,8 +2677,8 @@
     "cyclical_note": null,
     "pb_ratio": 4.73,
     "pe_ratio": 53.2,
-    "pe_ratio_5yr_avg": null,
-    "cash_plus_investments_pct_mcap": 5.69,
+    "pe_ratio_5yr_avg": 35.13,
+    "cash_plus_investments_pct_mcap": 7.77,
     "eps_cagr_3yr": -13.0,
     "eps_cagr_5yr": -2.0,
     "sales_cagr_3yr": 0.0,
@@ -2688,7 +2688,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 4.0,
     "opm_3yr_avg": 5.27,
-    "updated_at": "2026-07-30T10:14:52.247356+00:00"
+    "updated_at": "2026-07-30T11:13:27.604216+00:00"
   },
   "IOB": {
     "name": "Indian Overseas Bank",
@@ -2700,8 +2700,8 @@
     "cyclical_note": null,
     "pb_ratio": 1.67,
     "pe_ratio": 10.9,
-    "pe_ratio_5yr_avg": null,
-    "cash_plus_investments_pct_mcap": 183.7,
+    "pe_ratio_5yr_avg": 26.68,
+    "cash_plus_investments_pct_mcap": 206.82,
     "eps_cagr_3yr": 37.0,
     "eps_cagr_5yr": 48.0,
     "sales_cagr_3yr": 18.0,
@@ -2711,7 +2711,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": -3.0,
     "opm_3yr_avg": -2.0,
-    "updated_at": "2026-07-30T10:14:56.408158+00:00"
+    "updated_at": "2026-07-30T11:13:35.070999+00:00"
   },
   "PAYTM": {
     "name": "One 97",
@@ -2721,10 +2721,10 @@
     "recommendation": "Buy",
     "cyclical_flag": null,
     "cyclical_note": null,
-    "pb_ratio": 5.32,
+    "pb_ratio": 5.33,
     "pe_ratio": 105.0,
     "pe_ratio_5yr_avg": 316.41,
-    "cash_plus_investments_pct_mcap": 20.57,
+    "cash_plus_investments_pct_mcap": 20.53,
     "eps_cagr_3yr": 34.0,
     "eps_cagr_5yr": 20.0,
     "sales_cagr_3yr": 2.0,
@@ -2734,7 +2734,7 @@
     "negative_eps_quarters_of_8": 2,
     "opm_current": 8.0,
     "opm_3yr_avg": -8.33,
-    "updated_at": "2026-07-30T10:15:02.927257+00:00"
+    "updated_at": "2026-07-30T11:13:41.392730+00:00"
   },
   "ASHOKLEY": {
     "name": "Ashok Leyland",
@@ -2744,10 +2744,10 @@
     "recommendation": "Buy",
     "cyclical_flag": null,
     "cyclical_note": null,
-    "pb_ratio": 6.57,
-    "pe_ratio": 25.7,
+    "pb_ratio": 6.53,
+    "pe_ratio": 25.6,
     "pe_ratio_5yr_avg": 29.32,
-    "cash_plus_investments_pct_mcap": 19.5,
+    "cash_plus_investments_pct_mcap": 19.64,
     "eps_cagr_3yr": 45.0,
     "eps_cagr_5yr": 84.0,
     "sales_cagr_3yr": 5.0,
@@ -2757,7 +2757,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 19.0,
     "opm_3yr_avg": 10.0,
-    "updated_at": "2026-07-30T10:15:10.150192+00:00"
+    "updated_at": "2026-07-30T11:13:49.509122+00:00"
   },
   "OIL": {
     "name": "Oil India",
@@ -2769,8 +2769,8 @@
     "cyclical_note": null,
     "pb_ratio": 1.28,
     "pe_ratio": 11.3,
-    "pe_ratio_5yr_avg": null,
-    "cash_plus_investments_pct_mcap": 49.42,
+    "pe_ratio_5yr_avg": 7.41,
+    "cash_plus_investments_pct_mcap": 57.04,
     "eps_cagr_3yr": -9.0,
     "eps_cagr_5yr": 12.0,
     "sales_cagr_3yr": -2.0,
@@ -2780,7 +2780,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 35.0,
     "opm_3yr_avg": 35.0,
-    "updated_at": "2026-07-30T10:15:14.372540+00:00"
+    "updated_at": "2026-07-30T11:13:57.453762+00:00"
   },
   "AUROPHARMA": {
     "name": "Aurobindo Pharma",
@@ -2790,10 +2790,10 @@
     "recommendation": "Hold",
     "cyclical_flag": null,
     "cyclical_note": null,
-    "pb_ratio": 2.41,
-    "pe_ratio": 25.7,
+    "pb_ratio": 2.42,
+    "pe_ratio": 25.8,
     "pe_ratio_5yr_avg": 18.71,
-    "cash_plus_investments_pct_mcap": 11.96,
+    "cash_plus_investments_pct_mcap": 11.93,
     "eps_cagr_3yr": 23.0,
     "eps_cagr_5yr": 1.0,
     "sales_cagr_3yr": 11.0,
@@ -2803,7 +2803,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 20.0,
     "opm_3yr_avg": 20.33,
-    "updated_at": "2026-07-30T10:15:22.040705+00:00"
+    "updated_at": "2026-07-30T11:14:03.650310+00:00"
   },
   "ATGL": {
     "name": "Adani Total Gas",
@@ -2813,10 +2813,10 @@
     "recommendation": "Buy",
     "cyclical_flag": null,
     "cyclical_note": null,
-    "pb_ratio": 14.66,
+    "pb_ratio": 14.71,
     "pe_ratio": 113.0,
-    "pe_ratio_5yr_avg": null,
-    "cash_plus_investments_pct_mcap": 3.08,
+    "pe_ratio_5yr_avg": 241.88,
+    "cash_plus_investments_pct_mcap": 3.07,
     "eps_cagr_3yr": 6.0,
     "eps_cagr_5yr": 7.0,
     "sales_cagr_3yr": 10.0,
@@ -2826,7 +2826,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 15.0,
     "opm_3yr_avg": 22.67,
-    "updated_at": "2026-07-30T10:15:27.458865+00:00"
+    "updated_at": "2026-07-30T11:14:11.457246+00:00"
   },
   "PATANJALI": {
     "name": "Patanjali Foods",
@@ -2836,10 +2836,10 @@
     "recommendation": "Buy",
     "cyclical_flag": null,
     "cyclical_note": null,
-    "pb_ratio": 2.96,
-    "pe_ratio": 19.1,
-    "pe_ratio_5yr_avg": null,
-    "cash_plus_investments_pct_mcap": 0.06,
+    "pb_ratio": 2.97,
+    "pe_ratio": 19.2,
+    "pe_ratio_5yr_avg": 39.47,
+    "cash_plus_investments_pct_mcap": 2.07,
     "eps_cagr_3yr": null,
     "eps_cagr_5yr": null,
     "sales_cagr_3yr": null,
@@ -2849,16 +2849,30 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 4.0,
     "opm_3yr_avg": 3.67,
-    "updated_at": "2026-07-30T10:15:31.628439+00:00"
+    "updated_at": "2026-07-30T11:14:17.991958+00:00"
   },
   "GVT&D": {
     "name": "GE Vernova T&D",
+    "sector": "Capital Goods",
     "result_date": "2026-03-31",
-    "sales_growth_pct": 41.98,
-    "net_profit_growth_pct": 89.25,
-    "avg_growth_pct": 65.61,
     "classification": "Fast Grower",
-    "updated_at": "2026-07-20T06:26:32.435161+00:00"
+    "recommendation": "Buy",
+    "cyclical_flag": null,
+    "cyclical_note": null,
+    "pb_ratio": 40.02,
+    "pe_ratio": 84.1,
+    "pe_ratio_5yr_avg": null,
+    "cash_plus_investments_pct_mcap": 0.0,
+    "eps_cagr_3yr": 490.0,
+    "eps_cagr_5yr": 86.0,
+    "sales_cagr_3yr": 31.0,
+    "sales_cagr_5yr": 12.0,
+    "qoq_sales_growth": -3.76,
+    "qoq_swing": null,
+    "negative_eps_quarters_of_8": 0,
+    "opm_current": 27.0,
+    "opm_3yr_avg": 18.67,
+    "updated_at": "2026-07-30T11:14:28.599821+00:00"
   },
   "BERGEPAINT": {
     "name": "Berger Paints",
@@ -2868,10 +2882,10 @@
     "recommendation": "Sell",
     "cyclical_flag": null,
     "cyclical_note": null,
-    "pb_ratio": 8.8,
-    "pe_ratio": 53.9,
-    "pe_ratio_5yr_avg": null,
-    "cash_plus_investments_pct_mcap": 2.45,
+    "pb_ratio": 8.79,
+    "pe_ratio": 53.7,
+    "pe_ratio_5yr_avg": 63.29,
+    "cash_plus_investments_pct_mcap": 2.46,
     "eps_cagr_3yr": 10.0,
     "eps_cagr_5yr": 10.0,
     "sales_cagr_3yr": 4.0,
@@ -2881,7 +2895,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 17.0,
     "opm_3yr_avg": 16.0,
-    "updated_at": "2026-07-30T10:15:43.334064+00:00"
+    "updated_at": "2026-07-30T11:14:34.665106+00:00"
   },
   "JSWINFRA": {
     "name": "JSW Infrast",
@@ -2904,7 +2918,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 47.0,
     "opm_3yr_avg": 50.67,
-    "updated_at": "2026-07-30T10:15:50.914909+00:00"
+    "updated_at": "2026-07-30T11:14:42.175976+00:00"
   },
   "TORNTPOWER": {
     "name": "Torrent Power",
@@ -2915,8 +2929,8 @@
     "cyclical_flag": null,
     "cyclical_note": null,
     "pb_ratio": 3.76,
-    "pe_ratio": 31.5,
-    "pe_ratio_5yr_avg": null,
+    "pe_ratio": 31.4,
+    "pe_ratio_5yr_avg": 22.97,
     "cash_plus_investments_pct_mcap": 3.29,
     "eps_cagr_3yr": 4.0,
     "eps_cagr_5yr": 12.0,
@@ -2927,7 +2941,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 18.0,
     "opm_3yr_avg": 18.0,
-    "updated_at": "2026-07-30T10:15:56.362784+00:00"
+    "updated_at": "2026-07-30T11:14:48.766644+00:00"
   },
   "SCHAEFFLER": {
     "name": "Schaeffler India",
@@ -2937,8 +2951,8 @@
     "recommendation": "Buy",
     "cyclical_flag": null,
     "cyclical_note": null,
-    "pb_ratio": 10.3,
-    "pe_ratio": 50.5,
+    "pb_ratio": 10.28,
+    "pe_ratio": 50.4,
     "pe_ratio_5yr_avg": 58.37,
     "cash_plus_investments_pct_mcap": 2.38,
     "eps_cagr_3yr": 10.0,
@@ -2950,7 +2964,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 18.0,
     "opm_3yr_avg": 18.0,
-    "updated_at": "2026-07-30T10:16:03.016666+00:00"
+    "updated_at": "2026-07-30T11:14:56.127546+00:00"
   },
   "VMM": {
     "name": "Vishal Mega Mart",
@@ -2961,9 +2975,9 @@
     "cyclical_flag": null,
     "cyclical_note": null,
     "pb_ratio": 6.79,
-    "pe_ratio": 56.5,
-    "pe_ratio_5yr_avg": null,
-    "cash_plus_investments_pct_mcap": 2.22,
+    "pe_ratio": 56.7,
+    "pe_ratio_5yr_avg": 93.16,
+    "cash_plus_investments_pct_mcap": 3.39,
     "eps_cagr_3yr": 39.0,
     "eps_cagr_5yr": 48.0,
     "sales_cagr_3yr": 19.0,
@@ -2973,7 +2987,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 15.0,
     "opm_3yr_avg": 14.67,
-    "updated_at": "2026-07-30T10:16:07.646781+00:00"
+    "updated_at": "2026-07-30T11:15:03.818118+00:00"
   },
   "ABCAPITAL": {
     "name": "Aditya Birla Cap",
@@ -2983,10 +2997,10 @@
     "recommendation": "Buy",
     "cyclical_flag": null,
     "cyclical_note": null,
-    "pb_ratio": 3.0,
+    "pb_ratio": 3.01,
     "pe_ratio": 27.6,
     "pe_ratio_5yr_avg": 18.71,
-    "cash_plus_investments_pct_mcap": 120.67,
+    "cash_plus_investments_pct_mcap": 120.43,
     "eps_cagr_3yr": -7.0,
     "eps_cagr_5yr": 28.0,
     "sales_cagr_3yr": 15.0,
@@ -2996,7 +3010,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 11.0,
     "opm_3yr_avg": 11.67,
-    "updated_at": "2026-07-30T10:16:15.218139+00:00"
+    "updated_at": "2026-07-30T11:15:10.891381+00:00"
   },
   "GICRE": {
     "name": "General Insuranc",
@@ -3009,7 +3023,7 @@
     "pb_ratio": 0.89,
     "pe_ratio": 6.51,
     "pe_ratio_5yr_avg": 8.42,
-    "cash_plus_investments_pct_mcap": 236.9,
+    "cash_plus_investments_pct_mcap": 282.62,
     "eps_cagr_3yr": 12.0,
     "eps_cagr_5yr": 37.0,
     "sales_cagr_3yr": 4.0,
@@ -3019,7 +3033,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 19.0,
     "opm_3yr_avg": 17.67,
-    "updated_at": "2026-07-30T10:16:20.936345+00:00"
+    "updated_at": "2026-07-30T11:15:18.235357+00:00"
   },
   "NMDC": {
     "name": "NMDC",
@@ -3029,10 +3043,10 @@
     "recommendation": "Buy",
     "cyclical_flag": null,
     "cyclical_note": null,
-    "pb_ratio": 2.19,
+    "pb_ratio": 2.2,
     "pe_ratio": 10.0,
-    "pe_ratio_5yr_avg": null,
-    "cash_plus_investments_pct_mcap": 17.13,
+    "pe_ratio_5yr_avg": 7.99,
+    "cash_plus_investments_pct_mcap": 17.07,
     "eps_cagr_3yr": 17.0,
     "eps_cagr_5yr": 4.0,
     "sales_cagr_3yr": 22.0,
@@ -3042,7 +3056,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 23.0,
     "opm_3yr_avg": 32.33,
-    "updated_at": "2026-07-30T10:16:27.143609+00:00"
+    "updated_at": "2026-07-30T11:15:24.902406+00:00"
   },
   "PIIND": {
     "name": "P I Industries",
@@ -3054,7 +3068,7 @@
     "cyclical_note": null,
     "pb_ratio": 3.75,
     "pe_ratio": 35.0,
-    "pe_ratio_5yr_avg": null,
+    "pe_ratio_5yr_avg": 41.25,
     "cash_plus_investments_pct_mcap": 3.23,
     "eps_cagr_3yr": -1.0,
     "eps_cagr_5yr": 10.0,
@@ -3065,7 +3079,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 22.0,
     "opm_3yr_avg": 26.67,
-    "updated_at": "2026-07-30T10:16:31.245923+00:00"
+    "updated_at": "2026-07-30T11:15:30.297200+00:00"
   },
   "FORTIS": {
     "name": "Fortis Health.",
@@ -3077,7 +3091,7 @@
     "cyclical_note": null,
     "pb_ratio": 7.24,
     "pe_ratio": 67.7,
-    "pe_ratio_5yr_avg": null,
+    "pe_ratio_5yr_avg": 63.39,
     "cash_plus_investments_pct_mcap": 0.34,
     "eps_cagr_3yr": 27.0,
     "eps_cagr_5yr": 64.0,
@@ -3088,7 +3102,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 23.0,
     "opm_3yr_avg": 20.33,
-    "updated_at": "2026-07-30T10:16:35.849369+00:00"
+    "updated_at": "2026-07-30T11:15:37.027006+00:00"
   },
   "GODREJPROP": {
     "name": "Godrej Propert.",
@@ -3098,10 +3112,10 @@
     "recommendation": "Hold",
     "cyclical_flag": "peak_warning",
     "cyclical_note": "⚠ possible cycle peak - low PE + strong earnings is a Lynch warning sign, not a buy signal",
-    "pb_ratio": 3.33,
-    "pe_ratio": 39.6,
+    "pb_ratio": 3.32,
+    "pe_ratio": 39.5,
     "pe_ratio_5yr_avg": 68.96,
-    "cash_plus_investments_pct_mcap": 17.6,
+    "cash_plus_investments_pct_mcap": 17.66,
     "eps_cagr_3yr": 49.0,
     "eps_cagr_5yr": 56.0,
     "sales_cagr_3yr": 32.0,
@@ -3111,7 +3125,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 15.0,
     "opm_3yr_avg": -4.93,
-    "updated_at": "2026-07-30T10:16:43.575248+00:00"
+    "updated_at": "2026-07-30T11:15:44.071422+00:00"
   },
   "MRF": {
     "name": "MRF",
@@ -3122,9 +3136,9 @@
     "cyclical_flag": null,
     "cyclical_note": null,
     "pb_ratio": 2.73,
-    "pe_ratio": 23.2,
+    "pe_ratio": 23.1,
     "pe_ratio_5yr_avg": 36.32,
-    "cash_plus_investments_pct_mcap": 5.93,
+    "cash_plus_investments_pct_mcap": 9.75,
     "eps_cagr_3yr": 52.0,
     "eps_cagr_5yr": 14.0,
     "sales_cagr_3yr": 11.0,
@@ -3134,7 +3148,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 16.0,
     "opm_3yr_avg": 16.0,
-    "updated_at": "2026-07-30T10:16:48.442824+00:00"
+    "updated_at": "2026-07-30T11:15:51.132067+00:00"
   },
   "NYKAA": {
     "name": "FSN E-Commerce",
@@ -3157,7 +3171,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 8.0,
     "opm_3yr_avg": 6.33,
-    "updated_at": "2026-07-30T10:16:56.160009+00:00"
+    "updated_at": "2026-07-30T11:15:59.010510+00:00"
   },
   "KALYANKJIL": {
     "name": "Kalyan Jewellers",
@@ -3167,8 +3181,8 @@
     "recommendation": "Buy",
     "cyclical_flag": null,
     "cyclical_note": null,
-    "pb_ratio": 10.33,
-    "pe_ratio": 47.3,
+    "pb_ratio": 10.39,
+    "pe_ratio": 47.5,
     "pe_ratio_5yr_avg": 53.87,
     "cash_plus_investments_pct_mcap": 0.01,
     "eps_cagr_3yr": 44.0,
@@ -3180,7 +3194,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 7.0,
     "opm_3yr_avg": 6.67,
-    "updated_at": "2026-07-30T10:17:01.709574+00:00"
+    "updated_at": "2026-07-30T11:16:03.761544+00:00"
   },
   "FACT": {
     "name": "Fertilizer and Chemical Travancore",
@@ -3188,11 +3202,11 @@
     "result_date": "2025-12-31",
     "classification": "Cyclical",
     "recommendation": "Hold",
-    "cyclical_flag": null,
-    "cyclical_note": null,
-    "pb_ratio": 38.3,
-    "pe_ratio": 3548.0,
-    "pe_ratio_5yr_avg": null,
+    "cyclical_flag": "trough_setup",
+    "cyclical_note": "possible cycle trough - may be a recovery setup, worth a closer look",
+    "pb_ratio": 38.44,
+    "pe_ratio": 3567.0,
+    "pe_ratio_5yr_avg": 674.71,
     "cash_plus_investments_pct_mcap": 0.3,
     "eps_cagr_3yr": -63.0,
     "eps_cagr_5yr": 45.0,
@@ -3203,7 +3217,7 @@
     "negative_eps_quarters_of_8": 3,
     "opm_current": -2.7,
     "opm_3yr_avg": 7.1,
-    "updated_at": "2026-07-30T10:17:07.115417+00:00"
+    "updated_at": "2026-07-30T11:16:10.787805+00:00"
   },
   "UNOMINDA": {
     "name": "Uno Minda",
@@ -3213,7 +3227,7 @@
     "recommendation": "Buy",
     "cyclical_flag": null,
     "cyclical_note": null,
-    "pb_ratio": 9.93,
+    "pb_ratio": 9.94,
     "pe_ratio": 55.8,
     "pe_ratio_5yr_avg": 61.24,
     "cash_plus_investments_pct_mcap": 1.93,
@@ -3226,16 +3240,30 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 11.0,
     "opm_3yr_avg": 11.0,
-    "updated_at": "2026-07-30T10:17:13.826231+00:00"
+    "updated_at": "2026-07-30T11:16:16.964530+00:00"
   },
   "COLPAL": {
     "name": "Colgate-Palmoliv",
+    "sector": "Fast Moving Consumer Goods",
     "result_date": "2026-06-30",
-    "sales_growth_pct": 11.79,
-    "net_profit_growth_pct": 6.85,
-    "avg_growth_pct": 9.32,
-    "classification": "Stalwart",
-    "updated_at": "2026-07-30T05:55:13.818453+00:00"
+    "classification": "Slow Grower",
+    "recommendation": "Hold",
+    "cyclical_flag": null,
+    "cyclical_note": null,
+    "pb_ratio": 35.82,
+    "pe_ratio": 41.4,
+    "pe_ratio_5yr_avg": null,
+    "cash_plus_investments_pct_mcap": 0.61,
+    "eps_cagr_3yr": 8.0,
+    "eps_cagr_5yr": 5.0,
+    "sales_cagr_3yr": 5.0,
+    "sales_cagr_5yr": 5.0,
+    "qoq_sales_growth": 0.5,
+    "qoq_swing": null,
+    "negative_eps_quarters_of_8": 0,
+    "opm_current": 30.0,
+    "opm_3yr_avg": 32.0,
+    "updated_at": "2026-07-30T11:16:28.991250+00:00"
   },
   "ALKEM": {
     "name": "Alkem Lab",
@@ -3247,7 +3275,7 @@
     "cyclical_note": null,
     "pb_ratio": 5.03,
     "pe_ratio": 28.5,
-    "pe_ratio_5yr_avg": null,
+    "pe_ratio_5yr_avg": 30.63,
     "cash_plus_investments_pct_mcap": 5.18,
     "eps_cagr_3yr": 32.0,
     "eps_cagr_5yr": 9.0,
@@ -3258,7 +3286,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 14.0,
     "opm_3yr_avg": 19.0,
-    "updated_at": "2026-07-30T10:17:25.010106+00:00"
+    "updated_at": "2026-07-30T11:16:36.112618+00:00"
   },
   "GLENMARK": {
     "name": "Glenmark Pharma.",
@@ -3268,10 +3296,10 @@
     "recommendation": "Buy",
     "cyclical_flag": null,
     "cyclical_note": null,
-    "pb_ratio": 5.93,
-    "pe_ratio": 21.1,
-    "pe_ratio_5yr_avg": null,
-    "cash_plus_investments_pct_mcap": 0.07,
+    "pb_ratio": 5.89,
+    "pe_ratio": 20.9,
+    "pe_ratio_5yr_avg": 22.61,
+    "cash_plus_investments_pct_mcap": 1.97,
     "eps_cagr_3yr": 76.0,
     "eps_cagr_5yr": 26.0,
     "sales_cagr_3yr": 14.0,
@@ -3281,7 +3309,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 20.0,
     "opm_3yr_avg": 18.33,
-    "updated_at": "2026-07-30T10:17:29.849880+00:00"
+    "updated_at": "2026-07-30T11:16:43.802019+00:00"
   },
   "BDL": {
     "name": "Bharat Dynamics",
@@ -3291,8 +3319,8 @@
     "recommendation": "Hold",
     "cyclical_flag": null,
     "cyclical_note": null,
-    "pb_ratio": 10.68,
-    "pe_ratio": 108.0,
+    "pb_ratio": 10.74,
+    "pe_ratio": 109.0,
     "pe_ratio_5yr_avg": null,
     "cash_plus_investments_pct_mcap": 0.01,
     "eps_cagr_3yr": 6.0,
@@ -3304,7 +3332,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 12.0,
     "opm_3yr_avg": 15.33,
-    "updated_at": "2026-07-30T10:17:36.538987+00:00"
+    "updated_at": "2026-07-30T11:16:53.920107+00:00"
   },
   "YESBANK": {
     "name": "Yes Bank",
@@ -3316,8 +3344,8 @@
     "cyclical_note": null,
     "pb_ratio": 1.35,
     "pe_ratio": 18.8,
-    "pe_ratio_5yr_avg": null,
-    "cash_plus_investments_pct_mcap": 124.04,
+    "pe_ratio_5yr_avg": 40.54,
+    "cash_plus_investments_pct_mcap": 146.07,
     "eps_cagr_3yr": 69.0,
     "eps_cagr_5yr": 25.0,
     "sales_cagr_3yr": 10.0,
@@ -3327,7 +3355,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": -7.0,
     "opm_3yr_avg": -8.67,
-    "updated_at": "2026-07-30T10:17:40.705507+00:00"
+    "updated_at": "2026-07-30T11:17:01.490618+00:00"
   },
   "COFORGE": {
     "name": "Coforge",
@@ -3337,10 +3365,10 @@
     "recommendation": "Buy",
     "cyclical_flag": null,
     "cyclical_note": null,
-    "pb_ratio": 6.09,
-    "pe_ratio": 40.0,
+    "pb_ratio": 6.15,
+    "pe_ratio": 40.3,
     "pe_ratio_5yr_avg": 47.34,
-    "cash_plus_investments_pct_mcap": 1.43,
+    "cash_plus_investments_pct_mcap": 1.42,
     "eps_cagr_3yr": 31.0,
     "eps_cagr_5yr": 28.0,
     "sales_cagr_3yr": 27.0,
@@ -3350,7 +3378,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 19.0,
     "opm_3yr_avg": 16.0,
-    "updated_at": "2026-07-30T10:17:47.805813+00:00"
+    "updated_at": "2026-07-30T11:17:07.489397+00:00"
   },
   "UPL": {
     "name": "UPL",
@@ -3363,7 +3391,7 @@
     "pb_ratio": 1.47,
     "pe_ratio": 28.2,
     "pe_ratio_5yr_avg": 23.03,
-    "cash_plus_investments_pct_mcap": 17.2,
+    "cash_plus_investments_pct_mcap": 17.21,
     "eps_cagr_3yr": -21.0,
     "eps_cagr_5yr": -10.0,
     "sales_cagr_3yr": -1.0,
@@ -3373,7 +3401,7 @@
     "negative_eps_quarters_of_8": 3,
     "opm_current": 19.0,
     "opm_3yr_avg": 14.33,
-    "updated_at": "2026-07-30T10:17:55.133949+00:00"
+    "updated_at": "2026-07-30T11:17:14.542608+00:00"
   },
   "OBEROIRLTY": {
     "name": "Oberoi Realty",
@@ -3385,8 +3413,8 @@
     "cyclical_note": null,
     "pb_ratio": 3.68,
     "pe_ratio": 24.9,
-    "pe_ratio_5yr_avg": null,
-    "cash_plus_investments_pct_mcap": 2.63,
+    "pe_ratio_5yr_avg": 27.52,
+    "cash_plus_investments_pct_mcap": 5.21,
     "eps_cagr_3yr": 9.0,
     "eps_cagr_5yr": 27.0,
     "sales_cagr_3yr": 13.0,
@@ -3396,7 +3424,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 56.0,
     "opm_3yr_avg": 56.33,
-    "updated_at": "2026-07-30T10:17:59.634081+00:00"
+    "updated_at": "2026-07-30T11:17:22.395406+00:00"
   },
   "LINDEINDIA": {
     "name": "Linde India",
@@ -3406,9 +3434,9 @@
     "recommendation": "Sell",
     "cyclical_flag": null,
     "cyclical_note": null,
-    "pb_ratio": 13.3,
+    "pb_ratio": 13.27,
     "pe_ratio": 103.0,
-    "pe_ratio_5yr_avg": null,
+    "pe_ratio_5yr_avg": 107.63,
     "cash_plus_investments_pct_mcap": 0.34,
     "eps_cagr_3yr": 1.0,
     "eps_cagr_5yr": 30.0,
@@ -3419,7 +3447,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 28.0,
     "opm_3yr_avg": 30.67,
-    "updated_at": "2026-07-30T10:18:06.099763+00:00"
+    "updated_at": "2026-07-30T11:17:29.888876+00:00"
   },
   "JSL": {
     "name": "Jindal Stain.",
@@ -3432,7 +3460,7 @@
     "pb_ratio": 3.08,
     "pe_ratio": 18.8,
     "pe_ratio_5yr_avg": 14.95,
-    "cash_plus_investments_pct_mcap": 7.36,
+    "cash_plus_investments_pct_mcap": 7.38,
     "eps_cagr_3yr": 15.0,
     "eps_cagr_5yr": 55.0,
     "sales_cagr_3yr": 6.0,
@@ -3442,7 +3470,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 13.0,
     "opm_3yr_avg": 12.0,
-    "updated_at": "2026-07-30T10:18:12.586259+00:00"
+    "updated_at": "2026-07-30T11:17:36.346844+00:00"
   },
   "IRCTC": {
     "name": "I R C T C",
@@ -3453,9 +3481,9 @@
     "cyclical_flag": null,
     "cyclical_note": null,
     "pb_ratio": 9.15,
-    "pe_ratio": 28.6,
-    "pe_ratio_5yr_avg": null,
-    "cash_plus_investments_pct_mcap": 0.0,
+    "pe_ratio": 28.5,
+    "pe_ratio_5yr_avg": 46.67,
+    "cash_plus_investments_pct_mcap": 7.27,
     "eps_cagr_3yr": 12.0,
     "eps_cagr_5yr": null,
     "sales_cagr_3yr": 14.0,
@@ -3465,7 +3493,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 27.0,
     "opm_3yr_avg": 33.0,
-    "updated_at": "2026-07-30T10:18:16.793987+00:00"
+    "updated_at": "2026-07-30T11:17:44.191105+00:00"
   },
   "BHARATFORG": {
     "name": "Bharat Forge",
@@ -3475,10 +3503,10 @@
     "recommendation": "Buy",
     "cyclical_flag": null,
     "cyclical_note": null,
-    "pb_ratio": 10.79,
-    "pe_ratio": 91.5,
+    "pb_ratio": 10.82,
+    "pe_ratio": 91.7,
     "pe_ratio_5yr_avg": 61.48,
-    "cash_plus_investments_pct_mcap": 2.64,
+    "cash_plus_investments_pct_mcap": 2.63,
     "eps_cagr_3yr": 33.0,
     "eps_cagr_5yr": 39.0,
     "sales_cagr_3yr": 9.0,
@@ -3488,7 +3516,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 17.0,
     "opm_3yr_avg": 17.0,
-    "updated_at": "2026-07-30T10:18:24.207577+00:00"
+    "updated_at": "2026-07-30T11:17:50.891935+00:00"
   },
   "AUBANK": {
     "name": "AU Small Finance",
@@ -3521,10 +3549,10 @@
     "recommendation": "Sell",
     "cyclical_flag": null,
     "cyclical_note": null,
-    "pb_ratio": 19.46,
-    "pe_ratio": 45.9,
+    "pb_ratio": 19.49,
+    "pe_ratio": 46.0,
     "pe_ratio_5yr_avg": 51.85,
-    "cash_plus_investments_pct_mcap": 6.3,
+    "cash_plus_investments_pct_mcap": 6.29,
     "eps_cagr_3yr": 18.0,
     "eps_cagr_5yr": 15.0,
     "sales_cagr_3yr": 6.0,
@@ -3534,7 +3562,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 35.0,
     "opm_3yr_avg": 30.33,
-    "updated_at": "2026-07-30T10:18:39.775663+00:00"
+    "updated_at": "2026-07-30T11:18:02.528408+00:00"
   },
   "TIINDIA": {
     "name": "Tube Investments",
@@ -3545,7 +3573,7 @@
     "cyclical_flag": null,
     "cyclical_note": null,
     "pb_ratio": 6.72,
-    "pe_ratio": 78.8,
+    "pe_ratio": 78.7,
     "pe_ratio_5yr_avg": 71.64,
     "cash_plus_investments_pct_mcap": 4.79,
     "eps_cagr_3yr": -11.0,
@@ -3557,7 +3585,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 9.0,
     "opm_3yr_avg": 10.67,
-    "updated_at": "2026-07-30T10:18:46.550849+00:00"
+    "updated_at": "2026-07-30T11:18:08.981442+00:00"
   },
   "TIL": {
     "name": "Motil.Oswal.Fin.",
@@ -3567,10 +3595,10 @@
     "recommendation": "Buy",
     "cyclical_flag": null,
     "cyclical_note": null,
-    "pb_ratio": 18.0,
+    "pb_ratio": 17.93,
     "pe_ratio": null,
-    "pe_ratio_5yr_avg": null,
-    "cash_plus_investments_pct_mcap": 0.26,
+    "pe_ratio_5yr_avg": 432.34,
+    "cash_plus_investments_pct_mcap": 1.14,
     "eps_cagr_3yr": 20.0,
     "eps_cagr_5yr": 10.0,
     "sales_cagr_3yr": 95.0,
@@ -3580,7 +3608,7 @@
     "negative_eps_quarters_of_8": 7,
     "opm_current": 9.09,
     "opm_3yr_avg": -34.97,
-    "updated_at": "2026-07-30T10:18:51.693986+00:00"
+    "updated_at": "2026-07-30T11:18:16.975915+00:00"
   },
   "SUPREMEIND": {
     "name": "Supreme Inds.",
@@ -3590,10 +3618,10 @@
     "recommendation": "Hold",
     "cyclical_flag": null,
     "cyclical_note": null,
-    "pb_ratio": 7.11,
-    "pe_ratio": 42.5,
+    "pb_ratio": 7.12,
+    "pe_ratio": 42.6,
     "pe_ratio_5yr_avg": 45.35,
-    "cash_plus_investments_pct_mcap": 3.24,
+    "cash_plus_investments_pct_mcap": 3.23,
     "eps_cagr_3yr": 3.0,
     "eps_cagr_5yr": -1.0,
     "sales_cagr_3yr": 7.0,
@@ -3603,7 +3631,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 15.0,
     "opm_3yr_avg": 14.33,
-    "updated_at": "2026-07-30T10:18:59.610331+00:00"
+    "updated_at": "2026-07-30T11:18:23.611817+00:00"
   },
   "SUNDARMFIN": {
     "name": "Sundaram Finance",
@@ -3615,8 +3643,8 @@
     "cyclical_note": null,
     "pb_ratio": 3.35,
     "pe_ratio": 23.7,
-    "pe_ratio_5yr_avg": null,
-    "cash_plus_investments_pct_mcap": 21.14,
+    "pe_ratio_5yr_avg": 25.64,
+    "cash_plus_investments_pct_mcap": 18.1,
     "eps_cagr_3yr": 17.0,
     "eps_cagr_5yr": 13.0,
     "sales_cagr_3yr": 21.0,
@@ -3626,7 +3654,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 32.0,
     "opm_3yr_avg": 30.67,
-    "updated_at": "2026-07-30T10:19:05.132523+00:00"
+    "updated_at": "2026-07-30T11:18:29.890949+00:00"
   },
   "PHOENIXLTD": {
     "name": "Phoenix Mills",
@@ -3638,7 +3666,7 @@
     "cyclical_note": null,
     "pb_ratio": 6.15,
     "pe_ratio": 52.1,
-    "pe_ratio_5yr_avg": null,
+    "pe_ratio_5yr_avg": 57.58,
     "cash_plus_investments_pct_mcap": 2.21,
     "eps_cagr_3yr": 14.0,
     "eps_cagr_5yr": 83.0,
@@ -3649,7 +3677,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 60.0,
     "opm_3yr_avg": 57.33,
-    "updated_at": "2026-07-30T10:19:09.742330+00:00"
+    "updated_at": "2026-07-30T11:18:35.210142+00:00"
   },
   "BALKRISIND": {
     "name": "Balkrishna Inds",
@@ -3660,7 +3688,7 @@
     "cyclical_flag": null,
     "cyclical_note": null,
     "pb_ratio": 4.07,
-    "pe_ratio": 31.8,
+    "pe_ratio": 31.7,
     "pe_ratio_5yr_avg": 34.35,
     "cash_plus_investments_pct_mcap": 7.15,
     "eps_cagr_3yr": 1.0,
@@ -3672,7 +3700,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 22.0,
     "opm_3yr_avg": 23.0,
-    "updated_at": "2026-07-30T10:19:16.974625+00:00"
+    "updated_at": "2026-07-30T11:18:42.960998+00:00"
   },
   "MPHASIS": {
     "name": "Mphasis",
@@ -3682,10 +3710,10 @@
     "recommendation": "Buy",
     "cyclical_flag": null,
     "cyclical_note": null,
-    "pb_ratio": 4.18,
-    "pe_ratio": 23.2,
+    "pb_ratio": 4.17,
+    "pe_ratio": 23.1,
     "pe_ratio_5yr_avg": 30.55,
-    "cash_plus_investments_pct_mcap": 7.84,
+    "cash_plus_investments_pct_mcap": 7.86,
     "eps_cagr_3yr": 5.0,
     "eps_cagr_5yr": 9.0,
     "sales_cagr_3yr": 5.0,
@@ -3695,7 +3723,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 18.0,
     "opm_3yr_avg": 18.67,
-    "updated_at": "2026-07-30T10:19:23.456693+00:00"
+    "updated_at": "2026-07-30T11:18:51.033006+00:00"
   },
   "UBL": {
     "name": "United Breweries",
@@ -3705,10 +3733,10 @@
     "recommendation": "Sell",
     "cyclical_flag": null,
     "cyclical_note": null,
-    "pb_ratio": 8.47,
-    "pe_ratio": 112.0,
+    "pb_ratio": 8.4,
+    "pe_ratio": 111.0,
     "pe_ratio_5yr_avg": 116.23,
-    "cash_plus_investments_pct_mcap": 0.02,
+    "cash_plus_investments_pct_mcap": 1.53,
     "eps_cagr_3yr": 2.0,
     "eps_cagr_5yr": 24.0,
     "sales_cagr_3yr": 7.0,
@@ -3718,7 +3746,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 6.0,
     "opm_3yr_avg": 9.0,
-    "updated_at": "2026-07-30T10:19:28.128036+00:00"
+    "updated_at": "2026-07-30T11:18:56.625781+00:00"
   },
   "MFSL": {
     "name": "Max Financial",
@@ -3728,10 +3756,10 @@
     "recommendation": "Sell",
     "cyclical_flag": null,
     "cyclical_note": null,
-    "pb_ratio": 9.86,
-    "pe_ratio": 626.0,
+    "pb_ratio": 9.88,
+    "pe_ratio": 627.0,
     "pe_ratio_5yr_avg": 159.71,
-    "cash_plus_investments_pct_mcap": 18.67,
+    "cash_plus_investments_pct_mcap": 18.64,
     "eps_cagr_3yr": -40.0,
     "eps_cagr_5yr": -28.0,
     "sales_cagr_3yr": 15.0,
@@ -3741,7 +3769,7 @@
     "negative_eps_quarters_of_8": 1,
     "opm_current": -0.1,
     "opm_3yr_avg": 0.77,
-    "updated_at": "2026-07-30T10:19:34.251237+00:00"
+    "updated_at": "2026-07-30T11:19:03.668916+00:00"
   },
   "BIOCON": {
     "name": "Biocon",
@@ -3751,10 +3779,10 @@
     "recommendation": "Hold",
     "cyclical_flag": null,
     "cyclical_note": null,
-    "pb_ratio": 2.03,
-    "pe_ratio": 179.0,
-    "pe_ratio_5yr_avg": null,
-    "cash_plus_investments_pct_mcap": 7.16,
+    "pb_ratio": 2.02,
+    "pe_ratio": 178.0,
+    "pe_ratio_5yr_avg": 56.54,
+    "cash_plus_investments_pct_mcap": 7.17,
     "eps_cagr_3yr": -15.0,
     "eps_cagr_5yr": -12.0,
     "sales_cagr_3yr": 15.0,
@@ -3764,7 +3792,7 @@
     "negative_eps_quarters_of_8": 1,
     "opm_current": 23.0,
     "opm_3yr_avg": 21.33,
-    "updated_at": "2026-07-30T10:19:40.948852+00:00"
+    "updated_at": "2026-07-30T11:19:11.444360+00:00"
   },
   "PAGEIND": {
     "name": "Page Industries",
@@ -3774,8 +3802,8 @@
     "recommendation": "Buy",
     "cyclical_flag": null,
     "cyclical_note": null,
-    "pb_ratio": 30.53,
-    "pe_ratio": 58.0,
+    "pb_ratio": 30.5,
+    "pe_ratio": 58.1,
     "pe_ratio_5yr_avg": null,
     "cash_plus_investments_pct_mcap": 0.0,
     "eps_cagr_3yr": 11.0,
@@ -3787,7 +3815,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 21.0,
     "opm_3yr_avg": 21.0,
-    "updated_at": "2026-07-30T10:19:45.985295+00:00"
+    "updated_at": "2026-07-30T11:19:22.003500+00:00"
   },
   "JKCEMENT": {
     "name": "J K Cements",
@@ -3799,7 +3827,7 @@
     "cyclical_note": null,
     "pb_ratio": 6.11,
     "pe_ratio": 44.1,
-    "pe_ratio_5yr_avg": null,
+    "pe_ratio_5yr_avg": 44.11,
     "cash_plus_investments_pct_mcap": 1.04,
     "eps_cagr_3yr": 33.0,
     "eps_cagr_5yr": 7.0,
@@ -3810,7 +3838,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 16.0,
     "opm_3yr_avg": 17.33,
-    "updated_at": "2026-07-30T10:19:50.469086+00:00"
+    "updated_at": "2026-07-30T11:19:28.350994+00:00"
   },
   "BANKINDIA": {
     "name": "Bank of India",
@@ -3821,9 +3849,9 @@
     "cyclical_flag": null,
     "cyclical_note": null,
     "pb_ratio": 0.69,
-    "pe_ratio": 5.31,
+    "pe_ratio": 5.3,
     "pe_ratio_5yr_avg": 7.6,
-    "cash_plus_investments_pct_mcap": 518.8,
+    "cash_plus_investments_pct_mcap": 520.62,
     "eps_cagr_3yr": 42.0,
     "eps_cagr_5yr": 39.0,
     "sales_cagr_3yr": 16.0,
@@ -3833,7 +3861,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 8.0,
     "opm_3yr_avg": 6.33,
-    "updated_at": "2026-07-30T10:19:58.488127+00:00"
+    "updated_at": "2026-07-30T11:19:34.630964+00:00"
   },
   "SAIL": {
     "name": "Steel Authority of India",
@@ -3846,7 +3874,7 @@
     "pb_ratio": 1.16,
     "pe_ratio": 14.5,
     "pe_ratio_5yr_avg": 13.47,
-    "cash_plus_investments_pct_mcap": 7.27,
+    "cash_plus_investments_pct_mcap": 7.26,
     "eps_cagr_3yr": 25.0,
     "eps_cagr_5yr": -2.0,
     "sales_cagr_3yr": 2.0,
@@ -3856,7 +3884,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 16.0,
     "opm_3yr_avg": 10.67,
-    "updated_at": "2026-07-30T10:20:06.160362+00:00"
+    "updated_at": "2026-07-30T11:19:41.878567+00:00"
   },
   "LTF": {
     "name": "L&T Finance Ltd",
@@ -3869,7 +3897,7 @@
     "pb_ratio": 2.73,
     "pe_ratio": 24.0,
     "pe_ratio_5yr_avg": 20.09,
-    "cash_plus_investments_pct_mcap": 24.14,
+    "cash_plus_investments_pct_mcap": 13.78,
     "eps_cagr_3yr": 256.0,
     "eps_cagr_5yr": 32.0,
     "sales_cagr_3yr": 12.0,
@@ -3879,7 +3907,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 24.0,
     "opm_3yr_avg": 22.0,
-    "updated_at": "2026-07-30T10:20:11.884231+00:00"
+    "updated_at": "2026-07-30T11:19:48.000994+00:00"
   },
   "FEDERALBNK": {
     "name": "Federal Bank",
@@ -3890,9 +3918,9 @@
     "cyclical_flag": null,
     "cyclical_note": null,
     "pb_ratio": 2.19,
-    "pe_ratio": 18.8,
-    "pe_ratio_5yr_avg": null,
-    "cash_plus_investments_pct_mcap": 105.28,
+    "pe_ratio": 18.7,
+    "pe_ratio_5yr_avg": 11.42,
+    "cash_plus_investments_pct_mcap": 105.27,
     "eps_cagr_3yr": 11.0,
     "eps_cagr_5yr": 21.0,
     "sales_cagr_3yr": 19.0,
@@ -3902,7 +3930,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 8.0,
     "opm_3yr_avg": 7.0,
-    "updated_at": "2026-07-30T10:20:17.960683+00:00"
+    "updated_at": "2026-07-30T11:19:55.368647+00:00"
   },
   "TATACOMM": {
     "name": "Tata Comm",
@@ -3912,10 +3940,10 @@
     "recommendation": "Hold",
     "cyclical_flag": null,
     "cyclical_note": null,
-    "pb_ratio": 14.74,
-    "pe_ratio": 48.8,
-    "pe_ratio_5yr_avg": null,
-    "cash_plus_investments_pct_mcap": 5.89,
+    "pb_ratio": 14.66,
+    "pe_ratio": 48.5,
+    "pe_ratio_5yr_avg": 35.49,
+    "cash_plus_investments_pct_mcap": 5.92,
     "eps_cagr_3yr": -15.0,
     "eps_cagr_5yr": -4.0,
     "sales_cagr_3yr": 12.0,
@@ -3925,7 +3953,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 19.0,
     "opm_3yr_avg": 19.67,
-    "updated_at": "2026-07-30T10:20:24.367550+00:00"
+    "updated_at": "2026-07-30T11:20:03.005113+00:00"
   },
   "IDFCFIRSTB": {
     "name": "IDFC First Bank",
@@ -3938,7 +3966,7 @@
     "pb_ratio": 1.51,
     "pe_ratio": 31.7,
     "pe_ratio_5yr_avg": 30.49,
-    "cash_plus_investments_pct_mcap": 133.0,
+    "cash_plus_investments_pct_mcap": 117.26,
     "eps_cagr_3yr": -13.0,
     "eps_cagr_5yr": 28.0,
     "sales_cagr_3yr": 21.0,
@@ -3948,7 +3976,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": -7.0,
     "opm_3yr_avg": -10.67,
-    "updated_at": "2026-07-30T10:20:31.887991+00:00"
+    "updated_at": "2026-07-30T11:20:07.588674+00:00"
   },
   "ITCHOTELS": {
     "name": "ITC Hotels",
@@ -3959,9 +3987,9 @@
     "cyclical_flag": null,
     "cyclical_note": null,
     "pb_ratio": 2.88,
-    "pe_ratio": 36.5,
+    "pe_ratio": 36.3,
     "pe_ratio_5yr_avg": 48.03,
-    "cash_plus_investments_pct_mcap": 8.1,
+    "cash_plus_investments_pct_mcap": 5.85,
     "eps_cagr_3yr": null,
     "eps_cagr_5yr": null,
     "sales_cagr_3yr": null,
@@ -3971,7 +3999,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 31.0,
     "opm_3yr_avg": 35.33,
-    "updated_at": "2026-07-30T10:20:37.798552+00:00"
+    "updated_at": "2026-07-30T11:20:13.511818+00:00"
   },
   "GODFRYPHLP": {
     "name": "Godfrey Phillips",
@@ -3984,7 +4012,7 @@
     "pb_ratio": 5.36,
     "pe_ratio": 24.3,
     "pe_ratio_5yr_avg": 22.13,
-    "cash_plus_investments_pct_mcap": 10.02,
+    "cash_plus_investments_pct_mcap": 9.93,
     "eps_cagr_3yr": 37.0,
     "eps_cagr_5yr": 38.0,
     "sales_cagr_3yr": 22.0,
@@ -3994,7 +4022,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 15.0,
     "opm_3yr_avg": 22.67,
-    "updated_at": "2026-07-30T10:20:45.856814+00:00"
+    "updated_at": "2026-07-30T11:20:19.863076+00:00"
   },
   "LAURUSLABS": {
     "name": "Laurus Labs",
@@ -4004,10 +4032,10 @@
     "recommendation": "Buy",
     "cyclical_flag": null,
     "cyclical_note": null,
-    "pb_ratio": 18.18,
-    "pe_ratio": 88.1,
+    "pb_ratio": 18.14,
+    "pe_ratio": 88.0,
     "pe_ratio_5yr_avg": 79.08,
-    "cash_plus_investments_pct_mcap": 0.32,
+    "cash_plus_investments_pct_mcap": 0.44,
     "eps_cagr_3yr": 4.0,
     "eps_cagr_5yr": -2.0,
     "sales_cagr_3yr": 4.0,
@@ -4017,7 +4045,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 32.0,
     "opm_3yr_avg": 20.0,
-    "updated_at": "2026-07-30T10:20:50.873463+00:00"
+    "updated_at": "2026-07-30T11:20:27.852128+00:00"
   },
   "AIIL": {
     "name": "Authum Invest",
@@ -4027,10 +4055,10 @@
     "recommendation": "Buy",
     "cyclical_flag": null,
     "cyclical_note": null,
-    "pb_ratio": 3.15,
-    "pe_ratio": 22.0,
-    "pe_ratio_5yr_avg": null,
-    "cash_plus_investments_pct_mcap": 33.43,
+    "pb_ratio": 3.16,
+    "pe_ratio": 22.1,
+    "pe_ratio_5yr_avg": 9.17,
+    "cash_plus_investments_pct_mcap": 34.43,
     "eps_cagr_3yr": 217.0,
     "eps_cagr_5yr": null,
     "sales_cagr_3yr": 69.0,
@@ -4040,7 +4068,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 85.0,
     "opm_3yr_avg": 109.33,
-    "updated_at": "2026-07-30T10:20:55.904966+00:00"
+    "updated_at": "2026-07-30T11:20:35.611125+00:00"
   },
   "DIXON": {
     "name": "Dixon Tech",
@@ -4053,7 +4081,7 @@
     "pb_ratio": 18.64,
     "pe_ratio": 61.0,
     "pe_ratio_5yr_avg": 117.72,
-    "cash_plus_investments_pct_mcap": 1.15,
+    "cash_plus_investments_pct_mcap": 2.22,
     "eps_cagr_3yr": 77.0,
     "eps_cagr_5yr": 55.0,
     "sales_cagr_3yr": 59.0,
@@ -4063,7 +4091,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 3.9,
     "opm_3yr_avg": 3.9,
-    "updated_at": "2026-07-30T10:21:00.679003+00:00"
+    "updated_at": "2026-07-30T11:20:41.656065+00:00"
   },
   "KARURVYSYA": {
     "name": "Karuru Vyasa Bank",
@@ -4073,10 +4101,10 @@
     "recommendation": "Buy",
     "cyclical_flag": null,
     "cyclical_note": null,
-    "pb_ratio": 2.34,
+    "pb_ratio": 2.33,
     "pe_ratio": 12.0,
     "pe_ratio_5yr_avg": null,
-    "cash_plus_investments_pct_mcap": 87.84,
+    "cash_plus_investments_pct_mcap": 88.15,
     "eps_cagr_3yr": 31.0,
     "eps_cagr_5yr": 47.0,
     "sales_cagr_3yr": 19.0,
@@ -4086,7 +4114,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 18.0,
     "opm_3yr_avg": 9.33,
-    "updated_at": "2026-07-30T10:21:08.895441+00:00"
+    "updated_at": "2026-07-30T11:20:54.001501+00:00"
   },
   "VIMTALABS": {
     "name": "Ipca Labs",
@@ -4096,10 +4124,10 @@
     "recommendation": "Buy",
     "cyclical_flag": null,
     "cyclical_note": null,
-    "pb_ratio": 7.82,
-    "pe_ratio": 44.4,
-    "pe_ratio_5yr_avg": null,
-    "cash_plus_investments_pct_mcap": 1.04,
+    "pb_ratio": 7.84,
+    "pe_ratio": 44.5,
+    "pe_ratio_5yr_avg": 27.72,
+    "cash_plus_investments_pct_mcap": 1.03,
     "eps_cagr_3yr": 24.0,
     "eps_cagr_5yr": null,
     "sales_cagr_3yr": 15.0,
@@ -4109,7 +4137,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 37.0,
     "opm_3yr_avg": 28.67,
-    "updated_at": "2026-07-30T10:21:15.631541+00:00"
+    "updated_at": "2026-07-30T11:21:00.197892+00:00"
   },
   "GLAND": {
     "name": "Gland Pharma",
@@ -4120,9 +4148,9 @@
     "cyclical_flag": null,
     "cyclical_note": null,
     "pb_ratio": 4.0,
-    "pe_ratio": 39.7,
-    "pe_ratio_5yr_avg": null,
-    "cash_plus_investments_pct_mcap": 8.1,
+    "pe_ratio": 39.8,
+    "pe_ratio_5yr_avg": 38.31,
+    "cash_plus_investments_pct_mcap": 8.09,
     "eps_cagr_3yr": 8.0,
     "eps_cagr_5yr": 1.0,
     "sales_cagr_3yr": 21.0,
@@ -4132,7 +4160,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 29.0,
     "opm_3yr_avg": 24.0,
-    "updated_at": "2026-07-30T10:21:21.502526+00:00"
+    "updated_at": "2026-07-30T11:21:07.645749+00:00"
   },
   "INDUSTOWER": {
     "name": "Indus Tower",
@@ -4142,10 +4170,10 @@
     "recommendation": "Hold",
     "cyclical_flag": null,
     "cyclical_note": null,
-    "pb_ratio": 2.61,
+    "pb_ratio": 2.62,
     "pe_ratio": 14.4,
     "pe_ratio_5yr_avg": 13.05,
-    "cash_plus_investments_pct_mcap": 5.68,
+    "cash_plus_investments_pct_mcap": 5.66,
     "eps_cagr_3yr": 50.0,
     "eps_cagr_5yr": 15.0,
     "sales_cagr_3yr": 5.0,
@@ -4155,7 +4183,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 53.0,
     "opm_3yr_avg": 58.33,
-    "updated_at": "2026-07-30T10:21:29.490890+00:00"
+    "updated_at": "2026-07-30T11:21:15.195599+00:00"
   },
   "MCX": {
     "name": "Multi Commodity Exchange",
@@ -4165,7 +4193,7 @@
     "recommendation": "Buy",
     "cyclical_flag": null,
     "cyclical_note": null,
-    "pb_ratio": 23.91,
+    "pb_ratio": 23.9,
     "pe_ratio": 51.3,
     "pe_ratio_5yr_avg": 85.73,
     "cash_plus_investments_pct_mcap": 8.03,
@@ -4178,7 +4206,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 75.0,
     "opm_3yr_avg": 46.67,
-    "updated_at": "2026-07-30T10:21:36.824207+00:00"
+    "updated_at": "2026-07-30T11:21:21.963324+00:00"
   },
   "SOLARINDS": {
     "name": "Solar Industries",
@@ -4188,7 +4216,7 @@
     "recommendation": "Buy",
     "cyclical_flag": null,
     "cyclical_note": null,
-    "pb_ratio": 26.04,
+    "pb_ratio": 26.01,
     "pe_ratio": 93.7,
     "pe_ratio_5yr_avg": 77.79,
     "cash_plus_investments_pct_mcap": 0.47,
@@ -4201,7 +4229,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 27.0,
     "opm_3yr_avg": 26.33,
-    "updated_at": "2026-07-30T10:21:44.868837+00:00"
+    "updated_at": "2026-07-30T11:21:29.327276+00:00"
   },
   "POLYCAB": {
     "name": "Polycab India",
@@ -4211,7 +4239,7 @@
     "recommendation": "Buy",
     "cyclical_flag": null,
     "cyclical_note": null,
-    "pb_ratio": 11.14,
+    "pb_ratio": 11.15,
     "pe_ratio": 46.8,
     "pe_ratio_5yr_avg": 46.08,
     "cash_plus_investments_pct_mcap": 3.2,
@@ -4224,7 +4252,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 14.0,
     "opm_3yr_avg": 13.67,
-    "updated_at": "2026-07-30T10:21:52.781803+00:00"
+    "updated_at": "2026-07-30T11:21:36.681459+00:00"
   },
   "HDFCAMC": {
     "name": "HDFC AMC",
@@ -4234,10 +4262,10 @@
     "recommendation": "Buy",
     "cyclical_flag": null,
     "cyclical_note": null,
-    "pb_ratio": 11.85,
+    "pb_ratio": 11.84,
     "pe_ratio": 37.0,
     "pe_ratio_5yr_avg": 39.91,
-    "cash_plus_investments_pct_mcap": 8.62,
+    "cash_plus_investments_pct_mcap": 8.63,
     "eps_cagr_3yr": 26.0,
     "eps_cagr_5yr": null,
     "sales_cagr_3yr": 23.0,
@@ -4247,7 +4275,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 77.0,
     "opm_3yr_avg": 81.67,
-    "updated_at": "2026-07-30T10:21:58.300144+00:00"
+    "updated_at": "2026-07-30T11:21:42.344707+00:00"
   },
   "HINDZINC": {
     "name": "Hindustan Zinc",
@@ -4257,10 +4285,10 @@
     "recommendation": "Buy",
     "cyclical_flag": null,
     "cyclical_note": null,
-    "pb_ratio": 9.98,
-    "pe_ratio": 13.2,
-    "pe_ratio_5yr_avg": null,
-    "cash_plus_investments_pct_mcap": 6.4,
+    "pb_ratio": 10.0,
+    "pe_ratio": 13.3,
+    "pe_ratio_5yr_avg": 18.01,
+    "cash_plus_investments_pct_mcap": 6.54,
     "eps_cagr_3yr": 10.0,
     "eps_cagr_5yr": 12.0,
     "sales_cagr_3yr": 6.0,
@@ -4270,7 +4298,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 59.0,
     "opm_3yr_avg": 50.67,
-    "updated_at": "2026-07-30T10:22:02.540245+00:00"
+    "updated_at": "2026-07-30T11:21:50.671294+00:00"
   },
   "IDBI": {
     "name": "IDBI Bank",
@@ -4281,9 +4309,9 @@
     "cyclical_flag": null,
     "cyclical_note": null,
     "pb_ratio": 1.32,
-    "pe_ratio": 9.77,
+    "pe_ratio": 9.69,
     "pe_ratio_5yr_avg": 15.6,
-    "cash_plus_investments_pct_mcap": 176.6,
+    "cash_plus_investments_pct_mcap": 177.21,
     "eps_cagr_3yr": 35.0,
     "eps_cagr_5yr": 43.0,
     "sales_cagr_3yr": 12.0,
@@ -4293,7 +4321,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 23.0,
     "opm_3yr_avg": 13.33,
-    "updated_at": "2026-07-30T10:22:09.335261+00:00"
+    "updated_at": "2026-07-30T11:21:57.945075+00:00"
   },
   "MAZDOCK": {
     "name": "Mazagon Dock Shipbuilders",
@@ -4303,10 +4331,10 @@
     "recommendation": "Hold",
     "cyclical_flag": null,
     "cyclical_note": null,
-    "pb_ratio": 9.62,
-    "pe_ratio": 36.4,
+    "pb_ratio": 9.58,
+    "pe_ratio": 36.3,
     "pe_ratio_5yr_avg": 28.84,
-    "cash_plus_investments_pct_mcap": 14.92,
+    "cash_plus_investments_pct_mcap": 14.98,
     "eps_cagr_3yr": 32.0,
     "eps_cagr_5yr": 34.0,
     "sales_cagr_3yr": 18.0,
@@ -4316,7 +4344,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 14.0,
     "opm_3yr_avg": 16.67,
-    "updated_at": "2026-07-30T10:22:16.905464+00:00"
+    "updated_at": "2026-07-30T11:22:04.633203+00:00"
   },
   "5PAISA": {
     "name": "Tata Capital",
@@ -4327,9 +4355,9 @@
     "cyclical_flag": null,
     "cyclical_note": null,
     "pb_ratio": 2.51,
-    "pe_ratio": 36.7,
-    "pe_ratio_5yr_avg": null,
-    "cash_plus_investments_pct_mcap": 87.55,
+    "pe_ratio": 36.8,
+    "pe_ratio_5yr_avg": 50.94,
+    "cash_plus_investments_pct_mcap": 87.28,
     "eps_cagr_3yr": 0.0,
     "eps_cagr_5yr": 25.0,
     "sales_cagr_3yr": -2.0,
@@ -4339,7 +4367,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 30.0,
     "opm_3yr_avg": 31.67,
-    "updated_at": "2026-07-30T10:22:22.801978+00:00"
+    "updated_at": "2026-07-30T11:22:12.275819+00:00"
   },
   "PREMIERENE": {
     "name": "Premier Energies",
@@ -4349,10 +4377,10 @@
     "recommendation": "Buy",
     "cyclical_flag": null,
     "cyclical_note": null,
-    "pb_ratio": 10.36,
-    "pe_ratio": 29.7,
-    "pe_ratio_5yr_avg": null,
-    "cash_plus_investments_pct_mcap": 6.17,
+    "pb_ratio": 10.34,
+    "pe_ratio": 29.6,
+    "pe_ratio_5yr_avg": 50.59,
+    "cash_plus_investments_pct_mcap": 6.18,
     "eps_cagr_3yr": 370.0,
     "eps_cagr_5yr": 133.0,
     "sales_cagr_3yr": 76.0,
@@ -4362,7 +4390,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 30.0,
     "opm_3yr_avg": 24.0,
-    "updated_at": "2026-07-30T10:22:28.500811+00:00"
+    "updated_at": "2026-07-30T11:22:19.556827+00:00"
   },
   "APLAPOLLO": {
     "name": "APL Apollo Tubes",
@@ -4372,10 +4400,10 @@
     "recommendation": "Hold",
     "cyclical_flag": null,
     "cyclical_note": null,
-    "pb_ratio": 9.93,
+    "pb_ratio": 9.91,
     "pe_ratio": 43.7,
-    "pe_ratio_5yr_avg": null,
-    "cash_plus_investments_pct_mcap": 1.77,
+    "pe_ratio_5yr_avg": 53.03,
+    "cash_plus_investments_pct_mcap": 1.78,
     "eps_cagr_3yr": 23.0,
     "eps_cagr_5yr": 27.0,
     "sales_cagr_3yr": 13.0,
@@ -4385,7 +4413,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 8.0,
     "opm_3yr_avg": 7.0,
-    "updated_at": "2026-07-30T10:22:34.652074+00:00"
+    "updated_at": "2026-07-30T11:22:27.651831+00:00"
   },
   "UNIONBANK": {
     "name": "Union Bank of India",
@@ -4396,9 +4424,9 @@
     "cyclical_flag": null,
     "cyclical_note": null,
     "pb_ratio": 0.93,
-    "pe_ratio": 6.26,
-    "pe_ratio_5yr_avg": null,
-    "cash_plus_investments_pct_mcap": 264.09,
+    "pe_ratio": 6.3,
+    "pe_ratio_5yr_avg": 6.41,
+    "cash_plus_investments_pct_mcap": 313.73,
     "eps_cagr_3yr": 32.0,
     "eps_cagr_5yr": 47.0,
     "sales_cagr_3yr": 10.0,
@@ -4408,7 +4436,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 7.0,
     "opm_3yr_avg": 4.0,
-    "updated_at": "2026-07-30T10:22:39.460525+00:00"
+    "updated_at": "2026-07-30T11:22:32.911125+00:00"
   },
   "KAYNES": {
     "name": "Kaynes Technologies",
@@ -4431,7 +4459,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 16.0,
     "opm_3yr_avg": 15.0,
-    "updated_at": "2026-07-30T10:22:44.254242+00:00"
+    "updated_at": "2026-07-30T11:22:40.166178+00:00"
   },
   "MANKIND": {
     "name": "Mankind Pharma",
@@ -4443,8 +4471,8 @@
     "cyclical_note": null,
     "pb_ratio": 6.52,
     "pe_ratio": 52.9,
-    "pe_ratio_5yr_avg": null,
-    "cash_plus_investments_pct_mcap": 2.32,
+    "pe_ratio_5yr_avg": 50.44,
+    "cash_plus_investments_pct_mcap": 1.87,
     "eps_cagr_3yr": 17.0,
     "eps_cagr_5yr": 11.0,
     "sales_cagr_3yr": 18.0,
@@ -4454,7 +4482,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 27.0,
     "opm_3yr_avg": 25.0,
-    "updated_at": "2026-07-30T10:22:50.283045+00:00"
+    "updated_at": "2026-07-30T11:22:46.207941+00:00"
   },
   "NATIONALUM": {
     "name": "National Aluminium",
@@ -4467,7 +4495,7 @@
     "pb_ratio": 2.95,
     "pe_ratio": 11.0,
     "pe_ratio_5yr_avg": 11.08,
-    "cash_plus_investments_pct_mcap": 14.0,
+    "cash_plus_investments_pct_mcap": 14.01,
     "eps_cagr_3yr": 59.0,
     "eps_cagr_5yr": 35.0,
     "sales_cagr_3yr": 8.0,
@@ -4477,7 +4505,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 47.0,
     "opm_3yr_avg": 36.67,
-    "updated_at": "2026-07-30T10:22:57.438603+00:00"
+    "updated_at": "2026-07-30T11:22:53.332775+00:00"
   },
   "KEI": {
     "name": "KEI Industries",
@@ -4489,8 +4517,8 @@
     "cyclical_note": null,
     "pb_ratio": 6.89,
     "pe_ratio": 50.0,
-    "pe_ratio_5yr_avg": null,
-    "cash_plus_investments_pct_mcap": 0.0,
+    "pe_ratio_5yr_avg": 44.91,
+    "cash_plus_investments_pct_mcap": 3.3,
     "eps_cagr_3yr": 24.0,
     "eps_cagr_5yr": 27.0,
     "sales_cagr_3yr": 19.0,
@@ -4500,7 +4528,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 11.0,
     "opm_3yr_avg": 10.0,
-    "updated_at": "2026-07-30T10:23:02.719019+00:00"
+    "updated_at": "2026-07-30T11:23:00.407908+00:00"
   },
   "MAXHEALTH": {
     "name": "Max Healthcare Institute",
@@ -4511,9 +4539,9 @@
     "cyclical_flag": null,
     "cyclical_note": null,
     "pb_ratio": 10.23,
-    "pe_ratio": 73.8,
-    "pe_ratio_5yr_avg": null,
-    "cash_plus_investments_pct_mcap": 0.0,
+    "pe_ratio": 73.9,
+    "pe_ratio_5yr_avg": 74.33,
+    "cash_plus_investments_pct_mcap": 0.64,
     "eps_cagr_3yr": 10.0,
     "eps_cagr_5yr": 60.0,
     "sales_cagr_3yr": 22.0,
@@ -4523,7 +4551,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 28.0,
     "opm_3yr_avg": 27.0,
-    "updated_at": "2026-07-30T10:23:06.796874+00:00"
+    "updated_at": "2026-07-30T11:23:07.704046+00:00"
   },
   "SAILIFE": {
     "name": "Sai Life Science",
@@ -4533,10 +4561,10 @@
     "recommendation": "Hold",
     "cyclical_flag": null,
     "cyclical_note": null,
-    "pb_ratio": 11.23,
-    "pe_ratio": 78.6,
-    "pe_ratio_5yr_avg": null,
-    "cash_plus_investments_pct_mcap": 0.18,
+    "pb_ratio": 11.24,
+    "pe_ratio": 78.7,
+    "pe_ratio_5yr_avg": 65.53,
+    "cash_plus_investments_pct_mcap": 0.58,
     "eps_cagr_3yr": 226.0,
     "eps_cagr_5yr": 42.0,
     "sales_cagr_3yr": 22.0,
@@ -4546,7 +4574,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 29.0,
     "opm_3yr_avg": 24.33,
-    "updated_at": "2026-07-30T10:23:12.271710+00:00"
+    "updated_at": "2026-07-30T11:23:14.369809+00:00"
   },
   "WOCKPHARMA": {
     "name": "Wockhardt",
@@ -4556,10 +4584,10 @@
     "recommendation": "Buy",
     "cyclical_flag": null,
     "cyclical_note": null,
-    "pb_ratio": 6.27,
+    "pb_ratio": 6.26,
     "pe_ratio": 109.0,
-    "pe_ratio_5yr_avg": null,
-    "cash_plus_investments_pct_mcap": 1.33,
+    "pe_ratio_5yr_avg": 241.25,
+    "cash_plus_investments_pct_mcap": 2.14,
     "eps_cagr_3yr": 43.0,
     "eps_cagr_5yr": -19.0,
     "sales_cagr_3yr": 8.0,
@@ -4569,7 +4597,7 @@
     "negative_eps_quarters_of_8": 4,
     "opm_current": 23.0,
     "opm_3yr_avg": 11.73,
-    "updated_at": "2026-07-30T10:23:16.703024+00:00"
+    "updated_at": "2026-07-30T11:23:22.511388+00:00"
   },
   "GRAPHITE": {
     "name": "Graphite India Ltd",
@@ -4577,12 +4605,12 @@
     "result_date": "2026-03-31",
     "classification": "Cyclical",
     "recommendation": "Hold",
-    "cyclical_flag": null,
-    "cyclical_note": null,
-    "pb_ratio": 2.21,
-    "pe_ratio": 71.1,
-    "pe_ratio_5yr_avg": null,
-    "cash_plus_investments_pct_mcap": 31.33,
+    "cyclical_flag": "trough_setup",
+    "cyclical_note": "possible cycle trough - may be a recovery setup, worth a closer look",
+    "pb_ratio": 2.22,
+    "pe_ratio": 71.4,
+    "pe_ratio_5yr_avg": 50.08,
+    "cash_plus_investments_pct_mcap": 31.61,
     "eps_cagr_3yr": -8.0,
     "eps_cagr_5yr": 51.0,
     "sales_cagr_3yr": -4.0,
@@ -4592,7 +4620,7 @@
     "negative_eps_quarters_of_8": 2,
     "opm_current": -17.0,
     "opm_3yr_avg": 4.03,
-    "updated_at": "2026-07-30T10:23:21.885614+00:00"
+    "updated_at": "2026-07-30T11:23:29.033264+00:00"
   },
   "MSUMI": {
     "name": "Motherson Sumi Wiring",
@@ -4602,8 +4630,8 @@
     "recommendation": "Buy",
     "cyclical_flag": null,
     "cyclical_note": null,
-    "pb_ratio": 12.64,
-    "pe_ratio": 43.7,
+    "pb_ratio": 12.58,
+    "pe_ratio": 43.6,
     "pe_ratio_5yr_avg": null,
     "cash_plus_investments_pct_mcap": 0.0,
     "eps_cagr_3yr": 9.0,
@@ -4615,7 +4643,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 8.0,
     "opm_3yr_avg": 10.67,
-    "updated_at": "2026-07-30T10:23:27.293378+00:00"
+    "updated_at": "2026-07-30T11:23:39.619859+00:00"
   },
   "RELIGARE": {
     "name": "Religare Enterprises ltd",
@@ -4625,10 +4653,10 @@
     "recommendation": "Buy",
     "cyclical_flag": null,
     "cyclical_note": null,
-    "pb_ratio": 2.89,
-    "pe_ratio": 98.0,
+    "pb_ratio": 2.88,
+    "pe_ratio": 97.8,
     "pe_ratio_5yr_avg": 90.65,
-    "cash_plus_investments_pct_mcap": 153.24,
+    "cash_plus_investments_pct_mcap": 153.53,
     "eps_cagr_3yr": 71.0,
     "eps_cagr_5yr": 17.0,
     "sales_cagr_3yr": 22.0,
@@ -4638,7 +4666,7 @@
     "negative_eps_quarters_of_8": 2,
     "opm_current": 6.0,
     "opm_3yr_avg": 4.13,
-    "updated_at": "2026-07-30T10:23:35.023471+00:00"
+    "updated_at": "2026-07-30T11:23:47.050238+00:00"
   },
   "RADICO": {
     "name": "Radico Khaitan",
@@ -4648,8 +4676,8 @@
     "recommendation": "Hold",
     "cyclical_flag": null,
     "cyclical_note": null,
-    "pb_ratio": 17.57,
-    "pe_ratio": 82.2,
+    "pb_ratio": 17.61,
+    "pe_ratio": 82.3,
     "pe_ratio_5yr_avg": 76.02,
     "cash_plus_investments_pct_mcap": 0.56,
     "eps_cagr_3yr": 41.0,
@@ -4661,7 +4689,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 21.0,
     "opm_3yr_avg": 14.33,
-    "updated_at": "2026-07-30T10:23:42.179639+00:00"
+    "updated_at": "2026-07-30T11:23:53.432768+00:00"
   },
   "ONESOURCE": {
     "name": "One Source Speciality Pharma",
@@ -4671,10 +4699,10 @@
     "recommendation": "Buy",
     "cyclical_flag": null,
     "cyclical_note": null,
-    "pb_ratio": 3.3,
+    "pb_ratio": 3.32,
     "pe_ratio": null,
     "pe_ratio_5yr_avg": 387.5,
-    "cash_plus_investments_pct_mcap": 0.08,
+    "cash_plus_investments_pct_mcap": 0.59,
     "eps_cagr_3yr": 24.0,
     "eps_cagr_5yr": 8.0,
     "sales_cagr_3yr": 232.0,
@@ -4684,7 +4712,7 @@
     "negative_eps_quarters_of_8": 3,
     "opm_current": 27.0,
     "opm_3yr_avg": 1.67,
-    "updated_at": "2026-07-30T10:23:47.509703+00:00"
+    "updated_at": "2026-07-30T11:24:00.208252+00:00"
   },
   "TATACHEM": {
     "name": "Acutaas Chemicals",
@@ -4696,8 +4724,8 @@
     "cyclical_note": null,
     "pb_ratio": 0.81,
     "pe_ratio": null,
-    "pe_ratio_5yr_avg": null,
-    "cash_plus_investments_pct_mcap": 57.89,
+    "pe_ratio_5yr_avg": 35.33,
+    "cash_plus_investments_pct_mcap": 57.84,
     "eps_cagr_3yr": -51.0,
     "eps_cagr_5yr": 3.0,
     "sales_cagr_3yr": -5.0,
@@ -4707,7 +4735,7 @@
     "negative_eps_quarters_of_8": 5,
     "opm_current": 13.0,
     "opm_3yr_avg": 14.33,
-    "updated_at": "2026-07-30T10:23:51.680220+00:00"
+    "updated_at": "2026-07-30T11:24:06.657669+00:00"
   },
   "METROPOLIS": {
     "name": "Metropolis Healthcare",
@@ -4717,10 +4745,10 @@
     "recommendation": "Buy",
     "cyclical_flag": null,
     "cyclical_note": null,
-    "pb_ratio": 7.95,
-    "pe_ratio": 62.0,
+    "pb_ratio": 8.01,
+    "pe_ratio": 62.6,
     "pe_ratio_5yr_avg": 60.19,
-    "cash_plus_investments_pct_mcap": 1.18,
+    "cash_plus_investments_pct_mcap": 1.68,
     "eps_cagr_3yr": 11.0,
     "eps_cagr_5yr": 1.0,
     "sales_cagr_3yr": 13.0,
@@ -4730,7 +4758,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 25.0,
     "opm_3yr_avg": 24.0,
-    "updated_at": "2026-07-30T10:23:57.257104+00:00"
+    "updated_at": "2026-07-30T11:24:13.266343+00:00"
   },
   "HAPPYFORGE": {
     "name": "Happy Forging",
@@ -4740,10 +4768,10 @@
     "recommendation": "Buy",
     "cyclical_flag": null,
     "cyclical_note": null,
-    "pb_ratio": 7.33,
-    "pe_ratio": 52.2,
-    "pe_ratio_5yr_avg": null,
-    "cash_plus_investments_pct_mcap": 1.86,
+    "pb_ratio": 7.35,
+    "pe_ratio": 52.4,
+    "pe_ratio_5yr_avg": 39.41,
+    "cash_plus_investments_pct_mcap": 1.85,
     "eps_cagr_3yr": 13.0,
     "eps_cagr_5yr": 28.0,
     "sales_cagr_3yr": 9.0,
@@ -4753,7 +4781,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 31.0,
     "opm_3yr_avg": 29.33,
-    "updated_at": "2026-07-30T10:24:03.537753+00:00"
+    "updated_at": "2026-07-30T11:24:20.324590+00:00"
   },
   "CRAFTSMAN": {
     "name": "Craftsman automation",
@@ -4765,8 +4793,8 @@
     "cyclical_note": null,
     "pb_ratio": 7.34,
     "pe_ratio": 56.1,
-    "pe_ratio_5yr_avg": null,
-    "cash_plus_investments_pct_mcap": 0.05,
+    "pe_ratio_5yr_avg": 42.14,
+    "cash_plus_investments_pct_mcap": 0.73,
     "eps_cagr_3yr": 16.0,
     "eps_cagr_5yr": 32.0,
     "sales_cagr_3yr": 36.0,
@@ -4776,7 +4804,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 16.0,
     "opm_3yr_avg": 16.67,
-    "updated_at": "2026-07-30T10:24:08.520264+00:00"
+    "updated_at": "2026-07-30T11:24:28.424031+00:00"
   },
   "LTFOODS": {
     "name": "LT Foods Ltd",
@@ -4786,10 +4814,10 @@
     "recommendation": "Buy",
     "cyclical_flag": null,
     "cyclical_note": null,
-    "pb_ratio": 3.06,
-    "pe_ratio": 22.0,
-    "pe_ratio_5yr_avg": null,
-    "cash_plus_investments_pct_mcap": 0.35,
+    "pb_ratio": 3.05,
+    "pe_ratio": 21.5,
+    "pe_ratio_5yr_avg": 15.49,
+    "cash_plus_investments_pct_mcap": 2.79,
     "eps_cagr_3yr": 16.0,
     "eps_cagr_5yr": 18.0,
     "sales_cagr_3yr": 16.0,
@@ -4799,7 +4827,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 11.0,
     "opm_3yr_avg": 11.33,
-    "updated_at": "2026-07-30T10:24:12.911262+00:00"
+    "updated_at": "2026-07-30T11:24:36.640433+00:00"
   },
   "TI": {
     "name": "Tilaknagar Industries",
@@ -4810,9 +4838,9 @@
     "cyclical_flag": null,
     "cyclical_note": null,
     "pb_ratio": 3.86,
-    "pe_ratio": 51.1,
-    "pe_ratio_5yr_avg": null,
-    "cash_plus_investments_pct_mcap": 0.28,
+    "pe_ratio": 51.2,
+    "pe_ratio_5yr_avg": 40.26,
+    "cash_plus_investments_pct_mcap": 3.39,
     "eps_cagr_3yr": 53.0,
     "eps_cagr_5yr": 54.0,
     "sales_cagr_3yr": 26.0,
@@ -4822,7 +4850,7 @@
     "negative_eps_quarters_of_8": 2,
     "opm_current": 16.0,
     "opm_3yr_avg": 16.33,
-    "updated_at": "2026-07-30T10:24:17.794976+00:00"
+    "updated_at": "2026-07-30T11:24:41.604496+00:00"
   },
   "JUBLPHARMA": {
     "name": "Jubilant Pharmova",
@@ -4832,9 +4860,9 @@
     "recommendation": "Buy",
     "cyclical_flag": null,
     "cyclical_note": null,
-    "pb_ratio": 2.15,
+    "pb_ratio": 2.16,
     "pe_ratio": 35.0,
-    "pe_ratio_5yr_avg": null,
+    "pe_ratio_5yr_avg": 56.13,
     "cash_plus_investments_pct_mcap": 0.4,
     "eps_cagr_3yr": 47.0,
     "eps_cagr_5yr": -13.0,
@@ -4845,7 +4873,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 15.0,
     "opm_3yr_avg": 14.67,
-    "updated_at": "2026-07-30T10:24:22.047237+00:00"
+    "updated_at": "2026-07-30T11:24:48.197113+00:00"
   },
   "ASTERDM": {
     "name": "Aster DM",
@@ -4855,10 +4883,10 @@
     "recommendation": "Buy",
     "cyclical_flag": null,
     "cyclical_note": null,
-    "pb_ratio": 9.18,
-    "pe_ratio": 173.0,
+    "pb_ratio": 9.22,
+    "pe_ratio": 174.0,
     "pe_ratio_5yr_avg": 69.38,
-    "cash_plus_investments_pct_mcap": 3.52,
+    "cash_plus_investments_pct_mcap": 3.51,
     "eps_cagr_3yr": -1.0,
     "eps_cagr_5yr": 23.0,
     "sales_cagr_3yr": 16.0,
@@ -4868,7 +4896,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 19.0,
     "opm_3yr_avg": 17.67,
-    "updated_at": "2026-07-30T10:24:28.981850+00:00"
+    "updated_at": "2026-07-30T11:24:55.608358+00:00"
   },
   "MUTHOOTFIN": {
     "name": "Muthoot Finance",
@@ -4881,7 +4909,7 @@
     "pb_ratio": 3.09,
     "pe_ratio": 11.4,
     "pe_ratio_5yr_avg": 15.0,
-    "cash_plus_investments_pct_mcap": 11.1,
+    "cash_plus_investments_pct_mcap": 11.11,
     "eps_cagr_3yr": 43.0,
     "eps_cagr_5yr": 23.0,
     "sales_cagr_3yr": 38.0,
@@ -4891,7 +4919,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 50.0,
     "opm_3yr_avg": 40.67,
-    "updated_at": "2026-07-30T10:24:36.881519+00:00"
+    "updated_at": "2026-07-30T11:25:02.376649+00:00"
   },
   "DCBBANK": {
     "name": "DCB Bank",
@@ -4902,9 +4930,9 @@
     "cyclical_flag": null,
     "cyclical_note": null,
     "pb_ratio": 0.93,
-    "pe_ratio": 7.7,
+    "pe_ratio": 7.67,
     "pe_ratio_5yr_avg": null,
-    "cash_plus_investments_pct_mcap": 337.44,
+    "cash_plus_investments_pct_mcap": 337.33,
     "eps_cagr_3yr": 16.0,
     "eps_cagr_5yr": 17.0,
     "sales_cagr_3yr": 21.0,
@@ -4914,7 +4942,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 5.0,
     "opm_3yr_avg": 4.0,
-    "updated_at": "2026-07-30T10:24:43.862664+00:00"
+    "updated_at": "2026-07-30T11:25:10.911625+00:00"
   },
   "CSBBANK": {
     "name": "CSB Bank",
@@ -4925,9 +4953,9 @@
     "cyclical_flag": null,
     "cyclical_note": null,
     "pb_ratio": 1.16,
-    "pe_ratio": 8.54,
+    "pe_ratio": 8.52,
     "pe_ratio_5yr_avg": null,
-    "cash_plus_investments_pct_mcap": 210.22,
+    "cash_plus_investments_pct_mcap": 210.77,
     "eps_cagr_3yr": 5.0,
     "eps_cagr_5yr": 24.0,
     "sales_cagr_3yr": 25.0,
@@ -4937,7 +4965,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": -2.0,
     "opm_3yr_avg": 0.0,
-    "updated_at": "2026-07-30T10:24:50.000521+00:00"
+    "updated_at": "2026-07-30T11:25:19.370136+00:00"
   },
   "PNBHOUSING": {
     "name": "PNB Hosuing Finance",
@@ -4950,7 +4978,7 @@
     "pb_ratio": 1.4,
     "pe_ratio": 11.7,
     "pe_ratio_5yr_avg": 12.68,
-    "cash_plus_investments_pct_mcap": 22.79,
+    "cash_plus_investments_pct_mcap": 22.72,
     "eps_cagr_3yr": 30.0,
     "eps_cagr_5yr": 20.0,
     "sales_cagr_3yr": 9.0,
@@ -4960,7 +4988,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 40.0,
     "opm_3yr_avg": 32.33,
-    "updated_at": "2026-07-30T10:24:57.473100+00:00"
+    "updated_at": "2026-07-30T11:25:25.969917+00:00"
   },
   "ICDSLTD": {
     "name": "CDS",
@@ -4983,20 +5011,20 @@
     "negative_eps_quarters_of_8": 3,
     "opm_current": -86.54,
     "opm_3yr_avg": 36.73,
-    "updated_at": "2026-07-30T10:25:05.201122+00:00"
+    "updated_at": "2026-07-30T11:25:32.047040+00:00"
   },
   "NUVAMA": {
     "name": "Nuvama Wealth Management",
     "sector": "Financial Services",
     "result_date": "2026-03-31",
-    "classification": "Slow Grower",
+    "classification": "Asset Play",
     "recommendation": "Buy",
     "cyclical_flag": null,
     "cyclical_note": null,
-    "pb_ratio": 7.96,
-    "pe_ratio": 31.6,
-    "pe_ratio_5yr_avg": null,
-    "cash_plus_investments_pct_mcap": 1.09,
+    "pb_ratio": 7.93,
+    "pe_ratio": 31.5,
+    "pe_ratio_5yr_avg": 26.32,
+    "cash_plus_investments_pct_mcap": 68.21,
     "eps_cagr_3yr": 51.0,
     "eps_cagr_5yr": 59.0,
     "sales_cagr_3yr": 28.0,
@@ -5006,7 +5034,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 50.0,
     "opm_3yr_avg": 52.0,
-    "updated_at": "2026-07-30T10:25:09.356190+00:00"
+    "updated_at": "2026-07-30T11:25:39.873438+00:00"
   },
   "JGCHEM": {
     "name": "J B Chemials",
@@ -5016,10 +5044,10 @@
     "recommendation": "Buy",
     "cyclical_flag": null,
     "cyclical_note": null,
-    "pb_ratio": 3.61,
-    "pe_ratio": 29.0,
+    "pb_ratio": 3.64,
+    "pe_ratio": 29.2,
     "pe_ratio_5yr_avg": 24.73,
-    "cash_plus_investments_pct_mcap": 9.11,
+    "cash_plus_investments_pct_mcap": 9.03,
     "eps_cagr_3yr": 7.0,
     "eps_cagr_5yr": 24.0,
     "sales_cagr_3yr": 8.0,
@@ -5029,7 +5057,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 8.0,
     "opm_3yr_avg": 8.33,
-    "updated_at": "2026-07-30T10:25:17.012547+00:00"
+    "updated_at": "2026-07-30T11:25:47.463990+00:00"
   },
   "NEULANDLAB": {
     "name": "Neuland Laboritries",
@@ -5039,10 +5067,10 @@
     "recommendation": "Buy",
     "cyclical_flag": null,
     "cyclical_note": null,
-    "pb_ratio": 13.18,
-    "pe_ratio": 68.3,
-    "pe_ratio_5yr_avg": null,
-    "cash_plus_investments_pct_mcap": 0.01,
+    "pb_ratio": 13.14,
+    "pe_ratio": 68.2,
+    "pe_ratio_5yr_avg": 49.62,
+    "cash_plus_investments_pct_mcap": 1.45,
     "eps_cagr_3yr": 30.0,
     "eps_cagr_5yr": 39.0,
     "sales_cagr_3yr": 19.0,
@@ -5052,7 +5080,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 40.0,
     "opm_3yr_avg": 27.0,
-    "updated_at": "2026-07-30T10:25:21.580801+00:00"
+    "updated_at": "2026-07-30T11:25:55.064402+00:00"
   },
   "KIMS": {
     "name": "Krishna Institue of Medical Science",
@@ -5062,8 +5090,8 @@
     "recommendation": "Buy",
     "cyclical_flag": null,
     "cyclical_note": null,
-    "pb_ratio": 14.34,
-    "pe_ratio": 136.0,
+    "pb_ratio": 14.36,
+    "pe_ratio": 137.0,
     "pe_ratio_5yr_avg": 58.08,
     "cash_plus_investments_pct_mcap": 0.53,
     "eps_cagr_3yr": -9.0,
@@ -5075,7 +5103,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 19.0,
     "opm_3yr_avg": 24.33,
-    "updated_at": "2026-07-30T10:25:29.784069+00:00"
+    "updated_at": "2026-07-30T11:26:01.792308+00:00"
   },
   "ASTRAZEN": {
     "name": "Astrazeneca Pharma India Ltd",
@@ -5085,7 +5113,7 @@
     "recommendation": "Buy",
     "cyclical_flag": null,
     "cyclical_note": null,
-    "pb_ratio": 23.17,
+    "pb_ratio": 23.19,
     "pe_ratio": 106.0,
     "pe_ratio_5yr_avg": null,
     "cash_plus_investments_pct_mcap": 0.0,
@@ -5098,7 +5126,7 @@
     "negative_eps_quarters_of_8": 1,
     "opm_current": 11.0,
     "opm_3yr_avg": 13.67,
-    "updated_at": "2026-07-30T10:25:34.322556+00:00"
+    "updated_at": "2026-07-30T11:26:13.070577+00:00"
   },
   "MEDPLUS": {
     "name": "Medplus Health Services",
@@ -5108,10 +5136,10 @@
     "recommendation": "Buy",
     "cyclical_flag": null,
     "cyclical_note": null,
-    "pb_ratio": 4.34,
-    "pe_ratio": 40.9,
-    "pe_ratio_5yr_avg": null,
-    "cash_plus_investments_pct_mcap": 0.0,
+    "pb_ratio": 4.33,
+    "pe_ratio": 40.8,
+    "pe_ratio_5yr_avg": 100.95,
+    "cash_plus_investments_pct_mcap": 5.38,
     "eps_cagr_3yr": 66.0,
     "eps_cagr_5yr": 28.0,
     "sales_cagr_3yr": 15.0,
@@ -5121,7 +5149,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 7.0,
     "opm_3yr_avg": 7.67,
-    "updated_at": "2026-07-30T10:25:39.989220+00:00"
+    "updated_at": "2026-07-30T11:26:19.626340+00:00"
   },
   "AADHARHFC": {
     "name": "Aadhar Housing Finance",
@@ -5131,10 +5159,10 @@
     "recommendation": "Buy",
     "cyclical_flag": null,
     "cyclical_note": null,
-    "pb_ratio": 2.87,
-    "pe_ratio": 19.6,
+    "pb_ratio": 2.84,
+    "pe_ratio": 19.4,
     "pe_ratio_5yr_avg": 22.0,
-    "cash_plus_investments_pct_mcap": 8.51,
+    "cash_plus_investments_pct_mcap": 8.63,
     "eps_cagr_3yr": 25.0,
     "eps_cagr_5yr": 27.0,
     "sales_cagr_3yr": 22.0,
@@ -5144,7 +5172,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 41.0,
     "opm_3yr_avg": 38.67,
-    "updated_at": "2026-07-30T10:25:46.360284+00:00"
+    "updated_at": "2026-07-30T11:26:27.057232+00:00"
   },
   "PTC": {
     "name": "PTC Industries",
@@ -5155,9 +5183,9 @@
     "cyclical_flag": null,
     "cyclical_note": null,
     "pb_ratio": 0.84,
-    "pe_ratio": 8.22,
-    "pe_ratio_5yr_avg": null,
-    "cash_plus_investments_pct_mcap": 18.77,
+    "pe_ratio": 8.23,
+    "pe_ratio_5yr_avg": 8.46,
+    "cash_plus_investments_pct_mcap": 97.1,
     "eps_cagr_3yr": 11.0,
     "eps_cagr_5yr": 6.0,
     "sales_cagr_3yr": 2.0,
@@ -5167,7 +5195,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 3.7,
     "opm_3yr_avg": 6.0,
-    "updated_at": "2026-07-30T10:25:51.377030+00:00"
+    "updated_at": "2026-07-30T11:26:33.697199+00:00"
   },
   "RAMCOCEM": {
     "name": "Ramco Cements",
@@ -5177,9 +5205,9 @@
     "recommendation": "Hold",
     "cyclical_flag": null,
     "cyclical_note": null,
-    "pb_ratio": 2.66,
+    "pb_ratio": 2.67,
     "pe_ratio": 728.0,
-    "pe_ratio_5yr_avg": null,
+    "pe_ratio_5yr_avg": 75.64,
     "cash_plus_investments_pct_mcap": 1.33,
     "eps_cagr_3yr": -54.0,
     "eps_cagr_5yr": -48.0,
@@ -5190,7 +5218,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 14.0,
     "opm_3yr_avg": 15.67,
-    "updated_at": "2026-07-30T10:25:58.129401+00:00"
+    "updated_at": "2026-07-30T11:26:41.925998+00:00"
   },
   "UTIAMC": {
     "name": "ICICI Pru Asset Management Co Ltd.",
@@ -5203,7 +5231,7 @@
     "pb_ratio": 2.6,
     "pe_ratio": 21.9,
     "pe_ratio_5yr_avg": 20.16,
-    "cash_plus_investments_pct_mcap": 37.9,
+    "cash_plus_investments_pct_mcap": 37.92,
     "eps_cagr_3yr": 2.0,
     "eps_cagr_5yr": -1.0,
     "sales_cagr_3yr": 10.0,
@@ -5213,7 +5241,7 @@
     "negative_eps_quarters_of_8": 1,
     "opm_current": 66.0,
     "opm_3yr_avg": 56.0,
-    "updated_at": "2026-07-30T10:26:06.316577+00:00"
+    "updated_at": "2026-07-30T11:26:48.496078+00:00"
   },
   "CHOLAHLDNG": {
     "name": "Cholamandalam Financial Holdings Ltd",
@@ -5224,9 +5252,9 @@
     "cyclical_flag": null,
     "cyclical_note": null,
     "pb_ratio": 1.83,
-    "pe_ratio": 11.5,
-    "pe_ratio_5yr_avg": null,
-    "cash_plus_investments_pct_mcap": 141.42,
+    "pe_ratio": 11.6,
+    "pe_ratio_5yr_avg": 13.88,
+    "cash_plus_investments_pct_mcap": 141.28,
     "eps_cagr_3yr": 24.0,
     "eps_cagr_5yr": 24.0,
     "sales_cagr_3yr": 29.0,
@@ -5236,7 +5264,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 20.0,
     "opm_3yr_avg": 19.0,
-    "updated_at": "2026-07-30T10:26:10.896764+00:00"
+    "updated_at": "2026-07-30T11:26:55.780272+00:00"
   },
   "HINDPETRO": {
     "name": "Hindustan Petroleum Corporation Ltd",
@@ -5247,9 +5275,9 @@
     "cyclical_flag": null,
     "cyclical_note": null,
     "pb_ratio": 1.26,
-    "pe_ratio": 49.4,
+    "pe_ratio": 49.5,
     "pe_ratio_5yr_avg": 7.18,
-    "cash_plus_investments_pct_mcap": 34.1,
+    "cash_plus_investments_pct_mcap": 33.87,
     "eps_cagr_3yr": 66.0,
     "eps_cagr_5yr": 11.0,
     "sales_cagr_3yr": 0.0,
@@ -5259,7 +5287,7 @@
     "negative_eps_quarters_of_8": 1,
     "opm_current": -11.0,
     "opm_3yr_avg": 5.6,
-    "updated_at": "2026-07-30T10:26:18.588378+00:00"
+    "updated_at": "2026-07-30T11:27:02.156475+00:00"
   },
   "HCG": {
     "name": "Healthcare Global Entprises",
@@ -5269,9 +5297,9 @@
     "recommendation": "Hold",
     "cyclical_flag": null,
     "cyclical_note": null,
-    "pb_ratio": 7.49,
-    "pe_ratio": 347.0,
-    "pe_ratio_5yr_avg": null,
+    "pb_ratio": 7.51,
+    "pe_ratio": 348.0,
+    "pe_ratio_5yr_avg": 233.2,
     "cash_plus_investments_pct_mcap": 0.14,
     "eps_cagr_3yr": -1.0,
     "eps_cagr_5yr": 18.0,
@@ -5282,7 +5310,7 @@
     "negative_eps_quarters_of_8": 1,
     "opm_current": 19.17,
     "opm_3yr_avg": 17.33,
-    "updated_at": "2026-07-30T10:26:22.954573+00:00"
+    "updated_at": "2026-07-30T11:27:08.273232+00:00"
   },
   "UJJIVANSFB": {
     "name": "Ujjivan Small Finance Bank Ltd",
@@ -5295,7 +5323,7 @@
     "pb_ratio": 2.0,
     "pe_ratio": 15.1,
     "pe_ratio_5yr_avg": null,
-    "cash_plus_investments_pct_mcap": 93.09,
+    "cash_plus_investments_pct_mcap": 92.98,
     "eps_cagr_3yr": -14.0,
     "eps_cagr_5yr": 194.0,
     "sales_cagr_3yr": 19.0,
@@ -5305,7 +5333,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 8.0,
     "opm_3yr_avg": 7.0,
-    "updated_at": "2026-07-30T10:26:28.730126+00:00"
+    "updated_at": "2026-07-30T11:27:20.084243+00:00"
   },
   "CDSL": {
     "name": "Central Depository Services (India) Ltd",
@@ -5328,7 +5356,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 44.0,
     "opm_3yr_avg": 56.33,
-    "updated_at": "2026-07-30T10:26:35.928480+00:00"
+    "updated_at": "2026-07-30T11:27:26.747250+00:00"
   },
   "RAIN": {
     "name": "Billionbrains Garage Ventures Ltd",
@@ -5339,9 +5367,9 @@
     "cyclical_flag": null,
     "cyclical_note": null,
     "pb_ratio": 1.0,
-    "pe_ratio": 24.7,
+    "pe_ratio": 24.8,
     "pe_ratio_5yr_avg": 9.32,
-    "cash_plus_investments_pct_mcap": 20.88,
+    "cash_plus_investments_pct_mcap": 0.39,
     "eps_cagr_3yr": -69.0,
     "eps_cagr_5yr": -40.0,
     "sales_cagr_3yr": -7.0,
@@ -5351,7 +5379,7 @@
     "negative_eps_quarters_of_8": 4,
     "opm_current": 15.0,
     "opm_3yr_avg": 8.67,
-    "updated_at": "2026-07-30T10:26:43.514433+00:00"
+    "updated_at": "2026-07-30T11:27:33.192369+00:00"
   },
   "IOC": {
     "name": "I O C L",
@@ -5362,9 +5390,9 @@
     "cyclical_flag": null,
     "cyclical_note": null,
     "pb_ratio": 0.9,
-    "pe_ratio": 4.66,
-    "pe_ratio_5yr_avg": null,
-    "cash_plus_investments_pct_mcap": 39.37,
+    "pe_ratio": 4.7,
+    "pe_ratio_5yr_avg": 8.57,
+    "cash_plus_investments_pct_mcap": 39.31,
     "eps_cagr_3yr": 63.0,
     "eps_cagr_5yr": 14.0,
     "sales_cagr_3yr": -2.0,
@@ -5374,7 +5402,7 @@
     "negative_eps_quarters_of_8": 1,
     "opm_current": 12.0,
     "opm_3yr_avg": 8.27,
-    "updated_at": "2026-07-30T10:26:49.744515+00:00"
+    "updated_at": "2026-07-30T11:27:40.984289+00:00"
   },
   "CGPOWER": {
     "name": "CG Power & Ind",
@@ -5397,7 +5425,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 12.0,
     "opm_3yr_avg": 13.33,
-    "updated_at": "2026-07-30T10:26:56.806632+00:00"
+    "updated_at": "2026-07-30T11:27:48.017925+00:00"
   },
   "MOTHERSON": {
     "name": "Samvardh. Mothe.",
@@ -5408,9 +5436,9 @@
     "cyclical_flag": null,
     "cyclical_note": null,
     "pb_ratio": 3.79,
-    "pe_ratio": 36.2,
-    "pe_ratio_5yr_avg": null,
-    "cash_plus_investments_pct_mcap": 4.68,
+    "pe_ratio": 36.3,
+    "pe_ratio_5yr_avg": 42.59,
+    "cash_plus_investments_pct_mcap": 9.99,
     "eps_cagr_3yr": 40.0,
     "eps_cagr_5yr": 32.0,
     "sales_cagr_3yr": 17.0,
@@ -5420,7 +5448,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 11.0,
     "opm_3yr_avg": 9.33,
-    "updated_at": "2026-07-30T10:27:01.515651+00:00"
+    "updated_at": "2026-07-30T11:27:56.170758+00:00"
   },
   "ICICIPRULI": {
     "name": "ICICI Pru Life",
@@ -5430,10 +5458,10 @@
     "recommendation": "Sell",
     "cyclical_flag": null,
     "cyclical_note": null,
-    "pb_ratio": 5.43,
-    "pe_ratio": 46.0,
+    "pb_ratio": 5.44,
+    "pe_ratio": 46.1,
     "pe_ratio_5yr_avg": 93.49,
-    "cash_plus_investments_pct_mcap": 415.41,
+    "cash_plus_investments_pct_mcap": 416.46,
     "eps_cagr_3yr": 26.0,
     "eps_cagr_5yr": 11.0,
     "sales_cagr_3yr": 8.0,
@@ -5443,7 +5471,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": -24.0,
     "opm_3yr_avg": 1.07,
-    "updated_at": "2026-07-30T10:27:05.769172+00:00"
+    "updated_at": "2026-07-30T11:28:01.368094+00:00"
   },
   "OFSS": {
     "name": "Oracle Fin.Serv.",
@@ -5453,9 +5481,9 @@
     "recommendation": "Buy",
     "cyclical_flag": null,
     "cyclical_note": null,
-    "pb_ratio": 12.38,
+    "pb_ratio": 12.39,
     "pe_ratio": 28.4,
-    "pe_ratio_5yr_avg": null,
+    "pe_ratio_5yr_avg": 25.3,
     "cash_plus_investments_pct_mcap": 5.68,
     "eps_cagr_3yr": 13.0,
     "eps_cagr_5yr": 8.0,
@@ -5466,7 +5494,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 60.0,
     "opm_3yr_avg": 44.67,
-    "updated_at": "2026-07-30T10:27:11.888426+00:00"
+    "updated_at": "2026-07-30T11:28:09.338308+00:00"
   },
   "NAM-INDIA": {
     "name": "Nippon Life Ind.",
@@ -5476,10 +5504,10 @@
     "recommendation": "Buy",
     "cyclical_flag": null,
     "cyclical_note": null,
-    "pb_ratio": 15.7,
+    "pb_ratio": 15.71,
     "pe_ratio": 44.7,
-    "pe_ratio_5yr_avg": null,
-    "cash_plus_investments_pct_mcap": 5.14,
+    "pe_ratio_5yr_avg": 31.76,
+    "cash_plus_investments_pct_mcap": 5.55,
     "eps_cagr_3yr": 28.0,
     "eps_cagr_5yr": 18.0,
     "sales_cagr_3yr": 25.0,
@@ -5489,7 +5517,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 66.0,
     "opm_3yr_avg": 68.67,
-    "updated_at": "2026-07-30T10:27:16.722835+00:00"
+    "updated_at": "2026-07-30T11:28:16.102801+00:00"
   },
   "RUBICON": {
     "name": "Rubicon Research",
@@ -5499,10 +5527,10 @@
     "recommendation": "Buy",
     "cyclical_flag": null,
     "cyclical_note": null,
-    "pb_ratio": 19.08,
-    "pe_ratio": 99.9,
-    "pe_ratio_5yr_avg": null,
-    "cash_plus_investments_pct_mcap": 0.11,
+    "pb_ratio": 19.21,
+    "pe_ratio": 101.0,
+    "pe_ratio_5yr_avg": 70.0,
+    "cash_plus_investments_pct_mcap": 1.5,
     "eps_cagr_3yr": 155.0,
     "eps_cagr_5yr": 52.0,
     "sales_cagr_3yr": 65.0,
@@ -5512,7 +5540,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 23.0,
     "opm_3yr_avg": 20.33,
-    "updated_at": "2026-07-30T10:27:29.361731+00:00"
+    "updated_at": "2026-07-30T11:28:30.456920+00:00"
   },
   "ZFCVINDIA": {
     "name": "ZF Commcercial",
@@ -5522,10 +5550,10 @@
     "recommendation": "Sell",
     "cyclical_flag": null,
     "cyclical_note": null,
-    "pb_ratio": 7.36,
+    "pb_ratio": 7.35,
     "pe_ratio": 53.7,
-    "pe_ratio_5yr_avg": null,
-    "cash_plus_investments_pct_mcap": 2.23,
+    "pe_ratio_5yr_avg": 71.63,
+    "cash_plus_investments_pct_mcap": 8.23,
     "eps_cagr_3yr": 17.0,
     "eps_cagr_5yr": null,
     "sales_cagr_3yr": 6.0,
@@ -5535,7 +5563,7 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 13.0,
     "opm_3yr_avg": 15.67,
-    "updated_at": "2026-07-30T10:27:34.018756+00:00"
+    "updated_at": "2026-07-30T11:28:38.757382+00:00"
   },
   "EMBASSY": {
     "name": "Embassy Office Parks REIT",
@@ -5548,7 +5576,7 @@
     "pb_ratio": 2.0,
     "pe_ratio": 151.0,
     "pe_ratio_5yr_avg": 49.63,
-    "cash_plus_investments_pct_mcap": 9.41,
+    "cash_plus_investments_pct_mcap": 9.42,
     "eps_cagr_3yr": -18.0,
     "eps_cagr_5yr": -17.0,
     "sales_cagr_3yr": 9.0,
@@ -5558,7 +5586,7 @@
     "negative_eps_quarters_of_8": 2,
     "opm_current": 75.0,
     "opm_3yr_avg": 76.33,
-    "updated_at": "2026-07-30T10:27:40.742167+00:00"
+    "updated_at": "2026-07-30T11:28:44.889823+00:00"
   },
   "HDBFS": {
     "name": "HDB FINANC SER",
@@ -5571,7 +5599,7 @@
     "pb_ratio": null,
     "pe_ratio": 26.0,
     "pe_ratio_5yr_avg": 26.53,
-    "cash_plus_investments_pct_mcap": 5.39,
+    "cash_plus_investments_pct_mcap": 5.38,
     "eps_cagr_3yr": null,
     "eps_cagr_5yr": null,
     "sales_cagr_3yr": null,
@@ -5581,6 +5609,6 @@
     "negative_eps_quarters_of_8": 0,
     "opm_current": 18.0,
     "opm_3yr_avg": 21.67,
-    "updated_at": "2026-07-30T10:27:24.095591+00:00"
+    "updated_at": "2026-07-30T11:28:23.177483+00:00"
   }
 }

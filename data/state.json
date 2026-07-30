@@ -1,1 +1,1217 @@
-{}
+{
+  "RELIANCE": {
+    "name": "Reliance Industry",
+    "last_result_date": "2026-06-30",
+    "last_qoq_sales_growth": 5.240104876912456
+  },
+  "HDFCBANK": {
+    "name": "HDFC Bank",
+    "last_result_date": "2026-06-30",
+    "last_qoq_sales_growth": 3.8918584111399137
+  },
+  "TCS": {
+    "name": "TCS",
+    "last_result_date": "2026-06-30",
+    "last_qoq_sales_growth": 2.2306147274321764
+  },
+  "BHARTIARTL": {
+    "name": "Bharti Airtel",
+    "last_result_date": "2026-03-31",
+    "last_qoq_sales_growth": 2.5953095476269867
+  },
+  "ICICIBANK": {
+    "name": "ICICI Bank",
+    "last_result_date": "2026-06-30",
+    "last_qoq_sales_growth": 5.33733919425737
+  },
+  "SBIN": {
+    "name": "St Bk of India",
+    "last_result_date": "2026-03-31",
+    "last_qoq_sales_growth": 0.5322657340512018
+  },
+  "INFY": {
+    "name": "Infosys",
+    "last_result_date": "2026-06-30",
+    "last_qoq_sales_growth": 3.8985388560837895
+  },
+  "BAJFINANCE": {
+    "name": "Bajaj Finance",
+    "last_result_date": "2026-03-31",
+    "last_qoq_sales_growth": 2.8220625327178412
+  },
+  "HINDUNILVR": {
+    "name": "Hind. Unilever",
+    "last_result_date": "2026-06-30",
+    "last_qoq_sales_growth": 6.054675555011926
+  },
+  "ITC": {
+    "name": "ITC",
+    "last_result_date": "2026-03-31",
+    "last_qoq_sales_growth": -11.083952711128847
+  },
+  "LT": {
+    "name": "Larsen & Toubro Ltd",
+    "last_result_date": "2026-06-30",
+    "last_qoq_sales_growth": -17.906768806940384
+  },
+  "KOTAKBANK": {
+    "name": "Kotak Mah. Bank",
+    "last_result_date": "2026-06-30",
+    "last_qoq_sales_growth": 2.9617995175856846
+  },
+  "ANUHPHR": {
+    "name": "Sun Pharma.Inds.",
+    "last_result_date": "2026-03-31",
+    "last_qoq_sales_growth": 2.5380710659898478
+  },
+  "HCLTECH": {
+    "name": "HCL Technologies",
+    "last_result_date": "2026-06-30",
+    "last_qoq_sales_growth": 1.7598069509431742
+  },
+  "MARUTI": {
+    "name": "Maruti Suzuki",
+    "last_result_date": "2026-03-31",
+    "last_qoq_sales_growth": 5.125841615902533
+  },
+  "NTPC": {
+    "name": "NTPC",
+    "last_result_date": "2026-06-30",
+    "last_qoq_sales_growth": 2.1233345409169586
+  },
+  "ULTRACEMCO": {
+    "name": "UltraTech Cem.",
+    "last_result_date": "2026-06-30",
+    "last_qoq_sales_growth": -4.46141323307105
+  },
+  "AXISBANK": {
+    "name": "Axis Bank",
+    "last_result_date": "2026-06-30",
+    "last_qoq_sales_growth": 4.0121740657282485
+  },
+  "M&M": {
+    "name": "M & M",
+    "last_result_date": "2026-06-30",
+    "last_qoq_sales_growth": 5.8309992361136365
+  },
+  "BAJAJFINSV": {
+    "name": "Bajaj Finserv",
+    "last_result_date": "2026-03-31",
+    "last_qoq_sales_growth": -3.0573184244988414
+  },
+  "ONGC": {
+    "name": "O N G C",
+    "last_result_date": "2026-03-31",
+    "last_qoq_sales_growth": 3.811901590581939
+  },
+  "POWERGRID": {
+    "name": "Power Grid Corpn",
+    "last_result_date": "2026-03-31",
+    "last_qoq_sales_growth": -5.881403791851553
+  },
+  "TITAN": {
+    "name": "Titan Company",
+    "last_result_date": "2026-03-31",
+    "last_qoq_sales_growth": 5.917532263141329
+  },
+  "ADANIENT": {
+    "name": "Adani Enterp.",
+    "last_result_date": "2026-06-30",
+    "last_qoq_sales_growth": 1.4951139061006813
+  },
+  "WIPRO": {
+    "name": "Wipro",
+    "last_result_date": "2026-06-30",
+    "last_qoq_sales_growth": 1.0026406997854431
+  },
+  "ADANIPORTS": {
+    "name": "Adani Ports",
+    "last_result_date": "2026-06-30",
+    "last_qoq_sales_growth": 0.7729558577016205
+  },
+  "COALINDIA": {
+    "name": "Coal India",
+    "last_result_date": "2026-06-30",
+    "last_qoq_sales_growth": -0.505485050548505
+  },
+  "ASIANPAINT": {
+    "name": "Asian Paints",
+    "last_result_date": "2026-06-30",
+    "last_qoq_sales_growth": 14.00454201362604
+  },
+  "JSWSTEEL": {
+    "name": "JSW Steel",
+    "last_result_date": "2026-06-30",
+    "last_qoq_sales_growth": -7.456037514654162
+  },
+  "NESTLEIND": {
+    "name": "Nestle India",
+    "last_result_date": "2026-06-30",
+    "last_qoq_sales_growth": -5.483106105512745
+  },
+  "BAJAJ-AUTO": {
+    "name": "Bajaj Auto",
+    "last_result_date": "2026-06-30",
+    "last_qoq_sales_growth": 21.629654553611484
+  },
+  "ETERNAL": {
+    "name": "Eternal Ltd",
+    "last_result_date": "2026-06-30",
+    "last_qoq_sales_growth": 16.88063844552394
+  },
+  "BEL": {
+    "name": "Bharat Electron",
+    "last_result_date": "2026-06-30",
+    "last_qoq_sales_growth": -45.74530516431925
+  },
+  "GRASIM": {
+    "name": "Grasim Inds",
+    "last_result_date": "2026-03-31",
+    "last_qoq_sales_growth": 15.320906300776313
+  },
+  "TATASTEEL": {
+    "name": "Tata Steel",
+    "last_result_date": "2026-03-31",
+    "last_qoq_sales_growth": 10.996105399810533
+  },
+  "TRENT": {
+    "name": "Trent",
+    "last_result_date": "2026-03-31",
+    "last_qoq_sales_growth": -5.930776426566885
+  },
+  "SBILIFE": {
+    "name": "SBI Life Insuran",
+    "last_result_date": "2026-06-30",
+    "last_qoq_sales_growth": 1038.2215671825104
+  },
+  "EICHERMOT": {
+    "name": "Eicher Motors",
+    "last_result_date": "2026-06-30",
+    "last_qoq_sales_growth": 9.078947368421053
+  },
+  "HDFCLIFE": {
+    "name": "HDFC Life Insur.",
+    "last_result_date": "2026-06-30",
+    "last_qoq_sales_growth": 69.72850678733032
+  },
+  "JIOFIN": {
+    "name": "Jio Financial",
+    "last_result_date": "2026-06-30",
+    "last_qoq_sales_growth": 96.66339548577037
+  },
+  "HINDALCO": {
+    "name": "Hindalco Inds.",
+    "last_result_date": "2026-03-31",
+    "last_qoq_sales_growth": 17.45614166954796
+  },
+  "TECHM": {
+    "name": "Tech Mahindra",
+    "last_result_date": "2026-06-30",
+    "last_qoq_sales_growth": 4.218625630140621
+  },
+  "SHRIRAMFIN": {
+    "name": "Shriram Finance",
+    "last_result_date": "2026-06-30",
+    "last_qoq_sales_growth": 7.088627827059859
+  },
+  "CIPLA": {
+    "name": "Cipla",
+    "last_result_date": "2026-06-30",
+    "last_qoq_sales_growth": 8.836569331906437
+  },
+  "HONASA": {
+    "name": "Tata Consumer",
+    "last_result_date": "2026-03-31",
+    "last_qoq_sales_growth": 9.136212624584719
+  },
+  "DRREDDY": {
+    "name": "Dr Reddy's Labs",
+    "last_result_date": "2026-06-30",
+    "last_qoq_sales_growth": 7.341637953882851
+  },
+  "APOLLOHOSP": {
+    "name": "Apollo Hospitals",
+    "last_result_date": "2026-03-31",
+    "last_qoq_sales_growth": 1.9916628068550255
+  },
+  "LICI": {
+    "name": "Life Insurance",
+    "last_result_date": "2026-03-31",
+    "last_qoq_sales_growth": 17.287267857294218
+  },
+  "INDUSINDBK": {
+    "name": "IndusInd Bank",
+    "last_result_date": "2026-06-30",
+    "last_qoq_sales_growth": 2.7714675147660155
+  },
+  "HEROMOTOCO": {
+    "name": "Hero Motocorp",
+    "last_result_date": "2026-03-31",
+    "last_qoq_sales_growth": 3.932089372947866
+  },
+  "HAL": {
+    "name": "Hind.Aeronautics",
+    "last_result_date": "2026-03-31",
+    "last_qoq_sales_growth": 81.0884530458501
+  },
+  "DMART": {
+    "name": "Avenue Super.",
+    "last_result_date": "2026-06-30",
+    "last_qoq_sales_growth": 6.282515268038905
+  },
+  "ADANIPOWER": {
+    "name": "Adani Power",
+    "last_result_date": "2026-06-30",
+    "last_qoq_sales_growth": 32.897419672361664
+  },
+  "INDIGO": {
+    "name": "Interglobe Aviat",
+    "last_result_date": "2026-06-30",
+    "last_qoq_sales_growth": 9.564132275603885
+  },
+  "VBL": {
+    "name": "Varun Beverages",
+    "last_result_date": "2026-06-30",
+    "last_qoq_sales_growth": 28.55187100699726
+  },
+  "IRFC": {
+    "name": "IRFC",
+    "last_result_date": "2026-06-30",
+    "last_qoq_sales_growth": 12.609051254089424
+  },
+  "VEDL": {
+    "name": "Vedanta",
+    "last_result_date": "2026-03-31",
+    "last_qoq_sales_growth": 15.334864320194965
+  },
+  "DLF": {
+    "name": "DLF",
+    "last_result_date": "2026-03-31",
+    "last_qoq_sales_growth": -10.198019801980198
+  },
+  "PIDILITIND": {
+    "name": "Pidilite Inds.",
+    "last_result_date": "2026-03-31",
+    "last_qoq_sales_growth": -3.4231805929919137
+  },
+  "DIVISLAB": {
+    "name": "Divi's Lab.",
+    "last_result_date": "2026-03-31",
+    "last_qoq_sales_growth": 8.717357910906298
+  },
+  "ADANIGREEN": {
+    "name": "Adani Green",
+    "last_result_date": "2026-06-30",
+    "last_qoq_sales_growth": 26.527698458023984
+  },
+  "PFC": {
+    "name": "Power Fin.Corpn.",
+    "last_result_date": "2026-03-31",
+    "last_qoq_sales_growth": -0.6014779171678982
+  },
+  "AMBUJACEM": {
+    "name": "Ambuja Cements",
+    "last_result_date": "2026-06-30",
+    "last_qoq_sales_growth": -12.971784536460243
+  },
+  "MANINDS": {
+    "name": "Cholaman.Inv.&Fn",
+    "last_result_date": "2026-03-31",
+    "last_qoq_sales_growth": 39.397590361445786
+  },
+  "BPCL": {
+    "name": "B P C L",
+    "last_result_date": "2026-06-30",
+    "last_qoq_sales_growth": 27.443745208549213
+  },
+  "BRITANNIA": {
+    "name": "Britannia Inds.",
+    "last_result_date": "2026-03-31",
+    "last_qoq_sales_growth": -5.050301810865191
+  },
+  "AMJLAND": {
+    "name": "Bajaj Holdings",
+    "last_result_date": "2026-03-31",
+    "last_qoq_sales_growth": 29.949238578680195
+  },
+  "GODREJCP": {
+    "name": "Godrej Consumer",
+    "last_result_date": "2026-03-31",
+    "last_qoq_sales_growth": -2.451225612806403
+  },
+  "BANKBARODA": {
+    "name": "Bank of Baroda",
+    "last_result_date": "2026-06-30",
+    "last_qoq_sales_growth": 1.7413223619400824
+  },
+  "HYUNDAI": {
+    "name": "Hyundai Motor I",
+    "last_result_date": "2026-03-31",
+    "last_qoq_sales_growth": 5.246759027430034
+  },
+  "TVSMOTOR": {
+    "name": "TVS Motor Co.",
+    "last_result_date": "2026-06-30",
+    "last_qoq_sales_growth": 8.25749020128878
+  },
+  "GAIL": {
+    "name": "GAIL (India)",
+    "last_result_date": "2026-03-31",
+    "last_qoq_sales_growth": 1.1486083075086002
+  },
+  "LODHA": {
+    "name": "Lodha Developers Ltd",
+    "last_result_date": "2026-06-30",
+    "last_qoq_sales_growth": 6.003394145099703
+  },
+  "INDHOTEL": {
+    "name": "Indian Hotels Co",
+    "last_result_date": "2026-06-30",
+    "last_qoq_sales_growth": -15.406871609403256
+  },
+  "TATAPOWER": {
+    "name": "Tata Power Co.",
+    "last_result_date": "2026-06-30",
+    "last_qoq_sales_growth": 27.859060402684566
+  },
+  "ABB": {
+    "name": "A B B",
+    "last_result_date": "2026-03-31",
+    "last_qoq_sales_growth": -6.982179374817411
+  },
+  "RECLTD": {
+    "name": "REC Ltd",
+    "last_result_date": "2026-06-30",
+    "last_qoq_sales_growth": -0.8857456742653117
+  },
+  "PNB": {
+    "name": "Punjab Natl.Bank",
+    "last_result_date": "2026-06-30",
+    "last_qoq_sales_growth": 2.411732422708702
+  },
+  "SHREECEM": {
+    "name": "Shree Cement",
+    "last_result_date": "2026-03-31",
+    "last_qoq_sales_growth": 27.07769214746928
+  },
+  "UNITDSPR": {
+    "name": "United Spirits",
+    "last_result_date": "2026-06-30",
+    "last_qoq_sales_growth": -11.329404060248855
+  },
+  "BAJAJHFL": {
+    "name": "Bajaj Housing",
+    "last_result_date": "2026-06-30",
+    "last_qoq_sales_growth": 5.511539786427833
+  },
+  "ADANIENSOL": {
+    "name": "Adani Energy Sol",
+    "last_result_date": "2026-06-30",
+    "last_qoq_sales_growth": 30.471584038694076
+  },
+  "TORNTPHARM": {
+    "name": "Torrent Pharma.",
+    "last_result_date": "2026-03-31",
+    "last_qoq_sales_growth": 27.06630336058129
+  },
+  "HAVELLS": {
+    "name": "Havells India",
+    "last_result_date": "2026-06-30",
+    "last_qoq_sales_growth": -2.7889634601043998
+  },
+  "SIEMENS": {
+    "name": "Siemens",
+    "last_result_date": "2026-03-31",
+    "last_qoq_sales_growth": 20.54293918037066
+  },
+  "PRESTIGE": {
+    "name": "Prestige Estates",
+    "last_result_date": "2026-06-30",
+    "last_qoq_sales_growth": -34.33971526755032
+  },
+  "CANBK": {
+    "name": "Canara Bank",
+    "last_result_date": "2026-06-30",
+    "last_qoq_sales_growth": 3.511416815854769
+  },
+  "NAUKRI": {
+    "name": "Info Edg.(India)",
+    "last_result_date": "2026-03-31",
+    "last_qoq_sales_growth": 6.105006105006105
+  },
+  "JINDALSTEL": {
+    "name": "Jindal Steel",
+    "last_result_date": "2026-06-30",
+    "last_qoq_sales_growth": -4.53816746824516
+  },
+  "ZYDUSLIFE": {
+    "name": "Zydus Lifesci.",
+    "last_result_date": "2026-03-31",
+    "last_qoq_sales_growth": 10.533216783216783
+  },
+  "DABUR": {
+    "name": "Dabur India",
+    "last_result_date": "2026-06-30",
+    "last_qoq_sales_growth": 23.897300855826202
+  },
+  "BSE": {
+    "name": "BSE",
+    "last_result_date": "2026-03-31",
+    "last_qoq_sales_growth": 25.723472668810288
+  },
+  "SWIGGY": {
+    "name": "Swiggy",
+    "last_result_date": "2026-03-31",
+    "last_qoq_sales_growth": 3.822381262199089
+  },
+  "JSWENERGY": {
+    "name": "JSW Energy",
+    "last_result_date": "2026-06-30",
+    "last_qoq_sales_growth": 15.736830406757058
+  },
+  "BOSCHLTD": {
+    "name": "Bosch",
+    "last_result_date": "2026-03-31",
+    "last_qoq_sales_growth": 13.917314776913631
+  },
+  "CUMMINSIND": {
+    "name": "Cummins India",
+    "last_result_date": "2026-03-31",
+    "last_qoq_sales_growth": -1.4402618657937807
+  },
+  "GMRAIRPORT": {
+    "name": "GMR Airports",
+    "last_result_date": "2026-03-31",
+    "last_qoq_sales_growth": -1.4021031547320981
+  },
+  "ICICIGI": {
+    "name": "ICICI Lombard",
+    "last_result_date": "2026-06-30",
+    "last_qoq_sales_growth": 3.8534798534798536
+  },
+  "BHARTIHEXA": {
+    "name": "Bharti Hexacom",
+    "last_result_date": "2026-03-31",
+    "last_qoq_sales_growth": 2.288135593220339
+  },
+  "LUPIN": {
+    "name": "Lupin",
+    "last_result_date": "2026-03-31",
+    "last_qoq_sales_growth": 4.282924107142857
+  },
+  "MARICO": {
+    "name": "Marico",
+    "last_result_date": "2026-03-31",
+    "last_qoq_sales_growth": -5.767599660729432
+  },
+  "SRF": {
+    "name": "SRF",
+    "last_result_date": "2026-06-30",
+    "last_qoq_sales_growth": 9.057421451787649
+  },
+  "NTPCGREEN": {
+    "name": "NTPC Green Ene.",
+    "last_result_date": "2026-06-30",
+    "last_qoq_sales_growth": 21.248630887185104
+  },
+  "POWERINDIA": {
+    "name": "Hitachi Energy",
+    "last_result_date": "2026-03-31",
+    "last_qoq_sales_growth": 32.27665706051873
+  },
+  "WAAREEENER": {
+    "name": "Waaree Energies",
+    "last_result_date": "2026-06-30",
+    "last_qoq_sales_growth": -6.462264150943396
+  },
+  "NHPC": {
+    "name": "NHPC Ltd",
+    "last_result_date": "2026-03-31",
+    "last_qoq_sales_growth": 26.78973435389464
+  },
+  "BHEL": {
+    "name": "BHEL",
+    "last_result_date": "2026-06-30",
+    "last_qoq_sales_growth": -37.465475223395615
+  },
+  "INDIANB": {
+    "name": "Indian Bank",
+    "last_result_date": "2026-06-30",
+    "last_qoq_sales_growth": 3.4709515096065875
+  },
+  "POLICYBZR": {
+    "name": "PB Fintech.",
+    "last_result_date": "2026-03-31",
+    "last_qoq_sales_growth": 16.37492941840768
+  },
+  "PERSISTENT": {
+    "name": "Persistent Sys",
+    "last_result_date": "2026-03-31",
+    "last_qoq_sales_growth": 7.358390682901006
+  },
+  "SUZLON": {
+    "name": "Suzlon Energy",
+    "last_result_date": "2026-06-30",
+    "last_qoq_sales_growth": -30.2931003094848
+  },
+  "LLOYDSME": {
+    "name": "Lloyds Metals",
+    "last_result_date": "2026-03-31",
+    "last_qoq_sales_growth": 19.019375247133254
+  },
+  "COROMANDEL": {
+    "name": "Coromandel Inter",
+    "last_result_date": "2026-06-30",
+    "last_qoq_sales_growth": 35.99267155229847
+  },
+  "SBICARD": {
+    "name": "SBI Cards",
+    "last_result_date": "2026-06-30",
+    "last_qoq_sales_growth": 2.168625861370085
+  },
+  "IDEA": {
+    "name": "Vodafone Idea",
+    "last_result_date": "2026-03-31",
+    "last_qoq_sales_growth": 0.07948423562660073
+  },
+  "ABBOTINDIA": {
+    "name": "Abbott India",
+    "last_result_date": "2026-03-31",
+    "last_qoq_sales_growth": -0.8120649651972157
+  },
+  "RVNL": {
+    "name": "Rail Vikas",
+    "last_result_date": "2026-03-31",
+    "last_qoq_sales_growth": 42.95473953885568
+  },
+  "IOB": {
+    "name": "Indian Overseas Bank",
+    "last_result_date": "2026-06-30",
+    "last_qoq_sales_growth": 3.4044057014960534
+  },
+  "PAYTM": {
+    "name": "One 97",
+    "last_result_date": "2026-06-30",
+    "last_qoq_sales_growth": 8.12720848056537
+  },
+  "ASHOKLEY": {
+    "name": "Ashok Leyland",
+    "last_result_date": "2026-03-31",
+    "last_qoq_sales_growth": 16.29130141604855
+  },
+  "OIL": {
+    "name": "Oil India",
+    "last_result_date": "2026-03-31",
+    "last_qoq_sales_growth": 11.560624249699881
+  },
+  "AUROPHARMA": {
+    "name": "Aurobindo Pharma",
+    "last_result_date": "2026-03-31",
+    "last_qoq_sales_growth": 2.394170714781402
+  },
+  "ATGL": {
+    "name": "Adani Total Gas",
+    "last_result_date": "2026-06-30",
+    "last_qoq_sales_growth": 12.652536929993577
+  },
+  "PATANJALI": {
+    "name": "Patanjali Foods",
+    "last_result_date": "2026-03-31",
+    "last_qoq_sales_growth": 6.409767264402899
+  },
+  "GVT&D": {
+    "name": "GE Vernova T&D",
+    "last_result_date": "2026-03-31",
+    "last_qoq_sales_growth": -3.76249265138154
+  },
+  "BERGEPAINT": {
+    "name": "Berger Paints",
+    "last_result_date": "2026-03-31",
+    "last_qoq_sales_growth": -3.8873994638069704
+  },
+  "JSWINFRA": {
+    "name": "JSW Infrast",
+    "last_result_date": "2026-06-30",
+    "last_qoq_sales_growth": -5.059132720105125
+  },
+  "TORNTPOWER": {
+    "name": "Torrent Power",
+    "last_result_date": "2026-03-31",
+    "last_qoq_sales_growth": -5.488344644437887
+  },
+  "SCHAEFFLER": {
+    "name": "Schaeffler India",
+    "last_result_date": "2026-06-30",
+    "last_qoq_sales_growth": 6.767208043310132
+  },
+  "VMM": {
+    "name": "Vishal Mega Mart",
+    "last_result_date": "2026-06-30",
+    "last_qoq_sales_growth": 19.68529222864483
+  },
+  "ABCAPITAL": {
+    "name": "Aditya Birla Cap",
+    "last_result_date": "2026-03-31",
+    "last_qoq_sales_growth": 12.608768406961179
+  },
+  "GICRE": {
+    "name": "General Insuranc",
+    "last_result_date": "2026-03-31",
+    "last_qoq_sales_growth": 3.407736913178171
+  },
+  "NMDC": {
+    "name": "NMDC",
+    "last_result_date": "2026-03-31",
+    "last_qoq_sales_growth": 49.034292471422944
+  },
+  "PIIND": {
+    "name": "P I Industries",
+    "last_result_date": "2026-03-31",
+    "last_qoq_sales_growth": 13.73546511627907
+  },
+  "FORTIS": {
+    "name": "Fortis Health.",
+    "last_result_date": "2026-03-31",
+    "last_qoq_sales_growth": 4.415011037527594
+  },
+  "GODREJPROP": {
+    "name": "Godrej Propert.",
+    "last_result_date": "2026-03-31",
+    "last_qoq_sales_growth": 594.3775100401607
+  },
+  "MRF": {
+    "name": "MRF",
+    "last_result_date": "2026-03-31",
+    "last_qoq_sales_growth": -0.07453416149068323
+  },
+  "NYKAA": {
+    "name": "FSN E-Commerce",
+    "last_result_date": "2026-03-31",
+    "last_qoq_sales_growth": -7.831534980856247
+  },
+  "KALYANKJIL": {
+    "name": "Kalyan Jewellers",
+    "last_result_date": "2026-03-31",
+    "last_qoq_sales_growth": -0.657449482741951
+  },
+  "FACT": {
+    "name": "Fertilizer and Chemical Travancore",
+    "last_result_date": "2025-12-31",
+    "last_qoq_sales_growth": -3.7446286065070598
+  },
+  "UNOMINDA": {
+    "name": "Uno Minda",
+    "last_result_date": "2026-03-31",
+    "last_qoq_sales_growth": 6.3371861299322445
+  },
+  "COLPAL": {
+    "name": "Colgate-Palmoliv",
+    "last_result_date": "2026-06-30",
+    "last_qoq_sales_growth": 0.5015673981191223
+  },
+  "ALKEM": {
+    "name": "Alkem Lab",
+    "last_result_date": "2026-03-31",
+    "last_qoq_sales_growth": -3.585763981803586
+  },
+  "GLENMARK": {
+    "name": "Glenmark Pharma.",
+    "last_result_date": "2026-03-31",
+    "last_qoq_sales_growth": -3.3324788515765187
+  },
+  "BDL": {
+    "name": "Bharat Dynamics",
+    "last_result_date": "2026-03-31",
+    "last_qoq_sales_growth": -15.343915343915343
+  },
+  "YESBANK": {
+    "name": "Yes Bank",
+    "last_result_date": "2026-06-30",
+    "last_qoq_sales_growth": 5.116157661185069
+  },
+  "COFORGE": {
+    "name": "Coforge",
+    "last_result_date": "2026-06-30",
+    "last_qoq_sales_growth": 24.224719101123597
+  },
+  "UPL": {
+    "name": "UPL",
+    "last_result_date": "2026-03-31",
+    "last_qoq_sales_growth": 49.441682288695084
+  },
+  "OBEROIRLTY": {
+    "name": "Oberoi Realty",
+    "last_result_date": "2026-06-30",
+    "last_qoq_sales_growth": -25.657142857142855
+  },
+  "LINDEINDIA": {
+    "name": "Linde India",
+    "last_result_date": "2026-03-31",
+    "last_qoq_sales_growth": -12.410841654778887
+  },
+  "JSL": {
+    "name": "Jindal Stain.",
+    "last_result_date": "2026-03-31",
+    "last_qoq_sales_growth": 7.7866514546491725
+  },
+  "IRCTC": {
+    "name": "I R C T C",
+    "last_result_date": "2026-03-31",
+    "last_qoq_sales_growth": 0.759144237405107
+  },
+  "BHARATFORG": {
+    "name": "Bharat Forge",
+    "last_result_date": "2026-03-31",
+    "last_qoq_sales_growth": 4.259728298411237
+  },
+  "GLAXO": {
+    "name": "Glaxosmi. Pharma",
+    "last_result_date": "2026-03-31",
+    "last_qoq_sales_growth": -4.418828049951969
+  },
+  "TIINDIA": {
+    "name": "Tube Investments",
+    "last_result_date": "2026-03-31",
+    "last_qoq_sales_growth": 7.136700568867436
+  },
+  "TIL": {
+    "name": "Motil.Oswal.Fin.",
+    "last_result_date": "2026-03-31",
+    "last_qoq_sales_growth": 48.62761163457599
+  },
+  "SUPREMEIND": {
+    "name": "Supreme Inds.",
+    "last_result_date": "2026-06-30",
+    "last_qoq_sales_growth": -22.95918367346939
+  },
+  "SUNDARMFIN": {
+    "name": "Sundaram Finance",
+    "last_result_date": "2026-03-31",
+    "last_qoq_sales_growth": 1.8297533810660305
+  },
+  "PHOENIXLTD": {
+    "name": "Phoenix Mills",
+    "last_result_date": "2026-06-30",
+    "last_qoq_sales_growth": -12.814274128142742
+  },
+  "BALKRISIND": {
+    "name": "Balkrishna Inds",
+    "last_result_date": "2026-06-30",
+    "last_qoq_sales_growth": 17.797476986021138
+  },
+  "MPHASIS": {
+    "name": "Mphasis",
+    "last_result_date": "2026-06-30",
+    "last_qoq_sales_growth": 3.3231204336554327
+  },
+  "UBL": {
+    "name": "United Breweries",
+    "last_result_date": "2026-03-31",
+    "last_qoq_sales_growth": 8.5383502170767
+  },
+  "MFSL": {
+    "name": "Max Financial",
+    "last_result_date": "2026-03-31",
+    "last_qoq_sales_growth": -24.24433691002174
+  },
+  "BIOCON": {
+    "name": "Biocon",
+    "last_result_date": "2026-03-31",
+    "last_qoq_sales_growth": 8.243469925712917
+  },
+  "PAGEIND": {
+    "name": "Page Industries",
+    "last_result_date": "2026-03-31",
+    "last_qoq_sales_growth": -9.66113914924297
+  },
+  "JKCEMENT": {
+    "name": "J K Cements",
+    "last_result_date": "2026-06-30",
+    "last_qoq_sales_growth": 3.7037037037037033
+  },
+  "BANKINDIA": {
+    "name": "Bank of India",
+    "last_result_date": "2026-06-30",
+    "last_qoq_sales_growth": 2.677157308537271
+  },
+  "SAIL": {
+    "name": "Steel Authority of India",
+    "last_result_date": "2026-06-30",
+    "last_qoq_sales_growth": -14.82166617985915
+  },
+  "LTF": {
+    "name": "L&T Finance Ltd",
+    "last_result_date": "2026-06-30",
+    "last_qoq_sales_growth": 9.264305177111716
+  },
+  "FEDERALBNK": {
+    "name": "Federal Bank",
+    "last_result_date": "2026-06-30",
+    "last_qoq_sales_growth": -1.0695860072983516
+  },
+  "TATACOMM": {
+    "name": "Tata Comm",
+    "last_result_date": "2026-06-30",
+    "last_qoq_sales_growth": 0.4424778761061947
+  },
+  "IDFCFIRSTB": {
+    "name": "IDFC First Bank",
+    "last_result_date": "2026-06-30",
+    "last_qoq_sales_growth": 4.7190372405950916
+  },
+  "ITCHOTELS": {
+    "name": "ITC Hotels",
+    "last_result_date": "2026-06-30",
+    "last_qoq_sales_growth": -25.358851674641148
+  },
+  "GODFRYPHLP": {
+    "name": "Godfrey Phillips",
+    "last_result_date": "2026-06-30",
+    "last_qoq_sales_growth": -32.51259093452714
+  },
+  "LAURUSLABS": {
+    "name": "Laurus Labs",
+    "last_result_date": "2026-06-30",
+    "last_qoq_sales_growth": 11.810154525386315
+  },
+  "AIIL": {
+    "name": "Authum Invest",
+    "last_result_date": "2026-06-30",
+    "last_qoq_sales_growth": 372.66881028938906
+  },
+  "DIXON": {
+    "name": "Dixon Tech",
+    "last_result_date": "2026-03-31",
+    "last_qoq_sales_growth": -1.5086206896551724
+  },
+  "KARURVYSYA": {
+    "name": "Karuru Vyasa Bank",
+    "last_result_date": "2026-06-30",
+    "last_qoq_sales_growth": 4.993112947658402
+  },
+  "VIMTALABS": {
+    "name": "Ipca Labs",
+    "last_result_date": "2024-12-31",
+    "last_qoq_sales_growth": 5.88235294117647
+  },
+  "GLAND": {
+    "name": "Gland Pharma",
+    "last_result_date": "2026-03-31",
+    "last_qoq_sales_growth": 2.831858407079646
+  },
+  "INDUSTOWER": {
+    "name": "Indus Tower",
+    "last_result_date": "2026-06-30",
+    "last_qoq_sales_growth": 4.073571164053821
+  },
+  "MCX": {
+    "name": "Multi Commodity Exchange",
+    "last_result_date": "2026-03-31",
+    "last_qoq_sales_growth": 33.48348348348348
+  },
+  "SOLARINDS": {
+    "name": "Solar Industries",
+    "last_result_date": "2026-03-31",
+    "last_qoq_sales_growth": 19.819466248037678
+  },
+  "POLYCAB": {
+    "name": "Polycab India",
+    "last_result_date": "2026-06-30",
+    "last_qoq_sales_growth": -7.378158844765342
+  },
+  "HDFCAMC": {
+    "name": "HDFC AMC",
+    "last_result_date": "2026-06-30",
+    "last_qoq_sales_growth": 4.562737642585551
+  },
+  "HINDZINC": {
+    "name": "Hindustan Zinc",
+    "last_result_date": "2026-06-30",
+    "last_qoq_sales_growth": 1.4988186650915534
+  },
+  "IDBI": {
+    "name": "IDBI Bank",
+    "last_result_date": "2026-06-30",
+    "last_qoq_sales_growth": -3.267555099948744
+  },
+  "MAZDOCK": {
+    "name": "Mazagon Dock Shipbuilders",
+    "last_result_date": "2026-03-31",
+    "last_qoq_sales_growth": 6.914745903915579
+  },
+  "5PAISA": {
+    "name": "Tata Capital",
+    "last_result_date": "2026-06-30",
+    "last_qoq_sales_growth": 3.5294117647058822
+  },
+  "PREMIERENE": {
+    "name": "Premier Energies",
+    "last_result_date": "2026-03-31",
+    "last_qoq_sales_growth": 15.18595041322314
+  },
+  "APLAPOLLO": {
+    "name": "APL Apollo Tubes",
+    "last_result_date": "2026-03-31",
+    "last_qoq_sales_growth": 4.797726512871949
+  },
+  "UNIONBANK": {
+    "name": "Union Bank of India",
+    "last_result_date": "2026-06-30",
+    "last_qoq_sales_growth": 2.8152646573699207
+  },
+  "KAYNES": {
+    "name": "Kaynes Technologies",
+    "last_result_date": "2026-03-31",
+    "last_qoq_sales_growth": 54.60199004975125
+  },
+  "MANKIND": {
+    "name": "Mankind Pharma",
+    "last_result_date": "2026-03-31",
+    "last_qoq_sales_growth": -3.476310625175217
+  },
+  "NATIONALUM": {
+    "name": "National Aluminium",
+    "last_result_date": "2026-03-31",
+    "last_qoq_sales_growth": 5.960684844641725
+  },
+  "KEI": {
+    "name": "KEI Industries",
+    "last_result_date": "2026-03-31",
+    "last_qoq_sales_growth": 17.63113367174281
+  },
+  "MAXHEALTH": {
+    "name": "Max Healthcare Institute",
+    "last_result_date": "2026-03-31",
+    "last_qoq_sales_growth": 3.6266924564796903
+  },
+  "SAILIFE": {
+    "name": "Sai Life Science",
+    "last_result_date": "2026-03-31",
+    "last_qoq_sales_growth": 8.273381294964029
+  },
+  "WOCKPHARMA": {
+    "name": "Wockhardt",
+    "last_result_date": "2026-03-31",
+    "last_qoq_sales_growth": 8.67117117117117
+  },
+  "GRAPHITE": {
+    "name": "Graphite India Ltd",
+    "last_result_date": "2026-03-31",
+    "last_qoq_sales_growth": 27.102803738317753
+  },
+  "MSUMI": {
+    "name": "Motherson Sumi Wiring",
+    "last_result_date": "2026-03-31",
+    "last_qoq_sales_growth": 15.51783858676827
+  },
+  "RELIGARE": {
+    "name": "Religare Enterprises ltd",
+    "last_result_date": "2026-03-31",
+    "last_qoq_sales_growth": 19.990272373540858
+  },
+  "RADICO": {
+    "name": "Radico Khaitan",
+    "last_result_date": "2026-06-30",
+    "last_qoq_sales_growth": 11.96808510638298
+  },
+  "ONESOURCE": {
+    "name": "One Source Speciality Pharma",
+    "last_result_date": "2026-06-30",
+    "last_qoq_sales_growth": 4.906542056074766
+  },
+  "TATACHEM": {
+    "name": "Acutaas Chemicals",
+    "last_result_date": "2026-06-30",
+    "last_qoq_sales_growth": 23.763816172193135
+  },
+  "METROPOLIS": {
+    "name": "Metropolis Healthcare",
+    "last_result_date": "2026-03-31",
+    "last_qoq_sales_growth": 4.679802955665025
+  },
+  "HAPPYFORGE": {
+    "name": "Happy Forging",
+    "last_result_date": "2026-03-31",
+    "last_qoq_sales_growth": 8.439897698209718
+  },
+  "CRAFTSMAN": {
+    "name": "Craftsman automation",
+    "last_result_date": "2026-06-30",
+    "last_qoq_sales_growth": 9.254267744833783
+  },
+  "LTFOODS": {
+    "name": "LT Foods Ltd",
+    "last_result_date": "2026-06-30",
+    "last_qoq_sales_growth": 8.427932576539387
+  },
+  "TI": {
+    "name": "Tilaknagar Industries",
+    "last_result_date": "2026-06-30",
+    "last_qoq_sales_growth": 10.221285563751318
+  },
+  "JUBLPHARMA": {
+    "name": "Jubilant Pharmova",
+    "last_result_date": "2026-03-31",
+    "last_qoq_sales_growth": 7.917059377945335
+  },
+  "ASTERDM": {
+    "name": "Aster DM",
+    "last_result_date": "2026-03-31",
+    "last_qoq_sales_growth": -0.33726812816188867
+  },
+  "MUTHOOTFIN": {
+    "name": "Muthoot Finance",
+    "last_result_date": "2026-03-31",
+    "last_qoq_sales_growth": 13.446507083536883
+  },
+  "DCBBANK": {
+    "name": "DCB Bank",
+    "last_result_date": "2026-06-30",
+    "last_qoq_sales_growth": 4.037755637126376
+  },
+  "CSBBANK": {
+    "name": "CSB Bank",
+    "last_result_date": "2026-06-30",
+    "last_qoq_sales_growth": 7.160699417152373
+  },
+  "PNBHOUSING": {
+    "name": "PNB Hosuing Finance",
+    "last_result_date": "2026-03-31",
+    "last_qoq_sales_growth": 2.973100519112789
+  },
+  "ICDSLTD": {
+    "name": "CDS",
+    "last_result_date": "2026-03-31",
+    "last_qoq_sales_growth": -8.771929824561392
+  },
+  "NUVAMA": {
+    "name": "Nuvama Wealth Management",
+    "last_result_date": "2026-03-31",
+    "last_qoq_sales_growth": 14.945652173913043
+  },
+  "JGCHEM": {
+    "name": "J B Chemials",
+    "last_result_date": "2026-03-31",
+    "last_qoq_sales_growth": 15.32258064516129
+  },
+  "NEULANDLAB": {
+    "name": "Neuland Laboritries",
+    "last_result_date": "2026-03-31",
+    "last_qoq_sales_growth": 76.36363636363637
+  },
+  "KIMS": {
+    "name": "Krishna Institue of Medical Science",
+    "last_result_date": "2026-03-31",
+    "last_qoq_sales_growth": 7.715430861723446
+  },
+  "ASTRAZEN": {
+    "name": "Astrazeneca Pharma India Ltd",
+    "last_result_date": "2026-03-31",
+    "last_qoq_sales_growth": -5.392156862745098
+  },
+  "MEDPLUS": {
+    "name": "Medplus Health Services",
+    "last_result_date": "2026-06-30",
+    "last_qoq_sales_growth": 0.8583690987124464
+  },
+  "AADHARHFC": {
+    "name": "Aadhar Housing Finance",
+    "last_result_date": "2026-03-31",
+    "last_qoq_sales_growth": 4.453870625662779
+  },
+  "PTC": {
+    "name": "PTC Industries",
+    "last_result_date": "2026-03-31",
+    "last_qoq_sales_growth": 14.47870778267254
+  },
+  "RAMCOCEM": {
+    "name": "Ramco Cements",
+    "last_result_date": "2026-03-31",
+    "last_qoq_sales_growth": 23.931623931623932
+  },
+  "UTIAMC": {
+    "name": "ICICI Pru Asset Management Co Ltd.",
+    "last_result_date": "2026-06-30",
+    "last_qoq_sales_growth": 49.743589743589745
+  },
+  "CHOLAHLDNG": {
+    "name": "Cholamandalam Financial Holdings Ltd",
+    "last_result_date": "2026-03-31",
+    "last_qoq_sales_growth": 4.19137601769022
+  },
+  "HINDPETRO": {
+    "name": "Hindustan Petroleum Corporation Ltd",
+    "last_result_date": "2026-06-30",
+    "last_qoq_sales_growth": 22.31396330163481
+  },
+  "HCG": {
+    "name": "Healthcare Global Entprises",
+    "last_result_date": "2026-03-31",
+    "last_qoq_sales_growth": 3.0423175952106387
+  },
+  "UJJIVANSFB": {
+    "name": "Ujjivan Small Finance Bank Ltd",
+    "last_result_date": "2026-06-30",
+    "last_qoq_sales_growth": 7.827476038338658
+  },
+  "CDSL": {
+    "name": "Central Depository Services (India) Ltd",
+    "last_result_date": "2026-03-31",
+    "last_qoq_sales_growth": -13.486842105263158
+  },
+  "RAIN": {
+    "name": "Billionbrains Garage Ventures Ltd",
+    "last_result_date": "2026-03-31",
+    "last_qoq_sales_growth": 5.115089514066496
+  },
+  "IOC": {
+    "name": "I O C L",
+    "last_result_date": "2026-03-31",
+    "last_qoq_sales_growth": 1.526635698513821
+  },
+  "CGPOWER": {
+    "name": "CG Power & Ind",
+    "last_result_date": "2026-06-30",
+    "last_qoq_sales_growth": -4.677513073794306
+  },
+  "MOTHERSON": {
+    "name": "Samvardh. Mothe.",
+    "last_result_date": "2026-03-31",
+    "last_qoq_sales_growth": 9.233022382119776
+  },
+  "ICICIPRULI": {
+    "name": "ICICI Pru Life",
+    "last_result_date": "2026-03-31",
+    "last_qoq_sales_growth": -86.05150214592274
+  },
+  "OFSS": {
+    "name": "Oracle Fin.Serv.",
+    "last_result_date": "2026-06-30",
+    "last_qoq_sales_growth": 51.3317191283293
+  },
+  "NAM-INDIA": {
+    "name": "Nippon Life Ind.",
+    "last_result_date": "2026-06-30",
+    "last_qoq_sales_growth": 3.7889039242219216
+  },
+  "HDBFS": {
+    "name": "HDB FINANC SER",
+    "last_result_date": "2025-03-31",
+    "last_qoq_sales_growth": 2.9440154440154442
+  },
+  "RUBICON": {
+    "name": "Rubicon Research",
+    "last_result_date": "2026-03-31",
+    "last_qoq_sales_growth": 7.9831932773109235
+  },
+  "ZFCVINDIA": {
+    "name": "ZF Commcercial",
+    "last_result_date": "2026-06-30",
+    "last_qoq_sales_growth": -7.705627705627706
+  },
+  "EMBASSY": {
+    "name": "Embassy Office Parks REIT",
+    "last_result_date": "2026-03-31",
+    "last_qoq_sales_growth": 1.0058675607711651
+  }
+}
