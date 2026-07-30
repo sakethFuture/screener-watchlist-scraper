@@ -157,7 +157,7 @@ def _extract_from(page: Page, url: str) -> Optional[dict]:
     return page.evaluate(_EXTRACT_PAGE_DATA_JS)
 
 
-def _fetch_pe_5yr_avg(page: Page, company_id: str, consolidated: bool) -> Optional[float]:
+def _fetch_pe_5yr_avg_once(page: Page, company_id: str, consolidated: bool) -> Optional[float]:
     query = urllib.parse.quote("Price to Earning")
     url = (
         f"https://www.screener.in/api/company/{company_id}/chart/"
@@ -181,6 +181,22 @@ def _fetch_pe_5yr_avg(page: Page, company_id: str, consolidated: bool) -> Option
             values = [v[1] for v in dataset.get("values", []) if isinstance(v[1], (int, float))]
             if values:
                 return sum(values) / len(values)
+    return None
+
+
+def _fetch_pe_5yr_avg(page: Page, company_id: str, consolidated: bool) -> Optional[float]:
+    # This undocumented chart API has been observed returning an empty
+    # dataset intermittently (not tied to request volume/pacing - a real
+    # production run with proper per-stock delays still saw ~50% of stocks
+    # come back empty on the first attempt, including long-listed companies
+    # that definitely have 5 years of price history). A short retry clears
+    # it up in practice.
+    for attempt in range(3):
+        result = _fetch_pe_5yr_avg_once(page, company_id, consolidated)
+        if result is not None:
+            return result
+        if attempt < 2:
+            time.sleep(1.5)
     return None
 
 
