@@ -280,6 +280,12 @@
   }
   .save-status.on{ color:var(--buy); }
 
+  .filter-status{
+    font-size:12px;
+    color:var(--text-dim);
+    white-space:nowrap;
+  }
+
   /* ===== Autofill / Sync panels ===== */
   .autofill-panel, .sync-panel{
     padding:16px 20px 18px;
@@ -532,6 +538,8 @@
         <select class="filter" id="sectorFilter" autocomplete="off">
           <option value="">All sectors</option>
         </select>
+        <button class="btn" id="clearFiltersBtn" style="display:none;">✕ Clear filters</button>
+        <span class="filter-status" id="filterStatus"></span>
         <button class="btn" id="autofillBtn">⇩ Autofill results</button>
         <button class="btn" id="syncBtn">⟳ Sync from automation</button>
         <button class="btn primary" id="verifyBtn">✓ Verify latest</button>
@@ -915,6 +923,12 @@ function renderTable(){
 
   document.getElementById('emptyState').style.display = shown === 0 ? 'block' : 'none';
 
+  const anyFilterActive = !!(search || catF || recF || sectorF);
+  const filterStatusEl = document.getElementById('filterStatus');
+  const clearBtn = document.getElementById('clearFiltersBtn');
+  if(filterStatusEl) filterStatusEl.textContent = anyFilterActive ? `Showing ${shown} of ${state.companies.length}` : '';
+  if(clearBtn) clearBtn.style.display = anyFilterActive ? 'inline-flex' : 'none';
+
   body.querySelectorAll('.notes-input').forEach(el => {
     el.addEventListener('change', onNotesEdit);
   });
@@ -1145,6 +1159,15 @@ document.getElementById('sectorFilter').addEventListener('change', (e) => {
   renderTable();
   highlightActiveSectorCard();
 });
+document.getElementById('clearFiltersBtn').addEventListener('click', () => {
+  document.getElementById('searchBox').value = '';
+  document.getElementById('catFilter').value = '';
+  document.getElementById('recFilter').value = '';
+  document.getElementById('sectorFilter').value = '';
+  currentSectorFilter = '';
+  renderTable();
+  highlightActiveSectorCard();
+});
 
 function populateSectorFilterOptions(){
   const sel = document.getElementById('sectorFilter');
@@ -1362,6 +1385,19 @@ function setupScrollReveal(){
   els.forEach(el => io.observe(el));
 }
 setupScrollReveal();
+
+// Browsers commonly restore a form control's last value across a plain
+// page reload (independent of autocomplete="off", which only affects
+// autofill suggestions) - search box included. Previously only the sector
+// filter was hardened against this (via currentSectorFilter), so a stale
+// restored value in searchBox/catFilter/recFilter could still silently
+// zero out the table on load even with sectorFilter behaving correctly.
+// Force every filter control back to its default before the first render.
+document.getElementById('searchBox').value = '';
+document.getElementById('catFilter').value = '';
+document.getElementById('recFilter').value = '';
+document.getElementById('sectorFilter').value = '';
+currentSectorFilter = '';
 
 loadState().then(async () => {
   render();
