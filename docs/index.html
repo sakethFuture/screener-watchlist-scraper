@@ -66,7 +66,14 @@
     padding:32px 32px 20px;
     border-bottom:1px solid var(--border);
   }
-  .masthead-inner{max-width:1300px; margin:0 auto;}
+  .masthead-inner{max-width:1300px; margin:0 auto; display:flex; align-items:flex-end; justify-content:space-between; gap:16px; flex-wrap:wrap;}
+  .last-synced{
+    font-size:12px;
+    color:var(--text-faint);
+    margin:0;
+    white-space:nowrap;
+  }
+  .last-synced.fresh{ color:var(--buy); font-weight:500; }
   .eyebrow{
     font-size:12px;
     font-weight:500;
@@ -347,6 +354,22 @@
   .co-name:hover{ border-color:var(--border); }
   .co-name:focus{ border-color:var(--accent); background:var(--bg); }
 
+  .notes-input{
+    font-size:12.5px;
+    background:transparent;
+    border:1px solid transparent;
+    color:var(--text-dim);
+    padding:5px 8px;
+    border-radius:5px;
+    width:100%;
+    min-width:140px;
+    outline:none;
+    font-family:'Inter';
+  }
+  .notes-input::placeholder{ color:var(--text-faint); font-style:italic; }
+  .notes-input:hover{ border-color:var(--border); }
+  .notes-input:focus{ border-color:var(--accent); background:var(--bg); color:var(--text); }
+
   .prior{
     font-size:12px;
     color:var(--text-faint);
@@ -472,6 +495,7 @@
         <p class="eyebrow">FCC · Fundamental Call Register</p>
         <h1>Top 200 <em>Company Analysis</em></h1>
       </div>
+      <p class="last-synced" id="lastSyncedDisplay"></p>
     </div>
 
     <div class="tabs-row" id="tabsRow"></div>
@@ -490,7 +514,7 @@
       <div class="summary" id="summaryRow"></div>
       <div class="toolbar">
         <input class="search" id="searchBox" type="text" placeholder="Filter by company name…">
-        <select class="filter" id="catFilter">
+        <select class="filter" id="catFilter" autocomplete="off">
           <option value="">All categories</option>
           <option>Slow Grower</option>
           <option>Stalwart</option>
@@ -499,13 +523,13 @@
           <option>Turnaround</option>
           <option>Asset Play</option>
         </select>
-        <select class="filter" id="recFilter">
+        <select class="filter" id="recFilter" autocomplete="off">
           <option value="">All recommendations</option>
           <option>Buy</option>
           <option>Hold</option>
           <option>Sell</option>
         </select>
-        <select class="filter" id="sectorFilter">
+        <select class="filter" id="sectorFilter" autocomplete="off">
           <option value="">All sectors</option>
         </select>
         <button class="btn" id="autofillBtn">⇩ Autofill results</button>
@@ -548,11 +572,12 @@
         <table>
           <thead>
             <tr>
-              <th style="width:22%">Company</th>
-              <th style="width:16%">Prior quarter</th>
-              <th style="width:22%">Category</th>
-              <th style="width:12%">Recommendation</th>
-              <th style="width:13%">Change</th>
+              <th style="width:18%">Company</th>
+              <th style="width:13%">Prior quarter</th>
+              <th style="width:18%">Category</th>
+              <th style="width:10%">Recommendation</th>
+              <th style="width:10%">Change</th>
+              <th style="width:18%">Notes</th>
               <th style="width:4%"></th>
             </tr>
           </thead>
@@ -646,6 +671,11 @@ const store = hasNativeStorage ? window.storage : localStore;
 const DEFAULT_SYNC_URL = 'https://raw.githubusercontent.com/sakethFuture/screener-watchlist-scraper/main/data/output.json';
 
 let state = { activeQ: 'Q1 2026', companies: [] };
+// Explicit source of truth for the sector filter - never read back from the
+// <select>'s own .value, since browsers commonly restore a <select>'s last
+// value across a page reload, which previously made the table look
+// filtered/empty on load before any sector card had ever been clicked.
+let currentSectorFilter = '';
 
 function normCat(c){
   if(!c) return '';
@@ -675,6 +705,7 @@ function seedToState(){
       id: 'c' + i + '_' + Date.now().toString(36).slice(-4),
       name: row.name,
       sector: sectorOf(row.name),
+      notes: '',
       baseline: { cat: normCat(row.q4_2025_cat), rec: normRec(row.q4_2025_rec) },
       quarters: {
         'Q1 2026':{cat:q1Class, rec:q1Rec, recSuggested: !!q1Rec},
@@ -701,6 +732,10 @@ function backfillQ1Classifications(){
     }
     if(!c.sector){
       c.sector = sectorOf(c.name);
+      filled++;
+    }
+    if(c.notes === undefined){
+      c.notes = '';
       filled++;
     }
   });
@@ -805,7 +840,7 @@ function renderTable(){
   const search = document.getElementById('searchBox').value.trim().toLowerCase();
   const catF = document.getElementById('catFilter').value;
   const recF = document.getElementById('recFilter').value;
-  const sectorF = document.getElementById('sectorFilter').value;
+  const sectorF = currentSectorFilter;
 
   const body = document.getElementById('tableBody');
   body.innerHTML = '';
@@ -872,6 +907,7 @@ function renderTable(){
         ${suggestedTag}${outlierTag}
       </td>
       <td>${changeHtml}</td>
+      <td><input class="notes-input" value="${(c.notes||'').replace(/"/g,'&quot;')}" data-id="${c.id}" placeholder="Thesis / rationale…" title="One persistent note per company - not per quarter"></td>
       <td><button class="del-btn" data-id="${c.id}" title="Remove from ledger">✕</button></td>
     `;
     body.appendChild(tr);
@@ -879,6 +915,9 @@ function renderTable(){
 
   document.getElementById('emptyState').style.display = shown === 0 ? 'block' : 'none';
 
+  body.querySelectorAll('.notes-input').forEach(el => {
+    el.addEventListener('change', onNotesEdit);
+  });
   body.querySelectorAll('.co-name').forEach(el => {
     el.addEventListener('change', onNameEdit);
   });
@@ -899,6 +938,12 @@ function onNameEdit(e){
   const c = findCompany(e.target.dataset.id);
   if(!c) return;
   c.name = e.target.value.trim() || c.name;
+  saveState();
+}
+function onNotesEdit(e){
+  const c = findCompany(e.target.dataset.id);
+  if(!c) return;
+  c.notes = e.target.value;
   saveState();
 }
 function onFieldEdit(e){
@@ -925,6 +970,7 @@ document.getElementById('addBtn').addEventListener('click', () => {
   const rec = {
     id, name: 'New Stock',
     sector: '',
+    notes: '',
     baseline: { cat:'', rec:'' },
     quarters: { 'Q1 2026':{cat:'',rec:'',recSuggested:false}, 'Q2 2026':{cat:'',rec:'',recSuggested:false}, 'Q3 2026':{cat:'',rec:'',recSuggested:false}, 'Q4 2026':{cat:'',rec:'',recSuggested:false} }
   };
@@ -1094,22 +1140,30 @@ document.getElementById('applyAutofillBtn').addEventListener('click', () => {
 document.getElementById('searchBox').addEventListener('input', renderTable);
 document.getElementById('catFilter').addEventListener('change', renderTable);
 document.getElementById('recFilter').addEventListener('change', renderTable);
-document.getElementById('sectorFilter').addEventListener('change', () => { renderTable(); highlightActiveSectorCard(); });
+document.getElementById('sectorFilter').addEventListener('change', (e) => {
+  currentSectorFilter = e.target.value;
+  renderTable();
+  highlightActiveSectorCard();
+});
 
 function populateSectorFilterOptions(){
   const sel = document.getElementById('sectorFilter');
-  const current = sel.value;
   const present = new Set(state.companies.map(c => c.sector || 'Unclassified'));
   const ordered = SECTORS.filter(s => present.has(s));
   if(present.has('Unclassified')) ordered.push('Unclassified');
   sel.innerHTML = '<option value="">All sectors</option>' + ordered.map(s => `<option value="${s}">${s}</option>`).join('');
-  sel.value = ordered.includes(current) ? current : '';
+  // currentSectorFilter (a plain JS variable, not the <select>'s own .value)
+  // is the single source of truth - browsers commonly restore a <select>'s
+  // last value across a page reload, which previously made the table look
+  // filtered/empty on load with no card ever clicked. Only ever reset here
+  // if the previously-active sector no longer exists in the data.
+  if(!ordered.includes(currentSectorFilter)) currentSectorFilter = '';
+  sel.value = currentSectorFilter;
 }
 
 function highlightActiveSectorCard(){
-  const active = document.getElementById('sectorFilter').value;
   document.querySelectorAll('.sector-card').forEach(card => {
-    card.classList.toggle('active', card.dataset.sector === active);
+    card.classList.toggle('active', card.dataset.sector === currentSectorFilter);
   });
 }
 
@@ -1138,9 +1192,8 @@ function renderSectorOverview(){
     });
 
   const grid = document.getElementById('sectorGrid');
-  const activeSector = document.getElementById('sectorFilter').value;
   grid.innerHTML = cards.map(({ sector, b, color }) => `
-    <div class="sector-card${sector === activeSector ? ' active' : ''}" data-sector="${sector}" style="--sector-color:${color}">
+    <div class="sector-card${sector === currentSectorFilter ? ' active' : ''}" data-sector="${sector}" style="--sector-color:${color}">
       <div class="sector-card-top">
         <span class="sector-swatch"></span>
         <span class="sector-name">${sector}</span>
@@ -1158,8 +1211,8 @@ function renderSectorOverview(){
 
   grid.querySelectorAll('.sector-card').forEach(card => {
     card.addEventListener('click', () => {
-      const sel = document.getElementById('sectorFilter');
-      sel.value = (sel.value === card.dataset.sector) ? '' : card.dataset.sector;
+      currentSectorFilter = (currentSectorFilter === card.dataset.sector) ? '' : card.dataset.sector;
+      document.getElementById('sectorFilter').value = currentSectorFilter;
       renderTable();
       highlightActiveSectorCard();
     });
@@ -1176,6 +1229,29 @@ async function loadSyncUrl(){
 }
 async function saveSyncUrl(url){
   try{ await store.set('ledger-sync-url', url, false); }catch(e){ /* ignore */ }
+}
+
+async function loadLastSynced(){
+  try{
+    const res = await store.get('ledger-last-synced', false);
+    if(res && res.value) return res.value;
+  }catch(e){ /* nothing saved yet */ }
+  return null;
+}
+async function saveLastSynced(iso){
+  try{ await store.set('ledger-last-synced', iso, false); }catch(e){ /* ignore */ }
+}
+function formatLastSynced(iso){
+  const d = new Date(iso);
+  if(isNaN(d.getTime())) return null;
+  return d.toLocaleString('en-US', { month:'short', day:'numeric', year:'numeric', hour:'numeric', minute:'2-digit', hour12:true });
+}
+function updateLastSyncedDisplay(iso, { fresh } = {}){
+  const el = document.getElementById('lastSyncedDisplay');
+  if(!el) return;
+  const formatted = iso ? formatLastSynced(iso) : null;
+  el.textContent = formatted ? `Last synced: ${formatted}` : 'Never synced yet';
+  el.classList.toggle('fresh', !!fresh);
 }
 
 async function runSync(url, { silent } = {}){
@@ -1205,6 +1281,9 @@ async function runSync(url, { silent } = {}){
     msg += ' — Recommendation still yours to set.';
     if(resultEl){ resultEl.textContent = msg; resultEl.classList.toggle('warn', unmatched.length > 0); }
     if(verifyStatus){ verifyStatus.textContent = `✓ verified — ${updated} synced just now`; verifyStatus.classList.remove('warn'); }
+    const syncedAt = new Date().toISOString();
+    await saveLastSynced(syncedAt);
+    updateLastSyncedDisplay(syncedAt, { fresh: true });
     saveState();
     renderSummary();
     renderSectorOverview();
@@ -1286,6 +1365,10 @@ setupScrollReveal();
 
 loadState().then(async () => {
   render();
+  // Show whatever was last persisted immediately, before any new fetch on
+  // this load - so the page always tells you when the data was actually
+  // last confirmed fresh, even if auto-sync below hasn't run/completed yet.
+  updateLastSyncedDisplay(await loadLastSynced());
   // Auto-fetch on load, silently, whenever this file is running standalone
   // (i.e. not inside claude.ai, where outbound fetch is blocked by policy).
   if(!hasNativeStorage){
