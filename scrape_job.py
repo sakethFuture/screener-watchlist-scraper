@@ -10,13 +10,18 @@ from playwright.sync_api import sync_playwright
 
 import auth
 from config import Config
-from growth import evaluate_quarter
+from growth import classify, recommend
 from logging_setup import configure_logging
 from scraper import fetch_with_retry
+from sector_map import sector_of
 from state_store import load_json, merge_output, save_json
 from watchlist import load_watchlist
 
 log = logging.getLogger(__name__)
+
+
+def _round(value: Optional[float]) -> Optional[float]:
+    return round(value, 2) if value is not None else None
 
 
 def run_scrape_job(config: Optional[Config] = None) -> dict:
@@ -32,7 +37,7 @@ def run_scrape_job(config: Optional[Config] = None) -> dict:
     state = load_json(config.state_path)
     output = load_json(config.output_path)
 
-    counts = {"unchanged": 0, "new_classified": 0, "new_skipped": 0, "errors": 0}
+    counts = {"unchanged": 0, "new_classified": 0, "errors": 0}
     errors: list[tuple[str, str]] = []
 
     with sync_playwright() as p:
@@ -44,8 +49,8 @@ def run_scrape_job(config: Optional[Config] = None) -> dict:
 
             for stock in stocks:
                 try:
-                    qd = fetch_with_retry(page, stock.slug, config)
-                    if qd is None:
+                    sd = fetch_with_retry(page, stock.slug, config)
+                    if sd is None:
                         counts["errors"] += 1
                         errors.append((stock.slug, "no quarterly results table found"))
                         log.error("%s (%s): no quarterly results table found", stock.name, stock.slug)
@@ -53,38 +58,54 @@ def run_scrape_job(config: Optional[Config] = None) -> dict:
 
                     prev = state.get(stock.slug, {})
                     prev_date = prev.get("last_result_date")
+                    prev_qoq_sales_growth = prev.get("last_qoq_sales_growth")
 
-                    if qd.latest_date == prev_date:
+                    if sd.latest_date == prev_date:
                         counts["unchanged"] += 1
                         log.info("%s (%s): unchanged, still %s", stock.name, stock.slug, prev_date)
                         continue
 
-                    state[stock.slug] = {"name": stock.name, "last_result_date": qd.latest_date}
+                    state[stock.slug] = {
+                        "name": stock.name,
+                        "last_result_date": sd.latest_date,
+                        "last_qoq_sales_growth": sd.qoq_sales_growth,
+                    }
                     save_json(config.state_path, state)
 
-                    result = evaluate_quarter(qd.dates, qd.sales, qd.net_profit)
-                    if result is None:
-                        counts["new_skipped"] += 1
-                        log.warning(
-                            "%s (%s): new result %s but not enough history/data for YoY growth",
-                            stock.name, stock.slug, qd.latest_date,
-                        )
-                        continue
+                    sector = sector_of(stock.name)
+                    classification = classify(sd, sector).classification
+                    rec = recommend(classification, sd, prev_qoq_sales_growth)
+                    negative_eps_quarters = sum(1 for e in sd.eps if e is not None and e < 0)
 
                     merge_output(output, stock.slug, {
                         "name": stock.name,
-                        "result_date": qd.latest_date,
-                        "sales_growth_pct": round(result.sales_growth, 2),
-                        "net_profit_growth_pct": round(result.net_profit_growth, 2),
-                        "avg_growth_pct": round(result.avg_growth, 2),
-                        "classification": result.classification,
+                        "sector": sector,
+                        "result_date": sd.latest_date,
+                        "classification": classification,
+                        "recommendation": rec.recommendation,
+                        "cyclical_flag": rec.cyclical_flag,
+                        "cyclical_note": rec.note,
+                        "pb_ratio": _round(sd.pb_ratio),
+                        "pe_ratio": _round(sd.stock_pe),
+                        "pe_ratio_5yr_avg": _round(sd.pe_5yr_avg),
+                        "cash_plus_investments_pct_mcap": _round(sd.cash_plus_investments_pct_mcap),
+                        "eps_cagr_3yr": _round(sd.profit_cagr_3yr),
+                        "eps_cagr_5yr": _round(sd.profit_cagr_5yr),
+                        "sales_cagr_3yr": _round(sd.sales_cagr_3yr),
+                        "sales_cagr_5yr": _round(sd.sales_cagr_5yr),
+                        "qoq_sales_growth": _round(sd.qoq_sales_growth),
+                        "qoq_swing": _round(rec.qoq_swing),
+                        "negative_eps_quarters_of_8": negative_eps_quarters,
+                        "opm_current": _round(sd.opm[-1]) if sd.opm else None,
+                        "opm_3yr_avg": _round(sd.annual_opm_avg_3yr),
                         "updated_at": datetime.now(timezone.utc).isoformat(),
                     })
                     save_json(config.output_path, output)
                     counts["new_classified"] += 1
                     log.info(
-                        "%s (%s): NEW result %s -> %s (avg growth %.1f%%)",
-                        stock.name, stock.slug, qd.latest_date, result.classification, result.avg_growth,
+                        "%s (%s): NEW result %s -> %s / %s%s",
+                        stock.name, stock.slug, sd.latest_date, classification, rec.recommendation,
+                        f" [{rec.cyclical_flag}]" if rec.cyclical_flag else "",
                     )
                 except Exception:
                     counts["errors"] += 1
@@ -92,19 +113,17 @@ def run_scrape_job(config: Optional[Config] = None) -> dict:
                     log.exception("%s (%s): error", stock.name, stock.slug)
                 finally:
                     # Must be in `finally`, not after the try/except: several
-                    # branches above `continue` (unchanged, no-table-found,
-                    # not-enough-history), which would otherwise skip this
-                    # entirely and hammer screener.in with zero delay between
-                    # the majority of requests - almost certainly the real
-                    # cause of the connection timeouts we were seeing, not IP
-                    # reputation.
+                    # branches above `continue` (unchanged, no-table-found),
+                    # which would otherwise skip this entirely and hammer
+                    # screener.in with zero delay between the majority of
+                    # requests.
                     time.sleep(random.uniform(config.min_delay_seconds, config.max_delay_seconds))
         finally:
             browser.close()
 
     log.info(
-        "RUN SUMMARY: total=%d unchanged=%d new_classified=%d new_skipped=%d errors=%d",
-        len(stocks), counts["unchanged"], counts["new_classified"], counts["new_skipped"], counts["errors"],
+        "RUN SUMMARY: total=%d unchanged=%d new_classified=%d errors=%d",
+        len(stocks), counts["unchanged"], counts["new_classified"], counts["errors"],
     )
     for slug, msg in errors:
         log.info("  error detail: %s: %s", slug, msg)
