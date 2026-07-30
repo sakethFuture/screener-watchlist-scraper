@@ -118,10 +118,16 @@ def _is_turnaround(stock: "StockData") -> bool:
     return False
 
 
-def _is_asset_play(stock: "StockData") -> bool:
+def _is_asset_play(stock: "StockData", sector: str) -> bool:
     if stock.pb_ratio is not None and stock.pb_ratio < 1:
         return True
-    if stock.cash_plus_investments_pct_mcap is not None and stock.cash_plus_investments_pct_mcap > 40:
+    # Financial Services (banks/NBFCs/insurers) structurally carry huge
+    # investment books as core business, not "excess cash" in the Peter
+    # Lynch asset-play sense - the cash+investments check would otherwise
+    # flag most of them (e.g. HDFC Bank measured at 126% of market cap).
+    # P/B < 1 above still applies to financials - that's still a
+    # meaningful value/distress signal for a bank, unlike the cash ratio.
+    if sector != "Financial Services" and stock.cash_plus_investments_pct_mcap is not None and stock.cash_plus_investments_pct_mcap > 40:
         return True
     return False
 
@@ -167,7 +173,7 @@ def classify(stock: "StockData", sector: str) -> ClassificationResult:
     """
     if _is_turnaround(stock):
         return ClassificationResult("Turnaround")
-    if _is_asset_play(stock):
+    if _is_asset_play(stock, sector):
         return ClassificationResult("Asset Play")
     if _is_cyclical(stock, sector):
         return ClassificationResult("Cyclical")

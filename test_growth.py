@@ -122,6 +122,19 @@ class AssetPlayTest(unittest.TestCase):
         stock = make_stock(pb_ratio=2.0, cash_plus_investments_pct_mcap=40.0, eps=[1] * 8, sales=[100] * 8, net_profit=[10] * 8)
         self.assertNotEqual(classify(stock, "Healthcare").classification, "Asset Play")
 
+    def test_financial_services_exempt_from_cash_plus_investments_check(self):
+        # Real observed case: a bank's investment book routinely dwarfs its
+        # market cap (core business, not "excess cash") - this must not
+        # trigger Asset Play for Financial Services.
+        stock = make_stock(pb_ratio=2.0, cash_plus_investments_pct_mcap=126.0, eps=[1] * 8, sales=[100] * 8, net_profit=[10] * 8)
+        self.assertNotEqual(classify(stock, "Financial Services").classification, "Asset Play")
+
+    def test_financial_services_still_flagged_via_pb_below_one(self):
+        # The P/B < 1 path is still a meaningful signal for a bank/NBFC,
+        # unlike the cash ratio - only the cash+investments check is exempt.
+        stock = make_stock(pb_ratio=0.8, cash_plus_investments_pct_mcap=126.0, eps=[1] * 8, sales=[100] * 8, net_profit=[10] * 8)
+        self.assertEqual(classify(stock, "Financial Services").classification, "Asset Play")
+
 
 class CyclicalTest(unittest.TestCase):
     HIGH_VOLATILITY_EPS = [10, -20, 30, -25, 15, -30, 20, -15]  # deliberately wild QoQ swings
