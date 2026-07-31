@@ -36,8 +36,8 @@
   },
   "BAJFINANCE": {
     "name": "Bajaj Finance",
-    "last_result_date": "2026-03-31",
-    "last_qoq_sales_growth": 2.8220625327178412
+    "last_result_date": "2026-06-30",
+    "last_qoq_sales_growth": 7.21558826251967
   },
   "HINDUNILVR": {
     "name": "Hind. Unilever",
@@ -171,8 +171,8 @@
   },
   "TATASTEEL": {
     "name": "Tata Steel",
-    "last_result_date": "2026-03-31",
-    "last_qoq_sales_growth": 10.996105399810533
+    "last_result_date": "2026-06-30",
+    "last_qoq_sales_growth": -3.913387071281808
   },
   "TRENT": {
     "name": "Trent",
@@ -281,8 +281,8 @@
   },
   "VEDL": {
     "name": "Vedanta",
-    "last_result_date": "2026-03-31",
-    "last_qoq_sales_growth": 15.334864320194965
+    "last_result_date": "2026-06-30",
+    "last_qoq_sales_growth": -1.6416758096631314
   },
   "DLF": {
     "name": "DLF",
@@ -346,8 +346,8 @@
   },
   "HYUNDAI": {
     "name": "Hyundai Motor I",
-    "last_result_date": "2026-03-31",
-    "last_qoq_sales_growth": 5.246759027430034
+    "last_result_date": "2026-06-30",
+    "last_qoq_sales_growth": -13.644533728060901
   },
   "TVSMOTOR": {
     "name": "TVS Motor Co.",
@@ -411,8 +411,8 @@
   },
   "TORNTPHARM": {
     "name": "Torrent Pharma.",
-    "last_result_date": "2026-03-31",
-    "last_qoq_sales_growth": 27.06630336058129
+    "last_result_date": "2026-06-30",
+    "last_qoq_sales_growth": 17.250416964498452
   },
   "HAVELLS": {
     "name": "Havells India",
@@ -461,8 +461,8 @@
   },
   "SWIGGY": {
     "name": "Swiggy",
-    "last_result_date": "2026-03-31",
-    "last_qoq_sales_growth": 3.822381262199089
+    "last_result_date": "2026-06-30",
+    "last_qoq_sales_growth": 6.720977596741344
   },
   "JSWENERGY": {
     "name": "JSW Energy",
@@ -936,8 +936,8 @@
   },
   "MAZDOCK": {
     "name": "Mazagon Dock Shipbuilders",
-    "last_result_date": "2026-03-31",
-    "last_qoq_sales_growth": 6.914745903915579
+    "last_result_date": "2026-06-30",
+    "last_qoq_sales_growth": -23.558441558441558
   },
   "5PAISA": {
     "name": "Tata Capital",
@@ -966,8 +966,8 @@
   },
   "MANKIND": {
     "name": "Mankind Pharma",
-    "last_result_date": "2026-03-31",
-    "last_qoq_sales_growth": -3.476310625175217
+    "last_result_date": "2026-06-30",
+    "last_qoq_sales_growth": 17.078129538193437
   },
   "NATIONALUM": {
     "name": "National Aluminium",
@@ -1086,8 +1086,8 @@
   },
   "NUVAMA": {
     "name": "Nuvama Wealth Management",
-    "last_result_date": "2026-03-31",
-    "last_qoq_sales_growth": 14.945652173913043
+    "last_result_date": "2026-06-30",
+    "last_qoq_sales_growth": 8.43183609141056
   },
   "JGCHEM": {
     "name": "J B Chemials",
@@ -1211,7 +1211,12 @@
   },
   "EMBASSY": {
     "name": "Embassy Office Parks REIT",
-    "last_result_date": "2026-03-31",
-    "last_qoq_sales_growth": 1.0058675607711651
+    "last_result_date": "2026-06-30",
+    "last_qoq_sales_growth": 2.987551867219917
+  },
+  "AUBANK": {
+    "name": "AU Small Finance",
+    "last_result_date": "2026-06-30",
+    "last_qoq_sales_growth": 5.658497708706914
   }
 }
