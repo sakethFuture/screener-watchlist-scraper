@@ -341,8 +341,8 @@
     background:var(--bg);
     z-index:3;
   }
-  thead .group-header-row .group-fundamental{ color:var(--text-dim); }
-  thead .group-header-row .group-technical{ color:var(--tech-accent); border-left:2px solid var(--border-strong); }
+  thead .group-header-row .group-fundamental{ color:var(--text-dim); border-bottom:2px solid var(--border-strong); }
+  thead .group-header-row .group-technical{ color:var(--text-dim); border-left:2px solid var(--border-strong); border-bottom:2px solid var(--tech-accent); }
   thead th{
     text-align:left;
     font-size:11px;
@@ -384,8 +384,8 @@
 
   .notes-input{
     font-size:12.5px;
-    background:transparent;
-    border:1px solid transparent;
+    background:var(--surface);
+    border:1px solid var(--border);
     color:var(--text-dim);
     padding:5px 8px;
     border-radius:5px;
@@ -395,8 +395,8 @@
     font-family:'Inter';
   }
   .notes-input::placeholder{ color:var(--text-faint); font-style:italic; }
-  .notes-input:hover{ border-color:var(--border); }
-  .notes-input:focus{ border-color:var(--accent); background:var(--bg); color:var(--text); }
+  .notes-input:hover{ border-color:var(--border-strong); background:var(--surface-hover); }
+  .notes-input:focus{ border-color:var(--accent); background:var(--bg); color:var(--text); box-shadow:0 0 0 3px var(--accent-soft); }
 
   .prior{
     font-size:12px;
@@ -406,38 +406,45 @@
   .prior .dash{ color:var(--text-faint); }
   .prior-period{ display:block; color:var(--text-faint); font-size:10px; margin-bottom:2px; }
 
-  select.cat-select, select.rec-select{
+  select.cat-select, select.rec-select, select.techrec-select{
     font-family:'Inter';
     font-size:12.5px;
-    padding:6px 9px;
-    border-radius:5px;
-    border:1px solid var(--border);
-    background:var(--bg);
-    color:var(--text);
     outline:none;
     cursor:pointer;
     min-width:140px;
   }
   select.rec-select, select.techrec-select{ min-width:85px; font-weight:500; }
-  select.cat-select:focus, select.cat2-select:focus, select.rec-select:focus, select.techrec-select:focus{ border-color:var(--accent); }
 
   select.rec-select[data-v="Buy"], select.techrec-select[data-v="Buy"]{ color:var(--buy); }
   select.rec-select[data-v="Sell"], select.techrec-select[data-v="Sell"]{ color:var(--sell); }
   select.rec-select[data-v="Hold"], select.techrec-select[data-v="Hold"]{ color:var(--hold); }
 
-  /* ===== Colorful pill selects (Category / Recommendation) ===== */
+  /* ===== Colorful pill selects (Category / Fundamental / Technical) =====
+     Every select of these three types lives inside a .pill-wrap, which
+     owns the rounded shape and background in BOTH states - the select
+     itself is always borderless/transparent so a value-less ("empty")
+     select can't fall back to raw native browser chrome. This is what
+     keeps Technical visually a sibling of Fundamental instead of a
+     different control entirely. */
   .pill-wrap{
     position:relative;
     display:inline-flex;
     align-items:center;
     border-radius:999px;
-    transition:transform .12s ease, box-shadow .12s ease;
+    transition:transform .12s ease, box-shadow .12s ease, background .12s ease, border-color .12s ease;
   }
   .pill-wrap:not(.empty){
     background:linear-gradient(135deg, var(--pill-color), color-mix(in srgb, var(--pill-color) 70%, black));
     box-shadow:0 2px 6px color-mix(in srgb, var(--pill-color) 45%, transparent), inset 0 1px 0 rgba(255,255,255,.35);
   }
   .pill-wrap:not(.empty):hover{ transform:translateY(-1px) scale(1.02); box-shadow:0 4px 12px color-mix(in srgb, var(--pill-color) 55%, transparent); }
+  .pill-wrap.empty{
+    background:var(--surface);
+    border:1px solid var(--border);
+    box-shadow:var(--shadow-1);
+  }
+  .pill-wrap.empty:hover{ background:var(--surface-hover); border-color:var(--border-strong); }
+  .pill-wrap:focus-within{ outline:2px solid var(--accent); outline-offset:2px; }
   .pill-wrap::before{
     content:attr(data-icon);
     position:absolute;
@@ -447,9 +454,12 @@
     opacity:.9;
     pointer-events:none;
   }
-  .pill-wrap:not(.empty) select{
+  .pill-wrap select{
     background:transparent;
     border:none;
+    border-radius:999px;
+  }
+  .pill-wrap:not(.empty) select{
     color:#fff;
     font-weight:700;
     padding:6px 12px 6px 26px;
@@ -457,7 +467,7 @@
   }
   .pill-wrap:not(.empty) select option{ color:var(--text); background:var(--bg); font-weight:500; text-shadow:none; }
   .pill-wrap.empty::before{ display:none; }
-  .pill-wrap.empty select{ padding-left:9px; }
+  .pill-wrap.empty select{ padding:6px 10px 6px 12px; color:var(--text-faint); }
 
   .suggested-tag, .outlier-tag{
     display:inline-block;
@@ -470,6 +480,20 @@
   }
   .suggested-tag{ color:var(--text-faint); background:var(--surface); border:1px solid var(--border); }
   .outlier-tag{ color:var(--hold); background:var(--hold-bg); border:1px solid transparent; font-weight:500; }
+
+  .cat2-badge{
+    display:inline-block;
+    font-size:10px;
+    font-weight:600;
+    padding:2px 7px;
+    border-radius:999px;
+    margin-left:6px;
+    cursor:help;
+    vertical-align:middle;
+    color:var(--text-dim);
+    background:var(--surface);
+    border:1px solid var(--border);
+  }
 
   .change-badge{
     font-size:11px;
@@ -606,19 +630,18 @@
           <thead>
             <tr class="group-header-row">
               <th colspan="2"></th>
-              <th colspan="3" class="group-fundamental">Fundamental</th>
+              <th colspan="2" class="group-fundamental">Fundamental</th>
               <th colspan="1" class="group-technical">Technical</th>
               <th colspan="3"></th>
             </tr>
             <tr>
-              <th style="width:15%">Company</th>
-              <th style="width:11%">Prior quarter</th>
-              <th style="width:13%">Category</th>
-              <th style="width:11%">2nd Category</th>
-              <th style="width:8%">Fundamental</th>
-              <th style="width:8%" class="technical-col">Technical</th>
-              <th style="width:8%">Change</th>
-              <th style="width:15%">Notes</th>
+              <th style="width:16%">Company</th>
+              <th style="width:12%">Prior quarter</th>
+              <th style="width:16%">Category</th>
+              <th style="width:9%">Fundamental</th>
+              <th style="width:9%" class="technical-col">Technical</th>
+              <th style="width:9%">Change</th>
+              <th style="width:17%">Notes</th>
               <th style="width:4%"></th>
             </tr>
           </thead>
@@ -754,10 +777,10 @@ function seedToState(){
       notes: '',
       baseline: { cat: normCat(row.q4_2025_cat), rec: normRec(row.q4_2025_rec) },
       quarters: {
-        'Q1 2026':{cat:q1Class, rec:q1Rec, recSuggested: !!q1Rec, cat2:'', cat2Suggested:false, techRec:''},
-        'Q2 2026':{cat:'',rec:'', recSuggested:false, cat2:'', cat2Suggested:false, techRec:''},
-        'Q3 2026':{cat:'',rec:'', recSuggested:false, cat2:'', cat2Suggested:false, techRec:''},
-        'Q4 2026':{cat:'',rec:'', recSuggested:false, cat2:'', cat2Suggested:false, techRec:''}
+        'Q1 2026':{cat:q1Class, rec:q1Rec, recSuggested: !!q1Rec, cat2:'', techRec:''},
+        'Q2 2026':{cat:'',rec:'', recSuggested:false, cat2:'', techRec:''},
+        'Q3 2026':{cat:'',rec:'', recSuggested:false, cat2:'', techRec:''},
+        'Q4 2026':{cat:'',rec:'', recSuggested:false, cat2:'', techRec:''}
       }
     };
   });
@@ -926,18 +949,17 @@ function renderTable(){
     const outlierTag = isOutlier
       ? `<span class="outlier-tag" title="This quarter's growth % looks like a base effect (unusually low/negative prior-year quarter), not necessarily real acceleration. Worth checking manually before trusting the suggestion.">⚠ verify</span>`
       : '';
-    // 2nd Category is editable, same as Category - sync auto-fills it (from
-    // a genuine Step-2 scoring tie, or a gate stock's complementary growth-
-    // profile label; the two are mutually exclusive at the source) and
-    // tags it "suggested" until you confirm or override it by hand.
-    const cat2SuggestedTag = cur.cat2Suggested && cur.cat2
-      ? `<span class="suggested-tag" title="${cur.cat2Reason === 'tie' ? `Scoring tie with ${cur.cat || 'the primary category'} — not a clean call.` : `Complementary growth-profile signal alongside ${cur.cat || 'the gate classification'} — not a tie.`} Edit the dropdown to confirm or override.">suggested</span>`
+    // 2nd Category is a passive badge on the Category pill, not its own
+    // column or an editable control - it's empty on the vast majority of
+    // rows (a tie, or a gate stock's complementary growth-profile label,
+    // is the exception not the rule), so giving it a full dead-space
+    // column made the table look unfinished rather than informative.
+    const cat2Badge = cur.cat2
+      ? `<span class="cat2-badge" title="${cur.cat2Reason === 'tie' ? `Scoring tie with ${cur.cat || 'the primary category'} — not a clean call, ${cur.cat || 'the primary'} was picked by priority order.` : `Complementary growth-profile signal alongside ${cur.cat || 'the gate classification'} — not a tie.`}">+ ${cur.cat2}</span>`
       : '';
 
     const catColor = CAT_COLOR[cur.cat] || '';
     const catIcon = CAT_ICON[cur.cat] || '';
-    const cat2Color = CAT_COLOR[cur.cat2] || '';
-    const cat2Icon = CAT_ICON[cur.cat2] || '';
     const recColor = REC_COLOR[cur.rec] || '';
     const recIcon = REC_ICON[cur.rec] || '';
     const techRecColor = REC_COLOR[cur.techRec] || '';
@@ -953,15 +975,7 @@ function renderTable(){
             ${CATS.map(cat => `<option value="${cat}" ${cur.cat===cat?'selected':''}>${cat}</option>`).join('')}
           </select>
         </span>
-      </td>
-      <td>
-        <span class="pill-wrap${cur.cat2?'':' empty'}" data-icon="${cat2Icon}" style="--pill-color:${cat2Color||'transparent'}">
-          <select class="cat2-select" data-id="${c.id}" data-field="cat2">
-            <option value="">—</option>
-            ${CATS.map(cat => `<option value="${cat}" ${cur.cat2===cat?'selected':''}>${cat}</option>`).join('')}
-          </select>
-        </span>
-        ${cat2SuggestedTag}
+        ${cat2Badge}
       </td>
       <td>
         <span class="pill-wrap${cur.rec?'':' empty'}" data-icon="${recIcon}" style="--pill-color:${recColor||'transparent'}">
@@ -1004,9 +1018,6 @@ function renderTable(){
   body.querySelectorAll('.cat-select').forEach(el => {
     el.addEventListener('change', onFieldEdit);
   });
-  body.querySelectorAll('.cat2-select').forEach(el => {
-    el.addEventListener('change', onFieldEdit);
-  });
   body.querySelectorAll('.rec-select').forEach(el => {
     el.addEventListener('change', (e) => { onFieldEdit(e); e.target.setAttribute('data-v', e.target.value); });
   });
@@ -1037,7 +1048,6 @@ function onFieldEdit(e){
   if(!c) return;
   c.quarters[state.activeQ][e.target.dataset.field] = e.target.value;
   if(e.target.dataset.field === 'rec') c.quarters[state.activeQ].recSuggested = false;
-  if(e.target.dataset.field === 'cat2') c.quarters[state.activeQ].cat2Suggested = false;
   saveState();
   renderSummary();
   renderSectorOverview();
@@ -1060,10 +1070,10 @@ document.getElementById('addBtn').addEventListener('click', () => {
     notes: '',
     baseline: { cat:'', rec:'' },
     quarters: {
-      'Q1 2026':{cat:'',rec:'',recSuggested:false,cat2:'',cat2Suggested:false,techRec:''},
-      'Q2 2026':{cat:'',rec:'',recSuggested:false,cat2:'',cat2Suggested:false,techRec:''},
-      'Q3 2026':{cat:'',rec:'',recSuggested:false,cat2:'',cat2Suggested:false,techRec:''},
-      'Q4 2026':{cat:'',rec:'',recSuggested:false,cat2:'',cat2Suggested:false,techRec:''}
+      'Q1 2026':{cat:'',rec:'',recSuggested:false,cat2:'',techRec:''},
+      'Q2 2026':{cat:'',rec:'',recSuggested:false,cat2:'',techRec:''},
+      'Q3 2026':{cat:'',rec:'',recSuggested:false,cat2:'',techRec:''},
+      'Q4 2026':{cat:'',rec:'',recSuggested:false,cat2:'',techRec:''}
     }
   };
   state.companies.unshift(rec);
@@ -1382,11 +1392,9 @@ async function runSync(url, { silent } = {}){
       const secondaryCat = normCat(entry.secondary_category || '');
       if(tieOthers.length){
         co.quarters[state.activeQ].cat2 = normCat(tieOthers[0]) || tieOthers[0];
-        co.quarters[state.activeQ].cat2Suggested = true;
         co.quarters[state.activeQ].cat2Reason = 'tie';
       } else if(secondaryCat){
         co.quarters[state.activeQ].cat2 = secondaryCat;
-        co.quarters[state.activeQ].cat2Suggested = true;
         co.quarters[state.activeQ].cat2Reason = 'secondary';
       }
       const rec = normRec(entry.recommendation || '');
