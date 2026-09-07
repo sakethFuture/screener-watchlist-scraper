@@ -437,7 +437,7 @@
   .pill-wrap.empty::before{ display:none; }
   .pill-wrap.empty select{ padding-left:9px; }
 
-  .suggested-tag, .outlier-tag, .tie-tag{
+  .suggested-tag, .outlier-tag{
     display:inline-block;
     font-size:10px;
     padding:2px 7px;
@@ -447,7 +447,10 @@
     vertical-align:middle;
   }
   .suggested-tag{ color:var(--text-faint); background:var(--surface); border:1px solid var(--border); }
-  .outlier-tag, .tie-tag{ color:var(--hold); background:var(--hold-bg); border:1px solid transparent; font-weight:500; }
+  .outlier-tag{ color:var(--hold); background:var(--hold-bg); border:1px solid transparent; font-weight:500; }
+
+  .tie-cell{ font-size:12px; line-height:1.6; }
+  .tie-cell .dash{ color:var(--text-faint); }
 
   .change-badge{
     font-size:11px;
@@ -580,12 +583,13 @@
         <table>
           <thead>
             <tr>
-              <th style="width:18%">Company</th>
-              <th style="width:13%">Prior quarter</th>
-              <th style="width:18%">Category</th>
-              <th style="width:10%">Recommendation</th>
-              <th style="width:10%">Change</th>
-              <th style="width:18%">Notes</th>
+              <th style="width:16%">Company</th>
+              <th style="width:12%">Prior quarter</th>
+              <th style="width:14%">Category</th>
+              <th style="width:12%">2nd Category</th>
+              <th style="width:9%">Recommendation</th>
+              <th style="width:9%">Change</th>
+              <th style="width:16%">Notes</th>
               <th style="width:4%"></th>
             </tr>
           </thead>
@@ -888,9 +892,12 @@ function renderTable(){
     const outlierTag = isOutlier
       ? `<span class="outlier-tag" title="This quarter's growth % looks like a base effect (unusually low/negative prior-year quarter), not necessarily real acceleration. Worth checking manually before trusting the suggestion.">⚠ verify</span>`
       : '';
-    const tieTag = (cur.tie && cur.tie.length > 1)
-      ? `<span class="tie-tag" title="Scoring tie between ${cur.tie.join(' / ')} - not a clean call, ${cur.tie[0]} picked by priority order. Worth a manual look.">⚠ tie</span>`
-      : '';
+    // Categories tied with the primary (index 0), e.g. a 2-way tie leaves
+    // one entry here; a 3-way tie leaves two.
+    const tiedOthers = (cur.tie && cur.tie.length > 1) ? cur.tie.slice(1) : [];
+    const secondCategoryHtml = tiedOthers.length
+      ? `<span title="Scoring tie with ${cur.cat || cur.tie[0]} - not a clean call, ${cur.cat || cur.tie[0]} was picked by priority order.">${tiedOthers.map(cat => catDot(cat) + cat).join('<br>')}</span>`
+      : `<span class="dash">—</span>`;
 
     const catColor = CAT_COLOR[cur.cat] || '';
     const catIcon = CAT_ICON[cur.cat] || '';
@@ -907,8 +914,8 @@ function renderTable(){
             ${CATS.map(cat => `<option value="${cat}" ${cur.cat===cat?'selected':''}>${cat}</option>`).join('')}
           </select>
         </span>
-        ${tieTag}
       </td>
+      <td class="tie-cell">${secondCategoryHtml}</td>
       <td>
         <span class="pill-wrap${cur.rec?'':' empty'}" data-icon="${recIcon}" style="--pill-color:${recColor||'transparent'}">
           <select class="rec-select" data-id="${c.id}" data-field="rec" data-v="${cur.rec||''}">
