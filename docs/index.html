@@ -554,7 +554,7 @@
         <div class="autofill-head">
           <div>
             <div class="autofill-title">Sync <span id="syncQLabel">this quarter</span> from your Railway scraper</div>
-            <div class="autofill-sub">Paste the endpoint URL that serves <code>output.json</code> (the one your scraper's cron job writes to). This fetches classifications directly — no copy-paste needed once it's set. The URL is remembered for next time.</div>
+            <div class="autofill-sub">Paste the endpoint URL that serves <code>output.json</code> (the one your scraper's cron job writes to). This fetches classifications and rule-based recommendations directly — no copy-paste needed once it's set. The URL is remembered for next time.</div>
             <div class="autofill-sub" id="syncModeNote" style="margin-top:6px;"></div>
           </div>
           <button class="btn" id="closeSync">✕ Close</button>
@@ -682,7 +682,7 @@ const store = hasNativeStorage ? window.storage : localStore;
 // when this file is running standalone (not inside claude.ai's sandbox).
 const DEFAULT_SYNC_URL = 'https://raw.githubusercontent.com/sakethFuture/screener-watchlist-scraper/main/data/output.json';
 
-let state = { activeQ: 'Q1 2026', companies: [] };
+let state = { activeQ: 'Q2 2026', companies: [] };
 // Explicit source of truth for the sector filter - never read back from the
 // <select>'s own .value, since browsers commonly restore a <select>'s last
 // value across a page reload, which previously made the table look
@@ -1311,11 +1311,16 @@ async function runSync(url, { silent } = {}){
       co.quarters[state.activeQ].tie = Array.isArray(entry.category_tie) && entry.category_tie.length > 1
         ? entry.category_tie
         : null;
+      const rec = normRec(entry.recommendation || '');
+      if(rec){
+        co.quarters[state.activeQ].rec = rec;
+        co.quarters[state.activeQ].recSuggested = true;
+      }
       updated++;
     });
-    let msg = `Synced ${updated} classification${updated===1?'':'s'} into ${state.activeQ}`;
+    let msg = `Synced ${updated} classification${updated===1?'':'s'} (with recommendations) into ${state.activeQ}`;
     if(unmatched.length) msg += ` · ${unmatched.length} not matched: ${unmatched.slice(0,6).join(', ')}${unmatched.length>6?'…':''}`;
-    msg += ' — Recommendation still yours to set.';
+    msg += ' — recommendations are the scraper\'s rule-based suggestion; review before trusting.';
     if(resultEl){ resultEl.textContent = msg; resultEl.classList.toggle('warn', unmatched.length > 0); }
     if(verifyStatus){ verifyStatus.textContent = `✓ verified — ${updated} synced just now`; verifyStatus.classList.remove('warn'); }
     const syncedAt = new Date().toISOString();
