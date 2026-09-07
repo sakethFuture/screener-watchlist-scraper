@@ -282,6 +282,49 @@ class ClassificationScoringTest(unittest.TestCase):
         self.assertEqual(result.slow_grower_score, 0.0)
 
 
+class SecondaryCategoryTest(unittest.TestCase):
+    """When a Step 1 gate wins, Step 2's growth-profile score is still
+    computed and attached as secondary_category (not a tie - a gate result
+    and a growth-profile label are two different, complementary lenses)."""
+
+    def test_asset_play_gets_slow_grower_secondary(self):
+        sales = [None, None, None, 100, None, None, None, 105]  # YoY 5% -> Slow Grower profile
+        stock = make_stock(eps=[1] * 8, sales=sales, net_profit=[10] * 8, pb_ratio=0.5)
+        result = classify(stock, "Healthcare")
+        self.assertEqual(result.classification, "Asset Play")
+        self.assertIsNone(result.category_tie)
+        self.assertEqual(result.secondary_category, "Slow Grower")
+        self.assertAlmostEqual(result.slow_grower_score, 0.7)
+
+    def test_turnaround_gets_secondary_category(self):
+        eps = [-2, -3, -1, -4, -2, -1, 0.5, 1.5]  # 6 bad quarters, current EPS positive
+        sales = [None, None, None, 100, None, None, None, 105]  # Slow Grower profile
+        stock = make_stock(eps=eps, sales=sales, net_profit=[10] * 8, opm=[10] * 8)
+        result = classify(stock, "Healthcare")
+        self.assertEqual(result.classification, "Turnaround")
+        self.assertIsNone(result.category_tie)
+        self.assertEqual(result.secondary_category, "Slow Grower")
+
+    def test_cyclical_gets_secondary_category(self):
+        stock = make_stock(
+            eps=CyclicalTest.HIGH_VOLATILITY_EPS, sales=[100] * 8, net_profit=[10] * 8,
+            qoq_sales_growth=25, sales_cagr_3yr=25, sales_cagr_5yr=25,  # Fast Grower profile
+        )
+        result = classify(stock, "Metals & Mining")
+        self.assertEqual(result.classification, "Cyclical")
+        self.assertIsNone(result.category_tie)
+        self.assertEqual(result.secondary_category, "Fast Grower")
+
+    def test_no_gate_has_no_secondary_category(self):
+        stock = make_stock(
+            eps=[1] * 8, sales=[None] * 8, net_profit=[10] * 8,
+            qoq_sales_growth=25, sales_cagr_3yr=25, sales_cagr_5yr=25,
+        )
+        result = classify(stock, "Healthcare")
+        self.assertEqual(result.classification, "Fast Grower")
+        self.assertIsNone(result.secondary_category)
+
+
 class PriorityOrderTest(unittest.TestCase):
     def test_turnaround_beats_asset_play(self):
         eps = [-2, -3, -1, -4, -2, -1, -3, -2]

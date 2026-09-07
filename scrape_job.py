@@ -88,6 +88,7 @@ def run_scrape_job(config: Optional[Config] = None) -> dict:
                         "stalwart_score": cls.stalwart_score,
                         "slow_grower_score": cls.slow_grower_score,
                         "category_tie": cls.category_tie,
+                        "secondary_category": cls.secondary_category,
                         "recommendation": rec.recommendation,
                         "cyclical_flag": rec.cyclical_flag,
                         "cyclical_note": rec.note,
@@ -111,10 +112,11 @@ def run_scrape_job(config: Optional[Config] = None) -> dict:
                     if cls.category_tie:
                         ties.append((stock.name, stock.slug, cls.category_tie))
                     log.info(
-                        "%s (%s): NEW result %s -> %s / %s%s%s",
+                        "%s (%s): NEW result %s -> %s / %s%s%s%s",
                         stock.name, stock.slug, sd.latest_date, classification, rec.recommendation,
                         f" [{rec.cyclical_flag}]" if rec.cyclical_flag else "",
                         f" [TIE: {' / '.join(cls.category_tie)}]" if cls.category_tie else "",
+                        f" [also: {cls.secondary_category}]" if cls.secondary_category else "",
                     )
                 except Exception:
                     counts["errors"] += 1

@@ -33,7 +33,15 @@ class ClassificationResult:
     fast_grower_score: Optional[float] = None
     stalwart_score: Optional[float] = None
     slow_grower_score: Optional[float] = None
+    # Populated only when Step 2 itself decided `classification` and more
+    # than one category tied for the top score - a genuine scoring tie.
     category_tie: Optional[list[str]] = None
+    # Populated only when a Step 1 gate (Turnaround/Asset Play/Cyclical)
+    # decided `classification` - the Fast/Stalwart/Slow Grower label the
+    # stock would otherwise carry on growth profile alone. Not a tie: the
+    # gate result and this label are two different lenses on the same
+    # stock, both worth showing.
+    secondary_category: Optional[str] = None
 
 
 @dataclass(frozen=True)
@@ -203,18 +211,18 @@ def _slow_grower_score(stock: "StockData", yoy_sales_growth: Optional[float]) ->
 
 
 def classify(stock: "StockData", sector: str) -> ClassificationResult:
-    """Priority-ordered gates first (Turnaround > Asset Play > Cyclical);
-    if none fire, Fast Grower/Stalwart/Slow Grower are decided by whichever
-    has the highest weighted Step 2 score, with ties (including an all-zero
-    3-way tie) broken by _TIE_BREAK_ORDER and surfaced via category_tie.
-    """
-    if _is_turnaround(stock):
-        return ClassificationResult("Turnaround")
-    if _is_asset_play(stock, sector):
-        return ClassificationResult("Asset Play")
-    if _is_cyclical(stock, sector):
-        return ClassificationResult("Cyclical")
+    """Step 2's weighted growth-profile score (Fast/Stalwart/Slow Grower) is
+    always computed, regardless of whether a Step 1 gate fires - it's the
+    stock's growth profile on its own terms, independent of the value/
+    cyclicality/turnaround lens the gates apply.
 
+    If a gate (Turnaround/Asset Play/Cyclical, in that priority order)
+    fires, it wins the primary classification and the growth-profile
+    result is attached as `secondary_category` - a second, complementary
+    signal, not a tie. If no gate fires, Step 2's own highest score
+    decides the primary, and ties there (including an all-zero 3-way tie)
+    are broken by _TIE_BREAK_ORDER and surfaced via `category_tie`.
+    """
     yoy_eps_growth = yoy_growth(stock.eps[-1], stock.eps[-1 - YOY_LOOKBACK]) if len(stock.eps) > YOY_LOOKBACK else None
     yoy_sales_growth = yoy_growth(stock.sales[-1], stock.sales[-1 - YOY_LOOKBACK]) if len(stock.sales) > YOY_LOOKBACK else None
 
@@ -227,13 +235,25 @@ def classify(stock: "StockData", sector: str) -> ClassificationResult:
     }
     best = max(scores.values())
     winners = [name for name in _TIE_BREAK_ORDER if scores[name] == best]
+    step2_primary = winners[0]
+    step2_tie = winners if len(winners) > 1 else None
+
+    if _is_turnaround(stock):
+        gate = "Turnaround"
+    elif _is_asset_play(stock, sector):
+        gate = "Asset Play"
+    elif _is_cyclical(stock, sector):
+        gate = "Cyclical"
+    else:
+        gate = None
 
     return ClassificationResult(
-        winners[0],
+        gate or step2_primary,
         fast_grower_score=scores["Fast Grower"],
         stalwart_score=scores["Stalwart"],
         slow_grower_score=scores["Slow Grower"],
-        category_tie=winners if len(winners) > 1 else None,
+        category_tie=None if gate else step2_tie,
+        secondary_category=step2_primary if gate else None,
     )
 
 

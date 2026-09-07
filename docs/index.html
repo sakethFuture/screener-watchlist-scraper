@@ -893,11 +893,18 @@ function renderTable(){
       ? `<span class="outlier-tag" title="This quarter's growth % looks like a base effect (unusually low/negative prior-year quarter), not necessarily real acceleration. Worth checking manually before trusting the suggestion.">⚠ verify</span>`
       : '';
     // Categories tied with the primary (index 0), e.g. a 2-way tie leaves
-    // one entry here; a 3-way tie leaves two.
+    // one entry here; a 3-way tie leaves two. Mutually exclusive with
+    // secondaryCat below: a gate result never carries a category_tie, and
+    // a Step-2-decided primary never carries a secondaryCat.
     const tiedOthers = (cur.tie && cur.tie.length > 1) ? cur.tie.slice(1) : [];
-    const secondCategoryHtml = tiedOthers.length
-      ? `<span title="Scoring tie with ${cur.cat || cur.tie[0]} - not a clean call, ${cur.cat || cur.tie[0]} was picked by priority order.">${tiedOthers.map(cat => catDot(cat) + cat).join('<br>')}</span>`
-      : `<span class="dash">—</span>`;
+    let secondCategoryHtml;
+    if(tiedOthers.length){
+      secondCategoryHtml = `<span title="Scoring tie with ${cur.cat || cur.tie[0]} - not a clean call, ${cur.cat || cur.tie[0]} was picked by priority order.">${tiedOthers.map(cat => catDot(cat) + cat).join('<br>')}</span>`;
+    } else if(cur.secondaryCat){
+      secondCategoryHtml = `<span title="Not a tie — ${cur.cat} is the classification (value/turnaround/cyclical signal), but its underlying growth profile also looks like ${cur.secondaryCat}. Both are worth knowing.">${catDot(cur.secondaryCat)}${cur.secondaryCat}</span>`;
+    } else {
+      secondCategoryHtml = `<span class="dash">—</span>`;
+    }
 
     const catColor = CAT_COLOR[cur.cat] || '';
     const catIcon = CAT_ICON[cur.cat] || '';
@@ -1311,6 +1318,7 @@ async function runSync(url, { silent } = {}){
       co.quarters[state.activeQ].tie = Array.isArray(entry.category_tie) && entry.category_tie.length > 1
         ? entry.category_tie
         : null;
+      co.quarters[state.activeQ].secondaryCat = normCat(entry.secondary_category || '') || null;
       const rec = normRec(entry.recommendation || '');
       if(rec){
         co.quarters[state.activeQ].rec = rec;
