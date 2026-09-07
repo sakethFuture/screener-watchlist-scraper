@@ -39,6 +39,7 @@ def run_scrape_job(config: Optional[Config] = None) -> dict:
 
     counts = {"unchanged": 0, "new_classified": 0, "errors": 0}
     errors: list[tuple[str, str]] = []
+    ties: list[tuple[str, str, list[str]]] = []
 
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=config.headless)
@@ -73,7 +74,8 @@ def run_scrape_job(config: Optional[Config] = None) -> dict:
                     save_json(config.state_path, state)
 
                     sector = sector_of(stock.name)
-                    classification = classify(sd, sector).classification
+                    cls = classify(sd, sector)
+                    classification = cls.classification
                     rec = recommend(classification, sd, prev_qoq_sales_growth)
                     negative_eps_quarters = sum(1 for e in sd.eps if e is not None and e < 0)
 
@@ -82,6 +84,10 @@ def run_scrape_job(config: Optional[Config] = None) -> dict:
                         "sector": sector,
                         "result_date": sd.latest_date,
                         "classification": classification,
+                        "fast_grower_score": cls.fast_grower_score,
+                        "stalwart_score": cls.stalwart_score,
+                        "slow_grower_score": cls.slow_grower_score,
+                        "category_tie": cls.category_tie,
                         "recommendation": rec.recommendation,
                         "cyclical_flag": rec.cyclical_flag,
                         "cyclical_note": rec.note,
@@ -102,10 +108,13 @@ def run_scrape_job(config: Optional[Config] = None) -> dict:
                     })
                     save_json(config.output_path, output)
                     counts["new_classified"] += 1
+                    if cls.category_tie:
+                        ties.append((stock.name, stock.slug, cls.category_tie))
                     log.info(
-                        "%s (%s): NEW result %s -> %s / %s%s",
+                        "%s (%s): NEW result %s -> %s / %s%s%s",
                         stock.name, stock.slug, sd.latest_date, classification, rec.recommendation,
                         f" [{rec.cyclical_flag}]" if rec.cyclical_flag else "",
+                        f" [TIE: {' / '.join(cls.category_tie)}]" if cls.category_tie else "",
                     )
                 except Exception:
                     counts["errors"] += 1
@@ -122,12 +131,15 @@ def run_scrape_job(config: Optional[Config] = None) -> dict:
             browser.close()
 
     log.info(
-        "RUN SUMMARY: total=%d unchanged=%d new_classified=%d errors=%d",
-        len(stocks), counts["unchanged"], counts["new_classified"], counts["errors"],
+        "RUN SUMMARY: total=%d unchanged=%d new_classified=%d errors=%d ties=%d",
+        len(stocks), counts["unchanged"], counts["new_classified"], counts["errors"], len(ties),
     )
     for slug, msg in errors:
         log.info("  error detail: %s: %s", slug, msg)
+    for name, slug, tie in ties:
+        log.info("  category tie: %s (%s): %s", name, slug, " / ".join(tie))
 
+    counts["ties"] = len(ties)
     return counts
 
 

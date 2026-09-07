@@ -22,10 +22,18 @@ YOY_LOOKBACK = 4
 STRONG_EPS_GROWTH = 20.0
 WEAK_EPS_GROWTH = 5.0
 
+# Step 3 Buy/Sell threshold for non-Cyclical categories. Moved from 12% to
+# 15% - the one intentional change to this rule versus the prior version.
+BUY_SELL_THRESHOLD = 15.0
+
 
 @dataclass(frozen=True)
 class ClassificationResult:
     classification: str
+    fast_grower_score: Optional[float] = None
+    stalwart_score: Optional[float] = None
+    slow_grower_score: Optional[float] = None
+    category_tie: Optional[list[str]] = None
 
 
 @dataclass(frozen=True)
@@ -140,36 +148,65 @@ def _is_cyclical(stock: "StockData", sector: str) -> bool:
     return sd is not None and sd > 35
 
 
-def _is_fast_grower(stock: "StockData", yoy_eps_growth: Optional[float]) -> bool:
-    if (
+# Step 2 scoring weights (spec: weighted 0.7/0.3 combination per category,
+# highest score wins, rather than the old OR'd boolean gates).
+FAST_GROWER_QOQ_CAGR_WEIGHT = 0.7
+FAST_GROWER_YOY_EPS_WEIGHT = 0.3
+
+STALWART_EPS_CAGR_WEIGHT = 0.3
+STALWART_SALES_WEIGHT = 0.7
+
+SLOW_GROWER_YOY_SALES_WEIGHT = 0.7
+SLOW_GROWER_EPS_CAGR_WEIGHT = 0.3
+
+# "Between 10 and 19" per spec - inclusive both ends, matching this
+# codebase's existing convention for CAGR bands.
+STALWART_BAND_LOW = 10.0
+STALWART_BAND_HIGH = 19.0
+
+# Highest-score-wins tie-break order when Step 2 scores tie (including an
+# all-zero 3-way tie) - the ledger's Category field is single-select and
+# must always have one value, so ties surface via category_tie instead.
+_TIE_BREAK_ORDER = ["Fast Grower", "Stalwart", "Slow Grower"]
+
+
+def _fast_grower_score(stock: "StockData", yoy_eps_growth: Optional[float]) -> float:
+    qoq_and_sales_cagr = (
         stock.qoq_sales_growth is not None and stock.qoq_sales_growth > 20
         and stock.sales_cagr_3yr is not None and stock.sales_cagr_3yr > 20
         and stock.sales_cagr_5yr is not None and stock.sales_cagr_5yr > 20
-    ):
-        return True
-    if yoy_eps_growth is not None and yoy_eps_growth > 20:
-        return True
-    return False
+    )
+    yoy_eps = yoy_eps_growth is not None and yoy_eps_growth > 20
+    return FAST_GROWER_QOQ_CAGR_WEIGHT * qoq_and_sales_cagr + FAST_GROWER_YOY_EPS_WEIGHT * yoy_eps
 
 
-def _is_stalwart(stock: "StockData", yoy_sales_growth: Optional[float]) -> bool:
-    if (
-        stock.profit_cagr_3yr is not None and 10 <= stock.profit_cagr_3yr <= 20
-        and stock.profit_cagr_5yr is not None and 10 <= stock.profit_cagr_5yr <= 20
-    ):
-        return True
-    if (
-        yoy_sales_growth is not None and 10 <= yoy_sales_growth <= 15
-        and stock.sales_cagr_3yr is not None and 10 <= stock.sales_cagr_3yr <= 15
-        and stock.sales_cagr_5yr is not None and 10 <= stock.sales_cagr_5yr <= 15
-    ):
-        return True
-    return False
+def _stalwart_score(stock: "StockData", yoy_sales_growth: Optional[float]) -> float:
+    eps_cagr_in_band = (
+        stock.profit_cagr_3yr is not None and STALWART_BAND_LOW <= stock.profit_cagr_3yr <= STALWART_BAND_HIGH
+        and stock.profit_cagr_5yr is not None and STALWART_BAND_LOW <= stock.profit_cagr_5yr <= STALWART_BAND_HIGH
+    )
+    sales_in_band = (
+        yoy_sales_growth is not None and STALWART_BAND_LOW <= yoy_sales_growth <= STALWART_BAND_HIGH
+        and stock.sales_cagr_3yr is not None and STALWART_BAND_LOW <= stock.sales_cagr_3yr <= STALWART_BAND_HIGH
+        and stock.sales_cagr_5yr is not None and STALWART_BAND_LOW <= stock.sales_cagr_5yr <= STALWART_BAND_HIGH
+    )
+    return STALWART_EPS_CAGR_WEIGHT * eps_cagr_in_band + STALWART_SALES_WEIGHT * sales_in_band
+
+
+def _slow_grower_score(stock: "StockData", yoy_sales_growth: Optional[float]) -> float:
+    sales_below_band = yoy_sales_growth is not None and yoy_sales_growth < 10
+    eps_cagr_below_band = (
+        stock.profit_cagr_3yr is not None and stock.profit_cagr_3yr < 10
+        and stock.profit_cagr_5yr is not None and stock.profit_cagr_5yr < 10
+    )
+    return SLOW_GROWER_YOY_SALES_WEIGHT * sales_below_band + SLOW_GROWER_EPS_CAGR_WEIGHT * eps_cagr_below_band
 
 
 def classify(stock: "StockData", sector: str) -> ClassificationResult:
-    """Priority-ordered classification - first matching rule wins.
-    Turnaround > Asset Play > Cyclical > Fast Grower > Stalwart > Slow Grower.
+    """Priority-ordered gates first (Turnaround > Asset Play > Cyclical);
+    if none fire, Fast Grower/Stalwart/Slow Grower are decided by whichever
+    has the highest weighted Step 2 score, with ties (including an all-zero
+    3-way tie) broken by _TIE_BREAK_ORDER and surfaced via category_tie.
     """
     if _is_turnaround(stock):
         return ClassificationResult("Turnaround")
@@ -181,12 +218,23 @@ def classify(stock: "StockData", sector: str) -> ClassificationResult:
     yoy_eps_growth = yoy_growth(stock.eps[-1], stock.eps[-1 - YOY_LOOKBACK]) if len(stock.eps) > YOY_LOOKBACK else None
     yoy_sales_growth = yoy_growth(stock.sales[-1], stock.sales[-1 - YOY_LOOKBACK]) if len(stock.sales) > YOY_LOOKBACK else None
 
-    if _is_fast_grower(stock, yoy_eps_growth):
-        return ClassificationResult("Fast Grower")
-    if _is_stalwart(stock, yoy_sales_growth):
-        return ClassificationResult("Stalwart")
+    # Rounded before comparison so float noise (e.g. summed 0.7 + 0.3 terms)
+    # can't produce a spurious near-miss instead of a genuine tie.
+    scores = {
+        "Fast Grower": round(_fast_grower_score(stock, yoy_eps_growth), 6),
+        "Stalwart": round(_stalwart_score(stock, yoy_sales_growth), 6),
+        "Slow Grower": round(_slow_grower_score(stock, yoy_sales_growth), 6),
+    }
+    best = max(scores.values())
+    winners = [name for name in _TIE_BREAK_ORDER if scores[name] == best]
 
-    return ClassificationResult("Slow Grower")
+    return ClassificationResult(
+        winners[0],
+        fast_grower_score=scores["Fast Grower"],
+        stalwart_score=scores["Stalwart"],
+        slow_grower_score=scores["Slow Grower"],
+        category_tie=winners if len(winners) > 1 else None,
+    )
 
 
 def recommend(
@@ -223,8 +271,12 @@ def recommend(
     yoy_sales_growth = yoy_growth(stock.sales[-1], stock.sales[-1 - YOY_LOOKBACK]) if len(stock.sales) > YOY_LOOKBACK else None
     qoq_sales_growth = stock.qoq_sales_growth
 
-    swing_buy = qoq_swing is not None and qoq_swing > 12
-    if (yoy_sales_growth is not None and yoy_sales_growth > 12) or (qoq_sales_growth is not None and qoq_sales_growth > 12) or swing_buy:
+    swing_buy = qoq_swing is not None and qoq_swing > BUY_SELL_THRESHOLD
+    if (
+        (yoy_sales_growth is not None and yoy_sales_growth > BUY_SELL_THRESHOLD)
+        or (qoq_sales_growth is not None and qoq_sales_growth > BUY_SELL_THRESHOLD)
+        or swing_buy
+    ):
         return RecommendationResult("Buy", None, None, qoq_swing)
 
     negative = (yoy_sales_growth is not None and yoy_sales_growth < 0) or (qoq_sales_growth is not None and qoq_sales_growth < 0)

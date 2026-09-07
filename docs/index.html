@@ -437,7 +437,7 @@
   .pill-wrap.empty::before{ display:none; }
   .pill-wrap.empty select{ padding-left:9px; }
 
-  .suggested-tag, .outlier-tag{
+  .suggested-tag, .outlier-tag, .tie-tag{
     display:inline-block;
     font-size:10px;
     padding:2px 7px;
@@ -447,7 +447,7 @@
     vertical-align:middle;
   }
   .suggested-tag{ color:var(--text-faint); background:var(--surface); border:1px solid var(--border); }
-  .outlier-tag{ color:var(--hold); background:var(--hold-bg); border:1px solid transparent; font-weight:500; }
+  .outlier-tag, .tie-tag{ color:var(--hold); background:var(--hold-bg); border:1px solid transparent; font-weight:500; }
 
   .change-badge{
     font-size:11px;
@@ -888,6 +888,9 @@ function renderTable(){
     const outlierTag = isOutlier
       ? `<span class="outlier-tag" title="This quarter's growth % looks like a base effect (unusually low/negative prior-year quarter), not necessarily real acceleration. Worth checking manually before trusting the suggestion.">⚠ verify</span>`
       : '';
+    const tieTag = (cur.tie && cur.tie.length > 1)
+      ? `<span class="tie-tag" title="Scoring tie between ${cur.tie.join(' / ')} - not a clean call, ${cur.tie[0]} picked by priority order. Worth a manual look.">⚠ tie</span>`
+      : '';
 
     const catColor = CAT_COLOR[cur.cat] || '';
     const catIcon = CAT_ICON[cur.cat] || '';
@@ -904,6 +907,7 @@ function renderTable(){
             ${CATS.map(cat => `<option value="${cat}" ${cur.cat===cat?'selected':''}>${cat}</option>`).join('')}
           </select>
         </span>
+        ${tieTag}
       </td>
       <td>
         <span class="pill-wrap${cur.rec?'':' empty'}" data-icon="${recIcon}" style="--pill-color:${recColor||'transparent'}">
@@ -1297,6 +1301,9 @@ async function runSync(url, { silent } = {}){
       const co = findByName(entry.name);
       if(!co){ unmatched.push(entry.name); return; }
       co.quarters[state.activeQ].cat = cat;
+      co.quarters[state.activeQ].tie = Array.isArray(entry.category_tie) && entry.category_tie.length > 1
+        ? entry.category_tie
+        : null;
       updated++;
     });
     let msg = `Synced ${updated} classification${updated===1?'':'s'} into ${state.activeQ}`;

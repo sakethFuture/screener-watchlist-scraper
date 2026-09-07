@@ -10,7 +10,15 @@ from __future__ import annotations
 import unittest
 from types import SimpleNamespace
 
-from growth import classify, recommend, mean, stddev
+from growth import (
+    classify,
+    recommend,
+    mean,
+    stddev,
+    _fast_grower_score,
+    _stalwart_score,
+    _slow_grower_score,
+)
 
 
 def make_stock(**overrides) -> SimpleNamespace:
@@ -156,62 +164,122 @@ class CyclicalTest(unittest.TestCase):
         self.assertNotEqual(result.classification, "Cyclical")
 
 
-class FastGrowerTest(unittest.TestCase):
-    def test_qoq_and_both_cagrs_above_20(self):
+class ScoringHelpersTest(unittest.TestCase):
+    """Direct tests of the Step 2 weighted scoring functions (0.7/0.3 legs)."""
+
+    def test_fast_grower_score_both_legs(self):
+        stock = make_stock(qoq_sales_growth=25, sales_cagr_3yr=25, sales_cagr_5yr=25)
+        self.assertAlmostEqual(_fast_grower_score(stock, yoy_eps_growth=25), 1.0)
+
+    def test_fast_grower_score_qoq_cagr_leg_only(self):
+        stock = make_stock(qoq_sales_growth=25, sales_cagr_3yr=25, sales_cagr_5yr=25)
+        self.assertAlmostEqual(_fast_grower_score(stock, yoy_eps_growth=None), 0.7)
+
+    def test_fast_grower_score_yoy_eps_leg_only(self):
+        stock = make_stock()
+        self.assertAlmostEqual(_fast_grower_score(stock, yoy_eps_growth=25), 0.3)
+
+    def test_fast_grower_score_zero(self):
+        stock = make_stock()
+        self.assertEqual(_fast_grower_score(stock, yoy_eps_growth=None), 0.0)
+
+    def test_fast_grower_qoq_cagr_leg_needs_all_three_strictly_above_20(self):
+        stock = make_stock(qoq_sales_growth=20.0, sales_cagr_3yr=25, sales_cagr_5yr=25)  # qoq exactly 20
+        self.assertEqual(_fast_grower_score(stock, yoy_eps_growth=None), 0.0)
+
+    def test_stalwart_score_both_legs(self):
+        stock = make_stock(profit_cagr_3yr=15, profit_cagr_5yr=15, sales_cagr_3yr=15, sales_cagr_5yr=15)
+        self.assertAlmostEqual(_stalwart_score(stock, yoy_sales_growth=15), 1.0)
+
+    def test_stalwart_score_eps_cagr_leg_only(self):
+        stock = make_stock(profit_cagr_3yr=15, profit_cagr_5yr=15)
+        self.assertAlmostEqual(_stalwart_score(stock, yoy_sales_growth=None), 0.3)
+
+    def test_stalwart_score_sales_leg_only(self):
+        stock = make_stock(sales_cagr_3yr=15, sales_cagr_5yr=15)
+        self.assertAlmostEqual(_stalwart_score(stock, yoy_sales_growth=15), 0.7)
+
+    def test_stalwart_band_19_inclusive_20_excluded(self):
+        # Spec band is "10 to 19" (moved down from the old 10-20/10-15 bands).
+        in_band = make_stock(profit_cagr_3yr=19.0, profit_cagr_5yr=19.0)
+        self.assertAlmostEqual(_stalwart_score(in_band, yoy_sales_growth=None), 0.3)
+        out_of_band = make_stock(profit_cagr_3yr=20.0, profit_cagr_5yr=19.0)
+        self.assertEqual(_stalwart_score(out_of_band, yoy_sales_growth=None), 0.0)
+
+    def test_slow_grower_score_both_legs(self):
+        stock = make_stock(profit_cagr_3yr=5, profit_cagr_5yr=5)
+        self.assertAlmostEqual(_slow_grower_score(stock, yoy_sales_growth=5), 1.0)
+
+    def test_slow_grower_score_sales_leg_only(self):
+        stock = make_stock()
+        self.assertAlmostEqual(_slow_grower_score(stock, yoy_sales_growth=5), 0.7)
+
+    def test_slow_grower_score_eps_cagr_leg_only(self):
+        stock = make_stock(profit_cagr_3yr=5, profit_cagr_5yr=5)
+        self.assertAlmostEqual(_slow_grower_score(stock, yoy_sales_growth=None), 0.3)
+
+
+class ClassificationScoringTest(unittest.TestCase):
+    """classify()'s Step 2 behavior: highest weighted score wins; ties
+    (including an all-zero 3-way tie) are broken Fast > Stalwart > Slow
+    for the primary field, and surfaced via category_tie."""
+
+    def test_clean_fast_grower_winner(self):
         stock = make_stock(
-            eps=[1] * 8, sales=[100] * 8, net_profit=[10] * 8,
-            qoq_sales_growth=20.01, sales_cagr_3yr=20.01, sales_cagr_5yr=20.01,
+            eps=[1] * 8, sales=[None] * 8, net_profit=[10] * 8,
+            qoq_sales_growth=25, sales_cagr_3yr=25, sales_cagr_5yr=25,
         )
-        self.assertEqual(classify(stock, "Healthcare").classification, "Fast Grower")
+        result = classify(stock, "Healthcare")
+        self.assertEqual(result.classification, "Fast Grower")
+        self.assertAlmostEqual(result.fast_grower_score, 0.7)
+        self.assertEqual(result.stalwart_score, 0.0)
+        self.assertEqual(result.slow_grower_score, 0.0)
+        self.assertIsNone(result.category_tie)
 
-    def test_all_exactly_20_is_not_fast_grower(self):
+    def test_clean_stalwart_winner(self):
         stock = make_stock(
-            eps=[1] * 8, sales=[100] * 8, net_profit=[10] * 8,
-            qoq_sales_growth=20.0, sales_cagr_3yr=20.0, sales_cagr_5yr=20.0,
+            eps=[1] * 8, sales=[None] * 8, net_profit=[10] * 8,
+            profit_cagr_3yr=15, profit_cagr_5yr=15,
         )
-        self.assertNotEqual(classify(stock, "Healthcare").classification, "Fast Grower")
+        result = classify(stock, "Healthcare")
+        self.assertEqual(result.classification, "Stalwart")
+        self.assertAlmostEqual(result.stalwart_score, 0.3)
+        self.assertEqual(result.fast_grower_score, 0.0)
+        self.assertEqual(result.slow_grower_score, 0.0)
+        self.assertIsNone(result.category_tie)
 
-    def test_yoy_eps_growth_above_20_alone_qualifies(self):
-        # eps[-1]=13, eps[-5]=10 -> 30% YoY growth, no CAGR data needed.
-        eps = [None, None, None, 10, None, None, None, 13]
-        stock = make_stock(eps=eps, sales=[100] * 8, net_profit=[10] * 8)
-        self.assertEqual(classify(stock, "Healthcare").classification, "Fast Grower")
+    def test_clean_slow_grower_winner(self):
+        sales = [None, None, None, 100, None, None, None, 105]  # YoY 5% < 10
+        stock = make_stock(eps=[1] * 8, sales=sales, net_profit=[10] * 8)
+        result = classify(stock, "Healthcare")
+        self.assertEqual(result.classification, "Slow Grower")
+        self.assertAlmostEqual(result.slow_grower_score, 0.7)
+        self.assertEqual(result.fast_grower_score, 0.0)
+        self.assertEqual(result.stalwart_score, 0.0)
+        self.assertIsNone(result.category_tie)
 
-    def test_yoy_eps_growth_exactly_20_is_not_enough(self):
-        eps = [None, None, None, 10, None, None, None, 12]  # exactly 20%
-        stock = make_stock(eps=eps, sales=[100] * 8, net_profit=[10] * 8)
-        self.assertNotEqual(classify(stock, "Healthcare").classification, "Fast Grower")
-
-
-class StalwartTest(unittest.TestCase):
-    def test_eps_cagr_in_band(self):
-        stock = make_stock(
-            eps=[1] * 8, sales=[100] * 8, net_profit=[10] * 8,
-            profit_cagr_3yr=10.0, profit_cagr_5yr=20.0,  # inclusive boundaries
-        )
-        self.assertEqual(classify(stock, "Healthcare").classification, "Stalwart")
-
-    def test_eps_cagr_just_below_band_falls_through(self):
-        stock = make_stock(
-            eps=[1] * 8, sales=[100] * 8, net_profit=[10] * 8,
-            profit_cagr_3yr=9.99, profit_cagr_5yr=20.0,
-        )
-        self.assertNotEqual(classify(stock, "Healthcare").classification, "Stalwart")
-
-    def test_sales_growth_and_cagr_band(self):
-        # yoy sales: eps unrelated here, use sales[-1]/[-5] for YoY sales growth = 10%
-        sales = [None, None, None, 100, None, None, None, 110]
+    def test_two_way_tie_fast_and_slow_picks_fast_by_priority(self):
+        # Fast Grower's QoQ+CAGR leg (0.7) ties Slow Grower's sales leg (0.7)
+        # because YoY sales growth here is flat (0%, which is also < 10%).
+        sales = [None, None, None, 100, None, None, None, 100]
         stock = make_stock(
             eps=[1] * 8, sales=sales, net_profit=[10] * 8,
-            sales_cagr_3yr=10.0, sales_cagr_5yr=15.0,
+            qoq_sales_growth=25, sales_cagr_3yr=25, sales_cagr_5yr=25,
         )
-        self.assertEqual(classify(stock, "Healthcare").classification, "Stalwart")
+        result = classify(stock, "Healthcare")
+        self.assertEqual(result.classification, "Fast Grower")
+        self.assertEqual(result.category_tie, ["Fast Grower", "Slow Grower"])
 
-
-class SlowGrowerFallbackTest(unittest.TestCase):
-    def test_nothing_matches_falls_back_to_slow_grower(self):
-        stock = make_stock(eps=[1] * 8, sales=[100] * 8, net_profit=[10] * 8)
-        self.assertEqual(classify(stock, "Healthcare").classification, "Slow Grower")
+    def test_three_way_zero_tie_picks_fast_by_priority(self):
+        # No usable data at all -> every score is 0, but the ledger's
+        # single-select Category field still needs one resolved value.
+        stock = make_stock(eps=[1] * 8, sales=[None] * 8, net_profit=[10] * 8)
+        result = classify(stock, "Healthcare")
+        self.assertEqual(result.classification, "Fast Grower")
+        self.assertEqual(result.category_tie, ["Fast Grower", "Stalwart", "Slow Grower"])
+        self.assertEqual(result.fast_grower_score, 0.0)
+        self.assertEqual(result.stalwart_score, 0.0)
+        self.assertEqual(result.slow_grower_score, 0.0)
 
 
 class PriorityOrderTest(unittest.TestCase):
@@ -289,36 +357,36 @@ class CyclicalRecommendationTest(unittest.TestCase):
 
 class StandardRecommendationTest(unittest.TestCase):
     def test_buy_on_yoy_sales_growth(self):
-        sales = [None, None, None, 100, None, None, None, 112.01]  # YoY 12.01%
+        sales = [None, None, None, 100, None, None, None, 115.01]  # YoY 15.01%
         stock = make_stock(eps=[1] * 8, sales=sales, net_profit=[10] * 8, qoq_sales_growth=0)
         result = recommend("Slow Grower", stock, prev_qoq_sales_growth=0)
         self.assertEqual(result.recommendation, "Buy")
 
-    def test_yoy_sales_growth_exactly_12_is_not_buy(self):
-        sales = [None, None, None, 100, None, None, None, 112.0]  # exactly 12%
+    def test_yoy_sales_growth_exactly_15_is_not_buy(self):
+        sales = [None, None, None, 100, None, None, None, 115.0]  # exactly 15%
         stock = make_stock(eps=[1] * 8, sales=sales, net_profit=[10] * 8, qoq_sales_growth=0)
         result = recommend("Slow Grower", stock, prev_qoq_sales_growth=0)
         self.assertNotEqual(result.recommendation, "Buy")
 
     def test_buy_on_qoq_swing(self):
         stock = make_stock(eps=[1] * 8, sales=[100] * 8, net_profit=[10] * 8, qoq_sales_growth=5)
-        # swing = 5 - (-8) = 13 > 12
-        result = recommend("Slow Grower", stock, prev_qoq_sales_growth=-8)
+        # swing = 5 - (-11) = 16 > 15
+        result = recommend("Slow Grower", stock, prev_qoq_sales_growth=-11)
         self.assertEqual(result.recommendation, "Buy")
-        self.assertAlmostEqual(result.qoq_swing, 13.0, places=6)
+        self.assertAlmostEqual(result.qoq_swing, 16.0, places=6)
 
     def test_sell_on_negative_growth(self):
         sales = [None, None, None, 100, None, None, None, 95]  # YoY -5%
         stock = make_stock(eps=[1] * 8, sales=sales, net_profit=[10] * 8, qoq_sales_growth=-2)
-        result = recommend("Slow Grower", stock, prev_qoq_sales_growth=-2)  # swing = 0, not > 12
+        result = recommend("Slow Grower", stock, prev_qoq_sales_growth=-2)  # swing = 0, not > 15
         self.assertEqual(result.recommendation, "Sell")
 
     def test_negative_growth_but_strong_swing_is_buy_not_sell(self):
-        # Sell condition explicitly requires NOT(qoq_swing > 12) - a strong
+        # Sell condition explicitly requires NOT(qoq_swing > 15) - a strong
         # swing should win out to Buy even with negative growth.
         sales = [None, None, None, 100, None, None, None, 95]  # YoY -5%
         stock = make_stock(eps=[1] * 8, sales=sales, net_profit=[10] * 8, qoq_sales_growth=5)
-        result = recommend("Slow Grower", stock, prev_qoq_sales_growth=-8)  # swing = 13 > 12
+        result = recommend("Slow Grower", stock, prev_qoq_sales_growth=-11)  # swing = 16 > 15
         self.assertEqual(result.recommendation, "Buy")
 
     def test_hold_when_nothing_triggers(self):
