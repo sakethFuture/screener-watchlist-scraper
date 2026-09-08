@@ -7,6 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Nunito:wght@700;800;900&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
 <style>
   :root{
     --bg:#FFFFFF;
@@ -537,10 +538,147 @@
     .tabs-row, .wrap, footer.note{ padding-left:16px; padding-right:16px; }
     h1{ font-size:20px; }
   }
+
+  /* ===== App shell: top-level tab switcher (Fund Factsheets / Ledger /
+     Cross-Factsheet Analysis / Most Preferred) ===== */
+  .app-masthead{ padding:32px 32px 0; }
+  .app-masthead-inner{ max-width:1300px; margin:0 auto; }
+  .app-tabswitcher{ max-width:1300px; margin:0 auto; display:flex; gap:6px; padding:18px 0 0; flex-wrap:wrap; }
+  .app-tab-btn{
+    font-size:13.5px; font-weight:600; background:transparent; color:var(--text-dim);
+    border:1px solid transparent; border-bottom:2px solid transparent; padding:10px 16px 12px;
+    cursor:pointer; border-radius:8px 8px 0 0; transition:all .12s ease; font-family:'Inter';
+  }
+  .app-tab-btn:hover{ background:var(--surface); color:var(--text); }
+  .app-tab-btn.active{ color:var(--accent); border-bottom-color:var(--accent); background:var(--accent-soft); }
+  .app-tab-panel{ display:none; }
+  .app-tab-panel.active{ display:block; }
+
+  /* ===== Fund Factsheets (Tab 1) - shared bits also used by Tabs 3 & 4 ===== */
+  .status-line{ font-size:13px; color:var(--text-faint); }
+  .status-line.warn{ color:var(--hold); }
+  .status-line.err{ color:var(--sell); }
+  .upload-row{ display:flex; align-items:center; gap:14px; flex-wrap:wrap; }
+  input[type="file"]{
+    font-size:13px; padding:8px 12px; border:1px solid var(--border); border-radius:8px;
+    background:var(--surface); cursor:pointer;
+  }
+  .pill{ display:inline-block; padding:3px 10px; border-radius:999px; font-size:11.5px; font-weight:700; color:#fff; }
+  .pill.empty{ background:var(--surface); color:var(--text-faint); font-weight:500; border:1px solid var(--border); }
+  .pill.technical{ box-shadow:inset 0 0 0 1.5px var(--tech-accent-bg); }
+
+  table.holdings-table{ width:100%; border-collapse:collapse; font-size:13px; }
+  table.holdings-table th{
+    text-align:left; font-size:10.5px; font-weight:600; text-transform:uppercase;
+    letter-spacing:0.03em; color:var(--text-faint); padding:8px 10px; border-bottom:1px solid var(--border);
+  }
+  table.holdings-table td{ padding:7px 10px; border-bottom:1px solid var(--border); vertical-align:middle; }
+  table.holdings-table tr:hover td{ background:var(--surface); }
+
+  .ff-panel{
+    background:var(--bg); border:1px solid var(--border); border-radius:16px;
+    padding:24px; margin-top:20px; box-shadow:var(--shadow-3);
+  }
+  .ff-panel h2{ font-size:16px; margin:0 0 6px; }
+  .ff-panel h3{ font-size:14px; margin:0 0 10px; color:var(--text); }
+  .ff-panel .sub{ font-size:13px; color:var(--text-faint); margin:0 0 16px; line-height:1.5; }
+
+  .ff-amc-row{ display:flex; align-items:center; gap:10px; margin-bottom:14px; }
+  .ff-amc-row label{ font-size:12.5px; color:var(--text-dim); font-weight:600; }
+  .ff-review-list{ display:flex; flex-direction:column; gap:8px; margin-bottom:16px; }
+  .ff-review-item{ display:flex; align-items:center; gap:10px; padding:8px 10px; border:1px solid var(--border); border-radius:8px; background:var(--surface); }
+  .ff-review-item .ff-review-name{ flex:1; }
+  .ff-review-count{ font-size:12px; color:var(--text-faint); white-space:nowrap; }
+  .ff-review-actions{ display:flex; align-items:center; gap:12px; }
+
+  .ff-funds-head{ margin-top:28px; }
+  .ff-funds-head h2{ font-family:'Nunito','Inter',sans-serif; font-size:19px; font-weight:800; margin:0 0 4px; letter-spacing:-.01em; color:var(--text); }
+  .ff-funds-grid{ display:grid; grid-template-columns:repeat(auto-fill, minmax(320px, 1fr)); gap:16px; margin-top:14px; }
+  .fund-card{
+    background:var(--bg); border:1px solid var(--border); border-radius:16px; padding:18px 20px;
+    box-shadow:var(--shadow-2); cursor:pointer; transition:box-shadow .18s ease, transform .18s ease;
+  }
+  .fund-card:hover{ box-shadow:var(--shadow-3); transform:translateY(-2px); }
+  .fund-card-top{ display:flex; justify-content:space-between; align-items:flex-start; gap:10px; margin-bottom:12px; }
+  .fund-card-name{ font-size:15px; font-weight:700; color:var(--text); }
+  .fund-card-meta{ font-size:11.5px; color:var(--text-faint); margin-top:3px; }
+  .ff-weight-block{ margin-top:10px; }
+  .ff-weight-label{ font-size:10.5px; font-weight:700; text-transform:uppercase; letter-spacing:.04em; color:var(--text-faint); margin-bottom:4px; }
+  .weight-bar{ display:flex; height:8px; border-radius:999px; overflow:hidden; background:var(--surface); }
+  .weight-bar.large{ height:16px; }
+  .weight-bar .wb-buy{ background:var(--buy); }
+  .weight-bar .wb-hold{ background:var(--hold); }
+  .weight-bar .wb-sell{ background:var(--sell); }
+  .ff-weight-caption{ font-size:11px; color:var(--text-dim); margin-top:4px; }
+  .fund-card-detail{ display:none; margin-top:14px; padding-top:14px; border-top:1px solid var(--border); overflow-x:auto; }
+  .fund-card-detail.open{ display:block; }
+
+  /* ===== Most Preferred (Tab 4) ranking + drilldown ===== */
+  .rank-list{ display:flex; flex-direction:column; gap:6px; margin-top:12px; }
+  .rank-row{ border:1px solid var(--border); border-radius:10px; background:var(--surface); overflow:hidden; }
+  .rank-row-head{ display:flex; align-items:center; gap:12px; padding:10px 14px; cursor:pointer; }
+  .rank-row-head:hover{ background:var(--surface-hover); }
+  .rank-num{ font-family:'Nunito','Inter',sans-serif; font-weight:800; color:var(--text-faint); width:24px; flex-shrink:0; }
+  .rank-name{ flex:1; font-size:13.5px; font-weight:600; color:var(--text); }
+  .rank-pct{ font-size:15px; color:var(--accent); }
+  .rank-sub{ font-size:11.5px; color:var(--text-faint); white-space:nowrap; }
+  .rank-drill{ display:none; padding:0 14px 12px 50px; }
+  .rank-row.open .rank-drill{ display:block; }
+  .drill-item{ display:flex; justify-content:space-between; font-size:12.5px; color:var(--text-dim); padding:3px 0; border-bottom:1px dashed var(--border); }
+  .drill-item:last-child{ border-bottom:none; }
 </style>
 </head>
 <body>
 
+  <div class="app-masthead">
+    <div class="app-masthead-inner">
+      <p class="eyebrow">FCC · Fund Analysis Platform</p>
+      <h1>Fund <em>Analysis</em> Platform</h1>
+    </div>
+    <div class="app-tabswitcher" id="appTabSwitcher">
+      <button class="app-tab-btn" data-tab="factsheets">Fund Factsheets</button>
+      <button class="app-tab-btn" data-tab="ledger">Quarterly Stock Ledger</button>
+      <button class="app-tab-btn" data-tab="cross">Cross-Factsheet Analysis</button>
+      <button class="app-tab-btn" data-tab="preferred">Most Preferred</button>
+    </div>
+  </div>
+
+  <div id="panel-factsheets" class="app-tab-panel">
+    <div class="wrap">
+      <div class="ff-panel reveal">
+        <h2>Upload a mutual fund factsheet PDF</h2>
+        <p class="sub">Runs entirely in your browser — parsed locally, never leaves this page. Extracts each fund's <b>top 15 holdings by % of AUM</b> and matches them against the Quarterly Stock Ledger tab.</p>
+        <div class="upload-row">
+          <input type="file" id="ffPdfInput" accept="application/pdf">
+          <span class="status-line" id="ffStatusLine"></span>
+        </div>
+      </div>
+
+      <div class="ff-panel reveal" id="ffReviewPanel" style="display:none;">
+        <h2>Review before saving</h2>
+        <p class="sub">Found <b id="ffReviewCount"></b> scheme(s) in this PDF. Uncheck any you don't want to save, fix a name if the parser guessed wrong, then save.</p>
+        <div class="ff-amc-row">
+          <label for="ffAmcInput">AMC name</label>
+          <input type="text" id="ffAmcInput" class="search" style="max-width:280px;" placeholder="e.g. ITI, Helios">
+        </div>
+        <div id="ffReviewList" class="ff-review-list"></div>
+        <div class="ff-review-actions">
+          <button class="btn primary" id="ffSaveBtn">Save selected funds</button>
+          <button class="btn" id="ffCancelBtn">Cancel</button>
+          <span class="autofill-result" id="ffSaveResult"></span>
+        </div>
+      </div>
+
+      <div class="ff-funds-head reveal">
+        <h2>Saved funds</h2>
+        <p class="sub" id="ffFundsSub"></p>
+      </div>
+      <div class="ff-funds-grid reveal" id="ffFundsGrid"></div>
+      <div class="empty-state" id="ffEmptyState" style="display:none;">No funds saved yet — upload a factsheet PDF above.</div>
+    </div>
+  </div>
+
+  <div id="panel-ledger" class="app-tab-panel">
   <div class="masthead">
     <div class="masthead-inner">
       <div>
@@ -548,7 +686,6 @@
         <h1>Top 200 <em>Company Analysis</em></h1>
       </div>
       <div style="display:flex; align-items:baseline; gap:16px;">
-        <a class="nav-link" href="./factsheet-reader.html">Factsheet Reader →</a>
         <p class="last-synced" id="lastSyncedDisplay"></p>
       </div>
     </div>
@@ -656,6 +793,41 @@
     <b>Logic:</b> each quarter's category is compared to the previous quarter for the same stock. "Changed" fires when the category label differs; a fresh addition is tagged "New" instead of a change. This mirrors the FY25-26 sheet's Category / Recommendation / Change columns.<br>
     <b>Screener sync:</b> Screener doesn't expose an API even on Premium — export stays CSV-based. But Premium's bulk "Export" on a saved screen (up to 50 columns, whole watchlist in one file) is enough: paste that CSV into Autofill below and it reads Sales/Profit growth columns itself, classifies Category against your bands, and matches rows by name. Recommendation still needs your judgment, so it's left blank for you to set.
   </footer>
+  </div><!-- /panel-ledger -->
+
+  <div id="panel-cross" class="app-tab-panel">
+    <div class="wrap">
+      <div class="ff-panel reveal">
+        <h2>Cross-Factsheet Analysis</h2>
+        <p class="sub">Aggregated across every fund currently saved in the Fund Factsheets tab — recalculates automatically as funds are added or deleted.</p>
+        <div class="summary" id="xfSummaryStats"></div>
+      </div>
+      <div class="ff-panel reveal">
+        <h3>Fundamental — aggregate weighted call</h3>
+        <div id="xfFundBlock"></div>
+      </div>
+      <div class="ff-panel reveal">
+        <h3>Technical — aggregate weighted call</h3>
+        <div id="xfTechBlock"></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="panel-preferred" class="app-tab-panel">
+    <div class="wrap">
+      <div class="ff-panel reveal">
+        <h2>Most Preferred Stocks</h2>
+        <p class="sub">Every matched stock appearing in at least one saved fund's top 15, ranked by aggregate weighted % of AUM across all funds. Click a row to see which funds hold it.</p>
+        <div id="mpStockList" class="rank-list"></div>
+        <div class="empty-state" id="mpStockEmpty" style="display:none;">No matched holdings yet — upload factsheets in the Fund Factsheets tab.</div>
+      </div>
+      <div class="ff-panel reveal">
+        <h2>Most Preferred Sectors</h2>
+        <p class="sub">The same aggregation rolled up to sector level. Click a row to see which stocks contributed.</p>
+        <div id="mpSectorList" class="rank-list"></div>
+      </div>
+    </div>
+  </div>
 
 <script>
 const QUARTERS = ['Q1 2026','Q2 2026','Q3 2026','Q4 2026'];
@@ -1530,7 +1702,664 @@ loadState().then(async () => {
     const url = await loadSyncUrl();
     await runSync(url, { silent: true });
   }
+  if(window.onLedgerReady) window.onLedgerReady();
 });
+</script>
+
+<script>
+// ============================================================
+// Fund Factsheets / Cross-Factsheet Analysis / Most Preferred
+// (Tabs 1, 3, 4). Reads the Quarterly Stock Ledger tab's own globals
+// (state, sectorOf, SECTORS, REC_COLOR) which are defined above, in the
+// ledger's own <script> block, and share this document's global scope.
+// ============================================================
+
+// ---- Wait-for-ledger handshake -----------------------------------------
+let ffLedgerReadyResolve;
+const ffLedgerReadyPromise = new Promise((res) => { ffLedgerReadyResolve = res; });
+window.onLedgerReady = function(){ ffLedgerReadyResolve(); };
+
+// ---- IndexedDB -----------------------------------------------------------
+const FF_DB_NAME = 'fundFactsheetsDB';
+const FF_DB_VERSION = 1;
+const FF_STORE = 'funds';
+
+function ffOpenDB(){
+  return new Promise((resolve, reject) => {
+    const req = indexedDB.open(FF_DB_NAME, FF_DB_VERSION);
+    req.onupgradeneeded = () => {
+      const db = req.result;
+      if(!db.objectStoreNames.contains(FF_STORE)){
+        db.createObjectStore(FF_STORE, { keyPath: 'id' });
+      }
+    };
+    req.onsuccess = () => resolve(req.result);
+    req.onerror = () => reject(req.error);
+  });
+}
+async function ffGetAllFunds(){
+  const db = await ffOpenDB();
+  return new Promise((resolve, reject) => {
+    const tx = db.transaction(FF_STORE, 'readonly');
+    const req = tx.objectStore(FF_STORE).getAll();
+    req.onsuccess = () => resolve(req.result || []);
+    req.onerror = () => reject(req.error);
+  });
+}
+async function ffPutFund(record){
+  const db = await ffOpenDB();
+  return new Promise((resolve, reject) => {
+    const tx = db.transaction(FF_STORE, 'readwrite');
+    tx.objectStore(FF_STORE).put(record);
+    tx.oncomplete = () => resolve();
+    tx.onerror = () => reject(tx.error);
+  });
+}
+async function ffDeleteFund(id){
+  const db = await ffOpenDB();
+  return new Promise((resolve, reject) => {
+    const tx = db.transaction(FF_STORE, 'readwrite');
+    tx.objectStore(FF_STORE).delete(id);
+    tx.oncomplete = () => resolve();
+    tx.onerror = () => reject(tx.error);
+  });
+}
+function ffUid(){ return 'f' + Date.now().toString(36) + Math.random().toString(36).slice(2, 8); }
+
+// ---- Fuzzy name matching against the ledger's watchlist -------------------
+// (ported unchanged from the standalone factsheet-reader prototype)
+const FF_SUFFIX_WORDS = new Set(['limited','ltd','inds','industry','industries',
+  'company','co','india','the','and','&','corporation','corpn','enterprises']);
+
+function ffCollapseSpacedAcronyms(tokens){
+  const out = [];
+  let i = 0;
+  while(i < tokens.length){
+    if(tokens[i].length === 1 && /[a-z]/.test(tokens[i])){
+      const run = [tokens[i]];
+      let j = i + 1;
+      while(j < tokens.length && tokens[j].length === 1 && /[a-z]/.test(tokens[j])){
+        run.push(tokens[j]);
+        j++;
+      }
+      if(run.length >= 2){ out.push(run.join('')); i = j; continue; }
+    }
+    out.push(tokens[i]);
+    i++;
+  }
+  return out;
+}
+function ffNormalizeName(name){
+  let n = name.toLowerCase().replace(/[^\w\s&]/g, ' ').replace(/\s+/g, ' ').trim();
+  const tokens = ffCollapseSpacedAcronyms(n.split(' '));
+  return tokens.filter(w => w && !FF_SUFFIX_WORDS.has(w)).join(' ');
+}
+function ffSeqRatio(a, b){
+  if(a === b) return 1.0;
+  if(!a.length || !b.length) return 0.0;
+  const m = a.length, n = b.length;
+  let dp = new Array(n + 1).fill(0);
+  for(let i = 1; i <= m; i++){
+    const newDp = new Array(n + 1).fill(0);
+    for(let j = 1; j <= n; j++){
+      newDp[j] = a[i-1] === b[j-1] ? dp[j-1] + 1 : Math.max(dp[j], newDp[j-1]);
+    }
+    dp = newDp;
+  }
+  return (2 * dp[n]) / (m + n);
+}
+function ffIsSubsequence(short, long){
+  let idx = 0;
+  for(const ch of long){
+    if(ch === short[idx]) idx++;
+    if(idx === short.length) return true;
+  }
+  return short.length === 0;
+}
+function ffTokenScore(a, b){
+  if(a === b) return 1.0;
+  if(a.startsWith(b) || b.startsWith(a)) return 0.95;
+  const [shorter, longer] = a.length <= b.length ? [a, b] : [b, a];
+  if(shorter.length >= 2 && shorter.length <= 5 && ffIsSubsequence(shorter, longer)) return 0.85;
+  return ffSeqRatio(a, b);
+}
+function ffInitials(tokens){ return tokens.map(t => t[0] || '').join(''); }
+function ffNameScore(normWl, normHolding){
+  const whole = ffSeqRatio(normWl, normHolding);
+  const wlTokens = normWl.split(' ').filter(Boolean);
+  const hTokens = normHolding.split(' ').filter(Boolean);
+  if(!wlTokens.length || !hTokens.length) return whole;
+
+  const perTokenBest = wlTokens.map(wt => Math.max(...hTokens.map(ht => ffTokenScore(wt, ht))));
+  const tokenAvg = perTokenBest.reduce((a,b) => a+b, 0) / perTokenBest.length;
+  const tokenMin = Math.min(...perTokenBest);
+  const tokenScoreFinal = tokenMin >= 0.55 ? tokenAvg : tokenAvg * tokenMin;
+
+  let acronymScore = 0;
+  if(wlTokens.length === 1 && wlTokens[0].length >= 2 && wlTokens[0].length <= 6 && /^[a-z]+$/.test(wlTokens[0])){
+    if(wlTokens[0] === ffInitials(hTokens)) acronymScore = 0.97;
+  }
+  return Math.max(whole, tokenScoreFinal, acronymScore);
+}
+function ffBuildWatchlistIndex(names){
+  const idx = new Map();
+  for(const name of names) idx.set(ffNormalizeName(name), name);
+  return idx;
+}
+function ffMatchWatchlist(holdingName, watchlistIndex, threshold){
+  threshold = threshold === undefined ? 0.72 : threshold;
+  const norm = ffNormalizeName(holdingName);
+  if(!norm) return { name: null, score: 0 };
+  if(watchlistIndex.has(norm)) return { name: watchlistIndex.get(norm), score: 1.0 };
+  let bestName = null, bestScore = 0;
+  const normLen = norm.length;
+  for(const [wlNorm, wlOrig] of watchlistIndex){
+    const wlLen = wlNorm.length;
+    if(wlLen === 0) continue;
+    if(wlLen > 6){
+      const shorter = Math.min(wlLen, normLen), longer = Math.max(wlLen, normLen);
+      if(shorter / longer < 0.35) continue;
+    }
+    const score = ffNameScore(wlNorm, norm);
+    if(score > bestScore){ bestScore = score; bestName = wlOrig; }
+  }
+  return bestScore >= threshold ? { name: bestName, score: bestScore } : { name: null, score: bestScore };
+}
+
+// ---- PDF parsing: header-column detection + top-15 extraction -----------
+// Column-pair (name-x, %-x) detection anchored to the holdings table's own
+// header text ("Issuer Name" / "Name of the Instrument" paired with
+// "% of AUM" / "% to NAV"), rather than a whole-row text join - this is what
+// keeps header rows and unrelated same-row panels (ratio boxes, charts) from
+// ever being read as issuer names in the first place.
+function ffCleanPdfText(s){
+  return s.replace(/\x00/g, '').replace(/\s+/g, ' ').trim();
+}
+const FF_NAME_HEADER_RE = /issuer\s*name|name\s*of\s*(the\s*)?instrument|instrument\s*name|company\s*name|security\s*name/i;
+const FF_PCT_HEADER_RE = /%\s*to\s*n\.?a\.?v\.?|%\s*of\s*aum|%\s*to\s*aum|%\s*to\s*net\s*assets|weightage/i;
+const FF_INDUSTRY_HEADER_RE = /industry\s*\/?\s*rating|rating\s*\/?\s*industry|market\s*value|\bisin\b|\bquantity\b/i;
+function ffIsHeaderLine(text){
+  return FF_NAME_HEADER_RE.test(text) || FF_PCT_HEADER_RE.test(text) || FF_INDUSTRY_HEADER_RE.test(text);
+}
+function ffIsPureNumber(text){
+  return /^-?\d+(\.\d+)?%?$/.test(text.trim());
+}
+const FF_NON_HOLDING_NAMES = new Set([
+  'total','sub total','subtotal','grand total','net current assets','treps',
+  'cash & cash equivalent','cash and cash equivalent','reverse repo','government bond',
+  'money market instruments','equity & equity related total','equity and equity related total',
+  'derivatives','government securities','corporate debt','debt instruments',
+  'net receivables/payables','cash equivalent','triparty repo',
+  'corporate bond','certificate of deposit','commercial paper','treasury bill','treasury bills',
+  'mutual fund units','money market instrument','debt instrument','state government bond',
+  'forest materials','paper forest & jute products','diversified','others',
+]);
+function ffIsNonHoldingName(name){
+  const n = name.toLowerCase().trim().replace(/[.,]/g, '');
+  if(!/[a-z]/i.test(n)) return true; // no letters at all -> a stray number/axis label
+  if(FF_NON_HOLDING_NAMES.has(n)) return true;
+  if(/\btotal\b/.test(n)) return true;
+  if(/net current assets/.test(n)) return true;
+  if(/treps|triparty repo/.test(n)) return true;
+  if(/^grand total/.test(n)) return true;
+  return false;
+}
+// Some factsheets drop ligature glyphs ("ti", "fi") when the PDF's font
+// encoding is incomplete, so "Information Technology" extracts as
+// "Informaon Technology". Fuzzy-match against the ledger's own sector list
+// (rather than requiring an exact match) so these still get filtered as
+// sector-subtotal rows instead of leaking through as fake holdings.
+function ffIsSectorLineFuzzy(name){
+  const n = name.toLowerCase().trim();
+  const sectors = (typeof SECTORS !== 'undefined') ? SECTORS : [];
+  for(const s of sectors){
+    if(ffSeqRatio(n, s.toLowerCase()) >= 0.85) return true;
+  }
+  return false;
+}
+
+function ffFindHeaderColumns(items, pageHeight){
+  const top = items.filter(it => (pageHeight - it.transform[5]) < 200);
+  const cells = top.map(it => ({ x: it.transform[4], y: it.transform[5], text: ffCleanPdfText(it.str) }));
+  const merged = [];
+  for(const c of cells){
+    const below = cells.find(o => o !== c && Math.abs(o.x - c.x) < 8 && c.y - o.y > 0 && c.y - o.y < 20);
+    merged.push({ x: c.x, y: c.y, text: below ? (c.text + ' ' + below.text) : c.text });
+  }
+  const nameHeaders = merged.filter(m => FF_NAME_HEADER_RE.test(m.text));
+  const pctHeaders = merged.filter(m => FF_PCT_HEADER_RE.test(m.text));
+  const pairs = [];
+  for(const nh of nameHeaders){
+    let best = null, bestDist = Infinity;
+    for(const ph of pctHeaders){
+      if(ph.x > nh.x){
+        const d = ph.x - nh.x;
+        if(d < bestDist){ bestDist = d; best = ph; }
+      }
+    }
+    if(best) pairs.push({ nameX: nh.x, pctX: best.x, headerY: Math.min(nh.y, best.y) });
+  }
+  return pairs;
+}
+// Header text is often left-aligned while the numeric data column it labels
+// is right-justified well to the right of the header's own x - re-anchor to
+// the densest nearby numeric column instead of trusting the header's x.
+function ffRefinePctX(items, pctX, headerY){
+  const buckets = new Map();
+  for(const it of items){
+    const text = ffCleanPdfText(it.str);
+    if(!text || !ffIsPureNumber(text)) continue;
+    if(it.transform[5] >= headerY - 2) continue;
+    const x = it.transform[4];
+    if(Math.abs(x - pctX) > 150) continue;
+    const key = Math.round(x / 4) * 4;
+    const b = buckets.get(key) || { count: 0, sumX: 0 };
+    b.count++; b.sumX += x;
+    buckets.set(key, b);
+  }
+  if(!buckets.size) return pctX;
+  let best = null, bestScore = -Infinity;
+  for(const [key, b] of buckets){
+    const score = b.count * 100 - Math.abs(key - pctX);
+    if(score > bestScore){ bestScore = score; best = b.sumX / b.count; }
+  }
+  return best;
+}
+const FF_JUNK_TOKEN_RE = /^[=•\-–—Ÿ*]+$/;
+function ffExtractTableColumn(items, nameX, pctX, headerY, xTol){
+  xTol = xTol === undefined ? 15 : xTol;
+  pctX = ffRefinePctX(items, pctX, headerY);
+  const belowHeader = items.filter(it => ffCleanPdfText(it.str) && it.transform[5] < headerY - 2);
+  const nameItems = belowHeader.filter(it => Math.abs(it.transform[4] - nameX) <= xTol)
+    .map(it => ({ text: ffCleanPdfText(it.str), y: it.transform[5] }))
+    .filter(it => it.text && !FF_JUNK_TOKEN_RE.test(it.text) && !ffIsPureNumber(it.text));
+  const pctItemsRaw = belowHeader.filter(it => Math.abs(it.transform[4] - pctX) <= xTol)
+    .map(it => ({ text: ffCleanPdfText(it.str), y: it.transform[5] }))
+    .filter(it => it.text && ffIsPureNumber(it.text));
+
+  nameItems.sort((a, b) => b.y - a.y);
+  const pctItems = pctItemsRaw.slice().sort((a, b) => b.y - a.y);
+  if(!pctItems.length) return [];
+
+  const gaps = [];
+  for(let i = 1; i < pctItems.length; i++) gaps.push(pctItems[i-1].y - pctItems[i].y);
+  gaps.sort((a, b) => a - b);
+  const medianGap = gaps.length ? gaps[Math.floor(gaps.length / 2)] : 12;
+  const maxRowHalfHeight = Math.min(Math.max(medianGap * 1.5, 10), 22);
+
+  const rows = [];
+  for(let i = 0; i < pctItems.length; i++){
+    const upper = i === 0
+      ? pctItems[i].y + maxRowHalfHeight
+      : Math.min((pctItems[i-1].y + pctItems[i].y) / 2, pctItems[i].y + maxRowHalfHeight);
+    const lower = i === pctItems.length - 1
+      ? pctItems[i].y - maxRowHalfHeight
+      : Math.max((pctItems[i].y + pctItems[i+1].y) / 2, pctItems[i].y - maxRowHalfHeight);
+    const nameParts = nameItems.filter(n => n.y <= upper && n.y > lower).sort((a, b) => b.y - a.y);
+    const name = nameParts.map(n => n.text).join(' ').replace(/\s+/g, ' ').trim();
+    const pct = parseFloat(pctItems[i].text.replace('%', ''));
+    if(!name || isNaN(pct)) continue;
+    if(ffIsHeaderLine(name)) continue;
+    if(ffIsNonHoldingName(name)) continue;
+    if(ffIsSectorLineFuzzy(name)) continue;
+    if(pct < 0 || pct > 100) continue;
+    rows.push({ name, pct });
+  }
+  return rows;
+}
+function ffGetPageTitle(items, pageHeight, maxTop){
+  maxTop = maxTop === undefined ? 100 : maxTop;
+  const titleItems = items.filter(it => (pageHeight - it.transform[5]) < maxTop && ffCleanPdfText(it.str));
+  if(!titleItems.length) return null;
+  titleItems.sort((a, b) => b.transform[5] - a.transform[5]);
+  const firstY = titleItems[0].transform[5];
+  const firstLine = titleItems.filter(it => Math.abs(it.transform[5] - firstY) <= 3);
+  firstLine.sort((a, b) => a.transform[4] - b.transform[4]);
+  return firstLine.map(it => ffCleanPdfText(it.str)).join(' ').replace(/\s+/g, ' ').trim();
+}
+async function ffExtractSchemesFromPdf(arrayBuffer){
+  const pdfjsLib = window['pdfjs-dist/build/pdf'] || window.pdfjsLib;
+  pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+  const doc = await pdfjsLib.getDocument({ data: arrayBuffer }).promise;
+  const byTitle = new Map();
+
+  for(let p = 1; p <= doc.numPages; p++){
+    const page = await doc.getPage(p);
+    const viewport = page.getViewport({ scale: 1.0 });
+    const content = await page.getTextContent();
+    const items = content.items.filter(it => ffCleanPdfText(it.str));
+    if(!items.length) continue;
+
+    const pairs = ffFindHeaderColumns(items, viewport.height);
+    if(!pairs.length) continue;
+
+    let title = ffGetPageTitle(items, viewport.height);
+    if(!title || ffIsHeaderLine(title)) title = 'Page ' + p; // never let a header/column-label row become a fund name
+    let rows = [];
+    for(const pair of pairs){
+      rows.push(...ffExtractTableColumn(items, pair.nameX, pair.pctX, pair.headerY));
+    }
+    if(!rows.length) continue;
+
+    if(!byTitle.has(title)) byTitle.set(title, []);
+    byTitle.get(title).push(...rows);
+  }
+
+  const schemes = [];
+  for(const [title, rows] of byTitle){
+    const dedup = new Map();
+    for(const r of rows){
+      const key = r.name.toLowerCase();
+      if(!dedup.has(key) || dedup.get(key).pct < r.pct) dedup.set(key, r);
+    }
+    const sorted = [...dedup.values()].sort((a, b) => b.pct - a.pct);
+    if(!sorted.length) continue;
+    schemes.push({ title, allCount: sorted.length, top15: sorted.slice(0, 15) });
+  }
+  return schemes;
+}
+
+// ---- Weighted verdict calculation -----------------------------------------
+// Fundamental and Technical are each computed independently: sum the % of
+// AUM of matched holdings by verdict, divided by the total % of AUM among
+// matched holdings that actually carry a verdict for that field (so the
+// three shares always sum to 100%, rather than diluting against holdings
+// that matched the watchlist but have no call recorded yet).
+function ffWeightedVerdict(holdingsList, field){
+  let total = 0;
+  const sums = { Buy: 0, Hold: 0, Sell: 0 };
+  for(const h of holdingsList){
+    if(!h.matchedName) continue;
+    const v = h[field];
+    if(!v || !(v in sums)) continue;
+    sums[v] += h.pctAum;
+    total += h.pctAum;
+  }
+  if(total <= 0) return null;
+  return { total, buy: sums.Buy / total * 100, hold: sums.Hold / total * 100, sell: sums.Sell / total * 100 };
+}
+function ffWeightBarHtml(w, large){
+  if(!w){
+    return `<div class="weight-bar${large ? ' large' : ''} empty"></div><div class="ff-weight-caption">No verdicts yet</div>`;
+  }
+  return `<div class="weight-bar${large ? ' large' : ''}">
+      <span class="wb-buy" style="width:${w.buy}%"></span>
+      <span class="wb-hold" style="width:${w.hold}%"></span>
+      <span class="wb-sell" style="width:${w.sell}%"></span>
+    </div>
+    <div class="ff-weight-caption">${w.buy.toFixed(0)}% Buy · ${w.hold.toFixed(0)}% Hold · ${w.sell.toFixed(0)}% Sell</div>`;
+}
+function ffPillHtml(value, technical){
+  if(!value) return '<span class="pill empty">—</span>';
+  const colorMap = (typeof REC_COLOR !== 'undefined') ? REC_COLOR : {};
+  const color = colorMap[value] || 'var(--text-faint)';
+  return `<span class="pill${technical ? ' technical' : ''}" style="background:${color}">${value}</span>`;
+}
+
+// ---- Tab 1: upload / review / save / list ---------------------------------
+function ffSetStatus(msg, cls){
+  const el = document.getElementById('ffStatusLine');
+  el.textContent = msg;
+  el.className = 'status-line' + (cls ? ' ' + cls : '');
+}
+let ffPendingSchemes = [];
+function ffGuessAmc(titles){
+  if(!titles.length) return '';
+  const firstWords = titles.map(t => t.trim().split(/\s+/)[0]);
+  const counts = {};
+  firstWords.forEach(w => counts[w] = (counts[w] || 0) + 1);
+  let best = firstWords[0], bestCount = 0;
+  for(const w in counts) if(counts[w] > bestCount){ bestCount = counts[w]; best = w; }
+  return bestCount >= Math.ceil(titles.length / 2) ? best : '';
+}
+function ffShowReview(schemes){
+  ffPendingSchemes = schemes;
+  document.getElementById('ffAmcInput').value = ffGuessAmc(schemes.map(s => s.title));
+  document.getElementById('ffReviewCount').textContent = schemes.length;
+  document.getElementById('ffReviewList').innerHTML = schemes.map((s, i) => `
+    <div class="ff-review-item" data-idx="${i}">
+      <label class="ff-review-check"><input type="checkbox" checked></label>
+      <input type="text" class="ff-review-name search" value="${s.title.replace(/"/g, '&quot;')}">
+      <span class="ff-review-count">${s.top15.length} holding${s.top15.length === 1 ? '' : 's'}${s.allCount > s.top15.length ? ` (of ${s.allCount} found)` : ''}</span>
+    </div>
+  `).join('');
+  document.getElementById('ffReviewPanel').style.display = 'block';
+}
+async function ffHandleFile(file){
+  ffSetStatus('Reading PDF…');
+  document.getElementById('ffReviewPanel').style.display = 'none';
+  try{
+    const buf = await file.arrayBuffer();
+    ffSetStatus('Parsing pages…');
+    const schemes = await ffExtractSchemesFromPdf(buf);
+    if(!schemes.length){
+      ffSetStatus('No holdings tables found in this PDF.', 'warn');
+      return;
+    }
+    ffShowReview(schemes);
+    ffSetStatus(`Found ${schemes.length} scheme${schemes.length === 1 ? '' : 's'}. Review below before saving.`);
+  }catch(err){
+    console.error(err);
+    ffSetStatus('Failed to parse this PDF: ' + err.message, 'err');
+  }
+}
+async function ffSaveReviewed(){
+  await ffLedgerReadyPromise;
+  const amc = document.getElementById('ffAmcInput').value.trim();
+  const items = document.querySelectorAll('#ffReviewList .ff-review-item');
+  const companies = (typeof state !== 'undefined' && state.companies) ? state.companies : [];
+  const activeQ = (typeof state !== 'undefined') ? state.activeQ : null;
+  const watchlistIndex = ffBuildWatchlistIndex(companies.map(c => c.name));
+  const byName = new Map(companies.map(c => [c.name, c]));
+  let savedCount = 0;
+  for(const item of items){
+    const checkbox = item.querySelector('input[type="checkbox"]');
+    if(!checkbox.checked) continue;
+    const idx = parseInt(item.dataset.idx, 10);
+    const scheme = ffPendingSchemes[idx];
+    if(!scheme) continue;
+    const fundNameInput = item.querySelector('.ff-review-name');
+    const fundName = (fundNameInput.value || '').trim() || scheme.title;
+    const holdings = scheme.top15.map(h => {
+      const m = ffMatchWatchlist(h.name, watchlistIndex);
+      const company = m.name ? byName.get(m.name) : null;
+      const q = (company && activeQ && company.quarters) ? company.quarters[activeQ] : null;
+      return {
+        name: h.name,
+        pctAum: h.pct,
+        matchedName: m.name || null,
+        fundamental: (q && q.rec) ? q.rec : null,
+        technical: (q && q.techRec) ? q.techRec : null,
+      };
+    });
+    await ffPutFund({ id: ffUid(), amc, fundName, uploadDate: new Date().toISOString(), holdings });
+    savedCount++;
+  }
+  document.getElementById('ffReviewPanel').style.display = 'none';
+  document.getElementById('ffPdfInput').value = '';
+  ffSetStatus(savedCount ? `Saved ${savedCount} fund${savedCount === 1 ? '' : 's'}.` : 'Nothing selected to save.');
+  await ffRefreshAll();
+}
+function ffRenderFundCard(fund){
+  const matchedCount = fund.holdings.filter(h => h.matchedName).length;
+  const fundW = ffWeightedVerdict(fund.holdings, 'fundamental');
+  const techW = ffWeightedVerdict(fund.holdings, 'technical');
+  const dateStr = new Date(fund.uploadDate).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' });
+  const rowsHtml = fund.holdings.map(h => `
+    <tr>
+      <td>${h.name}</td>
+      <td class="num-font">${h.pctAum.toFixed(2)}%</td>
+      <td>${h.matchedName ? h.matchedName : '<span class="pill empty">Unmatched</span>'}</td>
+      <td>${ffPillHtml(h.fundamental)}</td>
+      <td>${ffPillHtml(h.technical, true)}</td>
+    </tr>
+  `).join('');
+  return `
+  <div class="fund-card" data-id="${fund.id}">
+    <div class="fund-card-top">
+      <div>
+        <div class="fund-card-name">${fund.fundName}</div>
+        <div class="fund-card-meta">${fund.amc || 'AMC unknown'} · Uploaded ${dateStr} · ${matchedCount}/${fund.holdings.length} matched</div>
+      </div>
+      <button class="del-btn" data-action="delete" title="Delete fund">✕</button>
+    </div>
+    <div class="ff-weight-block">
+      <div class="ff-weight-label">Fundamental</div>
+      ${ffWeightBarHtml(fundW)}
+    </div>
+    <div class="ff-weight-block">
+      <div class="ff-weight-label">Technical</div>
+      ${ffWeightBarHtml(techW)}
+    </div>
+    <div class="fund-card-detail">
+      <div style="overflow-x:auto;">
+        <table class="holdings-table">
+          <thead><tr><th>Holding</th><th>% of AUM</th><th>Matched stock</th><th>Fundamental</th><th>Technical</th></tr></thead>
+          <tbody>${rowsHtml}</tbody>
+        </table>
+      </div>
+    </div>
+  </div>`;
+}
+let ffFundsCache = [];
+async function ffRenderFundsList(){
+  ffFundsCache = await ffGetAllFunds();
+  ffFundsCache.sort((a, b) => new Date(b.uploadDate) - new Date(a.uploadDate));
+  const grid = document.getElementById('ffFundsGrid');
+  const empty = document.getElementById('ffEmptyState');
+  document.getElementById('ffFundsSub').textContent = ffFundsCache.length
+    ? `${ffFundsCache.length} fund${ffFundsCache.length === 1 ? '' : 's'} saved in this browser.`
+    : '';
+  if(!ffFundsCache.length){
+    grid.innerHTML = '';
+    empty.style.display = 'block';
+    return;
+  }
+  empty.style.display = 'none';
+  grid.innerHTML = ffFundsCache.map(ffRenderFundCard).join('');
+}
+
+// ---- Tab 3: cross-factsheet aggregation ------------------------------------
+async function ffRenderCrossAnalysis(){
+  const funds = ffFundsCache;
+  const allHoldings = funds.flatMap(f => f.holdings);
+  const totalHoldings = allHoldings.length;
+  const totalMatched = allHoldings.filter(h => h.matchedName).length;
+  const fundW = ffWeightedVerdict(allHoldings, 'fundamental');
+  const techW = ffWeightedVerdict(allHoldings, 'technical');
+
+  document.getElementById('xfSummaryStats').innerHTML = `
+    <div class="stat"><div class="num">${funds.length}</div><div class="lbl">Funds analyzed</div></div>
+    <div class="stat"><div class="num">${totalHoldings}</div><div class="lbl">Holdings scanned</div></div>
+    <div class="stat buy"><div class="num">${totalMatched}</div><div class="lbl">Matched</div></div>
+    <div class="stat sell"><div class="num">${totalHoldings - totalMatched}</div><div class="lbl">Unmatched</div></div>
+  `;
+  document.getElementById('xfFundBlock').innerHTML = ffWeightBarHtml(fundW, true);
+  document.getElementById('xfTechBlock').innerHTML = ffWeightBarHtml(techW, true);
+}
+
+// ---- Tab 4: most preferred stocks + sectors --------------------------------
+function ffRankRowHtml(rank, name, pct, subLabel, drillHtml){
+  return `
+  <div class="rank-row">
+    <div class="rank-row-head">
+      <span class="rank-num">${rank}</span>
+      <span class="rank-name">${name}</span>
+      <span class="rank-pct num-font">${pct.toFixed(1)}%</span>
+      <span class="rank-sub">${subLabel}</span>
+    </div>
+    <div class="rank-drill">${drillHtml}</div>
+  </div>`;
+}
+function ffWireRankRowToggles(){
+  document.querySelectorAll('.rank-row-head').forEach(el => {
+    el.onclick = () => el.parentElement.classList.toggle('open');
+  });
+}
+async function ffRenderPreferred(){
+  const funds = ffFundsCache;
+  const stockMap = new Map();
+  for(const f of funds){
+    for(const h of f.holdings){
+      if(!h.matchedName) continue;
+      if(!stockMap.has(h.matchedName)) stockMap.set(h.matchedName, { totalPct: 0, funds: [] });
+      const e = stockMap.get(h.matchedName);
+      e.totalPct += h.pctAum;
+      e.funds.push({ fundId: f.id, fundName: f.fundName, pct: h.pctAum });
+    }
+  }
+  const stockRanked = [...stockMap.entries()].map(([name, e]) => ({ name, ...e })).sort((a, b) => b.totalPct - a.totalPct);
+
+  const stockListEl = document.getElementById('mpStockList');
+  document.getElementById('mpStockEmpty').style.display = stockRanked.length ? 'none' : 'block';
+  stockListEl.innerHTML = stockRanked.map((s, i) => ffRankRowHtml(
+    i + 1, s.name, s.totalPct, `across ${new Set(s.funds.map(x => x.fundId)).size} fund(s)`,
+    s.funds.slice().sort((a, b) => b.pct - a.pct)
+      .map(x => `<div class="drill-item"><span>${x.fundName}</span><span class="num-font">${x.pct.toFixed(2)}%</span></div>`).join('')
+  )).join('');
+
+  const sectorOfFn = (typeof sectorOf === 'function') ? sectorOf : () => 'Unclassified';
+  const sectorMap = new Map();
+  for(const s of stockRanked){
+    const sec = sectorOfFn(s.name);
+    if(!sectorMap.has(sec)) sectorMap.set(sec, { totalPct: 0, stocks: [] });
+    const e = sectorMap.get(sec);
+    e.totalPct += s.totalPct;
+    e.stocks.push(s);
+  }
+  const sectorRanked = [...sectorMap.entries()].map(([name, e]) => ({ name, ...e })).sort((a, b) => b.totalPct - a.totalPct);
+  const sectorListEl = document.getElementById('mpSectorList');
+  sectorListEl.innerHTML = sectorRanked.map((s, i) => ffRankRowHtml(
+    i + 1, s.name, s.totalPct, `${s.stocks.length} stock(s)`,
+    s.stocks.slice().sort((a, b) => b.totalPct - a.totalPct)
+      .map(st => `<div class="drill-item"><span>${st.name}</span><span class="num-font">${st.totalPct.toFixed(2)}%</span></div>`).join('')
+  )).join('');
+
+  ffWireRankRowToggles();
+}
+
+// ---- Shared refresh + event wiring -----------------------------------------
+async function ffRefreshAll(){
+  await ffRenderFundsList();
+  await ffRenderCrossAnalysis();
+  await ffRenderPreferred();
+}
+
+document.getElementById('ffPdfInput').addEventListener('change', (e) => {
+  const file = e.target.files[0];
+  if(file) ffHandleFile(file);
+});
+document.getElementById('ffCancelBtn').addEventListener('click', () => {
+  document.getElementById('ffReviewPanel').style.display = 'none';
+  document.getElementById('ffPdfInput').value = '';
+});
+document.getElementById('ffSaveBtn').addEventListener('click', ffSaveReviewed);
+document.getElementById('ffFundsGrid').addEventListener('click', async (e) => {
+  const card = e.target.closest('.fund-card');
+  if(!card) return;
+  const delBtn = e.target.closest('[data-action="delete"]');
+  if(delBtn){
+    e.stopPropagation();
+    if(!confirm('Delete this fund from your saved library?')) return;
+    await ffDeleteFund(card.dataset.id);
+    await ffRefreshAll();
+    return;
+  }
+  card.querySelector('.fund-card-detail').classList.toggle('open');
+});
+
+// ---- App-level tab switcher -------------------------------------------------
+document.querySelectorAll('.app-tab-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.app-tab-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.app-tab-panel').forEach(p => p.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById('panel-' + btn.dataset.tab).classList.add('active');
+  });
+});
+
+ffRefreshAll();
+document.querySelector('.app-tab-btn[data-tab="factsheets"]').click();
 </script>
 
 </body>
