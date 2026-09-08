@@ -179,7 +179,7 @@
     <div class="panel">
       <h2>Upload a mutual fund factsheet PDF</h2>
       <p class="sub">Runs entirely in your browser — the PDF is parsed locally and never leaves this page. Matches holdings against your live ledger (read from this browser's saved ledger data) and shows each matched stock's current Fundamental and Technical calls.</p>
-      <div class="amc-note" id="amcNote">Parsing: ITI Mutual Fund factsheet format only (other AMCs not supported yet)</div>
+      <div class="amc-note" id="amcNote">Works with any mutual fund factsheet — no fund-house-specific setup. Parsing is driven by matching against your own ledger, not a fixed layout, so results depend on how much a fund's holdings overlap your ledger.</div>
       <div class="upload-row">
         <input type="file" id="pdfInput" accept="application/pdf">
         <span class="status-line" id="statusLine"></span>
@@ -192,7 +192,7 @@
   <footer class="note">
     <b>How matching works:</b> company names are normalized (suffixes like "Limited"/"Industries" stripped, spaced acronyms like "I R F C" collapsed, vowel-dropped abbreviations like "Fn" for "Finance" handled) and fuzzy-matched against your ledger's company list — not a fixed watchlist copy, so this always reflects whatever stocks are actually in your ledger right now.<br>
     <b>Fundamental / Technical shown:</b> pulled from your ledger's currently active quarter tab at the time you last saved it in this browser — open the ledger and switch quarters there if you want a different quarter reflected here.<br>
-    <b>AMC coverage:</b> only ITI Mutual Fund's factsheet layout is implemented. The parser is structured as a registry keyed by AMC name so other fund houses' layouts can be added later without touching this one.
+    <b>AMC coverage:</b> generic across fund houses — the parser doesn't hardcode any AMC's column layout or holdings-table header text. It reconstructs each page's reading order from raw text positions, treats any "text + trailing number" line as a candidate holding, and keeps only candidates that fuzzy-match a real company in your ledger. A handful of common report-section titles (performance tables, SIP tables, disclaimers) are skipped since those list fund names next to numbers too and can coincidentally match. Verified against three structurally different real factsheets (ITI, ABSL, Helios) with no per-document tuning.
   </footer>
 
 <script>
@@ -303,9 +303,22 @@ function buildWatchlistIndex(names){
 function matchWatchlist(holdingName, watchlistIndex, threshold){
   threshold = threshold === undefined ? 0.72 : threshold;
   const norm = normalizeName(holdingName);
+  if(!norm) return { name: null, score: 0 };
   if(watchlistIndex.has(norm)) return { name: watchlistIndex.get(norm), score: 1.0 };
   let bestName = null, bestScore = 0;
+  const normLen = norm.length;
   for(const [wlNorm, wlOrig] of watchlistIndex){
+    // Cheap length-ratio pre-filter before the O(m*n) DP in seqRatio - two
+    // strings that differ wildly in length can't score above threshold
+    // anyway. Exempt short watchlist entries (<=6 chars, e.g. "TCS") since
+    // those are exactly the acronym-match case, legitimately short
+    // relative to a holding's full name.
+    const wlLen = wlNorm.length;
+    if(wlLen === 0) continue;
+    if(wlLen > 6){
+      const shorter = Math.min(wlLen, normLen), longer = Math.max(wlLen, normLen);
+      if(shorter / longer < 0.35) continue;
+    }
     const score = nameScore(wlNorm, norm);
     if(score > bestScore){ bestScore = score; bestName = wlOrig; }
   }
@@ -313,162 +326,134 @@ function matchWatchlist(holdingName, watchlistIndex, threshold){
 }
 
 // ============================================================
-// Parser registry, keyed by AMC name. Only ITI's layout is implemented;
-// a future AMC just adds another entry with the same method shape.
+// Generic, AMC-agnostic factsheet parsing. No document-specific column
+// positions or holdings-table header phrases are hardcoded - instead:
+//   1) reconstruct reading order via generic row-start-x0 column
+//      clustering (works whether a page is 1, 2, or 3 columns wide,
+//      without knowing any AMC's specific header text)
+//   2) treat any "text + trailing number" line as a holding candidate
+//   3) fuzzy-match each candidate against the ledger's own company list -
+//      that match is the real filter, not per-AMC keyword knowledge
+// A small, AMC-agnostic list of common report-section titles (SIP tables,
+// performance tables, disclaimers, ...) is excluded, since those sections
+// list fund/scheme names next to numbers too and can coincidentally
+// fuzzy-match real companies. Validated against three real, structurally
+// different factsheets (ITI, ABSL Alternates, Helios) with no per-
+// document tuning beyond this.
 // ============================================================
-const PARSERS = {
-  iti: {
-    label: 'ITI Mutual Fund',
 
-    cleanText(s){ return s.replace(/ /g, '').trim(); },
+function cleanPdfText(s){
+  return s.replace(/\x00/g, '').replace(/\s+/g, ' ').trim();
+}
 
-    findSplitX(items, offset){
-      offset = offset === undefined ? 15 : offset;
-      const hits = items
-        .filter(it => this.cleanText(it.str).replace(/\s+/g, ' ').trim() === 'Name of the Instrument')
-        .map(it => it.transform[4]);
-      if(hits.length < 2) return null;
-      hits.sort((a,b) => a-b);
-      return hits[hits.length - 1] - offset;
-    },
+function reconstructPageGeneric(items, rowTol, colGap){
+  rowTol = rowTol === undefined ? 3 : rowTol;
+  colGap = colGap === undefined ? 80 : colGap;
+  const words = items.filter(it => cleanPdfText(it.str));
+  if(!words.length) return [];
 
-    getSchemeName(items, pageHeight){
-      const titleItems = items.filter(it => (pageHeight - it.transform[5]) < 100 && this.cleanText(it.str));
-      if(!titleItems.length) return null;
-      titleItems.sort((a,b) => b.transform[5] - a.transform[5]);
-      const firstY = titleItems[0].transform[5];
-      const firstLine = titleItems.filter(it => Math.abs(it.transform[5] - firstY) <= 3);
-      firstLine.sort((a,b) => a.transform[4] - b.transform[4]);
-      return firstLine.map(it => this.cleanText(it.str)).join(' ').replace(/\s+/g, ' ').trim();
-    },
+  const sorted = [...words].sort((a,b) => b.transform[5] - a.transform[5] || a.transform[4] - b.transform[4]);
+  const rows = [];
+  let cur = [], curY = null;
+  for(const w of sorted){
+    const y = w.transform[5];
+    if(curY === null || Math.abs(y - curY) <= rowTol){ cur.push(w); curY = curY === null ? y : curY; }
+    else{ rows.push(cur); cur = [w]; curY = y; }
+  }
+  if(cur.length) rows.push(cur);
 
-    STOP_MARKERS: [
-      'Fund vs Index Overweight', 'Top Ten Holdings', 'RISKOMETER', 'Riskometer',
-      'Portfolio Classification', 'Portfolio Allocation', 'Please Refer Page',
-      'For scheme and SIP performance', 'Face Value per Unit', 'THIS PRODUCT IS SUITABLE',
-    ],
+  const rowInfos = rows.map(row => {
+    const rs = [...row].sort((a,b) => a.transform[4] - b.transform[4]);
+    return {
+      top: rs[0].transform[5],
+      x0: rs[0].transform[4],
+      text: rs.map(it => cleanPdfText(it.str)).join(' ').replace(/\s+/g, ' ').trim(),
+    };
+  }).filter(r => r.text);
+  if(!rowInfos.length) return [];
 
-    reconstructPortfolioRows(items, sidebarCutoff){
-      sidebarCutoff = sidebarCutoff === undefined ? 190 : sidebarCutoff;
-      const splitX = this.findSplitX(items);
-      const main = items.filter(it => it.transform[4] >= sidebarCutoff && this.cleanText(it.str));
-      const self = this;
+  // cluster row-start x0 (not every word's x0 - right-aligned numbers
+  // would otherwise pollute the clustering) into column bands via a
+  // gap threshold - no per-document header-phrase anchor needed.
+  const x0s = rowInfos.map(r => r.x0).sort((a,b) => a-b);
+  const bands = [];
+  let bandCur = [x0s[0]];
+  for(let i = 1; i < x0s.length; i++){
+    if(x0s[i] - bandCur[bandCur.length-1] >= colGap){ bands.push(bandCur); bandCur = [x0s[i]]; }
+    else bandCur.push(x0s[i]);
+  }
+  bands.push(bandCur);
+  const bandRanges = bands.map(b => [b[0], b[b.length-1]]);
 
-      function rowsToLines(ws){
-        const sorted = [...ws].sort((a,b) => b.transform[5] - a.transform[5] || a.transform[4] - b.transform[4]);
-        const lines = [];
-        let cur = [], curY = null;
-        for(const w of sorted){
-          const y = w.transform[5];
-          if(curY === null || Math.abs(y - curY) <= 3){ cur.push(w); curY = curY === null ? y : curY; }
-          else{ lines.push([...cur].sort((a,b) => a.transform[4]-b.transform[4])); cur = [w]; curY = y; }
-        }
-        if(cur.length) lines.push([...cur].sort((a,b) => a.transform[4]-b.transform[4]));
-        return lines.map(line => line.map(it => self.cleanText(it.str)).join(' ').replace(/\s+/g,' ').trim());
-      }
+  function bandIndex(x0){
+    for(let i = 0; i < bandRanges.length; i++){
+      if(x0 >= bandRanges[i][0] - 5 && x0 <= bandRanges[i][1] + colGap / 2) return i;
+    }
+    let best = 0, bestDist = Infinity;
+    bandRanges.forEach((r, i) => { const d = Math.abs(x0 - r[0]); if(d < bestDist){ bestDist = d; best = i; } });
+    return best;
+  }
 
-      const subTables = splitX === null
-        ? [main]
-        : [main.filter(it => it.transform[4] < splitX), main.filter(it => it.transform[4] >= splitX)];
+  rowInfos.forEach(r => { r.band = bandIndex(r.x0); });
+  const bandsPresent = [...new Set(rowInfos.map(r => r.band))].sort((a,b) => a-b);
+  const out = [];
+  for(const b of bandsPresent){
+    const bandRows = rowInfos.filter(r => r.band === b).sort((a,b) => b.top - a.top);
+    out.push(...bandRows.map(r => r.text));
+  }
+  return out;
+}
 
-      const allRows = [];
-      for(const sub of subTables){
-        let lines = rowsToLines(sub);
-        let start = 0;
-        for(let i = 0; i < lines.length; i++){
-          const l = lines[i].toLowerCase();
-          if(l.includes('nav') && l.includes('derivatives')) start = i + 1;
-        }
-        lines = lines.slice(start);
-        const truncated = [];
-        for(const line of lines){
-          if(this.STOP_MARKERS.some(m => line.toLowerCase().includes(m.toLowerCase()))) break;
-          truncated.push(line);
-        }
-        allRows.push(...truncated);
-      }
-      return allRows;
-    },
+function getPageTitle(items, pageHeight, maxTop){
+  maxTop = maxTop === undefined ? 100 : maxTop;
+  const titleItems = items.filter(it => (pageHeight - it.transform[5]) < maxTop && cleanPdfText(it.str));
+  if(!titleItems.length) return null;
+  titleItems.sort((a,b) => b.transform[5] - a.transform[5]);
+  const firstY = titleItems[0].transform[5];
+  const firstLine = titleItems.filter(it => Math.abs(it.transform[5] - firstY) <= 3);
+  firstLine.sort((a,b) => a.transform[4] - b.transform[4]);
+  return firstLine.map(it => cleanPdfText(it.str)).join(' ').replace(/\s+/g, ' ').trim();
+}
 
-    BOILERPLATE_PHRASES: [
-      'equity & equity related', 'equity and equity related', 'short term debt',
-      'net current assets', 'mutual fund units', 'growth option', 'treps',
-      'deposits placed', 'money market', 'government securities',
-      'cash equivalents', 'call money', 'reverse repo', 'margins',
-    ],
-    SECTORS: [
-      'Financial Services', 'Information Technology', 'Healthcare', 'Capital Goods',
-      'Automobile and Auto Components', 'Oil Gas & Consumable Fuels',
-      'Fast Moving Consumer Goods', 'Metals & Mining', 'Realty', 'Construction',
-      'Construction Materials', 'Consumer Durables', 'Consumer Services',
-      'Telecommunication', 'Power', 'Chemicals', 'Textiles', 'Services',
-    ],
+const CANDIDATE_NUM_RE = /-?\d+(?:\.\d+)?%?/g;
+const CANDIDATE_DECIMAL_RE = /-?\d+\.\d+/;
 
-    _simpleNormalize(s){
-      return s.toLowerCase().replace(/[^\w\s&]/g, ' ').replace(/\s+/g, ' ').trim();
-    },
-    isBoilerplateLine(text){
-      const t = this._simpleNormalize(text);
-      return this.BOILERPLATE_PHRASES.some(p => t.includes(p));
-    },
-    isSectorHeader(text, threshold){
-      threshold = threshold === undefined ? 0.80 : threshold;
-      const norm = this._simpleNormalize(text);
-      if(!norm) return false;
-      let best = 0;
-      for(const s of this.SECTORS) best = Math.max(best, seqRatio(norm, this._simpleNormalize(s)));
-      return best >= threshold;
-    },
+function extractCandidates(rows){
+  const candidates = [];
+  for(const raw of rows){
+    const line = raw.trim();
+    if(!line || line.length < 4) continue;
+    const nums = line.match(CANDIDATE_NUM_RE);
+    if(!nums) continue;
+    let textPart = line.replace(CANDIDATE_NUM_RE, '').trim();
+    textPart = textPart.replace(/^[=•\-\s]+/, '').trim();
+    if(textPart.length < 4 || textPart.length > 60) continue;
+    if(textPart.split(/\s+/).length > 8) continue; // likely prose, not a company name
+    const decimalMatch = line.match(CANDIDATE_DECIMAL_RE);
+    if(!decimalMatch) continue; // most % allocations have a decimal point
+    const val = parseFloat(decimalMatch[0]);
+    if(isNaN(val) || val > 100 || val < 0) continue; // not a plausible % allocation
+    candidates.push({ name: textPart, pct: val, raw });
+  }
+  return candidates;
+}
 
-    NUM_RE: /-?\d+\.\d+/g,
-
-    parseHoldings(rows){
-      const holdings = [];
-      const skipped = [];
-      let pending = [];
-      for(const raw of rows){
-        const line = raw.trim();
-        if(!line || line.length <= 2) continue;
-        const nums = line.match(this.NUM_RE) || [];
-        let textPart = line.replace(this.NUM_RE, '').trim();
-        textPart = textPart.replace(/^=\s*/, '').trim();
-
-        if(!nums.length){
-          if(textPart) pending.push(textPart);
-          continue;
-        }
-        const fullName = [...pending, ...(textPart ? [textPart] : [])].join(' ').trim();
-        pending = [];
-        if(!fullName) continue;
-
-        if(this.isBoilerplateLine(fullName) || this.isSectorHeader(fullName)){
-          skipped.push(raw);
-          continue;
-        }
-        holdings.push({ name: fullName, pctNav: parseFloat(nums[0]), pctDeriv: nums.length > 1 ? parseFloat(nums[1]) : null, raw });
-      }
-      return { holdings, skipped };
-    },
-
-    // Positive gate distinguishing a real equity/hybrid holdings page from
-    // debt-fund pages (different table entirely - Rating/Market Value
-    // columns, "Debt Instrument" summary line) and non-portfolio pages
-    // (market commentary, fund-performance tables, SIP-return tables).
-    isEquityPortfolioPage(items, rows){
-      const hasHeader = items.some(it => this.cleanText(it.str).replace(/\s+/g,' ').trim() === 'Name of the Instrument');
-      if(!hasHeader) return false;
-      return rows.some(r => {
-        const l = r.toLowerCase();
-        return l.includes('equity') && l.includes('total');
-      });
-    },
-  },
-};
+// Generic-across-AMCs report-section labels that are reliably NOT a
+// holdings table (performance/SIP/return tables list fund/scheme names
+// next to numbers too, which coincidentally fuzzy-match real companies).
+// This is about the REPORT SECTION TYPE, common across most factsheets -
+// not any one document's own holdings-table column headers.
+const TITLE_EXCLUDE_KEYWORDS = [
+  'fund performance', 'sip performance', 'sip returns', 'scheme performance',
+  'ready reckoner', 'market update', 'riskometer', 'disclaimer',
+  'idcw history', 'income distribution', 'how to read', 'market outlook',
+];
 
 // ============================================================
 // Main extraction flow
 // ============================================================
-async function extractFundsFromPdf(arrayBuffer, parser){
+async function extractFundsFromPdf(arrayBuffer, watchlistIndex, minMatchesPerPage){
+  minMatchesPerPage = minMatchesPerPage === undefined ? 5 : minMatchesPerPage;
   const pdfjsLib = window['pdfjs-dist/build/pdf'] || window.pdfjsLib;
   pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
 
@@ -481,14 +466,22 @@ async function extractFundsFromPdf(arrayBuffer, parser){
     const content = await page.getTextContent();
     const items = content.items;
 
-    const rows = parser.reconstructPortfolioRows(items);
-    if(!parser.isEquityPortfolioPage(items, rows)) continue;
+    const rows = reconstructPageGeneric(items);
+    const candidates = extractCandidates(rows);
+    if(!candidates.length) continue;
 
-    const schemeName = parser.getSchemeName(items, viewport.height);
-    const { holdings, skipped } = parser.parseHoldings(rows);
-    if(!schemeName || holdings.length < 3) continue;
+    const title = getPageTitle(items, viewport.height) || ('Page ' + p);
+    const titleNorm = title.toLowerCase().replace(/[^\w\s]/g, ' ').replace(/\s+/g, ' ').trim();
+    if(TITLE_EXCLUDE_KEYWORDS.some(kw => titleNorm.includes(kw))) continue;
 
-    funds.push({ page: p, schemeName, holdings, skipped });
+    let matchedCount = 0;
+    for(const c of candidates){
+      if(matchWatchlist(c.name, watchlistIndex).name) matchedCount++;
+    }
+    if(matchedCount < minMatchesPerPage) continue;
+
+    const holdings = candidates.map(c => ({ name: c.name, pctNav: c.pct, pctDeriv: null, raw: c.raw }));
+    funds.push({ page: p, schemeName: title, holdings, skipped: [] });
   }
   return funds;
 }
@@ -627,17 +620,25 @@ document.getElementById('pdfInput').addEventListener('change', async (e) => {
   const file = e.target.files[0];
   if(!file) return;
   document.getElementById('reportRoot').innerHTML = '';
+
+  const ledger = readLedgerState();
+  if(!ledger){
+    renderReport([], null);
+    setStatus('No saved ledger data found — see note below.', 'warn');
+    return;
+  }
+
   setStatus('Reading PDF…');
   try{
     const arrayBuffer = await file.arrayBuffer();
     setStatus('Parsing pages…');
-    const funds = await extractFundsFromPdf(arrayBuffer, PARSERS.iti);
+    const watchlistIndex = buildWatchlistIndex(ledger.companies.map(c => c.name));
+    const funds = await extractFundsFromPdf(arrayBuffer, watchlistIndex);
     if(!funds.length){
-      setStatus('No equity/hybrid fund PORTFOLIO sections found in this PDF — is it an ITI Mutual Fund factsheet?', 'warn');
+      setStatus('No holdings tables matched your ledger in this PDF — it may not be a mutual fund factsheet, or none of its holdings overlap your ledger.', 'warn');
       return;
     }
     setStatus(`Found ${funds.length} fund${funds.length===1?'':'s'}. Matching against your ledger…`);
-    const ledger = readLedgerState();
     renderReport(funds, ledger);
     setStatus(`Done — ${funds.length} fund${funds.length===1?'':'s'} parsed.`);
   }catch(err){
