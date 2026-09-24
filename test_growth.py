@@ -363,7 +363,7 @@ class CyclicalRecommendationTest(unittest.TestCase):
         eps = [None, None, None, 10, None, None, None, 13]  # YoY EPS growth 30% (> 20 strong threshold)
         stock = make_stock(eps=eps, sales=[100] * 8, net_profit=[10] * 8, stock_pe=13, pe_5yr_avg=20)
         # 13 < 0.7*20=14 -> peak warning path
-        result = recommend("Cyclical", stock, prev_qoq_sales_growth=None)
+        result = recommend("Cyclical", stock, prev_qoq_sales_growth=None, prev_yoy_sales_growth=None)
         self.assertEqual(result.recommendation, "Hold")
         self.assertEqual(result.cyclical_flag, "peak_warning")
         self.assertIsNotNone(result.note)
@@ -372,7 +372,7 @@ class CyclicalRecommendationTest(unittest.TestCase):
         eps = [None, None, None, 10, None, None, None, 9]  # YoY EPS growth -10% (weak)
         stock = make_stock(eps=eps, sales=[100] * 8, net_profit=[10] * 8, stock_pe=27, pe_5yr_avg=20)
         # 27 > 1.3*20=26 -> trough setup path
-        result = recommend("Cyclical", stock, prev_qoq_sales_growth=None)
+        result = recommend("Cyclical", stock, prev_qoq_sales_growth=None, prev_yoy_sales_growth=None)
         self.assertEqual(result.recommendation, "Hold")
         self.assertEqual(result.cyclical_flag, "trough_setup")
         self.assertIsNotNone(result.note)
@@ -380,7 +380,7 @@ class CyclicalRecommendationTest(unittest.TestCase):
     def test_neutral_cyclical_no_flag(self):
         eps = [None, None, None, 10, None, None, None, 11]  # YoY EPS growth 10% (neither strong nor weak)
         stock = make_stock(eps=eps, sales=[100] * 8, net_profit=[10] * 8, stock_pe=20, pe_5yr_avg=20)
-        result = recommend("Cyclical", stock, prev_qoq_sales_growth=None)
+        result = recommend("Cyclical", stock, prev_qoq_sales_growth=None, prev_yoy_sales_growth=None)
         self.assertEqual(result.recommendation, "Hold")
         self.assertIsNone(result.cyclical_flag)
         self.assertIsNone(result.note)
@@ -388,61 +388,123 @@ class CyclicalRecommendationTest(unittest.TestCase):
     def test_pe_exactly_at_07x_boundary_is_not_peak_warning(self):
         eps = [None, None, None, 10, None, None, None, 13]  # strong growth
         stock = make_stock(eps=eps, sales=[100] * 8, net_profit=[10] * 8, stock_pe=14.0, pe_5yr_avg=20)  # exactly 0.7x
-        result = recommend("Cyclical", stock, prev_qoq_sales_growth=None)
+        result = recommend("Cyclical", stock, prev_qoq_sales_growth=None, prev_yoy_sales_growth=None)
         self.assertIsNone(result.cyclical_flag)
 
     def test_pe_exactly_at_13x_boundary_is_not_trough_setup(self):
         eps = [None, None, None, 10, None, None, None, 9]  # weak growth
         stock = make_stock(eps=eps, sales=[100] * 8, net_profit=[10] * 8, stock_pe=26.0, pe_5yr_avg=20)  # exactly 1.3x
-        result = recommend("Cyclical", stock, prev_qoq_sales_growth=None)
+        result = recommend("Cyclical", stock, prev_qoq_sales_growth=None, prev_yoy_sales_growth=None)
         self.assertIsNone(result.cyclical_flag)
 
 
 class StandardRecommendationTest(unittest.TestCase):
-    def test_buy_on_yoy_sales_growth(self):
-        sales = [None, None, None, 100, None, None, None, 115.01]  # YoY 15.01%
-        stock = make_stock(eps=[1] * 8, sales=sales, net_profit=[10] * 8, qoq_sales_growth=0)
-        result = recommend("Slow Grower", stock, prev_qoq_sales_growth=0)
+    """Priority-3 swing rule, applied against QoQ sales growth (checked
+    first) or YoY sales growth (fallback) - whichever has a real
+    previous-quarter value for this stock. Every worked example from the
+    spec is covered directly, on both metrics."""
+
+    # ---- The four worked examples from the spec, verbatim, on QoQ -----
+    def test_worked_example_recovery_swing_buy(self):
+        # -5% -> 10% (swing 15) -> Buy
+        stock = make_stock(eps=[1] * 8, sales=[100] * 8, net_profit=[10] * 8, qoq_sales_growth=10)
+        result = recommend("Slow Grower", stock, prev_qoq_sales_growth=-5, prev_yoy_sales_growth=None)
         self.assertEqual(result.recommendation, "Buy")
+        self.assertAlmostEqual(result.qoq_swing, 15.0, places=6)
+        self.assertEqual(result.recommendation_metric, "qoq")
 
-    def test_yoy_sales_growth_exactly_15_is_not_buy(self):
-        sales = [None, None, None, 100, None, None, None, 115.0]  # exactly 15%
-        stock = make_stock(eps=[1] * 8, sales=sales, net_profit=[10] * 8, qoq_sales_growth=0)
-        result = recommend("Slow Grower", stock, prev_qoq_sales_growth=0)
-        self.assertNotEqual(result.recommendation, "Buy")
+    def test_worked_example_still_negative_but_improving_is_hold(self):
+        # -10% -> -2% (swing 8, still negative) -> Hold
+        stock = make_stock(eps=[1] * 8, sales=[100] * 8, net_profit=[10] * 8, qoq_sales_growth=-2)
+        result = recommend("Slow Grower", stock, prev_qoq_sales_growth=-10, prev_yoy_sales_growth=None)
+        self.assertEqual(result.recommendation, "Hold")
 
-    def test_buy_on_qoq_swing(self):
-        stock = make_stock(eps=[1] * 8, sales=[100] * 8, net_profit=[10] * 8, qoq_sales_growth=5)
-        # swing = 5 - (-11) = 16 > 15
-        result = recommend("Slow Grower", stock, prev_qoq_sales_growth=-11)
-        self.assertEqual(result.recommendation, "Buy")
-        self.assertAlmostEqual(result.qoq_swing, 16.0, places=6)
-
-    def test_sell_on_negative_growth(self):
-        sales = [None, None, None, 100, None, None, None, 95]  # YoY -5%
-        stock = make_stock(eps=[1] * 8, sales=sales, net_profit=[10] * 8, qoq_sales_growth=-2)
-        result = recommend("Slow Grower", stock, prev_qoq_sales_growth=-2)  # swing = 0, not > 15
+    def test_worked_example_positive_to_negative_is_always_sell(self):
+        # Positive quarter -> any negative quarter -> Sell, no matter how
+        # small the drop.
+        stock = make_stock(eps=[1] * 8, sales=[100] * 8, net_profit=[10] * 8, qoq_sales_growth=-0.01)
+        result = recommend("Slow Grower", stock, prev_qoq_sales_growth=0.01, prev_yoy_sales_growth=None)
         self.assertEqual(result.recommendation, "Sell")
 
-    def test_negative_growth_but_strong_swing_is_buy_not_sell(self):
-        # Sell condition explicitly requires NOT(qoq_swing > 15) - a strong
-        # swing should win out to Buy even with negative growth.
-        sales = [None, None, None, 100, None, None, None, 95]  # YoY -5%
-        stock = make_stock(eps=[1] * 8, sales=sales, net_profit=[10] * 8, qoq_sales_growth=5)
-        result = recommend("Slow Grower", stock, prev_qoq_sales_growth=-11)  # swing = 16 > 15
+    def test_worked_example_getting_worse_is_sell(self):
+        # -8% -> -12% (getting worse) -> Sell
+        stock = make_stock(eps=[1] * 8, sales=[100] * 8, net_profit=[10] * 8, qoq_sales_growth=-12)
+        result = recommend("Slow Grower", stock, prev_qoq_sales_growth=-8, prev_yoy_sales_growth=None)
+        self.assertEqual(result.recommendation, "Sell")
+
+    # ---- Every branch, explicitly ----
+    def test_curr_above_12_is_buy_even_with_negative_prev(self):
+        stock = make_stock(eps=[1] * 8, sales=[100] * 8, net_profit=[10] * 8, qoq_sales_growth=13)
+        result = recommend("Slow Grower", stock, prev_qoq_sales_growth=-50, prev_yoy_sales_growth=None)
         self.assertEqual(result.recommendation, "Buy")
 
-    def test_hold_when_nothing_triggers(self):
-        sales = [None, None, None, 100, None, None, None, 105]  # YoY 5%, neither buy nor sell
-        stock = make_stock(eps=[1] * 8, sales=sales, net_profit=[10] * 8, qoq_sales_growth=2)
-        result = recommend("Slow Grower", stock, prev_qoq_sales_growth=1)  # swing = 1
+    def test_curr_exactly_12_is_not_buy_via_strong_growth_branch(self):
+        # curr > 12 is strict; exactly 12 with both sides positive falls to
+        # the steady-positive Hold branch instead.
+        stock = make_stock(eps=[1] * 8, sales=[100] * 8, net_profit=[10] * 8, qoq_sales_growth=12)
+        result = recommend("Slow Grower", stock, prev_qoq_sales_growth=1, prev_yoy_sales_growth=None)
         self.assertEqual(result.recommendation, "Hold")
 
-    def test_missing_prev_qoq_does_not_crash_and_swing_is_none(self):
+    def test_steady_positive_both_sides_is_hold(self):
         stock = make_stock(eps=[1] * 8, sales=[100] * 8, net_profit=[10] * 8, qoq_sales_growth=5)
-        result = recommend("Slow Grower", stock, prev_qoq_sales_growth=None)
-        self.assertIsNone(result.qoq_swing)
+        result = recommend("Slow Grower", stock, prev_qoq_sales_growth=3, prev_yoy_sales_growth=None)
         self.assertEqual(result.recommendation, "Hold")
+
+    def test_zero_prev_counts_as_non_negative_for_sell_branch(self):
+        # prev == 0 satisfies "prev >= 0", so a drop into negative from
+        # exactly 0 is still the immediate-Sell branch.
+        stock = make_stock(eps=[1] * 8, sales=[100] * 8, net_profit=[10] * 8, qoq_sales_growth=-1)
+        result = recommend("Slow Grower", stock, prev_qoq_sales_growth=0, prev_yoy_sales_growth=None)
+        self.assertEqual(result.recommendation, "Sell")
+
+    def test_both_negative_same_swing_zero_is_sell(self):
+        # swing <= 0 (same or worse) -> Sell, including the exact-zero edge.
+        stock = make_stock(eps=[1] * 8, sales=[100] * 8, net_profit=[10] * 8, qoq_sales_growth=-5)
+        result = recommend("Slow Grower", stock, prev_qoq_sales_growth=-5, prev_yoy_sales_growth=None)
+        self.assertEqual(result.recommendation, "Sell")
+
+    def test_recovery_from_negative_weak_swing_is_hold_not_buy(self):
+        # curr >= 0, prev < 0, swing <= 12 -> Hold (not a strong enough
+        # recovery to earn a Buy).
+        stock = make_stock(eps=[1] * 8, sales=[100] * 8, net_profit=[10] * 8, qoq_sales_growth=2)
+        result = recommend("Slow Grower", stock, prev_qoq_sales_growth=-5, prev_yoy_sales_growth=None)  # swing = 7
+        self.assertEqual(result.recommendation, "Hold")
+
+    def test_recovery_from_negative_strong_swing_is_buy(self):
+        stock = make_stock(eps=[1] * 8, sales=[100] * 8, net_profit=[10] * 8, qoq_sales_growth=8)
+        result = recommend("Slow Grower", stock, prev_qoq_sales_growth=-5, prev_yoy_sales_growth=None)  # swing = 13 > 12
+        self.assertEqual(result.recommendation, "Buy")
+
+    def test_recovery_swing_exactly_12_is_not_buy(self):
+        stock = make_stock(eps=[1] * 8, sales=[100] * 8, net_profit=[10] * 8, qoq_sales_growth=7)
+        result = recommend("Slow Grower", stock, prev_qoq_sales_growth=-5, prev_yoy_sales_growth=None)  # swing = 12 exactly
+        self.assertEqual(result.recommendation, "Hold")
+
+    # ---- Metric selection ----
+    def test_missing_prev_qoq_falls_back_to_yoy(self):
+        sales = [None, None, None, 100, None, None, None, 111]  # YoY = 11
+        stock = make_stock(eps=[1] * 8, sales=sales, net_profit=[10] * 8, qoq_sales_growth=5)
+        result = recommend("Slow Grower", stock, prev_qoq_sales_growth=None, prev_yoy_sales_growth=-3)
+        # YoY: curr=11, prev=-3 -> recovery branch, swing=14 > 12 -> Buy
+        self.assertEqual(result.recommendation, "Buy")
+        self.assertEqual(result.recommendation_metric, "yoy")
+        self.assertAlmostEqual(result.yoy_sales_growth, 11.0, places=6)
+
+    def test_qoq_preferred_over_yoy_when_both_available(self):
+        sales = [None, None, None, 100, None, None, None, 200]  # YoY = 100 (would be Buy on its own)
+        stock = make_stock(eps=[1] * 8, sales=sales, net_profit=[10] * 8, qoq_sales_growth=5)
+        result = recommend("Slow Grower", stock, prev_qoq_sales_growth=3, prev_yoy_sales_growth=10)
+        # QoQ: curr=5, prev=3 -> steady positive -> Hold (wins over YoY's Buy)
+        self.assertEqual(result.recommendation, "Hold")
+        self.assertEqual(result.recommendation_metric, "qoq")
+
+    def test_no_metric_has_prev_defaults_to_hold_with_note(self):
+        stock = make_stock(eps=[1] * 8, sales=[100] * 8, net_profit=[10] * 8, qoq_sales_growth=5)
+        result = recommend("Slow Grower", stock, prev_qoq_sales_growth=None, prev_yoy_sales_growth=None)
+        self.assertIsNone(result.qoq_swing)
+        self.assertIsNone(result.recommendation_metric)
+        self.assertEqual(result.recommendation, "Hold")
+        self.assertIsNotNone(result.note)
 
 
 if __name__ == "__main__":

@@ -1,0 +1,16 @@
+[
+  {"company": "Reliance Industry", "quarter": "Q1 2026", "field": "cat", "corrected_value": "Stalwart", "confirmed": true},
+  {"company": "ITC", "quarter": "Q1 2026", "field": "cat", "corrected_value": "Stalwart", "confirmed": true},
+  {"company": "ITC", "quarter": "Q1 2026", "field": "rec", "corrected_value": "Sell", "confirmed": true},
+  {"company": "Sun Pharma.Inds.", "quarter": "Q1 2026", "field": "cat", "corrected_value": "Stalwart", "confirmed": true},
+  {"company": "Sun Pharma.Inds.", "quarter": "Q1 2026", "field": "rec", "corrected_value": "Hold", "confirmed": true},
+  {"company": "HCL Technologies", "quarter": "Q1 2026", "field": "cat", "corrected_value": "Slow Grower", "confirmed": true},
+  {"company": "HCL Technologies", "quarter": "Q1 2026", "field": "rec", "corrected_value": "Hold", "confirmed": true},
+  {"company": "Power Grid Corpn", "quarter": "Q1 2026", "field": "rec", "corrected_value": "Hold", "confirmed": true},
+  {"company": "Adani Enterp.", "quarter": "Q1 2026", "field": "rec", "corrected_value": "Buy", "confirmed": true},
+  {"company": "Adani Ports", "quarter": "Q1 2026", "field": "cat", "corrected_value": "Stalwart", "confirmed": true},
+  {"company": "Coal India", "quarter": "Q1 2026", "field": "rec", "corrected_value": "Hold", "confirmed": true},
+  {"company": "Asian Paints", "quarter": "Q1 2026", "field": "cat", "corrected_value": "Turnaround", "confirmed": true},
+  {"company": "Bharat Electron", "quarter": "Q1 2026", "field": "rec", "corrected_value": "Buy", "confirmed": true},
+  {"company": "Larsen & Toubro Ltd", "quarter": "Q1 2026", "field": "rec", "corrected_value": "Hold", "confirmed": true}
+]

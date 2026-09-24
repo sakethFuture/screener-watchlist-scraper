@@ -22,9 +22,11 @@ YOY_LOOKBACK = 4
 STRONG_EPS_GROWTH = 20.0
 WEAK_EPS_GROWTH = 5.0
 
-# Step 3 Buy/Sell threshold for non-Cyclical categories. Moved from 12% to
-# 15% - the one intentional change to this rule versus the prior version.
-BUY_SELL_THRESHOLD = 15.0
+# Priority-3 swing rule: absolute "strong growth" cutoff (curr > this is an
+# unconditional Buy) and the recovery-out-of-negative swing bar. Both spec'd
+# at 12, not the old 15%-threshold version this replaced.
+STRONG_GROWTH_CUTOFF = 12.0
+RECOVERY_SWING_CUTOFF = 12.0
 
 
 @dataclass(frozen=True)
@@ -50,6 +52,13 @@ class RecommendationResult:
     cyclical_flag: Optional[str]  # None | "peak_warning" | "trough_setup"
     note: Optional[str]
     qoq_swing: Optional[float]
+    # This quarter's own YoY sales growth, computed here so callers can
+    # persist it as next quarter's "prev" - mirrors qoq_swing's role for QoQ.
+    yoy_sales_growth: Optional[float] = None
+    yoy_swing: Optional[float] = None
+    # Which metric the swing-based rule actually fired on, for auditability:
+    # "qoq" | "yoy" | None (neither had a real previous-quarter value yet).
+    recommendation_metric: Optional[str] = None
 
 
 def yoy_growth(latest: Optional[float], year_ago: Optional[float]) -> Optional[float]:
@@ -257,19 +266,50 @@ def classify(stock: "StockData", sector: str) -> ClassificationResult:
     )
 
 
+def _swing_recommendation(curr: float, prev: float) -> str:
+    """Priority-3 rule: every branch compares this quarter's value against
+    that *same* metric's own value one quarter prior. There is no absolute
+    "negative = Sell" cutoff independent of that comparison - a stock that's
+    been negative but is recovering still reads as Hold, not Sell, and a
+    stock that just turned negative from positive is an immediate Sell
+    regardless of how small the drop was."""
+    swing = curr - prev
+    if curr > STRONG_GROWTH_CUTOFF:
+        return "Buy"
+    if curr >= 0 and prev >= 0:
+        return "Hold"
+    if curr < 0 and prev >= 0:
+        return "Sell"
+    if curr < 0 and prev < 0:
+        return "Hold" if swing > 0 else "Sell"
+    # curr >= 0 and prev < 0: recovering out of negative territory.
+    return "Buy" if swing > RECOVERY_SWING_CUTOFF else "Hold"
+
+
 def recommend(
     classification: str,
     stock: "StockData",
     prev_qoq_sales_growth: Optional[float],
+    prev_yoy_sales_growth: Optional[float],
 ) -> RecommendationResult:
     qoq_swing = None
     if stock.qoq_sales_growth is not None and prev_qoq_sales_growth is not None:
         qoq_swing = stock.qoq_sales_growth - prev_qoq_sales_growth
 
+    yoy_sales_growth = (
+        yoy_growth(stock.sales[-1], stock.sales[-1 - YOY_LOOKBACK]) if len(stock.sales) > YOY_LOOKBACK else None
+    )
+    yoy_swing = None
+    if yoy_sales_growth is not None and prev_yoy_sales_growth is not None:
+        yoy_swing = yoy_sales_growth - prev_yoy_sales_growth
+
     if classification == "Cyclical":
         # Peter Lynch: normal "strong growth = buy" logic is actively
         # misleading for cyclicals - a low P/E with strong current earnings
         # often means the cycle has peaked, not that the stock is cheap.
+        # This override is orthogonal to the Priority-3 swing rule below (a
+        # P/E-vs-history signal, not a sales-growth-swing one) and is
+        # unchanged by that rule's introduction.
         yoy_eps_growth = (
             yoy_growth(stock.eps[-1], stock.eps[-1 - YOY_LOOKBACK]) if len(stock.eps) > YOY_LOOKBACK else None
         )
@@ -278,29 +318,30 @@ def recommend(
                 return RecommendationResult(
                     "Hold", "peak_warning",
                     "⚠ possible cycle peak - low PE + strong earnings is a Lynch warning sign, not a buy signal",
-                    qoq_swing,
+                    qoq_swing, yoy_sales_growth, yoy_swing,
                 )
             if stock.stock_pe > 1.3 * stock.pe_5yr_avg and (yoy_eps_growth is None or yoy_eps_growth < WEAK_EPS_GROWTH):
                 return RecommendationResult(
                     "Hold", "trough_setup",
                     "possible cycle trough - may be a recovery setup, worth a closer look",
-                    qoq_swing,
+                    qoq_swing, yoy_sales_growth, yoy_swing,
                 )
-        return RecommendationResult("Hold", None, None, qoq_swing)
+        return RecommendationResult("Hold", None, None, qoq_swing, yoy_sales_growth, yoy_swing)
 
-    yoy_sales_growth = yoy_growth(stock.sales[-1], stock.sales[-1 - YOY_LOOKBACK]) if len(stock.sales) > YOY_LOOKBACK else None
-    qoq_sales_growth = stock.qoq_sales_growth
+    # Priority-3 swing rule, run against whichever metric actually has a
+    # real previous-quarter value for this stock right now. QoQ is checked
+    # first since it's the metric with continuous history already being
+    # tracked; YoY only has a genuine "prev" once a stock has gone through
+    # two full 4-quarter cycles under this schema.
+    if stock.qoq_sales_growth is not None and prev_qoq_sales_growth is not None:
+        rec = _swing_recommendation(stock.qoq_sales_growth, prev_qoq_sales_growth)
+        return RecommendationResult(rec, None, None, qoq_swing, yoy_sales_growth, yoy_swing, "qoq")
 
-    swing_buy = qoq_swing is not None and qoq_swing > BUY_SELL_THRESHOLD
-    if (
-        (yoy_sales_growth is not None and yoy_sales_growth > BUY_SELL_THRESHOLD)
-        or (qoq_sales_growth is not None and qoq_sales_growth > BUY_SELL_THRESHOLD)
-        or swing_buy
-    ):
-        return RecommendationResult("Buy", None, None, qoq_swing)
+    if yoy_sales_growth is not None and prev_yoy_sales_growth is not None:
+        rec = _swing_recommendation(yoy_sales_growth, prev_yoy_sales_growth)
+        return RecommendationResult(rec, None, None, qoq_swing, yoy_sales_growth, yoy_swing, "yoy")
 
-    negative = (yoy_sales_growth is not None and yoy_sales_growth < 0) or (qoq_sales_growth is not None and qoq_sales_growth < 0)
-    if negative and not swing_buy:
-        return RecommendationResult("Sell", None, None, qoq_swing)
-
-    return RecommendationResult("Hold", None, None, qoq_swing)
+    return RecommendationResult(
+        "Hold", None, "insufficient prior-quarter history for a QoQ or YoY comparison yet",
+        qoq_swing, yoy_sales_growth, yoy_swing, None,
+    )

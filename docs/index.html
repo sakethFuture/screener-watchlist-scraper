@@ -983,6 +983,55 @@ function backfillQ1Classifications(){
   return filled;
 }
 
+// ============================================================
+// Manual override mechanism (Priority 5). Confirmed corrections live as
+// data in data/overrides.json - {company, quarter, field, corrected_value,
+// confirmed} rows - not as one-off edits to this file. Sending a new
+// correction later means appending a row to that JSON file, never touching
+// this code. Applied once per distinct (company, quarter, field, value)
+// combination (tracked in state.appliedOverrides) so a correction always
+// wins the moment it's introduced, but doesn't keep stomping a value the
+// user goes on to edit by hand afterwards.
+// ============================================================
+const OVERRIDES_URL = 'https://raw.githubusercontent.com/sakethFuture/screener-watchlist-scraper/main/data/overrides.json';
+
+async function fetchOverrides(){
+  try{
+    const res = await fetch(OVERRIDES_URL, { cache: 'no-store' });
+    if(!res.ok) return [];
+    const data = await res.json();
+    return Array.isArray(data) ? data : [];
+  }catch(e){
+    return []; // offline, or fetch blocked (e.g. inside claude.ai's sandbox)
+  }
+}
+
+function applyManualOverrides(overrides){
+  if(!Array.isArray(state.appliedOverrides)) state.appliedOverrides = [];
+  const applied = new Set(state.appliedOverrides);
+  let changed = 0;
+  for(const o of overrides){
+    if(!o || !o.confirmed || !o.company || !o.quarter || !o.field) continue;
+    const key = `${o.company}|${o.quarter}|${o.field}|${o.corrected_value}`;
+    if(applied.has(key)) continue;
+    const company = state.companies.find(c => c.name === o.company);
+    const q = company && company.quarters ? company.quarters[o.quarter] : null;
+    if(!q) continue;
+    q[o.field] = o.corrected_value;
+    // Locks this field against Sync/Autofill silently re-clobbering it on
+    // a later load - those are rule-engine-derived sources, and a confirmed
+    // correction always outranks them. Direct manual edits in the table's
+    // own dropdowns are NOT locked out - that's still the escape valve.
+    if(o.field === 'cat') q.catConfirmed = true;
+    if(o.field === 'rec'){ q.recConfirmed = true; q.recSuggested = false; }
+    if(o.field === 'techRec') q.techRecConfirmed = true;
+    applied.add(key);
+    changed++;
+  }
+  state.appliedOverrides = [...applied];
+  return changed;
+}
+
 async function loadState(){
   try{
     const res = await store.get('fy26-27-ledger', false);
@@ -1339,7 +1388,7 @@ function applyScreenerCSV(lines){
     const cat = classifyGrowth(avg);
     const co = findByName(name);
     if(!co){ unmatched.push(name); continue; }
-    co.quarters[state.activeQ].cat = cat;
+    if(!co.quarters[state.activeQ].catConfirmed) co.quarters[state.activeQ].cat = cat;
     updated++;
   }
   return { updated, unmatched, skippedNoGrowth, nameIdx, salesIdx, profitIdx };
@@ -1392,8 +1441,8 @@ document.getElementById('applyAutofillBtn').addEventListener('click', () => {
       const co = findByName(parsed.name);
       if(!co){ unmatched.push(parsed.name); return; }
       const cell = co.quarters[state.activeQ];
-      if(parsed.cat) cell.cat = parsed.cat;
-      if(parsed.rec) cell.rec = parsed.rec;
+      if(parsed.cat && !cell.catConfirmed) cell.cat = parsed.cat;
+      if(parsed.rec && !cell.recConfirmed) cell.rec = parsed.rec;
       if(parsed.cat || parsed.rec) updated++;
     });
     if(updated || unmatched.length){
@@ -1556,23 +1605,26 @@ async function runSync(url, { silent } = {}){
       if(!cat) return;
       const co = findByName(entry.name);
       if(!co){ unmatched.push(entry.name); return; }
-      co.quarters[state.activeQ].cat = cat;
+      const cell = co.quarters[state.activeQ];
+      if(!cell.catConfirmed) cell.cat = cat;
       // 2nd Category: either the next-highest tied category (genuine Step-2
       // scoring tie) or a gate stock's complementary growth-profile label.
       // Mutually exclusive at the source - never both on the same entry.
       const tieOthers = Array.isArray(entry.category_tie) ? entry.category_tie.slice(1) : [];
       const secondaryCat = normCat(entry.secondary_category || '');
-      if(tieOthers.length){
-        co.quarters[state.activeQ].cat2 = normCat(tieOthers[0]) || tieOthers[0];
-        co.quarters[state.activeQ].cat2Reason = 'tie';
-      } else if(secondaryCat){
-        co.quarters[state.activeQ].cat2 = secondaryCat;
-        co.quarters[state.activeQ].cat2Reason = 'secondary';
+      if(!cell.catConfirmed){
+        if(tieOthers.length){
+          cell.cat2 = normCat(tieOthers[0]) || tieOthers[0];
+          cell.cat2Reason = 'tie';
+        } else if(secondaryCat){
+          cell.cat2 = secondaryCat;
+          cell.cat2Reason = 'secondary';
+        }
       }
       const rec = normRec(entry.recommendation || '');
-      if(rec){
-        co.quarters[state.activeQ].rec = rec;
-        co.quarters[state.activeQ].recSuggested = true;
+      if(rec && !cell.recConfirmed){
+        cell.rec = rec;
+        cell.recSuggested = true;
       }
       updated++;
     });
@@ -1691,6 +1743,12 @@ document.getElementById('sectorFilter').value = '';
 currentSectorFilter = '';
 
 loadState().then(async () => {
+  // Confirmed manual corrections always win over the rule engine's output,
+  // and apply regardless of whether Sync has ever been run - fetch failure
+  // (offline, or claude.ai's sandbox blocking outbound fetch) degrades to
+  // a silent no-op, same as Sync's own fetch below.
+  const overrides = await fetchOverrides();
+  if(applyManualOverrides(overrides) > 0) await saveState();
   render();
   // Show whatever was last persisted immediately, before any new fetch on
   // this load - so the page always tells you when the data was actually

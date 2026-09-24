@@ -60,24 +60,31 @@ def run_scrape_job(config: Optional[Config] = None) -> dict:
                     prev = state.get(stock.slug, {})
                     prev_date = prev.get("last_result_date")
                     prev_qoq_sales_growth = prev.get("last_qoq_sales_growth")
+                    prev_yoy_sales_growth = prev.get("last_yoy_sales_growth")
 
                     if sd.latest_date == prev_date:
                         counts["unchanged"] += 1
                         log.info("%s (%s): unchanged, still %s", stock.name, stock.slug, prev_date)
                         continue
 
+                    # Classify/recommend BEFORE touching state or output - if
+                    # either raises, we fall into the except block below with
+                    # neither file mutated, so this quarter is retried next
+                    # run instead of state silently marking it "seen" while
+                    # output.json never actually got this stock's new result.
+                    sector = sector_of(stock.name)
+                    cls = classify(sd, sector)
+                    classification = cls.classification
+                    rec = recommend(classification, sd, prev_qoq_sales_growth, prev_yoy_sales_growth)
+                    negative_eps_quarters = sum(1 for e in sd.eps if e is not None and e < 0)
+
                     state[stock.slug] = {
                         "name": stock.name,
                         "last_result_date": sd.latest_date,
                         "last_qoq_sales_growth": sd.qoq_sales_growth,
+                        "last_yoy_sales_growth": rec.yoy_sales_growth,
                     }
                     save_json(config.state_path, state)
-
-                    sector = sector_of(stock.name)
-                    cls = classify(sd, sector)
-                    classification = cls.classification
-                    rec = recommend(classification, sd, prev_qoq_sales_growth)
-                    negative_eps_quarters = sum(1 for e in sd.eps if e is not None and e < 0)
 
                     merge_output(output, stock.slug, {
                         "name": stock.name,
@@ -90,6 +97,7 @@ def run_scrape_job(config: Optional[Config] = None) -> dict:
                         "category_tie": cls.category_tie,
                         "secondary_category": cls.secondary_category,
                         "recommendation": rec.recommendation,
+                        "recommendation_metric": rec.recommendation_metric,
                         "cyclical_flag": rec.cyclical_flag,
                         "cyclical_note": rec.note,
                         "pb_ratio": _round(sd.pb_ratio),
@@ -101,7 +109,11 @@ def run_scrape_job(config: Optional[Config] = None) -> dict:
                         "sales_cagr_3yr": _round(sd.sales_cagr_3yr),
                         "sales_cagr_5yr": _round(sd.sales_cagr_5yr),
                         "qoq_sales_growth": _round(sd.qoq_sales_growth),
+                        "prev_qoq_sales_growth": _round(prev_qoq_sales_growth),
                         "qoq_swing": _round(rec.qoq_swing),
+                        "yoy_sales_growth": _round(rec.yoy_sales_growth),
+                        "prev_yoy_sales_growth": _round(prev_yoy_sales_growth),
+                        "yoy_swing": _round(rec.yoy_swing),
                         "negative_eps_quarters_of_8": negative_eps_quarters,
                         "opm_current": _round(sd.opm[-1]) if sd.opm else None,
                         "opm_3yr_avg": _round(sd.annual_opm_avg_3yr),
