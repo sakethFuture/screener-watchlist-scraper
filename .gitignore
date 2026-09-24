@@ -5,3 +5,5 @@ __pycache__/
 *.pyc
 .venv/
 .claude/
+server/node_modules/
+server/.env

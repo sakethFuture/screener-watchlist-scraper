@@ -1,0 +1,25 @@
+# Fly.io app config. `fly launch` (run from inside server/) generates one
+# of these automatically and will offer to overwrite this file with its own
+# detected settings - that's fine, just make sure `internal_port` stays
+# 3000 (or update it to match PORT) and re-add the [env] block below if
+# it's not carried over.
+
+app = "fund-analysis-api" # fly will ask you to confirm/rename this - it must be globally unique across all Fly.io apps
+primary_region = "sin" # Singapore - closest low-latency region to India; change if you're elsewhere
+
+[build]
+
+[env]
+  PORT = "3000"
+
+[http_service]
+  internal_port = 3000
+  force_https = true
+  auto_stop_machines = false   # keep it warm - a shared ledger shouldn't cold-start for the first visitor of the day
+  auto_start_machines = true
+  min_machines_running = 1
+
+[[vm]]
+  cpu_kind = "shared"
+  cpus = 1
+  memory_mb = 256

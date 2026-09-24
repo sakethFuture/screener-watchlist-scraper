@@ -1,0 +1,31 @@
+{
+  "name": "fund-analysis-api",
+  "version": "1.0.0",
+  "description": "Shared backend for the Fund Analysis Platform - companies, quarterly ledger data, manual overrides, and fund-factsheet analysis, backed by MySQL.",
+  "main": "src/index.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js",
+    "migrate": "node src/migrate.js",
+    "seed": "node src/seed.js",
+    "verify": "node verify-locally.js",
+    "verify:e2e": "node verify-e2e.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mysql2": "^3.11.0"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "mysql-memory-server": "^1.16.0",
+    "puppeteer": "^25.12.0"
+  },
+  "allowScripts": {
+    "puppeteer@25.12.0": true
+  }
+}
