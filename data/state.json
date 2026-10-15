@@ -434,8 +434,9 @@
   },
   "CANBK": {
     "name": "Canara Bank",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": 3.511416815854769
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 6.6905361531692815,
+    "last_yoy_sales_growth": 9.634572212521826
   },
   "NAUKRI": {
     "name": "Info Edg.(India)",
@@ -489,8 +490,9 @@
   },
   "ICICIGI": {
     "name": "ICICI Lombard",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": 3.8534798534798536
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 15.970654627539504,
+    "last_yoy_sales_growth": 19.66807395545203
   },
   "BHARTIHEXA": {
     "name": "Bharti Hexacom",
@@ -534,8 +536,9 @@
   },
   "BHEL": {
     "name": "BHEL",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": -37.465475223395615
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 20.810600155884647,
+    "last_yoy_sales_growth": 23.80191693290735
   },
   "INDIANB": {
     "name": "Indian Bank",
