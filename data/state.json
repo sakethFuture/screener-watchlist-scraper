@@ -123,8 +123,9 @@
   },
   "WIPRO": {
     "name": "Wipro",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": 1.0026406997854431
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 1.1193267698843907,
+    "last_yoy_sales_growth": 9.058465876547562
   },
   "ADANIPORTS": {
     "name": "Adani Ports",
@@ -148,8 +149,9 @@
   },
   "NESTLEIND": {
     "name": "Nestle India",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": -5.483106105512745
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 6.428347444339918,
+    "last_yoy_sales_growth": 20.269312544294827
   },
   "BAJAJ-AUTO": {
     "name": "Bajaj Auto",
@@ -193,13 +195,15 @@
   },
   "HDFCLIFE": {
     "name": "HDFC Life Insur.",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": 69.72850678733032
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": -27.613377173494474,
+    "last_yoy_sales_growth": 18.333252626991428
   },
   "JIOFIN": {
     "name": "Jio Financial",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": 96.66339548577037
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": -15.219560878243513,
+    "last_yoy_sales_growth": 73.19062181447502
   },
   "HINDALCO": {
     "name": "Hindalco Inds.",
@@ -208,8 +212,9 @@
   },
   "TECHM": {
     "name": "Tech Mahindra",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": 4.218625630140621
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 2.978615071283096,
+    "last_yoy_sales_growth": 15.61271882815291
   },
   "SHRIRAMFIN": {
     "name": "Shriram Finance",
@@ -279,8 +284,9 @@
   },
   "IRFC": {
     "name": "IRFC",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": 12.609051254089424
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": -4.781503449945528,
+    "last_yoy_sales_growth": 23.44632768361582
   },
   "VEDL": {
     "name": "Vedanta",
@@ -542,8 +548,9 @@
   },
   "INDIANB": {
     "name": "Indian Bank",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": 3.4709515096065875
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 5.824813484387952,
+    "last_yoy_sales_growth": 15.161173923502528
   },
   "POLICYBZR": {
     "name": "PB Fintech.",
@@ -552,8 +559,9 @@
   },
   "PERSISTENT": {
     "name": "Persistent Sys",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": 6.089743589743589
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 8.38949570067395,
+    "last_yoy_sales_growth": 30.242948896956158
   },
   "SUZLON": {
     "name": "Suzlon Energy",
@@ -847,8 +855,9 @@
   },
   "LTF": {
     "name": "L&T Finance Ltd",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": 9.264305177111716
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 5.19854210627278,
+    "last_yoy_sales_growth": 26.476014760147603
   },
   "FEDERALBNK": {
     "name": "Federal Bank",
@@ -857,8 +866,9 @@
   },
   "TATACOMM": {
     "name": "Tata Comm",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": 0.4424778761061947
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 1.5950174692389487,
+    "last_yoy_sales_growth": 9.639344262295083
   },
   "IDFCFIRSTB": {
     "name": "IDFC First Bank",
@@ -892,8 +902,9 @@
   },
   "KARURVYSYA": {
     "name": "Karuru Vyasa Bank",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": 4.993112947658402
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 6.10036077402427,
+    "last_yoy_sales_growth": 15.206552706552706
   },
   "VIMTALABS": {
     "name": "Ipca Labs",
@@ -922,13 +933,15 @@
   },
   "POLYCAB": {
     "name": "Polycab India",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": -7.378158844765342
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 20.572472594397077,
+    "last_yoy_sales_growth": 52.83310174463486
   },
   "HDFCAMC": {
     "name": "HDFC AMC",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": 4.562737642585551
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 6.363636363636363,
+    "last_yoy_sales_growth": 13.924050632911392
   },
   "HINDZINC": {
     "name": "Hindustan Zinc",
@@ -947,8 +960,9 @@
   },
   "5PAISA": {
     "name": "Tata Capital",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": 3.5294117647058822
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": -2.1623457488961813,
+    "last_yoy_sales_growth": 11.986523260334327
   },
   "PREMIERENE": {
     "name": "Premier Energies",
