@@ -295,8 +295,9 @@
   },
   "DLF": {
     "name": "DLF",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": -29.437706725468576
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": -1.484375,
+    "last_yoy_sales_growth": -23.25015216068168
   },
   "PIDILITIND": {
     "name": "Pidilite Inds.",
@@ -395,8 +396,9 @@
   },
   "PNB": {
     "name": "Punjab Natl.Bank",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": 2.411732422708702
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 4.995683110542141,
+    "last_yoy_sales_growth": 8.470457970657892
   },
   "SHREECEM": {
     "name": "Shree Cement",
@@ -410,8 +412,9 @@
   },
   "BAJAJHFL": {
     "name": "Bajaj Housing",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": 5.511539786427833
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 6.13777342474698,
+    "last_yoy_sales_growth": 18.304221251819506
   },
   "ADANIENSOL": {
     "name": "Adani Energy Sol",
@@ -755,8 +758,9 @@
   },
   "OBEROIRLTY": {
     "name": "Oberoi Realty",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": -25.657142857142855
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 28.43966179861645,
+    "last_yoy_sales_growth": -6.070826306913997
   },
   "LINDEINDIA": {
     "name": "Linde India",
@@ -861,8 +865,9 @@
   },
   "FEDERALBNK": {
     "name": "Federal Bank",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": -1.0695860072983516
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 6.626812515899262,
+    "last_yoy_sales_growth": 16.17239467849224
   },
   "TATACOMM": {
     "name": "Tata Comm",
@@ -1171,8 +1176,9 @@
   },
   "UJJIVANSFB": {
     "name": "Ujjivan Small Finance Bank Ltd",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": 7.827476038338658
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 6.320987654320988,
+    "last_yoy_sales_growth": 28.00237812128419
   },
   "CDSL": {
     "name": "Central Depository Services (India) Ltd",
