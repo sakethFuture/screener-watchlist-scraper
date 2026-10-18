@@ -6,8 +6,9 @@
   },
   "HDFCBANK": {
     "name": "HDFC Bank",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": 3.8918584111399137
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 5.031189621860337,
+    "last_yoy_sales_growth": 9.354668138032508
   },
   "TCS": {
     "name": "TCS",
@@ -22,8 +23,9 @@
   },
   "ICICIBANK": {
     "name": "ICICI Bank",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": 5.33733919425737
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 7.180184146551559,
+    "last_yoy_sales_growth": 16.211784728419918
   },
   "SBIN": {
     "name": "St Bk of India",
@@ -88,8 +90,9 @@
   },
   "AXISBANK": {
     "name": "Axis Bank",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": 4.0121740657282485
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 7.16054245681166,
+    "last_yoy_sales_growth": 17.87991333952337
   },
   "M&M": {
     "name": "M & M",
@@ -743,8 +746,9 @@
   },
   "YESBANK": {
     "name": "Yes Bank",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": 5.116157661185069
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 7.40004966476285,
+    "last_yoy_sales_growth": 17.065908783326567
   },
   "COFORGE": {
     "name": "Coforge",
@@ -955,8 +959,9 @@
   },
   "IDBI": {
     "name": "IDBI Bank",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": -3.267555099948744
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 12.849384024374089,
+    "last_yoy_sales_growth": 19.83401322267548
   },
   "MAZDOCK": {
     "name": "Mazagon Dock Shipbuilders",
