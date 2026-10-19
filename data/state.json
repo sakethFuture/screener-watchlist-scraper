@@ -986,8 +986,9 @@
   },
   "UNIONBANK": {
     "name": "Union Bank of India",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": 2.8152646573699207
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 3.467386152331644,
+    "last_yoy_sales_growth": 8.292310627742797
   },
   "KAYNES": {
     "name": "Kaynes Technologies",
