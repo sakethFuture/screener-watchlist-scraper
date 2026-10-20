@@ -39,8 +39,9 @@
   },
   "BAJFINANCE": {
     "name": "Bajaj Finance",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": 7.21558826251967
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 5.961579969781998,
+    "last_yoy_sales_growth": 22.791395697848923
   },
   "HINDUNILVR": {
     "name": "Hind. Unilever",
@@ -85,8 +86,9 @@
   },
   "ULTRACEMCO": {
     "name": "UltraTech Cem.",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": -4.46141323307105
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": -5.489289191820838,
+    "last_yoy_sales_growth": 18.809608813178965
   },
   "AXISBANK": {
     "name": "Axis Bank",
@@ -954,8 +956,9 @@
   },
   "HINDZINC": {
     "name": "Hindustan Zinc",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": 1.4988186650915534
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 9.791227176838584,
+    "last_yoy_sales_growth": 76.54696455725815
   },
   "IDBI": {
     "name": "IDBI Bank",
