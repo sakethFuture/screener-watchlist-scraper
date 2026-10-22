@@ -165,8 +165,9 @@
   },
   "ETERNAL": {
     "name": "Eternal Ltd",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": 16.88063844552394
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 19.430013359061896,
+    "last_yoy_sales_growth": 77.6158940397351
   },
   "BEL": {
     "name": "Bharat Electron",
@@ -316,8 +317,9 @@
   },
   "ADANIGREEN": {
     "name": "Adani Green",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": 26.527698458023984
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": -3.9043105393816293,
+    "last_yoy_sales_growth": 41.555851063829785
   },
   "PFC": {
     "name": "Power Fin.Corpn.",
@@ -381,8 +383,9 @@
   },
   "INDHOTEL": {
     "name": "Indian Hotels Co",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": -15.406871609403256
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 6.199230440359128,
+    "last_yoy_sales_growth": 21.705046545810877
   },
   "TATAPOWER": {
     "name": "Tata Power Co.",
@@ -525,8 +528,9 @@
   },
   "SRF": {
     "name": "SRF",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": 9.057421451787649
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": -2.563083647923704,
+    "last_yoy_sales_growth": 34.72527472527472
   },
   "NTPCGREEN": {
     "name": "NTPC Green Ene.",
@@ -668,8 +672,9 @@
   },
   "VMM": {
     "name": "Vishal Mega Mart",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": 19.68529222864483
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": -8.800643949557285,
+    "last_yoy_sales_growth": 14.022140221402212
   },
   "ABCAPITAL": {
     "name": "Aditya Birla Cap",
@@ -1010,8 +1015,9 @@
   },
   "KEI": {
     "name": "KEI Industries",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": -8.3716915995397
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 18.555729984301415,
+    "last_yoy_sales_growth": 38.51797505502568
   },
   "MAXHEALTH": {
     "name": "Max Healthcare Institute",
