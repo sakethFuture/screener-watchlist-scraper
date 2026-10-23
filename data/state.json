@@ -410,8 +410,9 @@
   },
   "SHREECEM": {
     "name": "Shree Cement",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": 2.1635797410260613
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": -5.390662602278197,
+    "last_yoy_sales_growth": 23.860533501365257
   },
   "UNITDSPR": {
     "name": "United Spirits",
@@ -426,8 +427,9 @@
   },
   "ADANIENSOL": {
     "name": "Adani Energy Sol",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": 30.471584038694076
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 3.7586242405519514,
+    "last_yoy_sales_growth": 52.759248029108555
   },
   "TORNTPHARM": {
     "name": "Torrent Pharma.",
@@ -436,8 +438,9 @@
   },
   "HAVELLS": {
     "name": "Havells India",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": -2.7889634601043998
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": -1.3194231359312671,
+    "last_yoy_sales_growth": 34.58882611424984
   },
   "SIEMENS": {
     "name": "Siemens",
@@ -482,8 +485,9 @@
   },
   "SWIGGY": {
     "name": "Swiggy",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": 6.720977596741344
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 11.142102172636523,
+    "last_yoy_sales_growth": 36.144578313253014
   },
   "JSWENERGY": {
     "name": "JSW Energy",
@@ -637,8 +641,9 @@
   },
   "ATGL": {
     "name": "Adani Total Gas",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": 12.652536929993577
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 10.832383124287343,
+    "last_yoy_sales_growth": 33.97656788421778
   },
   "PATANJALI": {
     "name": "Patanjali Foods",
@@ -703,8 +708,9 @@
   },
   "GODREJPROP": {
     "name": "Godrej Propert.",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": -85.36726431463273
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 282.4110671936759,
+    "last_yoy_sales_growth": 161.48648648648648
   },
   "MRF": {
     "name": "MRF",
@@ -733,8 +739,9 @@
   },
   "COLPAL": {
     "name": "Colgate-Palmoliv",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": 0.5015673981191223
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 6.4254522769806615,
+    "last_yoy_sales_growth": 12.23684210526316
   },
   "ALKEM": {
     "name": "Alkem Lab",
@@ -780,8 +787,9 @@
   },
   "JSL": {
     "name": "Jindal Stain.",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": -0.5115991884978389
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 14.1413245855129,
+    "last_yoy_sales_growth": 18.185991003396676
   },
   "IRCTC": {
     "name": "I R C T C",
@@ -1181,8 +1189,9 @@
   },
   "HINDPETRO": {
     "name": "Hindustan Petroleum Corporation Ltd",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": 22.31396330163481
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": -4.393814374324247,
+    "last_yoy_sales_growth": 33.266240977234865
   },
   "HCG": {
     "name": "Healthcare Global Entprises",
@@ -1232,8 +1241,9 @@
   },
   "NAM-INDIA": {
     "name": "Nippon Life Ind.",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": 3.7889039242219216
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 3.780964797913951,
+    "last_yoy_sales_growth": 20.972644376899694
   },
   "HDBFS": {
     "name": "HDB FINANC SER",
