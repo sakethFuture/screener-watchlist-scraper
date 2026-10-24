@@ -34,8 +34,9 @@
   },
   "INFY": {
     "name": "Infosys",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": 3.8985388560837895
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 2.142664537138827,
+    "last_yoy_sales_growth": 10.685547314003147
   },
   "BAJFINANCE": {
     "name": "Bajaj Finance",
@@ -149,8 +150,9 @@
   },
   "JSWSTEEL": {
     "name": "JSW Steel",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": -7.456037514654162
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 15.036736762097796,
+    "last_yoy_sales_growth": 20.67239546420978
   },
   "NESTLEIND": {
     "name": "Nestle India",
@@ -224,8 +226,9 @@
   },
   "SHRIRAMFIN": {
     "name": "Shriram Finance",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": 7.088627827059859
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 2.925373134328358,
+    "last_yoy_sales_growth": 15.782404298186703
   },
   "CIPLA": {
     "name": "Cipla",
@@ -239,8 +242,9 @@
   },
   "DRREDDY": {
     "name": "Dr Reddy's Labs",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": 7.341637953882851
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 7.382716049382716,
+    "last_yoy_sales_growth": -1.4725872224739467
   },
   "APOLLOHOSP": {
     "name": "Apollo Hospitals",
@@ -254,8 +258,9 @@
   },
   "INDUSINDBK": {
     "name": "IndusInd Bank",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": 2.7714675147660155
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 4.297082228116711,
+    "last_yoy_sales_growth": 1.610819192006202
   },
   "HEROMOTOCO": {
     "name": "Hero Motocorp",
@@ -275,8 +280,9 @@
   },
   "ADANIPOWER": {
     "name": "Adani Power",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": 32.897419672361664
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 2.840969209607449,
+    "last_yoy_sales_growth": 44.45270119640336
   },
   "INDIGO": {
     "name": "Interglobe Aviat",
@@ -338,8 +344,9 @@
   },
   "BPCL": {
     "name": "B P C L",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": 27.443745208549213
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": -1.4523027294301183,
+    "last_yoy_sales_growth": 42.05400872829836
   },
   "BRITANNIA": {
     "name": "Britannia Inds.",
@@ -433,8 +440,9 @@
   },
   "TORNTPHARM": {
     "name": "Torrent Pharma.",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": 17.250416964498452
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 1.1786222312538102,
+    "last_yoy_sales_growth": 50.78740157480315
   },
   "HAVELLS": {
     "name": "Havells India",
@@ -465,8 +473,9 @@
   },
   "JINDALSTEL": {
     "name": "Jindal Steel",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": -4.53816746824516
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 7.731559230073634,
+    "last_yoy_sales_growth": 42.72633920931029
   },
   "ZYDUSLIFE": {
     "name": "Zydus Lifesci.",
@@ -596,8 +605,9 @@
   },
   "SBICARD": {
     "name": "SBI Cards",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": 2.168625861370085
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 1.98373338623289,
+    "last_yoy_sales_growth": 3.6283007458173753
   },
   "IDEA": {
     "name": "Vodafone Idea",
@@ -766,8 +776,9 @@
   },
   "COFORGE": {
     "name": "Coforge",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": 24.224719101123597
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 11.631693198263386,
+    "last_yoy_sales_growth": 53.660358565737056
   },
   "UPL": {
     "name": "UPL",
@@ -868,8 +879,9 @@
   },
   "BANKINDIA": {
     "name": "Bank of India",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": 2.677157308537271
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 6.334278748071852,
+    "last_yoy_sales_growth": 15.382538739808865
   },
   "SAIL": {
     "name": "Steel Authority of India",
@@ -1114,13 +1126,15 @@
   },
   "DCBBANK": {
     "name": "DCB Bank",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": 4.037755637126376
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 3.326612903225806,
+    "last_yoy_sales_growth": 12.45200219418541
   },
   "CSBBANK": {
     "name": "CSB Bank",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": 7.160699417152373
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 4.040404040404041,
+    "last_yoy_sales_growth": 20.73940486925158
   },
   "PNBHOUSING": {
     "name": "PNB Hosuing Finance",
@@ -1179,8 +1193,9 @@
   },
   "UTIAMC": {
     "name": "ICICI Pru Asset Management Co Ltd.",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": 49.743589743589745
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": -28.93835616438356,
+    "last_yoy_sales_growth": -0.9546539379474941
   },
   "CHOLAHLDNG": {
     "name": "Cholamandalam Financial Holdings Ltd",
@@ -1221,8 +1236,9 @@
   },
   "CGPOWER": {
     "name": "CG Power & Ind",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": -4.677513073794306
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 15.879305089911613,
+    "last_yoy_sales_growth": 30.071843995894632
   },
   "MOTHERSON": {
     "name": "Samvardh. Mothe.",
@@ -1236,8 +1252,9 @@
   },
   "OFSS": {
     "name": "Oracle Fin.Serv.",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": 51.3317191283293
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": -38.976,
+    "last_yoy_sales_growth": 6.595863610955842
   },
   "NAM-INDIA": {
     "name": "Nippon Life Ind.",
