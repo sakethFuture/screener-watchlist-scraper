@@ -61,8 +61,9 @@
   },
   "KOTAKBANK": {
     "name": "Kotak Mah. Bank",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": 2.9617995175856846
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 8.17760828112231,
+    "last_yoy_sales_growth": 15.448572591429736
   },
   "ANUHPHR": {
     "name": "Sun Pharma.Inds.",
@@ -874,8 +875,9 @@
   },
   "JKCEMENT": {
     "name": "J K Cements",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": 3.7037037037037033
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": -7.415674603174603,
+    "last_yoy_sales_growth": 23.65021530308049
   },
   "BANKINDIA": {
     "name": "Bank of India",
@@ -908,8 +910,9 @@
   },
   "IDFCFIRSTB": {
     "name": "IDFC First Bank",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": 4.7190372405950916
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 7.890688625463758,
+    "last_yoy_sales_growth": 19.98591124081715
   },
   "ITCHOTELS": {
     "name": "ITC Hotels",
