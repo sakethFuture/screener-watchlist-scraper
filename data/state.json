@@ -1287,7 +1287,8 @@
   },
   "AUBANK": {
     "name": "AU Small Finance",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": 5.658497708706914
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 5.82689043937394,
+    "last_yoy_sales_growth": 24.40700509864775
   }
 }
