@@ -407,8 +407,9 @@
   },
   "RECLTD": {
     "name": "REC Ltd",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": -0.8857456742653117
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 3.9140976792518183,
+    "last_yoy_sales_growth": -1.009701049297169
   },
   "PNB": {
     "name": "Punjab Natl.Bank",
@@ -627,13 +628,15 @@
   },
   "IOB": {
     "name": "Indian Overseas Bank",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": 3.4044057014960534
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 4.818865345181134,
+    "last_yoy_sales_growth": 17.19526175009553
   },
   "PAYTM": {
     "name": "One 97",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": 8.12720848056537
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 8.169934640522875,
+    "last_yoy_sales_growth": 28.481319747695295
   },
   "ASHOKLEY": {
     "name": "Ashok Leyland",
@@ -830,8 +833,9 @@
   },
   "SUPREMEIND": {
     "name": "Supreme Inds.",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": -22.95918367346939
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 23.65710080941869,
+    "last_yoy_sales_growth": 40.39264828738513
   },
   "SUNDARMFIN": {
     "name": "Sundaram Finance",
@@ -916,8 +920,9 @@
   },
   "ITCHOTELS": {
     "name": "ITC Hotels",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": -25.358851674641148
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 12.606837606837606,
+    "last_yoy_sales_growth": 25.62574493444577
   },
   "GODFRYPHLP": {
     "name": "Godfrey Phillips",
@@ -1012,8 +1017,9 @@
   },
   "APLAPOLLO": {
     "name": "APL Apollo Tubes",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": -10.559897910352529
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 24.879614767255216,
+    "last_yoy_sales_growth": 26.59555234134876
   },
   "UNIONBANK": {
     "name": "Union Bank of India",
@@ -1028,8 +1034,9 @@
   },
   "MANKIND": {
     "name": "Mankind Pharma",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": 17.078129538193437
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 7.615976184569585,
+    "last_yoy_sales_growth": 17.33838247227482
   },
   "NATIONALUM": {
     "name": "National Aluminium",
