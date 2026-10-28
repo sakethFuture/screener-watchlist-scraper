@@ -46,8 +46,9 @@
   },
   "HINDUNILVR": {
     "name": "Hind. Unilever",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": 6.054675555011926
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 5.103511908194452,
+    "last_yoy_sales_growth": 14.492116338966015
   },
   "ITC": {
     "name": "ITC",
@@ -56,8 +57,9 @@
   },
   "LT": {
     "name": "Larsen & Toubro Ltd",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": -17.906768806940384
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 15.90768596744282,
+    "last_yoy_sales_growth": 15.836079077429984
   },
   "KOTAKBANK": {
     "name": "Kotak Mah. Bank",
@@ -78,8 +80,9 @@
   },
   "MARUTI": {
     "name": "Maruti Suzuki",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": 0.01524913270557737
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 1.6885839527348963,
+    "last_yoy_sales_growth": 26.00604572076327
   },
   "NTPC": {
     "name": "NTPC",
@@ -136,8 +139,9 @@
   },
   "ADANIPORTS": {
     "name": "Adani Ports",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": 0.7729558577016205
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 4.796229553645689,
+    "last_yoy_sales_growth": 23.704592560270534
   },
   "COALINDIA": {
     "name": "Coal India",
@@ -163,8 +167,9 @@
   },
   "BAJAJ-AUTO": {
     "name": "Bajaj Auto",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": 21.629654553611484
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 15.84674258840887,
+    "last_yoy_sales_growth": 59.68223705115984
   },
   "ETERNAL": {
     "name": "Eternal Ltd",
@@ -194,8 +199,9 @@
   },
   "SBILIFE": {
     "name": "SBI Life Insuran",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": 1038.2215671825104
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": -46.86751408161944,
+    "last_yoy_sales_growth": 6.510923642656284
   },
   "EICHERMOT": {
     "name": "Eicher Motors",
@@ -233,8 +239,9 @@
   },
   "CIPLA": {
     "name": "Cipla",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": 8.836569331906437
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 4.003371260008428,
+    "last_yoy_sales_growth": -2.4377388325207536
   },
   "HONASA": {
     "name": "Tata Consumer",
@@ -470,8 +477,9 @@
   },
   "NAUKRI": {
     "name": "Info Edg.(India)",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": 1.380897583429229
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 2.6106696935300793,
+    "last_yoy_sales_growth": 12.298136645962733
   },
   "JINDALSTEL": {
     "name": "Jindal Steel",
@@ -559,8 +567,9 @@
   },
   "WAAREEENER": {
     "name": "Waaree Energies",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": -6.462264150943396
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": -5.219364599092285,
+    "last_yoy_sales_growth": 23.93669634025717
   },
   "NHPC": {
     "name": "NHPC Ltd",
@@ -676,8 +685,9 @@
   },
   "JSWINFRA": {
     "name": "JSW Infrast",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": -5.059132720105125
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 2.491349480968858,
+    "last_yoy_sales_growth": 16.982622432859397
   },
   "TORNTPOWER": {
     "name": "Torrent Power",
@@ -686,8 +696,9 @@
   },
   "SCHAEFFLER": {
     "name": "Schaeffler India",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": 6.767208043310132
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 11.879753712423035,
+    "last_yoy_sales_growth": 26.858316221765914
   },
   "VMM": {
     "name": "Vishal Mega Mart",
@@ -859,13 +870,15 @@
   },
   "UBL": {
     "name": "United Breweries",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": 36.31111111111111
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": -17.280730355396155,
+    "last_yoy_sales_growth": 23.575255723331708
   },
   "MFSL": {
     "name": "Max Financial",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": 38.585447139418626
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": -22.505010020040082,
+    "last_yoy_sales_growth": 18.474264705882355
   },
   "BIOCON": {
     "name": "Biocon",
@@ -891,8 +904,9 @@
   },
   "SAIL": {
     "name": "Steel Authority of India",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": -14.82166617985915
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 21.915720490741446,
+    "last_yoy_sales_growth": 19.824745356500898
   },
   "LTF": {
     "name": "L&T Finance Ltd",
@@ -962,8 +976,9 @@
   },
   "INDUSTOWER": {
     "name": "Indus Tower",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": 4.073571164053821
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 1.0081840825524848,
+    "last_yoy_sales_growth": 4.005862237420615
   },
   "MCX": {
     "name": "Multi Commodity Exchange",
@@ -1001,8 +1016,9 @@
   },
   "MAZDOCK": {
     "name": "Mazagon Dock Shipbuilders",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": -23.558441558441558
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": -16.887529731566428,
+    "last_yoy_sales_growth": -16.490269716626834
   },
   "5PAISA": {
     "name": "Tata Capital",
@@ -1081,13 +1097,15 @@
   },
   "RADICO": {
     "name": "Radico Khaitan",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": 11.96808510638298
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 3.5608308605341246,
+    "last_yoy_sales_growth": 16.80053547523427
   },
   "ONESOURCE": {
     "name": "One Source Speciality Pharma",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": 4.906542056074766
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 14.92204899777283,
+    "last_yoy_sales_growth": 37.234042553191486
   },
   "TATACHEM": {
     "name": "Acutaas Chemicals",
@@ -1111,8 +1129,9 @@
   },
   "LTFOODS": {
     "name": "LT Foods Ltd",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": 8.427932576539387
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 2.601522842639594,
+    "last_yoy_sales_growth": 16.919739696312362
   },
   "TI": {
     "name": "Tilaknagar Industries",
@@ -1183,8 +1202,9 @@
   },
   "MEDPLUS": {
     "name": "Medplus Health Services",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": 0.8583690987124464
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 8.351063829787234,
+    "last_yoy_sales_growth": 21.322215604526505
   },
   "AADHARHFC": {
     "name": "Aadhar Housing Finance",
