@@ -128,8 +128,9 @@
   },
   "ADANIENT": {
     "name": "Adani Enterp.",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": 1.4951139061006813
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 13.03608310047382,
+    "last_yoy_sales_growth": 75.14235964045368
   },
   "WIPRO": {
     "name": "Wipro",
@@ -272,8 +273,9 @@
   },
   "HEROMOTOCO": {
     "name": "Hero Motocorp",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": 1.1403914316535675
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 14.048453451165626,
+    "last_yoy_sales_growth": 22.524144704534294
   },
   "HAL": {
     "name": "Hind.Aeronautics",
@@ -310,8 +312,9 @@
   },
   "VEDL": {
     "name": "Vedanta",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": -1.6416758096631314
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 8.886593678991945,
+    "last_yoy_sales_growth": 57.48087954110899
   },
   "DLF": {
     "name": "DLF",
@@ -321,8 +324,9 @@
   },
   "PIDILITIND": {
     "name": "Pidilite Inds.",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": 27.04437622104382
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": -5.579964850615114,
+    "last_yoy_sales_growth": 20.934158694428813
   },
   "DIVISLAB": {
     "name": "Divi's Lab.",
@@ -378,13 +382,15 @@
   },
   "HYUNDAI": {
     "name": "Hyundai Motor I",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": -13.644533728060901
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 26.697275788184875,
+    "last_yoy_sales_growth": 18.52700303533589
   },
   "TVSMOTOR": {
     "name": "TVS Motor Co.",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": 8.25749020128878
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 19.50171821305842,
+    "last_yoy_sales_growth": 38.595117785211016
   },
   "GAIL": {
     "name": "GAIL (India)",
@@ -432,8 +438,9 @@
   },
   "UNITDSPR": {
     "name": "United Spirits",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": -11.329404060248855
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 20.53175775480059,
+    "last_yoy_sales_growth": 2.8679483138985185
   },
   "BAJAJHFL": {
     "name": "Bajaj Housing",
@@ -510,8 +517,9 @@
   },
   "JSWENERGY": {
     "name": "JSW Energy",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": 15.736830406757058
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 22.296908008450163,
+    "last_yoy_sales_growth": 23.005601699826155
   },
   "BOSCHLTD": {
     "name": "Bosch",
@@ -525,8 +533,9 @@
   },
   "GMRAIRPORT": {
     "name": "GMR Airports",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": 0.7364144235652615
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 3.3526594403831615,
+    "last_yoy_sales_growth": 11.716621253405995
   },
   "ICICIGI": {
     "name": "ICICI Lombard",
@@ -1124,8 +1133,9 @@
   },
   "CRAFTSMAN": {
     "name": "Craftsman automation",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": 9.254267744833783
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 21.09375,
+    "last_yoy_sales_growth": 47.1028971028971
   },
   "LTFOODS": {
     "name": "LT Foods Ltd",
@@ -1167,8 +1177,9 @@
   },
   "PNBHOUSING": {
     "name": "PNB Hosuing Finance",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": 3.7121906507791023
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 7.070260715863898,
+    "last_yoy_sales_growth": 13.862781954887218
   },
   "ICDSLTD": {
     "name": "CDS",
@@ -1309,8 +1320,9 @@
   },
   "EMBASSY": {
     "name": "Embassy Office Parks REIT",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": 2.987551867219917
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 4.99597099113618,
+    "last_yoy_sales_growth": 15.92526690391459
   },
   "AUBANK": {
     "name": "AU Small Finance",
