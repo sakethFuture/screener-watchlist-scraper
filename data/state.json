@@ -146,13 +146,15 @@
   },
   "COALINDIA": {
     "name": "Coal India",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": -0.505485050548505
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": -4.488163441790077,
+    "last_yoy_sales_growth": 20.862856673870816
   },
   "ASIANPAINT": {
     "name": "Asian Paints",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": 14.00454201362604
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": -5.35951432365775,
+    "last_yoy_sales_growth": 16.9499472512015
   },
   "JSWSTEEL": {
     "name": "JSW Steel",
@@ -195,8 +197,9 @@
   },
   "TRENT": {
     "name": "Trent",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": 14.459029435163087
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 2.050390964378801,
+    "last_yoy_sales_growth": 21.897052718970528
   },
   "SBILIFE": {
     "name": "SBI Life Insuran",
@@ -296,13 +299,15 @@
   },
   "INDIGO": {
     "name": "Interglobe Aviat",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": 9.564132275603885
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": -4.962577286039701,
+    "last_yoy_sales_growth": 25.917542441390463
   },
   "VBL": {
     "name": "Varun Beverages",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": 28.55187100699726
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": -22.66822703335284,
+    "last_yoy_sales_growth": 33.198951824228985
   },
   "IRFC": {
     "name": "IRFC",
@@ -346,8 +351,9 @@
   },
   "AMBUJACEM": {
     "name": "Ambuja Cements",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": -12.971784536460243
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": -3.189473684210526,
+    "last_yoy_sales_growth": 0.23978201634877383
   },
   "MANINDS": {
     "name": "Cholaman.Inv.&Fn",
@@ -367,13 +373,15 @@
   },
   "AMJLAND": {
     "name": "Bajaj Holdings",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": -6.901041666666659
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 21.118881118881113,
+    "last_yoy_sales_growth": 56.6003616636528
   },
   "GODREJCP": {
     "name": "Godrej Consumer",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": 8.333333333333332
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 4.449704142011834,
+    "last_yoy_sales_growth": 19.01294498381877
   },
   "BANKBARODA": {
     "name": "Bank of Baroda",
@@ -610,8 +618,9 @@
   },
   "SUZLON": {
     "name": "Suzlon Energy",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": -30.2931003094848
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 27.34395403499608,
+    "last_yoy_sales_growth": 25.96228364763627
   },
   "LLOYDSME": {
     "name": "Lloyds Metals",
@@ -954,8 +963,9 @@
   },
   "LAURUSLABS": {
     "name": "Laurus Labs",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": 11.810154525386315
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 8.884501480750247,
+    "last_yoy_sales_growth": 33.45432546884452
   },
   "AIIL": {
     "name": "Authum Invest",
