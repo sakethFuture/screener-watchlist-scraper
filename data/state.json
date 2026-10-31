@@ -1,8 +1,9 @@
 {
   "RELIANCE": {
     "name": "Reliance Industry",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": 5.240104876912456
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 6.828815903421355,
+    "last_yoy_sales_growth": 29.83940963699273
   },
   "HDFCBANK": {
     "name": "HDFC Bank",
@@ -69,8 +70,9 @@
   },
   "ANUHPHR": {
     "name": "Sun Pharma.Inds.",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": -3.9603960396039604
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": -4.639175257731959,
+    "last_yoy_sales_growth": -0.5376344086021506
   },
   "HCLTECH": {
     "name": "HCL Technologies",
@@ -182,8 +184,9 @@
   },
   "BEL": {
     "name": "Bharat Electron",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": -45.74530516431925
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 32.107445466017666,
+    "last_yoy_sales_growth": 26.519337016574585
   },
   "GRASIM": {
     "name": "Grasim Inds",
@@ -385,8 +388,9 @@
   },
   "BANKBARODA": {
     "name": "Bank of Baroda",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": 1.7413223619400824
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 5.427879823437277,
+    "last_yoy_sales_growth": 11.114112491746203
   },
   "HYUNDAI": {
     "name": "Hyundai Motor I",
@@ -402,13 +406,15 @@
   },
   "GAIL": {
     "name": "GAIL (India)",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": 15.799533406414257
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 14.420602941890385,
+    "last_yoy_sales_growth": 32.64766299912767
   },
   "LODHA": {
     "name": "Lodha Developers Ltd",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": 6.003394145099703
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": -10.606363818290975,
+    "last_yoy_sales_growth": 17.614533965244867
   },
   "INDHOTEL": {
     "name": "Indian Hotels Co",
@@ -574,8 +580,9 @@
   },
   "NTPCGREEN": {
     "name": "NTPC Green Ene.",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": 21.248630887185104
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": -15.266485998193316,
+    "last_yoy_sales_growth": 53.26797385620915
   },
   "POWERINDIA": {
     "name": "Hitachi Energy",
@@ -607,8 +614,9 @@
   },
   "POLICYBZR": {
     "name": "PB Fintech.",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": -8.393983503153809
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 15.360169491525424,
+    "last_yoy_sales_growth": 34.94423791821561
   },
   "PERSISTENT": {
     "name": "Persistent Sys",
@@ -693,8 +701,9 @@
   },
   "GVT&D": {
     "name": "GE Vernova T&D",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": 12.156383628588882
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 10.403050108932462,
+    "last_yoy_sales_growth": 31.79453836150845
   },
   "BERGEPAINT": {
     "name": "Berger Paints",
@@ -726,13 +735,15 @@
   },
   "ABCAPITAL": {
     "name": "Aditya Birla Cap",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": -9.502934839141094
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 14.967159277504106,
+    "last_yoy_sales_growth": 32.16611609249646
   },
   "GICRE": {
     "name": "General Insuranc",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": 10.623751728376094
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 4.05527393930977,
+    "last_yoy_sales_growth": 17.483339866718932
   },
   "NMDC": {
     "name": "NMDC",
@@ -873,8 +884,9 @@
   },
   "PHOENIXLTD": {
     "name": "Phoenix Mills",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": -12.814274128142742
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 7.255813953488372,
+    "last_yoy_sales_growth": 3.4080717488789234
   },
   "BALKRISIND": {
     "name": "Balkrishna Inds",
@@ -974,8 +986,9 @@
   },
   "DIXON": {
     "name": "Dixon Tech",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": 47.921225382932164
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 40.17236943658348,
+    "last_yoy_sales_growth": 46.711544934365534
   },
   "KARURVYSYA": {
     "name": "Karuru Vyasa Bank",
@@ -1086,8 +1099,9 @@
   },
   "MAXHEALTH": {
     "name": "Max Healthcare Institute",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": 10.405972935137656
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 8.579881656804734,
+    "last_yoy_sales_growth": 20.327868852459016
   },
   "SAILIFE": {
     "name": "Sai Life Science",
@@ -1106,8 +1120,9 @@
   },
   "MSUMI": {
     "name": "Motherson Sumi Wiring",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": 2.158920539730135
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 18.990314059289698,
+    "last_yoy_sales_growth": 46.77769732078204
   },
   "RELIGARE": {
     "name": "Religare Enterprises ltd",
@@ -1155,8 +1170,9 @@
   },
   "TI": {
     "name": "Tilaknagar Industries",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": 10.221285563751318
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": -1.0516252390057361,
+    "last_yoy_sales_growth": 160.0502512562814
   },
   "JUBLPHARMA": {
     "name": "Jubilant Pharmova",
@@ -1282,8 +1298,9 @@
   },
   "IOC": {
     "name": "I O C L",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": 27.90257766852786
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": -4.669546971363365,
+    "last_yoy_sales_growth": 42.17647849161386
   },
   "CGPOWER": {
     "name": "CG Power & Ind",
