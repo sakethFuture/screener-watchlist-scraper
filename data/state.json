@@ -121,8 +121,9 @@
   },
   "POWERGRID": {
     "name": "Power Grid Corpn",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": -1.448654208811932
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 2.7746368617900323,
+    "last_yoy_sales_growth": 2.9627047751829907
   },
   "TITAN": {
     "name": "Titan Company",
