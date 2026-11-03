@@ -53,8 +53,9 @@
   },
   "ITC": {
     "name": "ITC",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": 7.231416549789621
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 6.042691221094485,
+    "last_yoy_sales_growth": 3.9329299559019586
   },
   "LT": {
     "name": "Larsen & Toubro Ltd",
@@ -111,8 +112,9 @@
   },
   "BAJAJFINSV": {
     "name": "Bajaj Finserv",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": 9.204031797163195
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 3.2804434188928804,
+    "last_yoy_sales_growth": 16.662636033857314
   },
   "ONGC": {
     "name": "O N G C",
@@ -571,8 +573,9 @@
   },
   "MARICO": {
     "name": "Marico",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": 19.872765828536807
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": -1.5163002274450341,
+    "last_yoy_sales_growth": 12.956521739130435
   },
   "SRF": {
     "name": "SRF",
@@ -828,8 +831,9 @@
   },
   "UPL": {
     "name": "UPL",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": -44.47232069811835
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 16.491503781553877,
+    "last_yoy_sales_growth": -1.322905399783676
   },
   "OBEROIRLTY": {
     "name": "Oberoi Realty",
@@ -1090,8 +1094,9 @@
   },
   "NATIONALUM": {
     "name": "National Aluminium",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": 5.765010971474167
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 2.206714447378348,
+    "last_yoy_sales_growth": 26.25815470643057
   },
   "KEI": {
     "name": "KEI Industries",
@@ -1112,8 +1117,9 @@
   },
   "WOCKPHARMA": {
     "name": "Wockhardt",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": -3.730569948186528
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 4.3057050592034445,
+    "last_yoy_sales_growth": 23.91304347826087
   },
   "GRAPHITE": {
     "name": "Graphite India Ltd",
@@ -1253,8 +1259,9 @@
   },
   "PTC": {
     "name": "PTC Industries",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": 22.473063109286816
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 21.742773355676583,
+    "last_yoy_sales_growth": 6.466385784942297
   },
   "RAMCOCEM": {
     "name": "Ramco Cements",
