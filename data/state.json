@@ -30,8 +30,9 @@
   },
   "SBIN": {
     "name": "St Bk of India",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": 3.936527311565456
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 3.547416324133881,
+    "last_yoy_sales_growth": 10.296865593457543
   },
   "INFY": {
     "name": "Infosys",
@@ -514,8 +515,9 @@
   },
   "ZYDUSLIFE": {
     "name": "Zydus Lifesci.",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": 5.667589297482536
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": -1.3346638393413994,
+    "last_yoy_sales_growth": 29.18504001306549
   },
   "DABUR": {
     "name": "Dabur India",
@@ -568,8 +570,9 @@
   },
   "LUPIN": {
     "name": "Lupin",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": 10.729096989966555
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": -5.436752446538601,
+    "last_yoy_sales_growth": 11.052780930760498
   },
   "MARICO": {
     "name": "Marico",
@@ -637,8 +640,9 @@
   },
   "LLOYDSME": {
     "name": "Lloyds Metals",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": 22.15946843853821
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": -20.657342657342657,
+    "last_yoy_sales_growth": 55.3395399780942
   },
   "COROMANDEL": {
     "name": "Coromandel Inter",
@@ -843,8 +847,9 @@
   },
   "LINDEINDIA": {
     "name": "Linde India",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": 13.029315960912053
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 4.178674351585014,
+    "last_yoy_sales_growth": 12.267080745341614
   },
   "JSL": {
     "name": "Jindal Stain.",
@@ -864,8 +869,9 @@
   },
   "GLAXO": {
     "name": "Glaxosmi. Pharma",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": -5.728643216080402
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 26.226012793176974,
+    "last_yoy_sales_growth": 20.816326530612244
   },
   "TIINDIA": {
     "name": "Tube Investments",
@@ -987,8 +993,9 @@
   },
   "AIIL": {
     "name": "Authum Invest",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": 372.66881028938906
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": -53.673469387755105,
+    "last_yoy_sales_growth": 12.561983471074381
   },
   "DIXON": {
     "name": "Dixon Tech",
@@ -1020,13 +1027,15 @@
   },
   "MCX": {
     "name": "Multi Commodity Exchange",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": -21.034870641169853
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 13.96011396011396,
+    "last_yoy_sales_growth": 113.90374331550801
   },
   "SOLARINDS": {
     "name": "Solar Industries",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": 20.144120537176548
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": -4.06215921483097,
+    "last_yoy_sales_growth": 69.02017291066282
   },
   "POLYCAB": {
     "name": "Polycab India",
@@ -1123,8 +1132,9 @@
   },
   "GRAPHITE": {
     "name": "Graphite India Ltd",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": 3.1862745098039214
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": -1.9002375296912115,
+    "last_yoy_sales_growth": 13.305898491083676
   },
   "MSUMI": {
     "name": "Motherson Sumi Wiring",
@@ -1156,8 +1166,9 @@
   },
   "METROPOLIS": {
     "name": "Metropolis Healthcare",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": 5.88235294117647
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 10.444444444444445,
+    "last_yoy_sales_growth": 15.85081585081585
   },
   "HAPPYFORGE": {
     "name": "Happy Forging",
@@ -1228,13 +1239,15 @@
   },
   "JGCHEM": {
     "name": "J B Chemials",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": 10.48951048951049
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 14.240506329113925,
+    "last_yoy_sales_growth": 64.0909090909091
   },
   "NEULANDLAB": {
     "name": "Neuland Laboritries",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": -17.2680412371134
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": -29.906542056074763,
+    "last_yoy_sales_growth": -12.45136186770428
   },
   "KIMS": {
     "name": "Krishna Institue of Medical Science",
