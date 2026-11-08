@@ -204,8 +204,9 @@
   },
   "TATASTEEL": {
     "name": "Tata Steel",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": -3.913387071281808
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 7.6356219363753,
+    "last_yoy_sales_growth": 11.49619179062516
   },
   "TRENT": {
     "name": "Trent",
@@ -1200,8 +1201,9 @@
   },
   "TATACHEM": {
     "name": "Acutaas Chemicals",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": 23.763816172193135
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": -1.8331374853113984,
+    "last_yoy_sales_growth": 7.7379417075058035
   },
   "METROPOLIS": {
     "name": "Metropolis Healthcare",
