@@ -804,8 +804,9 @@
   },
   "MRF": {
     "name": "MRF",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": 4.624564893088015
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 2.8992395437262357,
+    "last_yoy_sales_growth": 17.360075891042147
   },
   "NYKAA": {
     "name": "FSN E-Commerce",
@@ -815,8 +816,9 @@
   },
   "KALYANKJIL": {
     "name": "Kalyan Jewellers",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": 3.0559610705596105
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": -2.512040797053546,
+    "last_yoy_sales_growth": 31.40274949083503
   },
   "FACT": {
     "name": "Fertilizer and Chemical Travancore",
