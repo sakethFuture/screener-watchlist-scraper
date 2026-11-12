@@ -376,8 +376,9 @@
   },
   "MANINDS": {
     "name": "Cholaman.Inv.&Fn",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": -8.98876404494382
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 14.909781576448244,
+    "last_yoy_sales_growth": 45.08393285371702
   },
   "BPCL": {
     "name": "B P C L",
@@ -441,8 +442,9 @@
   },
   "TATAPOWER": {
     "name": "Tata Power Co.",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": 27.859060402684566
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 3.070704949871398,
+    "last_yoy_sales_growth": 26.317143776133804
   },
   "ABB": {
     "name": "A B B",
@@ -839,8 +841,9 @@
   },
   "ALKEM": {
     "name": "Alkem Lab",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": 3.8023868998057173
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 21.711229946524064,
+    "last_yoy_sales_growth": 13.771557110722318
   },
   "GLENMARK": {
     "name": "Glenmark Pharma.",
@@ -850,8 +853,9 @@
   },
   "BDL": {
     "name": "Bharat Dynamics",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": 19.166666666666668
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 190.9090909090909,
+    "last_yoy_sales_growth": 45.07410636442894
   },
   "YESBANK": {
     "name": "Yes Bank",
@@ -1274,8 +1278,9 @@
   },
   "ICDSLTD": {
     "name": "CDS",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": 17.307692307692303
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 16.393442622950815,
+    "last_yoy_sales_growth": 33.96226415094338
   },
   "NUVAMA": {
     "name": "Nuvama Wealth Management",
