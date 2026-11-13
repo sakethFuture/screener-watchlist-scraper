@@ -299,8 +299,9 @@
   },
   "HAL": {
     "name": "Hind.Aeronautics",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": -60.44326495481279
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 38.04170444242973,
+    "last_yoy_sales_growth": 14.843867853371547
   },
   "DMART": {
     "name": "Avenue Super.",
@@ -615,8 +616,9 @@
   },
   "POWERINDIA": {
     "name": "Hitachi Energy",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": -9.44081336238199
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 20.16840417000802,
+    "last_yoy_sales_growth": 63.50245499181669
   },
   "WAAREEENER": {
     "name": "Waaree Energies",
@@ -680,8 +682,9 @@
   },
   "IDEA": {
     "name": "Vodafone Idea",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": 3.15037063183904
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 1.6682350928223115,
+    "last_yoy_sales_growth": 6.154533273782939
   },
   "ABBOTINDIA": {
     "name": "Abbott India",
@@ -691,8 +694,9 @@
   },
   "RVNL": {
     "name": "Rail Vikas",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": -35.4689366786141
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 8.794260587826892,
+    "last_yoy_sales_growth": -8.237360921335155
   },
   "IOB": {
     "name": "Indian Overseas Bank",
@@ -713,8 +717,9 @@
   },
   "OIL": {
     "name": "Oil India",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": 34.542128483805016
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": -7.742141885947372,
+    "last_yoy_sales_growth": 37.419585418155826
   },
   "AUROPHARMA": {
     "name": "Aurobindo Pharma",
@@ -783,8 +788,9 @@
   },
   "NMDC": {
     "name": "NMDC",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": -40.09521290663846
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": -2.310522442972774,
+    "last_yoy_sales_growth": 4.076513013483851
   },
   "PIIND": {
     "name": "P I Industries",
@@ -895,8 +901,9 @@
   },
   "IRCTC": {
     "name": "I R C T C",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": -6.164383561643835
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": -2.7007299270072993,
+    "last_yoy_sales_growth": 16.31762652705061
   },
   "BHARATFORG": {
     "name": "Bharat Forge",
@@ -971,8 +978,9 @@
   },
   "PAGEIND": {
     "name": "Page Industries",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": 13.32801276935355
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 1.4084507042253522,
+    "last_yoy_sales_growth": 11.541440743609604
   },
   "JKCEMENT": {
     "name": "J K Cements",
@@ -1190,8 +1198,9 @@
   },
   "RELIGARE": {
     "name": "Religare Enterprises ltd",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": -4.620997162545602
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 1.3191489361702127,
+    "last_yoy_sales_growth": 14.63649494463168
   },
   "RADICO": {
     "name": "Radico Khaitan",
