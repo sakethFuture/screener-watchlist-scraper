@@ -199,8 +199,9 @@
   },
   "GRASIM": {
     "name": "Grasim Inds",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": -4.6672276472084695
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 2.8512193119303717,
+    "last_yoy_sales_growth": 25.576441102756892
   },
   "TATASTEEL": {
     "name": "Tata Steel",
@@ -222,8 +223,9 @@
   },
   "EICHERMOT": {
     "name": "Eicher Motors",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": 9.078947368421053
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 11.911942098914356,
+    "last_yoy_sales_growth": 20.252754374594943
   },
   "HDFCLIFE": {
     "name": "HDFC Life Insur.",
@@ -449,8 +451,9 @@
   },
   "ABB": {
     "name": "A B B",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": 11.777638190954773
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 5.029502669289126,
+    "last_yoy_sales_growth": 19.424920127795527
   },
   "RECLTD": {
     "name": "REC Ltd",
@@ -1252,8 +1255,9 @@
   },
   "JUBLPHARMA": {
     "name": "Jubilant Pharmova",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": -2.6637554585152836
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 6.3257065948856,
+    "last_yoy_sales_growth": 20.54933875890132
   },
   "ASTERDM": {
     "name": "Aster DM",
@@ -1435,8 +1439,9 @@
   },
   "ZFCVINDIA": {
     "name": "ZF Commcercial",
-    "last_result_date": "2026-06-30",
-    "last_qoq_sales_growth": -7.705627705627706
+    "last_result_date": "2026-09-30",
+    "last_qoq_sales_growth": 13.977485928705441,
+    "last_yoy_sales_growth": 33.07776560788609
   },
   "EMBASSY": {
     "name": "Embassy Office Parks REIT",
